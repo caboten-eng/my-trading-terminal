@@ -1,0 +1,29 @@
+
+name: Stock Screener
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 22 * * 1-5"
+
+permissions:
+  contents: read
+
+jobs:
+  screening:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install yfinance pandas
+
+      - name: Run stock screener
+        run: python screener.py
