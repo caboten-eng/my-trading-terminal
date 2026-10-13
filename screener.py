@@ -3,9 +3,45 @@ import yfinance as yf
 import pandas as pd
 from pathlib import Path
 
+
 TICKERS = [
-    "NVDA", "MU", "SNDK", "NBIS",
-    "PLTR", "SOFI", "ARM", "MRVL"
+    # 半導体・AI
+    "NVDA", "AMD", "AVGO", "MU", "SNDK",
+    "ARM", "MRVL", "QCOM", "TXN", "ADI",
+    "MCHP", "MPWR", "ON", "AMAT", "LRCX",
+    "KLAC", "ASML", "TSM", "INTC", "COHR",
+    "LITE", "SITM", "ALAB", "CRDO", "CAMT",
+
+    # クラウド・ソフトウェア
+    "MSFT", "GOOGL", "AMZN", "META", "ORCL",
+    "CRM", "NOW", "PLTR", "SNOW", "DDOG",
+    "NET", "MDB", "HUBS", "IOT", "CRWD",
+    "PANW", "ZS", "FTNT", "SHOP", "APP",
+
+    # AIインフラ・電力
+    "NBIS", "CRWV", "IREN", "BE", "VRT",
+    "ETN", "GEV", "CEG", "VST", "PWR",
+
+    # 宇宙・防衛
+    "RKLB", "ASTS", "LMT", "RTX", "NOC",
+    "GD", "BA", "HII", "KTOS", "PL",
+
+    # 金融・フィンテック
+    "SOFI", "HOOD", "COIN", "PYPL", "SQ",
+    "V", "MA", "JPM", "GS", "MS",
+
+    # 小売・消費
+    "WMT", "COST", "AMZN", "TGT", "DG",
+    "DLTR", "HD", "LOW", "NKE", "SBUX",
+
+    # その他
+    "AAPL", "TSLA", "NFLX", "UBER", "ABNB",
+    "DE", "CAT", "UPS", "PLD", "ALB"
+]
+
+# 重複銘柄を除外
+TICKERS = list(dict.fromkeys(TICKERS))
+"
 ]
 
 results = []
