@@ -110,9 +110,28 @@ for ticker in TICKERS:
 if not results:
     raise RuntimeError("有効な株価データを取得できませんでした")
 
+
+import json
+from datetime import datetime, timezone
+
 output = pd.DataFrame(results)
 Path("results").mkdir(exist_ok=True)
+
+# CSV保存
 output.to_csv("results/screening.csv", index=False)
 
+# JSON保存
+data = {
+    "updated_at": datetime.now(timezone.utc).isoformat(),
+    "total": len(output),
+    "passed": int(output["PASS"].sum()),
+    "stocks": output.to_dict(orient="records")
+}
+
+with open("results/screening.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
 print("\nスクリーニング完了")
+print(f"対象銘柄: {data['total']}")
+print(f"合格銘柄: {data['passed']}")
 print(output)
