@@ -37,3 +37,13 @@ jobs:
             results/screening.json
           if-no-files-found: error
           retention-days: 30
+
+      - name: Commit screening results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/screening.csv results/screening.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update screening results"
+            git push
+          fi
