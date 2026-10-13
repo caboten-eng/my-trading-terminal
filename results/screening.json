@@ -1,0 +1,751 @@
+{
+  "updated_at": "2026-10-13T05:14:31.372046+00:00",
+  "total": 93,
+  "passed": 21,
+  "stocks": [
+    {
+      "Ticker": "NVDA",
+      "Price": 226.32,
+      "MA50": 222.46,
+      "MA150": 207.54,
+      "MA200": 202.02,
+      "PASS": true
+    },
+    {
+      "Ticker": "AMD",
+      "Price": 594.24,
+      "MA50": 531.28,
+      "MA150": 443.83,
+      "MA200": 387.22,
+      "PASS": true
+    },
+    {
+      "Ticker": "AVGO",
+      "Price": 354.73,
+      "MA50": 370.71,
+      "MA150": 378.72,
+      "MA200": 367.14,
+      "PASS": false
+    },
+    {
+      "Ticker": "MU",
+      "Price": 989.04,
+      "MA50": 979.51,
+      "MA150": 814.26,
+      "MA200": 705.13,
+      "PASS": true
+    },
+    {
+      "Ticker": "SNDK",
+      "Price": 1487.33,
+      "MA50": 1587.95,
+      "MA150": 1417.27,
+      "MA200": 1187.74,
+      "PASS": false
+    },
+    {
+      "Ticker": "ARM",
+      "Price": 255.24,
+      "MA50": 270.18,
+      "MA150": 255.59,
+      "MA200": 220.83,
+      "PASS": false
+    },
+    {
+      "Ticker": "MRVL",
+      "Price": 265.86,
+      "MA50": 238.01,
+      "MA150": 202.91,
+      "MA200": 172.59,
+      "PASS": true
+    },
+    {
+      "Ticker": "QCOM",
+      "Price": 174.43,
+      "MA50": 173.24,
+      "MA150": 173.54,
+      "MA200": 168.01,
+      "PASS": false
+    },
+    {
+      "Ticker": "TXN",
+      "Price": 281.74,
+      "MA50": 272.0,
+      "MA150": 267.37,
+      "MA200": 250.63,
+      "PASS": true
+    },
+    {
+      "Ticker": "ADI",
+      "Price": 406.25,
+      "MA50": 380.42,
+      "MA150": 378.29,
+      "MA200": 361.96,
+      "PASS": true
+    },
+    {
+      "Ticker": "MCHP",
+      "Price": 73.83,
+      "MA50": 75.9,
+      "MA150": 80.57,
+      "MA200": 78.59,
+      "PASS": false
+    },
+    {
+      "Ticker": "MPWR",
+      "Price": 1319.23,
+      "MA50": 1313.15,
+      "MA150": 1365.41,
+      "MA200": 1293.7,
+      "PASS": false
+    },
+    {
+      "Ticker": "ON",
+      "Price": 76.0,
+      "MA50": 76.31,
+      "MA150": 87.37,
+      "MA200": 81.25,
+      "PASS": false
+    },
+    {
+      "Ticker": "AMAT",
+      "Price": 497.53,
+      "MA50": 489.59,
+      "MA150": 471.88,
+      "MA200": 434.84,
+      "PASS": false
+    },
+    {
+      "Ticker": "LRCX",
+      "Price": 309.56,
+      "MA50": 310.79,
+      "MA150": 299.5,
+      "MA200": 279.39,
+      "PASS": false
+    },
+    {
+      "Ticker": "KLAC",
+      "Price": 190.12,
+      "MA50": 188.08,
+      "MA150": 191.82,
+      "MA200": 179.74,
+      "PASS": false
+    },
+    {
+      "Ticker": "ASML",
+      "Price": 1750.24,
+      "MA50": 1741.04,
+      "MA150": 1636.39,
+      "MA200": 1562.35,
+      "PASS": true
+    },
+    {
+      "Ticker": "TSM",
+      "Price": 444.35,
+      "MA50": 432.58,
+      "MA150": 408.05,
+      "MA200": 390.82,
+      "PASS": true
+    },
+    {
+      "Ticker": "INTC",
+      "Price": 101.35,
+      "MA50": 103.3,
+      "MA150": 96.07,
+      "MA200": 83.36,
+      "PASS": false
+    },
+    {
+      "Ticker": "COHR",
+      "Price": 288.02,
+      "MA50": 304.6,
+      "MA150": 318.21,
+      "MA200": 293.12,
+      "PASS": false
+    },
+    {
+      "Ticker": "LITE",
+      "Price": 995.41,
+      "MA50": 925.97,
+      "MA150": 860.87,
+      "MA200": 767.23,
+      "PASS": true
+    },
+    {
+      "Ticker": "SITM",
+      "Price": 570.07,
+      "MA50": 626.76,
+      "MA150": 590.94,
+      "MA200": 537.42,
+      "PASS": false
+    },
+    {
+      "Ticker": "ALAB",
+      "Price": 324.11,
+      "MA50": 317.72,
+      "MA150": 278.68,
+      "MA200": 247.14,
+      "PASS": false
+    },
+    {
+      "Ticker": "CRDO",
+      "Price": 200.84,
+      "MA50": 209.73,
+      "MA150": 196.1,
+      "MA200": 179.48,
+      "PASS": false
+    },
+    {
+      "Ticker": "CAMT",
+      "Price": 147.63,
+      "MA50": 149.24,
+      "MA150": 161.38,
+      "MA200": 157.12,
+      "PASS": false
+    },
+    {
+      "Ticker": "MSFT",
+      "Price": 541.15,
+      "MA50": 501.73,
+      "MA150": 432.76,
+      "MA200": 432.99,
+      "PASS": false
+    },
+    {
+      "Ticker": "GOOGL",
+      "Price": 352.72,
+      "MA50": 346.08,
+      "MA150": 346.82,
+      "MA200": 339.86,
+      "PASS": false
+    },
+    {
+      "Ticker": "AMZN",
+      "Price": 259.53,
+      "MA50": 258.85,
+      "MA150": 248.05,
+      "MA200": 242.29,
+      "PASS": true
+    },
+    {
+      "Ticker": "META",
+      "Price": 742.96,
+      "MA50": 643.13,
+      "MA150": 621.28,
+      "MA200": 629.58,
+      "PASS": false
+    },
+    {
+      "Ticker": "ORCL",
+      "Price": 137.39,
+      "MA50": 145.38,
+      "MA150": 157.7,
+      "MA200": 160.24,
+      "PASS": false
+    },
+    {
+      "Ticker": "CRM",
+      "Price": 233.92,
+      "MA50": 225.78,
+      "MA150": 192.78,
+      "MA200": 198.77,
+      "PASS": false
+    },
+    {
+      "Ticker": "NOW",
+      "Price": 140.32,
+      "MA50": 132.81,
+      "MA150": 112.45,
+      "MA200": 115.27,
+      "PASS": false
+    },
+    {
+      "Ticker": "PLTR",
+      "Price": 209.0,
+      "MA50": 178.7,
+      "MA150": 150.99,
+      "MA200": 152.41,
+      "PASS": false
+    },
+    {
+      "Ticker": "SNOW",
+      "Price": 360.37,
+      "MA50": 331.59,
+      "MA150": 244.25,
+      "MA200": 231.73,
+      "PASS": true
+    },
+    {
+      "Ticker": "DDOG",
+      "Price": 287.29,
+      "MA50": 247.26,
+      "MA150": 210.53,
+      "MA200": 189.04,
+      "PASS": true
+    },
+    {
+      "Ticker": "NET",
+      "Price": 350.87,
+      "MA50": 317.46,
+      "MA150": 258.18,
+      "MA200": 239.85,
+      "PASS": true
+    },
+    {
+      "Ticker": "MDB",
+      "Price": 381.29,
+      "MA50": 396.04,
+      "MA150": 332.14,
+      "MA200": 341.14,
+      "PASS": false
+    },
+    {
+      "Ticker": "HUBS",
+      "Price": 223.37,
+      "MA50": 229.77,
+      "MA150": 221.51,
+      "MA200": 241.4,
+      "PASS": false
+    },
+    {
+      "Ticker": "IOT",
+      "Price": 41.62,
+      "MA50": 39.72,
+      "MA150": 34.8,
+      "MA200": 33.74,
+      "PASS": true
+    },
+    {
+      "Ticker": "CRWD",
+      "Price": 263.01,
+      "MA50": 230.15,
+      "MA150": 174.68,
+      "MA200": 158.03,
+      "PASS": true
+    },
+    {
+      "Ticker": "PANW",
+      "Price": 403.83,
+      "MA50": 372.29,
+      "MA150": 285.44,
+      "MA200": 257.0,
+      "PASS": true
+    },
+    {
+      "Ticker": "ZS",
+      "Price": 225.78,
+      "MA50": 187.27,
+      "MA150": 157.44,
+      "MA200": 166.02,
+      "PASS": false
+    },
+    {
+      "Ticker": "FTNT",
+      "Price": 192.94,
+      "MA50": 167.99,
+      "MA150": 135.69,
+      "MA200": 121.86,
+      "PASS": true
+    },
+    {
+      "Ticker": "SHOP",
+      "Price": 179.22,
+      "MA50": 146.06,
+      "MA150": 126.7,
+      "MA200": 129.57,
+      "PASS": false
+    },
+    {
+      "Ticker": "APP",
+      "Price": 270.87,
+      "MA50": 315.67,
+      "MA150": 417.78,
+      "MA200": 443.51,
+      "PASS": false
+    },
+    {
+      "Ticker": "NBIS",
+      "Price": 210.06,
+      "MA50": 224.81,
+      "MA150": 197.79,
+      "MA200": 172.06,
+      "PASS": false
+    },
+    {
+      "Ticker": "CRWV",
+      "Price": 80.26,
+      "MA50": 88.6,
+      "MA150": 94.22,
+      "MA200": 92.59,
+      "PASS": false
+    },
+    {
+      "Ticker": "IREN",
+      "Price": 34.8,
+      "MA50": 41.68,
+      "MA150": 45.32,
+      "MA200": 45.55,
+      "PASS": false
+    },
+    {
+      "Ticker": "BE",
+      "Price": 262.28,
+      "MA50": 247.61,
+      "MA150": 237.54,
+      "MA200": 213.28,
+      "PASS": true
+    },
+    {
+      "Ticker": "VRT",
+      "Price": 239.36,
+      "MA50": 259.52,
+      "MA150": 288.26,
+      "MA200": 267.12,
+      "PASS": false
+    },
+    {
+      "Ticker": "ETN",
+      "Price": 426.69,
+      "MA50": 426.58,
+      "MA150": 405.18,
+      "MA200": 390.99,
+      "PASS": true
+    },
+    {
+      "Ticker": "GEV",
+      "Price": 996.8,
+      "MA50": 968.84,
+      "MA150": 989.17,
+      "MA200": 927.58,
+      "PASS": false
+    },
+    {
+      "Ticker": "CEG",
+      "Price": 293.89,
+      "MA50": 274.51,
+      "MA150": 277.15,
+      "MA200": 285.12,
+      "PASS": false
+    },
+    {
+      "Ticker": "VST",
+      "Price": 158.13,
+      "MA50": 143.94,
+      "MA150": 151.5,
+      "MA200": 154.29,
+      "PASS": false
+    },
+    {
+      "Ticker": "PWR",
+      "Price": 694.79,
+      "MA50": 652.33,
+      "MA150": 654.47,
+      "MA200": 613.56,
+      "PASS": false
+    },
+    {
+      "Ticker": "RKLB",
+      "Price": 65.71,
+      "MA50": 70.55,
+      "MA150": 82.96,
+      "MA200": 81.55,
+      "PASS": false
+    },
+    {
+      "Ticker": "ASTS",
+      "Price": 51.46,
+      "MA50": 62.7,
+      "MA150": 75.96,
+      "MA200": 80.58,
+      "PASS": false
+    },
+    {
+      "Ticker": "LMT",
+      "Price": 511.88,
+      "MA50": 546.15,
+      "MA150": 548.08,
+      "MA200": 558.11,
+      "PASS": false
+    },
+    {
+      "Ticker": "RTX",
+      "Price": 186.66,
+      "MA50": 202.6,
+      "MA150": 193.45,
+      "MA200": 193.95,
+      "PASS": false
+    },
+    {
+      "Ticker": "NOC",
+      "Price": 485.0,
+      "MA50": 529.73,
+      "MA150": 566.09,
+      "MA200": 591.34,
+      "PASS": false
+    },
+    {
+      "Ticker": "GD",
+      "Price": 335.46,
+      "MA50": 361.24,
+      "MA150": 352.32,
+      "MA200": 351.58,
+      "PASS": false
+    },
+    {
+      "Ticker": "BA",
+      "Price": 189.5,
+      "MA50": 209.22,
+      "MA150": 215.21,
+      "MA200": 220.1,
+      "PASS": false
+    },
+    {
+      "Ticker": "HII",
+      "Price": 264.03,
+      "MA50": 289.4,
+      "MA150": 318.13,
+      "MA200": 339.39,
+      "PASS": false
+    },
+    {
+      "Ticker": "KTOS",
+      "Price": 41.62,
+      "MA50": 50.59,
+      "MA150": 57.92,
+      "MA200": 67.95,
+      "PASS": false
+    },
+    {
+      "Ticker": "PL",
+      "Price": 15.96,
+      "MA50": 19.45,
+      "MA150": 28.4,
+      "MA200": 27.3,
+      "PASS": false
+    },
+    {
+      "Ticker": "SOFI",
+      "Price": 15.23,
+      "MA50": 17.37,
+      "MA150": 17.16,
+      "MA200": 18.61,
+      "PASS": false
+    },
+    {
+      "Ticker": "HOOD",
+      "Price": 109.22,
+      "MA50": 107.69,
+      "MA150": 93.56,
+      "MA200": 94.05,
+      "PASS": false
+    },
+    {
+      "Ticker": "COIN",
+      "Price": 180.39,
+      "MA50": 175.25,
+      "MA150": 177.02,
+      "MA200": 183.47,
+      "PASS": false
+    },
+    {
+      "Ticker": "PYPL",
+      "Price": 56.05,
+      "MA50": 56.17,
+      "MA150": 49.82,
+      "MA200": 49.88,
+      "PASS": false
+    },
+    {
+      "Ticker": "V",
+      "Price": 389.27,
+      "MA50": 370.11,
+      "MA150": 340.41,
+      "MA200": 337.43,
+      "PASS": true
+    },
+    {
+      "Ticker": "MA",
+      "Price": 595.09,
+      "MA50": 571.72,
+      "MA150": 528.27,
+      "MA200": 530.63,
+      "PASS": false
+    },
+    {
+      "Ticker": "JPM",
+      "Price": 334.3,
+      "MA50": 348.22,
+      "MA150": 323.56,
+      "MA200": 319.15,
+      "PASS": false
+    },
+    {
+      "Ticker": "GS",
+      "Price": 893.95,
+      "MA50": 985.32,
+      "MA150": 968.81,
+      "MA200": 952.66,
+      "PASS": false
+    },
+    {
+      "Ticker": "MS",
+      "Price": 190.02,
+      "MA50": 206.92,
+      "MA150": 198.78,
+      "MA200": 192.97,
+      "PASS": false
+    },
+    {
+      "Ticker": "WMT",
+      "Price": 113.08,
+      "MA50": 108.47,
+      "MA150": 116.77,
+      "MA200": 117.76,
+      "PASS": false
+    },
+    {
+      "Ticker": "COST",
+      "Price": 959.44,
+      "MA50": 931.58,
+      "MA150": 964.07,
+      "MA200": 962.11,
+      "PASS": false
+    },
+    {
+      "Ticker": "TGT",
+      "Price": 153.62,
+      "MA50": 156.8,
+      "MA150": 136.33,
+      "MA200": 129.08,
+      "PASS": false
+    },
+    {
+      "Ticker": "DG",
+      "Price": 126.54,
+      "MA50": 123.59,
+      "MA150": 118.73,
+      "MA200": 125.2,
+      "PASS": false
+    },
+    {
+      "Ticker": "DLTR",
+      "Price": 117.61,
+      "MA50": 122.92,
+      "MA150": 113.84,
+      "MA200": 117.01,
+      "PASS": false
+    },
+    {
+      "Ticker": "HD",
+      "Price": 290.62,
+      "MA50": 315.71,
+      "MA150": 322.5,
+      "MA200": 332.99,
+      "PASS": false
+    },
+    {
+      "Ticker": "LOW",
+      "Price": 185.57,
+      "MA50": 201.75,
+      "MA150": 216.36,
+      "MA200": 228.16,
+      "PASS": false
+    },
+    {
+      "Ticker": "NKE",
+      "Price": 35.35,
+      "MA50": 37.84,
+      "MA150": 42.33,
+      "MA200": 47.1,
+      "PASS": false
+    },
+    {
+      "Ticker": "SBUX",
+      "Price": 92.29,
+      "MA50": 100.89,
+      "MA150": 100.13,
+      "MA200": 98.15,
+      "PASS": false
+    },
+    {
+      "Ticker": "AAPL",
+      "Price": 340.97,
+      "MA50": 323.0,
+      "MA150": 299.86,
+      "MA200": 290.75,
+      "PASS": true
+    },
+    {
+      "Ticker": "TSLA",
+      "Price": 378.03,
+      "MA50": 356.08,
+      "MA150": 378.0,
+      "MA200": 390.07,
+      "PASS": false
+    },
+    {
+      "Ticker": "NFLX",
+      "Price": 70.61,
+      "MA50": 75.3,
+      "MA150": 82.17,
+      "MA200": 83.34,
+      "PASS": false
+    },
+    {
+      "Ticker": "UBER",
+      "Price": 71.5,
+      "MA50": 73.1,
+      "MA150": 73.05,
+      "MA200": 74.43,
+      "PASS": false
+    },
+    {
+      "Ticker": "ABNB",
+      "Price": 163.5,
+      "MA50": 171.28,
+      "MA150": 148.8,
+      "MA200": 144.34,
+      "PASS": false
+    },
+    {
+      "Ticker": "DE",
+      "Price": 632.61,
+      "MA50": 652.39,
+      "MA150": 605.0,
+      "MA200": 590.46,
+      "PASS": false
+    },
+    {
+      "Ticker": "CAT",
+      "Price": 799.37,
+      "MA50": 821.69,
+      "MA150": 842.35,
+      "MA200": 800.76,
+      "PASS": false
+    },
+    {
+      "Ticker": "UPS",
+      "Price": 95.34,
+      "MA50": 99.92,
+      "MA150": 101.44,
+      "MA200": 102.35,
+      "PASS": false
+    },
+    {
+      "Ticker": "PLD",
+      "Price": 132.47,
+      "MA50": 135.95,
+      "MA150": 137.89,
+      "MA200": 136.11,
+      "PASS": false
+    },
+    {
+      "Ticker": "ALB",
+      "Price": 98.51,
+      "MA50": 121.03,
+      "MA150": 148.73,
+      "MA200": 153.37,
+      "PASS": false
+    }
+  ]
+}
