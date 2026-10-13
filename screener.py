@@ -40,8 +40,7 @@ TICKERS = [
 ]
 
 # 重複銘柄を除外
-TICKERS = list(dict.fromkeys(TICKERS))"
-]
+TICKERS = list(dict.fromkeys(TICKERS))
 
 results = []
 
