@@ -56,4 +56,100 @@ function scanCSV(){
  }).catch(e=>status.textContent='読み込み失敗: '+e.message)
 }
 </script>
+ 
+<section id="screening-results" style="padding:24px">
+  <h2>SEPA Screening Results</h2>
+
+  <input type="file" id="jsonFile" accept=".json">
+
+  <p id="screeningStatus">
+    screening.json を選択してください
+  </p>
+
+  <div style="overflow-x:auto">
+    <table id="screeningTable"
+      style="width:100%;border-collapse:collapse">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<script>
+document.getElementById("jsonFile")
+  .addEventListener("change", async function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const status =
+      document.getElementById("screeningStatus");
+    const table =
+      document.getElementById("screeningTable");
+
+    try {
+      const data = JSON.parse(await file.text());
+      const stocks = data.stocks;
+
+      if (!Array.isArray(stocks)) {
+        throw new Error("stocks が見つかりません");
+      }
+
+      status.textContent =
+        `対象: ${data.total}銘柄 / 合格: ${data.passed}銘柄`;
+
+      const columns = stocks.length
+        ? Object.keys(stocks[0])
+        : [];
+
+      const head = table.querySelector("thead");
+      const body = table.querySelector("tbody");
+
+      head.replaceChildren();
+      body.replaceChildren();
+
+      const headerRow = document.createElement("tr");
+
+      columns.forEach(col => {
+        const th = document.createElement("th");
+        th.textContent = col;
+        th.style.padding = "10px";
+        th.style.borderBottom = "1px solid #888";
+        headerRow.appendChild(th);
+      });
+
+      head.appendChild(headerRow);
+
+      stocks.forEach(stock => {
+        const row = document.createElement("tr");
+
+        columns.forEach(col => {
+          const cell = document.createElement("td");
+          cell.style.padding = "10px";
+          cell.style.borderBottom = "1px solid #555";
+
+          if (col.toLowerCase() === "ticker") {
+            const link = document.createElement("a");
+            link.textContent = stock[col];
+            link.href =
+              "https://www.tradingview.com/chart/?symbol="
+              + encodeURIComponent(stock[col]);
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            cell.appendChild(link);
+          } else {
+            cell.textContent = String(stock[col] ?? "");
+          }
+
+          row.appendChild(cell);
+        });
+
+        body.appendChild(row);
+      });
+
+    } catch (err) {
+      status.textContent =
+        "読み込みエラー: " + err.message;
+    }
+  });
+</script>
 </body></html>
