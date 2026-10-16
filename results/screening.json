@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16T02:51:39.003121+00:00",
+  "updated_at": "2026-10-16T03:01:58.890968+00:00",
   "total": 521,
   "passed": 68,
   "stocks": [
@@ -11,6 +11,8 @@
       "MA200": 775.21,
       "Trend_PASS": false,
       "RS_raw": 0.5996,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 99,
       "RS_PASS": true,
       "PASS": false
@@ -23,6 +25,8 @@
       "MA200": 76.46,
       "Trend_PASS": true,
       "RS_raw": 1.335,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 99,
       "RS_PASS": true,
       "PASS": true
@@ -35,6 +39,8 @@
       "MA200": 1205.42,
       "Trend_PASS": false,
       "RS_raw": 0.79,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 99,
       "RS_PASS": true,
       "PASS": false
@@ -47,6 +53,8 @@
       "MA200": 271.31,
       "Trend_PASS": true,
       "RS_raw": 0.3255,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 98,
       "RS_PASS": true,
       "PASS": true
@@ -59,6 +67,8 @@
       "MA200": 273.72,
       "Trend_PASS": true,
       "RS_raw": 0.3392,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 98,
       "RS_PASS": true,
       "PASS": true
@@ -71,6 +81,8 @@
       "MA200": 169.0,
       "Trend_PASS": true,
       "RS_raw": 0.3562,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 98,
       "RS_PASS": true,
       "PASS": true
@@ -83,6 +95,8 @@
       "MA200": 714.69,
       "Trend_PASS": false,
       "RS_raw": 0.4412,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 98,
       "RS_PASS": true,
       "PASS": false
@@ -95,6 +109,8 @@
       "MA200": 311.92,
       "Trend_PASS": false,
       "RS_raw": 0.3773,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 98,
       "RS_PASS": true,
       "PASS": false
@@ -107,6 +123,8 @@
       "MA200": 38.72,
       "Trend_PASS": false,
       "RS_raw": 0.2818,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 97,
       "RS_PASS": true,
       "PASS": false
@@ -119,6 +137,8 @@
       "MA200": 82.24,
       "Trend_PASS": true,
       "RS_raw": 0.3185,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 97,
       "RS_PASS": true,
       "PASS": true
@@ -131,6 +151,8 @@
       "MA200": 182.44,
       "Trend_PASS": true,
       "RS_raw": 0.2811,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 97,
       "RS_PASS": true,
       "PASS": true
@@ -143,6 +165,8 @@
       "MA200": 671.75,
       "Trend_PASS": false,
       "RS_raw": 0.2846,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 97,
       "RS_PASS": true,
       "PASS": false
@@ -155,6 +179,8 @@
       "MA200": 409.56,
       "Trend_PASS": false,
       "RS_raw": 0.2798,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 97,
       "RS_PASS": true,
       "PASS": false
@@ -167,6 +193,8 @@
       "MA200": 175.08,
       "Trend_PASS": true,
       "RS_raw": 0.3117,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 97,
       "RS_PASS": true,
       "PASS": true
@@ -179,6 +207,8 @@
       "MA200": 123.43,
       "Trend_PASS": true,
       "RS_raw": 0.2421,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 96,
       "RS_PASS": true,
       "PASS": true
@@ -191,6 +221,8 @@
       "MA200": 392.68,
       "Trend_PASS": true,
       "RS_raw": 0.2639,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 96,
       "RS_PASS": true,
       "PASS": true
@@ -203,6 +235,8 @@
       "MA200": 189.38,
       "Trend_PASS": true,
       "RS_raw": 0.2682,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 96,
       "RS_PASS": true,
       "PASS": true
@@ -215,6 +249,8 @@
       "MA200": 36.05,
       "Trend_PASS": true,
       "RS_raw": 0.2496,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 96,
       "RS_PASS": true,
       "PASS": true
@@ -227,6 +263,8 @@
       "MA200": 343.88,
       "Trend_PASS": false,
       "RS_raw": 0.2567,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 96,
       "RS_PASS": true,
       "PASS": false
@@ -239,6 +277,8 @@
       "MA200": 294.28,
       "Trend_PASS": false,
       "RS_raw": 0.2233,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 95,
       "RS_PASS": true,
       "PASS": false
@@ -251,6 +291,8 @@
       "MA200": 399.44,
       "Trend_PASS": false,
       "RS_raw": 0.2368,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 95,
       "RS_PASS": true,
       "PASS": false
@@ -263,6 +305,8 @@
       "MA200": 160.02,
       "Trend_PASS": true,
       "RS_raw": 0.2402,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 95,
       "RS_PASS": true,
       "PASS": true
@@ -275,6 +319,8 @@
       "MA200": 84.29,
       "Trend_PASS": false,
       "RS_raw": 0.2336,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 95,
       "RS_PASS": true,
       "PASS": false
@@ -287,6 +333,8 @@
       "MA200": 214.61,
       "Trend_PASS": true,
       "RS_raw": 0.2175,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 95,
       "RS_PASS": true,
       "PASS": true
@@ -299,6 +347,8 @@
       "MA200": 259.9,
       "Trend_PASS": false,
       "RS_raw": 0.2014,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 94,
       "RS_PASS": true,
       "PASS": false
@@ -311,6 +361,8 @@
       "MA200": 310.16,
       "Trend_PASS": false,
       "RS_raw": 0.1938,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 94,
       "RS_PASS": true,
       "PASS": false
@@ -323,6 +375,8 @@
       "MA200": 143.41,
       "Trend_PASS": true,
       "RS_raw": 0.2154,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 94,
       "RS_PASS": true,
       "PASS": true
@@ -335,6 +389,8 @@
       "MA200": 215.63,
       "Trend_PASS": false,
       "RS_raw": 0.1932,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 94,
       "RS_PASS": true,
       "PASS": false
@@ -347,6 +403,8 @@
       "MA200": 108.77,
       "Trend_PASS": true,
       "RS_raw": 0.2138,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 94,
       "RS_PASS": true,
       "PASS": true
@@ -359,6 +417,8 @@
       "MA200": 233.52,
       "Trend_PASS": true,
       "RS_raw": 0.1835,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 93,
       "RS_PASS": true,
       "PASS": true
@@ -371,6 +431,8 @@
       "MA200": 64.3,
       "Trend_PASS": false,
       "RS_raw": 0.1684,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 93,
       "RS_PASS": true,
       "PASS": false
@@ -383,6 +445,8 @@
       "MA200": 54.01,
       "Trend_PASS": true,
       "RS_raw": 0.1876,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 93,
       "RS_PASS": true,
       "PASS": true
@@ -395,6 +459,8 @@
       "MA200": 299.62,
       "Trend_PASS": true,
       "RS_raw": 0.1891,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 93,
       "RS_PASS": true,
       "PASS": true
@@ -407,6 +473,8 @@
       "MA200": 191.07,
       "Trend_PASS": true,
       "RS_raw": 0.1846,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 93,
       "RS_PASS": true,
       "PASS": true
@@ -419,6 +487,8 @@
       "MA200": 204.44,
       "Trend_PASS": true,
       "RS_raw": 0.1793,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 93,
       "RS_PASS": true,
       "PASS": true
@@ -431,6 +501,8 @@
       "MA200": 129.97,
       "Trend_PASS": false,
       "RS_raw": 0.1577,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 92,
       "RS_PASS": true,
       "PASS": false
@@ -443,6 +515,8 @@
       "MA200": 117.37,
       "Trend_PASS": true,
       "RS_raw": 0.1616,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 92,
       "RS_PASS": true,
       "PASS": true
@@ -455,6 +529,8 @@
       "MA200": 123.36,
       "Trend_PASS": true,
       "RS_raw": 0.1546,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 92,
       "RS_PASS": true,
       "PASS": true
@@ -467,6 +543,8 @@
       "MA200": 15.4,
       "Trend_PASS": true,
       "RS_raw": 0.1561,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 92,
       "RS_PASS": true,
       "PASS": true
@@ -479,6 +557,8 @@
       "MA200": 249.24,
       "Trend_PASS": false,
       "RS_raw": 0.1649,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 92,
       "RS_PASS": true,
       "PASS": false
@@ -491,6 +571,8 @@
       "MA200": 152.62,
       "Trend_PASS": false,
       "RS_raw": 0.1498,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 91,
       "RS_PASS": true,
       "PASS": false
@@ -503,6 +585,8 @@
       "MA200": 273.14,
       "Trend_PASS": true,
       "RS_raw": 0.1534,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 91,
       "RS_PASS": true,
       "PASS": true
@@ -515,6 +599,8 @@
       "MA200": 217.68,
       "Trend_PASS": true,
       "RS_raw": 0.1519,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 91,
       "RS_PASS": true,
       "PASS": true
@@ -527,6 +613,8 @@
       "MA200": 281.07,
       "Trend_PASS": false,
       "RS_raw": 0.1476,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 91,
       "RS_PASS": true,
       "PASS": false
@@ -539,6 +627,8 @@
       "MA200": 189.36,
       "Trend_PASS": false,
       "RS_raw": 0.1534,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 91,
       "RS_PASS": true,
       "PASS": false
@@ -551,6 +641,8 @@
       "MA200": 251.61,
       "Trend_PASS": false,
       "RS_raw": 0.1469,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 90,
       "RS_PASS": true,
       "PASS": false
@@ -563,6 +655,8 @@
       "MA200": 59.3,
       "Trend_PASS": false,
       "RS_raw": 0.1393,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 90,
       "RS_PASS": true,
       "PASS": false
@@ -575,6 +669,8 @@
       "MA200": 164.24,
       "Trend_PASS": true,
       "RS_raw": 0.1437,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 90,
       "RS_PASS": true,
       "PASS": true
@@ -587,6 +683,8 @@
       "MA200": 150.08,
       "Trend_PASS": true,
       "RS_raw": 0.1414,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 90,
       "RS_PASS": true,
       "PASS": true
@@ -599,6 +697,8 @@
       "MA200": 207.55,
       "Trend_PASS": true,
       "RS_raw": 0.1438,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 90,
       "RS_PASS": true,
       "PASS": true
@@ -611,6 +711,8 @@
       "MA200": 129.67,
       "Trend_PASS": false,
       "RS_raw": 0.1386,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 89,
       "RS_PASS": true,
       "PASS": false
@@ -623,6 +725,8 @@
       "MA200": 546.0,
       "Trend_PASS": false,
       "RS_raw": 0.133,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 89,
       "RS_PASS": true,
       "PASS": false
@@ -635,6 +739,8 @@
       "MA200": 437.63,
       "Trend_PASS": false,
       "RS_raw": 0.133,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 89,
       "RS_PASS": true,
       "PASS": false
@@ -647,6 +753,8 @@
       "MA200": 197.55,
       "Trend_PASS": true,
       "RS_raw": 0.132,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 89,
       "RS_PASS": true,
       "PASS": true
@@ -659,6 +767,8 @@
       "MA200": 218.7,
       "Trend_PASS": true,
       "RS_raw": 0.1378,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 89,
       "RS_PASS": true,
       "PASS": true
@@ -671,6 +781,8 @@
       "MA200": 363.96,
       "Trend_PASS": true,
       "RS_raw": 0.1368,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 89,
       "RS_PASS": true,
       "PASS": true
@@ -683,6 +795,8 @@
       "MA200": 133.89,
       "Trend_PASS": true,
       "RS_raw": 0.132,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 88,
       "RS_PASS": true,
       "PASS": true
@@ -695,6 +809,8 @@
       "MA200": 222.86,
       "Trend_PASS": false,
       "RS_raw": 0.1298,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 88,
       "RS_PASS": true,
       "PASS": false
@@ -707,6 +823,8 @@
       "MA200": 153.03,
       "Trend_PASS": false,
       "RS_raw": 0.1281,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 88,
       "RS_PASS": true,
       "PASS": false
@@ -719,6 +837,8 @@
       "MA200": 111.73,
       "Trend_PASS": false,
       "RS_raw": 0.128,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 88,
       "RS_PASS": true,
       "PASS": false
@@ -731,6 +851,8 @@
       "MA200": 145.89,
       "Trend_PASS": false,
       "RS_raw": 0.132,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 88,
       "RS_PASS": true,
       "PASS": false
@@ -743,6 +865,8 @@
       "MA200": 173.64,
       "Trend_PASS": false,
       "RS_raw": 0.1225,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 87,
       "RS_PASS": true,
       "PASS": false
@@ -755,6 +879,8 @@
       "MA200": 1587.31,
       "Trend_PASS": false,
       "RS_raw": 0.1212,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 87,
       "RS_PASS": true,
       "PASS": false
@@ -767,6 +893,8 @@
       "MA200": 365.12,
       "Trend_PASS": true,
       "RS_raw": 0.1274,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 87,
       "RS_PASS": true,
       "PASS": true
@@ -779,6 +907,8 @@
       "MA200": 187.18,
       "Trend_PASS": true,
       "RS_raw": 0.1224,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 87,
       "RS_PASS": true,
       "PASS": true
@@ -791,6 +921,8 @@
       "MA200": 44.69,
       "Trend_PASS": true,
       "RS_raw": 0.1212,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 87,
       "RS_PASS": true,
       "PASS": true
@@ -803,6 +935,8 @@
       "MA200": 1076.78,
       "Trend_PASS": true,
       "RS_raw": 0.1199,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 86,
       "RS_PASS": true,
       "PASS": true
@@ -815,6 +949,8 @@
       "MA200": 91.2,
       "Trend_PASS": false,
       "RS_raw": 0.119,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 86,
       "RS_PASS": true,
       "PASS": false
@@ -827,6 +963,8 @@
       "MA200": 89.88,
       "Trend_PASS": false,
       "RS_raw": 0.1183,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 86,
       "RS_PASS": true,
       "PASS": false
@@ -839,6 +977,8 @@
       "MA200": 76.57,
       "Trend_PASS": true,
       "RS_raw": 0.1178,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 86,
       "RS_PASS": true,
       "PASS": true
@@ -851,6 +991,8 @@
       "MA200": 241.76,
       "Trend_PASS": false,
       "RS_raw": 0.1198,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 86,
       "RS_PASS": true,
       "PASS": false
@@ -863,6 +1005,8 @@
       "MA200": 198.41,
       "Trend_PASS": false,
       "RS_raw": 0.1197,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 86,
       "RS_PASS": true,
       "PASS": false
@@ -875,6 +1019,8 @@
       "MA200": 144.82,
       "Trend_PASS": true,
       "RS_raw": 0.1131,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 85,
       "RS_PASS": true,
       "PASS": true
@@ -887,6 +1033,8 @@
       "MA200": 218.82,
       "Trend_PASS": true,
       "RS_raw": 0.1141,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 85,
       "RS_PASS": true,
       "PASS": true
@@ -899,6 +1047,8 @@
       "MA200": 733.96,
       "Trend_PASS": false,
       "RS_raw": 0.1148,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 85,
       "RS_PASS": true,
       "PASS": false
@@ -911,6 +1061,8 @@
       "MA200": 80.4,
       "Trend_PASS": false,
       "RS_raw": 0.1136,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 85,
       "RS_PASS": true,
       "PASS": false
@@ -923,6 +1075,8 @@
       "MA200": 162.24,
       "Trend_PASS": false,
       "RS_raw": 0.1112,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 85,
       "RS_PASS": true,
       "PASS": false
@@ -935,6 +1089,8 @@
       "MA200": 61.8,
       "Trend_PASS": false,
       "RS_raw": 0.1093,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 84,
       "RS_PASS": true,
       "PASS": false
@@ -947,6 +1103,8 @@
       "MA200": 50.58,
       "Trend_PASS": false,
       "RS_raw": 0.1088,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 84,
       "RS_PASS": true,
       "PASS": false
@@ -959,6 +1117,8 @@
       "MA200": 539.83,
       "Trend_PASS": false,
       "RS_raw": 0.1087,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 84,
       "RS_PASS": true,
       "PASS": false
@@ -971,6 +1131,8 @@
       "MA200": 365.97,
       "Trend_PASS": true,
       "RS_raw": 0.1111,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 84,
       "RS_PASS": true,
       "PASS": true
@@ -983,6 +1145,8 @@
       "MA200": 1571.53,
       "Trend_PASS": false,
       "RS_raw": 0.1092,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 84,
       "RS_PASS": true,
       "PASS": false
@@ -995,6 +1159,8 @@
       "MA200": 54.52,
       "Trend_PASS": true,
       "RS_raw": 0.1069,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 83,
       "RS_PASS": true,
       "PASS": true
@@ -1007,6 +1173,8 @@
       "MA200": 289.73,
       "Trend_PASS": true,
       "RS_raw": 0.1034,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 83,
       "RS_PASS": true,
       "PASS": true
@@ -1019,6 +1187,8 @@
       "MA200": 252.27,
       "Trend_PASS": true,
       "RS_raw": 0.1076,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 83,
       "RS_PASS": true,
       "PASS": true
@@ -1031,6 +1201,8 @@
       "MA200": 98.68,
       "Trend_PASS": false,
       "RS_raw": 0.1063,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 83,
       "RS_PASS": true,
       "PASS": false
@@ -1043,6 +1215,8 @@
       "MA200": 1325.85,
       "Trend_PASS": false,
       "RS_raw": 0.1052,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 83,
       "RS_PASS": true,
       "PASS": false
@@ -1055,6 +1229,8 @@
       "MA200": 136.49,
       "Trend_PASS": false,
       "RS_raw": 0.102,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 82,
       "RS_PASS": true,
       "PASS": false
@@ -1067,6 +1243,8 @@
       "MA200": 593.26,
       "Trend_PASS": false,
       "RS_raw": 0.1001,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 82,
       "RS_PASS": true,
       "PASS": false
@@ -1079,6 +1257,8 @@
       "MA200": 31.69,
       "Trend_PASS": false,
       "RS_raw": 0.1001,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 82,
       "RS_PASS": true,
       "PASS": false
@@ -1091,6 +1271,8 @@
       "MA200": 264.21,
       "Trend_PASS": false,
       "RS_raw": 0.1023,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 82,
       "RS_PASS": true,
       "PASS": false
@@ -1103,6 +1285,8 @@
       "MA200": 306.52,
       "Trend_PASS": true,
       "RS_raw": 0.1009,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 82,
       "RS_PASS": true,
       "PASS": true
@@ -1115,6 +1299,8 @@
       "MA200": 66.06,
       "Trend_PASS": true,
       "RS_raw": 0.102,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 82,
       "RS_PASS": true,
       "PASS": true
@@ -1127,6 +1313,8 @@
       "MA200": 133.01,
       "Trend_PASS": true,
       "RS_raw": 0.0979,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 81,
       "RS_PASS": true,
       "PASS": true
@@ -1139,6 +1327,8 @@
       "MA200": 83.25,
       "Trend_PASS": false,
       "RS_raw": 0.0995,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 81,
       "RS_PASS": true,
       "PASS": false
@@ -1151,6 +1341,8 @@
       "MA200": 433.81,
       "Trend_PASS": true,
       "RS_raw": 0.0994,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 81,
       "RS_PASS": true,
       "PASS": true
@@ -1163,6 +1355,8 @@
       "MA200": 354.39,
       "Trend_PASS": true,
       "RS_raw": 0.0983,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 81,
       "RS_PASS": true,
       "PASS": true
@@ -1175,6 +1369,8 @@
       "MA200": 20.86,
       "Trend_PASS": true,
       "RS_raw": 0.0988,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 81,
       "RS_PASS": true,
       "PASS": true
@@ -1187,6 +1383,8 @@
       "MA200": 244.31,
       "Trend_PASS": false,
       "RS_raw": 0.0967,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 80,
       "RS_PASS": true,
       "PASS": false
@@ -1199,6 +1397,8 @@
       "MA200": 299.67,
       "Trend_PASS": false,
       "RS_raw": 0.0964,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 80,
       "RS_PASS": true,
       "PASS": false
@@ -1211,6 +1411,8 @@
       "MA200": 80.02,
       "Trend_PASS": true,
       "RS_raw": 0.0973,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 80,
       "RS_PASS": true,
       "PASS": true
@@ -1223,6 +1425,8 @@
       "MA200": 180.52,
       "Trend_PASS": false,
       "RS_raw": 0.0963,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 80,
       "RS_PASS": true,
       "PASS": false
@@ -1235,6 +1439,8 @@
       "MA200": 23.57,
       "Trend_PASS": false,
       "RS_raw": 0.0969,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 80,
       "RS_PASS": true,
       "PASS": false
@@ -1247,6 +1453,8 @@
       "MA200": 617.04,
       "Trend_PASS": false,
       "RS_raw": 0.0942,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 79,
       "RS_PASS": true,
       "PASS": false
@@ -1259,6 +1467,8 @@
       "MA200": 73.87,
       "Trend_PASS": true,
       "RS_raw": 0.0943,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 79,
       "RS_PASS": true,
       "PASS": true
@@ -1271,6 +1481,8 @@
       "MA200": 170.5,
       "Trend_PASS": false,
       "RS_raw": 0.0957,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 79,
       "RS_PASS": true,
       "PASS": false
@@ -1283,6 +1495,8 @@
       "MA200": 340.15,
       "Trend_PASS": false,
       "RS_raw": 0.0945,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 79,
       "RS_PASS": true,
       "PASS": false
@@ -1295,6 +1509,8 @@
       "MA200": 26.0,
       "Trend_PASS": true,
       "RS_raw": 0.0941,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 79,
       "RS_PASS": true,
       "PASS": true
@@ -1307,6 +1523,8 @@
       "MA200": 350.81,
       "Trend_PASS": true,
       "RS_raw": 0.0933,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 78,
       "RS_PASS": true,
       "PASS": true
@@ -1319,6 +1537,8 @@
       "MA200": 211.99,
       "Trend_PASS": true,
       "RS_raw": 0.0917,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 78,
       "RS_PASS": true,
       "PASS": true
@@ -1331,6 +1551,8 @@
       "MA200": 851.69,
       "Trend_PASS": false,
       "RS_raw": 0.0912,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 78,
       "RS_PASS": true,
       "PASS": false
@@ -1343,6 +1565,8 @@
       "MA200": 101.85,
       "Trend_PASS": false,
       "RS_raw": 0.0934,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 78,
       "RS_PASS": true,
       "PASS": false
@@ -1355,6 +1579,8 @@
       "MA200": 219.21,
       "Trend_PASS": true,
       "RS_raw": 0.0935,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 78,
       "RS_PASS": true,
       "PASS": true
@@ -1367,6 +1593,8 @@
       "MA200": 554.24,
       "Trend_PASS": false,
       "RS_raw": 0.0939,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 78,
       "RS_PASS": true,
       "PASS": false
@@ -1379,6 +1607,8 @@
       "MA200": 350.82,
       "Trend_PASS": false,
       "RS_raw": 0.091,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 77,
       "RS_PASS": true,
       "PASS": false
@@ -1391,6 +1621,8 @@
       "MA200": 35.39,
       "Trend_PASS": false,
       "RS_raw": 0.0891,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 77,
       "RS_PASS": true,
       "PASS": false
@@ -1403,6 +1635,8 @@
       "MA200": 443.53,
       "Trend_PASS": false,
       "RS_raw": 0.0911,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 77,
       "RS_PASS": true,
       "PASS": false
@@ -1415,6 +1649,8 @@
       "MA200": 392.83,
       "Trend_PASS": false,
       "RS_raw": 0.0894,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 77,
       "RS_PASS": true,
       "PASS": false
@@ -1427,6 +1663,8 @@
       "MA200": 125.13,
       "Trend_PASS": false,
       "RS_raw": 0.0894,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 77,
       "RS_PASS": true,
       "PASS": false
@@ -1439,6 +1677,8 @@
       "MA200": 173.0,
       "Trend_PASS": false,
       "RS_raw": 0.0885,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 76,
       "RS_PASS": true,
       "PASS": false
@@ -1451,6 +1691,8 @@
       "MA200": 145.12,
       "Trend_PASS": false,
       "RS_raw": 0.0856,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 76,
       "RS_PASS": true,
       "PASS": false
@@ -1463,6 +1705,8 @@
       "MA200": 101.88,
       "Trend_PASS": true,
       "RS_raw": 0.0853,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 76,
       "RS_PASS": true,
       "PASS": true
@@ -1475,6 +1719,8 @@
       "MA200": 162.41,
       "Trend_PASS": false,
       "RS_raw": 0.0874,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 76,
       "RS_PASS": true,
       "PASS": false
@@ -1487,6 +1733,8 @@
       "MA200": 287.78,
       "Trend_PASS": false,
       "RS_raw": 0.0856,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 76,
       "RS_PASS": true,
       "PASS": false
@@ -1499,6 +1747,8 @@
       "MA200": 72.29,
       "Trend_PASS": true,
       "RS_raw": 0.0852,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 75,
       "RS_PASS": true,
       "PASS": true
@@ -1511,6 +1761,8 @@
       "MA200": 210.47,
       "Trend_PASS": true,
       "RS_raw": 0.0842,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 75,
       "RS_PASS": true,
       "PASS": true
@@ -1523,6 +1775,8 @@
       "MA200": 207.01,
       "Trend_PASS": true,
       "RS_raw": 0.085,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 75,
       "RS_PASS": true,
       "PASS": true
@@ -1535,6 +1789,8 @@
       "MA200": 113.47,
       "Trend_PASS": false,
       "RS_raw": 0.0842,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 75,
       "RS_PASS": true,
       "PASS": false
@@ -1547,6 +1803,8 @@
       "MA200": 321.76,
       "Trend_PASS": true,
       "RS_raw": 0.0842,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 75,
       "RS_PASS": true,
       "PASS": true
@@ -1559,6 +1817,8 @@
       "MA200": 29.21,
       "Trend_PASS": true,
       "RS_raw": 0.0839,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 74,
       "RS_PASS": true,
       "PASS": true
@@ -1571,6 +1831,8 @@
       "MA200": 258.65,
       "Trend_PASS": false,
       "RS_raw": 0.0832,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 74,
       "RS_PASS": true,
       "PASS": false
@@ -1583,6 +1845,8 @@
       "MA200": 340.42,
       "Trend_PASS": false,
       "RS_raw": 0.0837,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 74,
       "RS_PASS": true,
       "PASS": false
@@ -1595,6 +1859,8 @@
       "MA200": 116.97,
       "Trend_PASS": false,
       "RS_raw": 0.0832,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 74,
       "RS_PASS": true,
       "PASS": false
@@ -1607,6 +1873,8 @@
       "MA200": 58.44,
       "Trend_PASS": false,
       "RS_raw": 0.0838,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 74,
       "RS_PASS": true,
       "PASS": false
@@ -1619,6 +1887,8 @@
       "MA200": 366.19,
       "Trend_PASS": true,
       "RS_raw": 0.0829,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 74,
       "RS_PASS": true,
       "PASS": true
@@ -1631,6 +1901,8 @@
       "MA200": 138.55,
       "Trend_PASS": true,
       "RS_raw": 0.0804,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 73,
       "RS_PASS": true,
       "PASS": true
@@ -1643,6 +1915,8 @@
       "MA200": 230.46,
       "Trend_PASS": true,
       "RS_raw": 0.08,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 73,
       "RS_PASS": true,
       "PASS": true
@@ -1655,6 +1929,8 @@
       "MA200": 165.93,
       "Trend_PASS": false,
       "RS_raw": 0.0787,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 73,
       "RS_PASS": true,
       "PASS": false
@@ -1667,6 +1943,8 @@
       "MA200": 115.1,
       "Trend_PASS": false,
       "RS_raw": 0.0807,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 73,
       "RS_PASS": true,
       "PASS": false
@@ -1679,6 +1957,8 @@
       "MA200": 108.1,
       "Trend_PASS": true,
       "RS_raw": 0.0827,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 73,
       "RS_PASS": true,
       "PASS": true
@@ -1691,6 +1971,8 @@
       "MA200": 185.13,
       "Trend_PASS": false,
       "RS_raw": 0.0756,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 72,
       "RS_PASS": true,
       "PASS": false
@@ -1703,6 +1985,8 @@
       "MA200": 155.4,
       "Trend_PASS": false,
       "RS_raw": 0.0749,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 72,
       "RS_PASS": true,
       "PASS": false
@@ -1715,6 +1999,8 @@
       "MA200": 291.79,
       "Trend_PASS": true,
       "RS_raw": 0.0768,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 72,
       "RS_PASS": true,
       "PASS": true
@@ -1727,6 +2013,8 @@
       "MA200": 74.78,
       "Trend_PASS": false,
       "RS_raw": 0.0783,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 72,
       "RS_PASS": true,
       "PASS": false
@@ -1739,6 +2027,8 @@
       "MA200": 338.67,
       "Trend_PASS": false,
       "RS_raw": 0.0784,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 72,
       "RS_PASS": true,
       "PASS": false
@@ -1751,6 +2041,8 @@
       "MA200": 231.68,
       "Trend_PASS": true,
       "RS_raw": 0.0723,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 71,
       "RS_PASS": true,
       "PASS": true
@@ -1763,6 +2055,8 @@
       "MA200": 29.32,
       "Trend_PASS": false,
       "RS_raw": 0.0738,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 71,
       "RS_PASS": true,
       "PASS": false
@@ -1775,6 +2069,8 @@
       "MA200": 304.98,
       "Trend_PASS": false,
       "RS_raw": 0.0736,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 71,
       "RS_PASS": true,
       "PASS": false
@@ -1787,6 +2083,8 @@
       "MA200": 931.99,
       "Trend_PASS": false,
       "RS_raw": 0.0708,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 71,
       "RS_PASS": true,
       "PASS": false
@@ -1799,6 +2097,8 @@
       "MA200": 247.95,
       "Trend_PASS": false,
       "RS_raw": 0.0699,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 71,
       "RS_PASS": true,
       "PASS": false
@@ -1811,6 +2111,8 @@
       "MA200": 155.92,
       "Trend_PASS": false,
       "RS_raw": 0.0675,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 70,
       "RS_PASS": true,
       "PASS": false
@@ -1823,6 +2125,8 @@
       "MA200": 176.91,
       "Trend_PASS": true,
       "RS_raw": 0.0683,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 70,
       "RS_PASS": true,
       "PASS": true
@@ -1835,6 +2139,8 @@
       "MA200": 80.62,
       "Trend_PASS": false,
       "RS_raw": 0.0668,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 70,
       "RS_PASS": true,
       "PASS": false
@@ -1847,6 +2153,8 @@
       "MA200": 275.05,
       "Trend_PASS": false,
       "RS_raw": 0.0684,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 70,
       "RS_PASS": true,
       "PASS": false
@@ -1859,6 +2167,8 @@
       "MA200": 137.12,
       "Trend_PASS": false,
       "RS_raw": 0.069,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 70,
       "RS_PASS": true,
       "PASS": false
@@ -1871,6 +2181,8 @@
       "MA200": 108.22,
       "Trend_PASS": false,
       "RS_raw": 0.068,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 70,
       "RS_PASS": true,
       "PASS": false
@@ -1883,6 +2195,8 @@
       "MA200": 74.82,
       "Trend_PASS": true,
       "RS_raw": 0.0653,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 69,
       "RS_PASS": false,
       "PASS": false
@@ -1895,6 +2209,8 @@
       "MA200": 242.04,
       "Trend_PASS": false,
       "RS_raw": 0.0656,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 69,
       "RS_PASS": false,
       "PASS": false
@@ -1907,6 +2223,8 @@
       "MA200": 282.06,
       "Trend_PASS": true,
       "RS_raw": 0.0648,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 69,
       "RS_PASS": false,
       "PASS": false
@@ -1919,6 +2237,8 @@
       "MA200": 317.46,
       "Trend_PASS": false,
       "RS_raw": 0.0658,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 69,
       "RS_PASS": false,
       "PASS": false
@@ -1931,6 +2251,8 @@
       "MA200": 214.81,
       "Trend_PASS": true,
       "RS_raw": 0.0667,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 69,
       "RS_PASS": false,
       "PASS": false
@@ -1943,6 +2265,8 @@
       "MA200": 81.54,
       "Trend_PASS": false,
       "RS_raw": 0.0645,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 68,
       "RS_PASS": false,
       "PASS": false
@@ -1955,6 +2279,8 @@
       "MA200": 78.23,
       "Trend_PASS": false,
       "RS_raw": 0.0644,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 68,
       "RS_PASS": false,
       "PASS": false
@@ -1967,6 +2293,8 @@
       "MA200": 101.26,
       "Trend_PASS": false,
       "RS_raw": 0.0643,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 68,
       "RS_PASS": false,
       "PASS": false
@@ -1979,6 +2307,8 @@
       "MA200": 440.36,
       "Trend_PASS": false,
       "RS_raw": 0.0644,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 68,
       "RS_PASS": false,
       "PASS": false
@@ -1991,6 +2321,8 @@
       "MA200": 1215.76,
       "Trend_PASS": true,
       "RS_raw": 0.0647,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 68,
       "RS_PASS": false,
       "PASS": false
@@ -2003,6 +2335,8 @@
       "MA200": 446.01,
       "Trend_PASS": false,
       "RS_raw": 0.0638,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 67,
       "RS_PASS": false,
       "PASS": false
@@ -2015,6 +2349,8 @@
       "MA200": 60.04,
       "Trend_PASS": false,
       "RS_raw": 0.0638,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 67,
       "RS_PASS": false,
       "PASS": false
@@ -2027,6 +2363,8 @@
       "MA200": 83.84,
       "Trend_PASS": true,
       "RS_raw": 0.0636,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 67,
       "RS_PASS": false,
       "PASS": false
@@ -2039,6 +2377,8 @@
       "MA200": 21.06,
       "Trend_PASS": true,
       "RS_raw": 0.0622,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 67,
       "RS_PASS": false,
       "PASS": false
@@ -2051,6 +2391,8 @@
       "MA200": 945.8,
       "Trend_PASS": false,
       "RS_raw": 0.0637,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 67,
       "RS_PASS": false,
       "PASS": false
@@ -2063,6 +2405,8 @@
       "MA200": 86.28,
       "Trend_PASS": false,
       "RS_raw": 0.0637,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 67,
       "RS_PASS": false,
       "PASS": false
@@ -2075,6 +2419,8 @@
       "MA200": 44.6,
       "Trend_PASS": false,
       "RS_raw": 0.0611,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 66,
       "RS_PASS": false,
       "PASS": false
@@ -2087,6 +2433,8 @@
       "MA200": 107.43,
       "Trend_PASS": false,
       "RS_raw": 0.0589,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 66,
       "RS_PASS": false,
       "PASS": false
@@ -2099,6 +2447,8 @@
       "MA200": 250.66,
       "Trend_PASS": true,
       "RS_raw": 0.0608,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 66,
       "RS_PASS": false,
       "PASS": false
@@ -2111,6 +2461,8 @@
       "MA200": 46.34,
       "Trend_PASS": false,
       "RS_raw": 0.0615,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 66,
       "RS_PASS": false,
       "PASS": false
@@ -2123,6 +2475,8 @@
       "MA200": 200.61,
       "Trend_PASS": false,
       "RS_raw": 0.0603,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 66,
       "RS_PASS": false,
       "PASS": false
@@ -2135,6 +2489,8 @@
       "MA200": 33.81,
       "Trend_PASS": true,
       "RS_raw": 0.0563,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 65,
       "RS_PASS": false,
       "PASS": false
@@ -2147,6 +2503,8 @@
       "MA200": 247.29,
       "Trend_PASS": false,
       "RS_raw": 0.0586,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 65,
       "RS_PASS": false,
       "PASS": false
@@ -2159,6 +2517,8 @@
       "MA200": 338.08,
       "Trend_PASS": true,
       "RS_raw": 0.056,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 65,
       "RS_PASS": false,
       "PASS": false
@@ -2171,6 +2531,8 @@
       "MA200": 32.46,
       "Trend_PASS": false,
       "RS_raw": 0.0581,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 65,
       "RS_PASS": false,
       "PASS": false
@@ -2183,6 +2545,8 @@
       "MA200": 1298.71,
       "Trend_PASS": false,
       "RS_raw": 0.0581,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 65,
       "RS_PASS": false,
       "PASS": false
@@ -2195,6 +2559,8 @@
       "MA200": 62.41,
       "Trend_PASS": false,
       "RS_raw": 0.0537,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 64,
       "RS_PASS": false,
       "PASS": false
@@ -2207,6 +2573,8 @@
       "MA200": 27.68,
       "Trend_PASS": false,
       "RS_raw": 0.0546,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 64,
       "RS_PASS": false,
       "PASS": false
@@ -2219,6 +2587,8 @@
       "MA200": 202.52,
       "Trend_PASS": false,
       "RS_raw": 0.0537,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 64,
       "RS_PASS": false,
       "PASS": false
@@ -2231,6 +2601,8 @@
       "MA200": 475.67,
       "Trend_PASS": false,
       "RS_raw": 0.0539,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 64,
       "RS_PASS": false,
       "PASS": false
@@ -2243,6 +2615,8 @@
       "MA200": 62.56,
       "Trend_PASS": true,
       "RS_raw": 0.0537,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 64,
       "RS_PASS": false,
       "PASS": false
@@ -2255,6 +2629,8 @@
       "MA200": 267.25,
       "Trend_PASS": true,
       "RS_raw": 0.0519,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 63,
       "RS_PASS": false,
       "PASS": false
@@ -2267,6 +2643,8 @@
       "MA200": 56.06,
       "Trend_PASS": false,
       "RS_raw": 0.0532,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 63,
       "RS_PASS": false,
       "PASS": false
@@ -2279,6 +2657,8 @@
       "MA200": 31.35,
       "Trend_PASS": false,
       "RS_raw": 0.0524,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 63,
       "RS_PASS": false,
       "PASS": false
@@ -2291,6 +2671,8 @@
       "MA200": 152.64,
       "Trend_PASS": false,
       "RS_raw": 0.0521,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 63,
       "RS_PASS": false,
       "PASS": false
@@ -2303,6 +2685,8 @@
       "MA200": 363.82,
       "Trend_PASS": false,
       "RS_raw": 0.0518,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 63,
       "RS_PASS": false,
       "PASS": false
@@ -2315,6 +2699,8 @@
       "MA200": 201.46,
       "Trend_PASS": true,
       "RS_raw": 0.0535,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 63,
       "RS_PASS": false,
       "PASS": false
@@ -2327,6 +2713,8 @@
       "MA200": 180.06,
       "Trend_PASS": false,
       "RS_raw": 0.0518,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 62,
       "RS_PASS": false,
       "PASS": false
@@ -2339,6 +2727,8 @@
       "MA200": 992.52,
       "Trend_PASS": false,
       "RS_raw": 0.0502,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 62,
       "RS_PASS": false,
       "PASS": false
@@ -2351,6 +2741,8 @@
       "MA200": 42.64,
       "Trend_PASS": true,
       "RS_raw": 0.0513,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 62,
       "RS_PASS": false,
       "PASS": false
@@ -2363,6 +2755,8 @@
       "MA200": 264.89,
       "Trend_PASS": true,
       "RS_raw": 0.0496,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 62,
       "RS_PASS": false,
       "PASS": false
@@ -2375,6 +2769,8 @@
       "MA200": 170.57,
       "Trend_PASS": false,
       "RS_raw": 0.0493,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 62,
       "RS_PASS": false,
       "PASS": false
@@ -2387,6 +2783,8 @@
       "MA200": 803.37,
       "Trend_PASS": false,
       "RS_raw": 0.0486,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 61,
       "RS_PASS": false,
       "PASS": false
@@ -2399,6 +2797,8 @@
       "MA200": 329.61,
       "Trend_PASS": true,
       "RS_raw": 0.0474,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 61,
       "RS_PASS": false,
       "PASS": false
@@ -2411,6 +2811,8 @@
       "MA200": 96.2,
       "Trend_PASS": false,
       "RS_raw": 0.0484,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 61,
       "RS_PASS": false,
       "PASS": false
@@ -2423,6 +2825,8 @@
       "MA200": 115.84,
       "Trend_PASS": false,
       "RS_raw": 0.0488,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 61,
       "RS_PASS": false,
       "PASS": false
@@ -2435,6 +2839,8 @@
       "MA200": 137.33,
       "Trend_PASS": false,
       "RS_raw": 0.0485,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 61,
       "RS_PASS": false,
       "PASS": false
@@ -2447,6 +2853,8 @@
       "MA200": 531.12,
       "Trend_PASS": false,
       "RS_raw": 0.0471,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 60,
       "RS_PASS": false,
       "PASS": false
@@ -2459,6 +2867,8 @@
       "MA200": 200.4,
       "Trend_PASS": false,
       "RS_raw": 0.0461,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 60,
       "RS_PASS": false,
       "PASS": false
@@ -2471,6 +2881,8 @@
       "MA200": 235.78,
       "Trend_PASS": true,
       "RS_raw": 0.0455,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 60,
       "RS_PASS": false,
       "PASS": false
@@ -2483,6 +2895,8 @@
       "MA200": 85.14,
       "Trend_PASS": false,
       "RS_raw": 0.0448,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 60,
       "RS_PASS": false,
       "PASS": false
@@ -2495,6 +2909,8 @@
       "MA200": 130.75,
       "Trend_PASS": false,
       "RS_raw": 0.046,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 60,
       "RS_PASS": false,
       "PASS": false
@@ -2507,6 +2923,8 @@
       "MA200": 75.81,
       "Trend_PASS": false,
       "RS_raw": 0.0431,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 59,
       "RS_PASS": false,
       "PASS": false
@@ -2519,6 +2937,8 @@
       "MA200": 66.14,
       "Trend_PASS": false,
       "RS_raw": 0.0426,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 59,
       "RS_PASS": false,
       "PASS": false
@@ -2531,6 +2951,8 @@
       "MA200": 17.6,
       "Trend_PASS": true,
       "RS_raw": 0.0436,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 59,
       "RS_PASS": false,
       "PASS": false
@@ -2543,6 +2965,8 @@
       "MA200": 59.57,
       "Trend_PASS": false,
       "RS_raw": 0.0431,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 59,
       "RS_PASS": false,
       "PASS": false
@@ -2555,6 +2979,8 @@
       "MA200": 168.08,
       "Trend_PASS": false,
       "RS_raw": 0.0431,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 59,
       "RS_PASS": false,
       "PASS": false
@@ -2567,6 +2993,8 @@
       "MA200": 26.52,
       "Trend_PASS": false,
       "RS_raw": 0.0437,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 59,
       "RS_PASS": false,
       "PASS": false
@@ -2579,6 +3007,8 @@
       "MA200": 26.59,
       "Trend_PASS": true,
       "RS_raw": 0.0416,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 58,
       "RS_PASS": false,
       "PASS": false
@@ -2591,6 +3021,8 @@
       "MA200": 45.15,
       "Trend_PASS": false,
       "RS_raw": 0.0416,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 58,
       "RS_PASS": false,
       "PASS": false
@@ -2603,6 +3035,8 @@
       "MA200": 125.59,
       "Trend_PASS": false,
       "RS_raw": 0.0417,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 58,
       "RS_PASS": false,
       "PASS": false
@@ -2615,6 +3049,8 @@
       "MA200": 630.84,
       "Trend_PASS": false,
       "RS_raw": 0.0416,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 58,
       "RS_PASS": false,
       "PASS": false
@@ -2627,6 +3063,8 @@
       "MA200": 178.33,
       "Trend_PASS": false,
       "RS_raw": 0.041,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 58,
       "RS_PASS": false,
       "PASS": false
@@ -2639,6 +3077,8 @@
       "MA200": 88.33,
       "Trend_PASS": false,
       "RS_raw": 0.0409,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 57,
       "RS_PASS": false,
       "PASS": false
@@ -2651,6 +3091,8 @@
       "MA200": 242.64,
       "Trend_PASS": false,
       "RS_raw": 0.04,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 57,
       "RS_PASS": false,
       "PASS": false
@@ -2663,6 +3105,8 @@
       "MA200": 162.86,
       "Trend_PASS": false,
       "RS_raw": 0.0403,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 57,
       "RS_PASS": false,
       "PASS": false
@@ -2675,6 +3119,8 @@
       "MA200": 316.55,
       "Trend_PASS": false,
       "RS_raw": 0.0409,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 57,
       "RS_PASS": false,
       "PASS": false
@@ -2687,6 +3133,8 @@
       "MA200": 86.94,
       "Trend_PASS": false,
       "RS_raw": 0.0397,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 57,
       "RS_PASS": false,
       "PASS": false
@@ -2699,6 +3147,8 @@
       "MA200": 56.82,
       "Trend_PASS": false,
       "RS_raw": 0.0355,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 56,
       "RS_PASS": false,
       "PASS": false
@@ -2711,6 +3161,8 @@
       "MA200": 82.19,
       "Trend_PASS": false,
       "RS_raw": 0.0375,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 56,
       "RS_PASS": false,
       "PASS": false
@@ -2723,6 +3175,8 @@
       "MA200": 106.75,
       "Trend_PASS": false,
       "RS_raw": 0.0391,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 56,
       "RS_PASS": false,
       "PASS": false
@@ -2735,6 +3189,8 @@
       "MA200": 187.99,
       "Trend_PASS": false,
       "RS_raw": 0.039,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 56,
       "RS_PASS": false,
       "PASS": false
@@ -2747,6 +3203,8 @@
       "MA200": 153.79,
       "Trend_PASS": false,
       "RS_raw": 0.0356,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 56,
       "RS_PASS": false,
       "PASS": false
@@ -2759,6 +3217,8 @@
       "MA200": 193.98,
       "Trend_PASS": false,
       "RS_raw": 0.0343,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 55,
       "RS_PASS": false,
       "PASS": false
@@ -2771,6 +3231,8 @@
       "MA200": 423.73,
       "Trend_PASS": false,
       "RS_raw": 0.0339,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 55,
       "RS_PASS": false,
       "PASS": false
@@ -2783,6 +3245,8 @@
       "MA200": 284.07,
       "Trend_PASS": true,
       "RS_raw": 0.0334,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 55,
       "RS_PASS": false,
       "PASS": false
@@ -2795,6 +3259,8 @@
       "MA200": 85.12,
       "Trend_PASS": false,
       "RS_raw": 0.0329,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 55,
       "RS_PASS": false,
       "PASS": false
@@ -2807,6 +3273,8 @@
       "MA200": 355.24,
       "Trend_PASS": true,
       "RS_raw": 0.0328,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 55,
       "RS_PASS": false,
       "PASS": false
@@ -2819,6 +3287,8 @@
       "MA200": 267.99,
       "Trend_PASS": false,
       "RS_raw": 0.0332,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 55,
       "RS_PASS": false,
       "PASS": false
@@ -2831,6 +3301,8 @@
       "MA200": 600.89,
       "Trend_PASS": false,
       "RS_raw": 0.0322,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 54,
       "RS_PASS": false,
       "PASS": false
@@ -2843,6 +3315,8 @@
       "MA200": 27.22,
       "Trend_PASS": false,
       "RS_raw": 0.0317,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 54,
       "RS_PASS": false,
       "PASS": false
@@ -2855,6 +3329,8 @@
       "MA200": 558.74,
       "Trend_PASS": false,
       "RS_raw": 0.0317,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 54,
       "RS_PASS": false,
       "PASS": false
@@ -2867,6 +3343,8 @@
       "MA200": 224.12,
       "Trend_PASS": false,
       "RS_raw": 0.0322,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 54,
       "RS_PASS": false,
       "PASS": false
@@ -2879,6 +3357,8 @@
       "MA200": 41.85,
       "Trend_PASS": false,
       "RS_raw": 0.032,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 54,
       "RS_PASS": false,
       "PASS": false
@@ -2891,6 +3371,8 @@
       "MA200": 64.81,
       "Trend_PASS": false,
       "RS_raw": 0.0291,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 53,
       "RS_PASS": false,
       "PASS": false
@@ -2903,6 +3385,8 @@
       "MA200": 117.83,
       "Trend_PASS": false,
       "RS_raw": 0.0299,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 53,
       "RS_PASS": false,
       "PASS": false
@@ -2915,6 +3399,8 @@
       "MA200": 103.12,
       "Trend_PASS": false,
       "RS_raw": 0.0314,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 53,
       "RS_PASS": false,
       "PASS": false
@@ -2927,6 +3413,8 @@
       "MA200": 273.42,
       "Trend_PASS": false,
       "RS_raw": 0.0291,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 53,
       "RS_PASS": false,
       "PASS": false
@@ -2939,6 +3427,8 @@
       "MA200": 159.63,
       "Trend_PASS": false,
       "RS_raw": 0.0308,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 53,
       "RS_PASS": false,
       "PASS": false
@@ -2951,6 +3441,8 @@
       "MA200": 225.13,
       "Trend_PASS": false,
       "RS_raw": 0.0276,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 52,
       "RS_PASS": false,
       "PASS": false
@@ -2963,6 +3455,8 @@
       "MA200": 146.66,
       "Trend_PASS": false,
       "RS_raw": 0.0278,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 52,
       "RS_PASS": false,
       "PASS": false
@@ -2975,6 +3469,8 @@
       "MA200": 432.4,
       "Trend_PASS": false,
       "RS_raw": 0.0279,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 52,
       "RS_PASS": false,
       "PASS": false
@@ -2987,6 +3483,8 @@
       "MA200": 118.34,
       "Trend_PASS": false,
       "RS_raw": 0.0277,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 52,
       "RS_PASS": false,
       "PASS": false
@@ -2999,6 +3497,8 @@
       "MA200": 98.3,
       "Trend_PASS": false,
       "RS_raw": 0.0287,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 52,
       "RS_PASS": false,
       "PASS": false
@@ -3011,6 +3511,8 @@
       "MA200": 43.18,
       "Trend_PASS": false,
       "RS_raw": 0.0265,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 51,
       "RS_PASS": false,
       "PASS": false
@@ -3023,6 +3525,8 @@
       "MA200": 208.89,
       "Trend_PASS": false,
       "RS_raw": 0.0262,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 51,
       "RS_PASS": false,
       "PASS": false
@@ -3035,6 +3539,8 @@
       "MA200": 30.18,
       "Trend_PASS": false,
       "RS_raw": 0.0267,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 51,
       "RS_PASS": false,
       "PASS": false
@@ -3047,6 +3553,8 @@
       "MA200": 70.5,
       "Trend_PASS": false,
       "RS_raw": 0.0265,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 51,
       "RS_PASS": false,
       "PASS": false
@@ -3059,6 +3567,8 @@
       "MA200": 493.41,
       "Trend_PASS": false,
       "RS_raw": 0.0265,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 51,
       "RS_PASS": false,
       "PASS": false
@@ -3071,6 +3581,8 @@
       "MA200": 224.22,
       "Trend_PASS": false,
       "RS_raw": 0.0273,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 51,
       "RS_PASS": false,
       "PASS": false
@@ -3083,6 +3595,8 @@
       "MA200": 87.44,
       "Trend_PASS": true,
       "RS_raw": 0.0251,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 50,
       "RS_PASS": false,
       "PASS": false
@@ -3095,6 +3609,8 @@
       "MA200": 102.36,
       "Trend_PASS": false,
       "RS_raw": 0.024,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 50,
       "RS_PASS": false,
       "PASS": false
@@ -3107,6 +3623,8 @@
       "MA200": 956.32,
       "Trend_PASS": false,
       "RS_raw": 0.0247,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 50,
       "RS_PASS": false,
       "PASS": false
@@ -3119,6 +3637,8 @@
       "MA200": 58.26,
       "Trend_PASS": false,
       "RS_raw": 0.0238,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 50,
       "RS_PASS": false,
       "PASS": false
@@ -3131,6 +3651,8 @@
       "MA200": 157.92,
       "Trend_PASS": false,
       "RS_raw": 0.0256,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 50,
       "RS_PASS": false,
       "PASS": false
@@ -3143,6 +3665,8 @@
       "MA200": 14.52,
       "Trend_PASS": false,
       "RS_raw": 0.0232,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 49,
       "RS_PASS": false,
       "PASS": false
@@ -3155,6 +3679,8 @@
       "MA200": 392.39,
       "Trend_PASS": false,
       "RS_raw": 0.0231,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 49,
       "RS_PASS": false,
       "PASS": false
@@ -3167,6 +3693,8 @@
       "MA200": 155.04,
       "Trend_PASS": false,
       "RS_raw": 0.0233,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 49,
       "RS_PASS": false,
       "PASS": false
@@ -3179,6 +3707,8 @@
       "MA200": 319.35,
       "Trend_PASS": false,
       "RS_raw": 0.0237,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 49,
       "RS_PASS": false,
       "PASS": false
@@ -3191,6 +3721,8 @@
       "MA200": 200.96,
       "Trend_PASS": false,
       "RS_raw": 0.0224,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 49,
       "RS_PASS": false,
       "PASS": false
@@ -3203,6 +3735,8 @@
       "MA200": 310.96,
       "Trend_PASS": false,
       "RS_raw": 0.0198,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 48,
       "RS_PASS": false,
       "PASS": false
@@ -3215,6 +3749,8 @@
       "MA200": 346.72,
       "Trend_PASS": false,
       "RS_raw": 0.0198,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 48,
       "RS_PASS": false,
       "PASS": false
@@ -3227,6 +3763,8 @@
       "MA200": 78.73,
       "Trend_PASS": false,
       "RS_raw": 0.0212,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 48,
       "RS_PASS": false,
       "PASS": false
@@ -3239,6 +3777,8 @@
       "MA200": 106.98,
       "Trend_PASS": false,
       "RS_raw": 0.0197,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 48,
       "RS_PASS": false,
       "PASS": false
@@ -3251,6 +3791,8 @@
       "MA200": 266.19,
       "Trend_PASS": false,
       "RS_raw": 0.0212,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 48,
       "RS_PASS": false,
       "PASS": false
@@ -3263,6 +3805,8 @@
       "MA200": 70.9,
       "Trend_PASS": false,
       "RS_raw": 0.0201,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 48,
       "RS_PASS": false,
       "PASS": false
@@ -3275,6 +3819,8 @@
       "MA200": 173.47,
       "Trend_PASS": false,
       "RS_raw": 0.0189,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 47,
       "RS_PASS": false,
       "PASS": false
@@ -3287,6 +3833,8 @@
       "MA200": 222.17,
       "Trend_PASS": false,
       "RS_raw": 0.0189,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 47,
       "RS_PASS": false,
       "PASS": false
@@ -3299,6 +3847,8 @@
       "MA200": 58.94,
       "Trend_PASS": false,
       "RS_raw": 0.0196,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 47,
       "RS_PASS": false,
       "PASS": false
@@ -3311,6 +3861,8 @@
       "MA200": 120.15,
       "Trend_PASS": false,
       "RS_raw": 0.0196,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 47,
       "RS_PASS": false,
       "PASS": false
@@ -3323,6 +3875,8 @@
       "MA200": 152.36,
       "Trend_PASS": false,
       "RS_raw": 0.0196,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 47,
       "RS_PASS": false,
       "PASS": false
@@ -3335,6 +3889,8 @@
       "MA200": 165.1,
       "Trend_PASS": false,
       "RS_raw": 0.0182,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 46,
       "RS_PASS": false,
       "PASS": false
@@ -3347,6 +3903,8 @@
       "MA200": 778.97,
       "Trend_PASS": false,
       "RS_raw": 0.0181,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 46,
       "RS_PASS": false,
       "PASS": false
@@ -3359,6 +3917,8 @@
       "MA200": 180.17,
       "Trend_PASS": false,
       "RS_raw": 0.0185,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 46,
       "RS_PASS": false,
       "PASS": false
@@ -3371,6 +3931,8 @@
       "MA200": 89.97,
       "Trend_PASS": false,
       "RS_raw": 0.0188,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 46,
       "RS_PASS": false,
       "PASS": false
@@ -3383,6 +3945,8 @@
       "MA200": 76.13,
       "Trend_PASS": false,
       "RS_raw": 0.0176,
+      "VCP_SCORE": 3,
+      "VCP_CANDIDATE": true,
       "RS": 46,
       "RS_PASS": false,
       "PASS": false
@@ -3395,6 +3959,8 @@
       "MA200": 51.04,
       "Trend_PASS": false,
       "RS_raw": 0.0174,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 45,
       "RS_PASS": false,
       "PASS": false
@@ -3407,6 +3973,8 @@
       "MA200": 112.37,
       "Trend_PASS": false,
       "RS_raw": 0.0169,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 45,
       "RS_PASS": false,
       "PASS": false
@@ -3419,6 +3987,8 @@
       "MA200": 277.78,
       "Trend_PASS": false,
       "RS_raw": 0.0174,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 45,
       "RS_PASS": false,
       "PASS": false
@@ -3431,6 +4001,8 @@
       "MA200": 98.43,
       "Trend_PASS": false,
       "RS_raw": 0.0168,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 45,
       "RS_PASS": false,
       "PASS": false
@@ -3443,6 +4015,8 @@
       "MA200": 55.22,
       "Trend_PASS": false,
       "RS_raw": 0.0171,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 45,
       "RS_PASS": false,
       "PASS": false
@@ -3455,6 +4029,8 @@
       "MA200": 963.68,
       "Trend_PASS": false,
       "RS_raw": 0.0165,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 44,
       "RS_PASS": false,
       "PASS": false
@@ -3467,6 +4043,8 @@
       "MA200": 449.67,
       "Trend_PASS": false,
       "RS_raw": 0.016,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 44,
       "RS_PASS": false,
       "PASS": false
@@ -3479,6 +4057,8 @@
       "MA200": 70.66,
       "Trend_PASS": true,
       "RS_raw": 0.0139,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 44,
       "RS_PASS": false,
       "PASS": false
@@ -3491,6 +4071,8 @@
       "MA200": 214.16,
       "Trend_PASS": false,
       "RS_raw": 0.0151,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 44,
       "RS_PASS": false,
       "PASS": false
@@ -3503,6 +4085,8 @@
       "MA200": 78.96,
       "Trend_PASS": false,
       "RS_raw": 0.0146,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 44,
       "RS_PASS": false,
       "PASS": false
@@ -3515,6 +4099,8 @@
       "MA200": 92.59,
       "Trend_PASS": false,
       "RS_raw": 0.0167,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 44,
       "RS_PASS": false,
       "PASS": false
@@ -3527,6 +4113,8 @@
       "MA200": 157.54,
       "Trend_PASS": false,
       "RS_raw": 0.0128,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 43,
       "RS_PASS": false,
       "PASS": false
@@ -3539,6 +4127,8 @@
       "MA200": 193.05,
       "Trend_PASS": false,
       "RS_raw": 0.0137,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 43,
       "RS_PASS": false,
       "PASS": false
@@ -3551,6 +4141,8 @@
       "MA200": 628.01,
       "Trend_PASS": false,
       "RS_raw": 0.0128,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 43,
       "RS_PASS": false,
       "PASS": false
@@ -3563,6 +4155,8 @@
       "MA200": 112.26,
       "Trend_PASS": false,
       "RS_raw": 0.0138,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 43,
       "RS_PASS": false,
       "PASS": false
@@ -3575,6 +4169,8 @@
       "MA200": 76.81,
       "Trend_PASS": false,
       "RS_raw": 0.0135,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 43,
       "RS_PASS": false,
       "PASS": false
@@ -3587,6 +4183,8 @@
       "MA200": 486.55,
       "Trend_PASS": false,
       "RS_raw": 0.0119,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 42,
       "RS_PASS": false,
       "PASS": false
@@ -3599,6 +4197,8 @@
       "MA200": 96.36,
       "Trend_PASS": false,
       "RS_raw": 0.0114,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 42,
       "RS_PASS": false,
       "PASS": false
@@ -3611,6 +4211,8 @@
       "MA200": 338.14,
       "Trend_PASS": false,
       "RS_raw": 0.0126,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 42,
       "RS_PASS": false,
       "PASS": false
@@ -3623,6 +4225,8 @@
       "MA200": 24.52,
       "Trend_PASS": false,
       "RS_raw": 0.0121,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 42,
       "RS_PASS": false,
       "PASS": false
@@ -3635,6 +4239,8 @@
       "MA200": 486.82,
       "Trend_PASS": false,
       "RS_raw": 0.0127,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 42,
       "RS_PASS": false,
       "PASS": false
@@ -3647,6 +4253,8 @@
       "MA200": 148.93,
       "Trend_PASS": false,
       "RS_raw": 0.0102,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 41,
       "RS_PASS": false,
       "PASS": false
@@ -3659,6 +4267,8 @@
       "MA200": 215.9,
       "Trend_PASS": false,
       "RS_raw": 0.0097,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 41,
       "RS_PASS": false,
       "PASS": false
@@ -3671,6 +4281,8 @@
       "MA200": 952.62,
       "Trend_PASS": false,
       "RS_raw": 0.0113,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 41,
       "RS_PASS": false,
       "PASS": false
@@ -3683,6 +4295,8 @@
       "MA200": 224.47,
       "Trend_PASS": false,
       "RS_raw": 0.01,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 41,
       "RS_PASS": false,
       "PASS": false
@@ -3695,6 +4309,8 @@
       "MA200": 73.72,
       "Trend_PASS": false,
       "RS_raw": 0.0092,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 41,
       "RS_PASS": false,
       "PASS": false
@@ -3707,6 +4323,8 @@
       "MA200": 80.44,
       "Trend_PASS": false,
       "RS_raw": 0.0092,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 40,
       "RS_PASS": false,
       "PASS": false
@@ -3719,6 +4337,8 @@
       "MA200": 169.57,
       "Trend_PASS": false,
       "RS_raw": 0.0085,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 40,
       "RS_PASS": false,
       "PASS": false
@@ -3731,6 +4351,8 @@
       "MA200": 212.53,
       "Trend_PASS": false,
       "RS_raw": 0.0083,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 40,
       "RS_PASS": false,
       "PASS": false
@@ -3743,6 +4365,8 @@
       "MA200": 105.93,
       "Trend_PASS": false,
       "RS_raw": 0.0091,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 40,
       "RS_PASS": false,
       "PASS": false
@@ -3755,6 +4379,8 @@
       "MA200": 126.14,
       "Trend_PASS": false,
       "RS_raw": 0.0077,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 40,
       "RS_PASS": false,
       "PASS": false
@@ -3767,6 +4393,8 @@
       "MA200": 69.89,
       "Trend_PASS": false,
       "RS_raw": 0.0082,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 40,
       "RS_PASS": false,
       "PASS": false
@@ -3779,6 +4407,8 @@
       "MA200": 331.91,
       "Trend_PASS": false,
       "RS_raw": 0.0074,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 39,
       "RS_PASS": false,
       "PASS": false
@@ -3791,6 +4421,8 @@
       "MA200": 111.09,
       "Trend_PASS": false,
       "RS_raw": 0.0058,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 39,
       "RS_PASS": false,
       "PASS": false
@@ -3803,6 +4435,8 @@
       "MA200": 114.43,
       "Trend_PASS": false,
       "RS_raw": 0.0072,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 39,
       "RS_PASS": false,
       "PASS": false
@@ -3815,6 +4449,8 @@
       "MA200": 398.81,
       "Trend_PASS": false,
       "RS_raw": 0.0069,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 39,
       "RS_PASS": false,
       "PASS": false
@@ -3827,6 +4463,8 @@
       "MA200": 735.27,
       "Trend_PASS": false,
       "RS_raw": 0.0065,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 39,
       "RS_PASS": false,
       "PASS": false
@@ -3839,6 +4477,8 @@
       "MA200": 58.92,
       "Trend_PASS": false,
       "RS_raw": 0.004,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 38,
       "RS_PASS": false,
       "PASS": false
@@ -3851,6 +4491,8 @@
       "MA200": 21.24,
       "Trend_PASS": false,
       "RS_raw": 0.0056,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 38,
       "RS_PASS": false,
       "PASS": false
@@ -3863,6 +4505,8 @@
       "MA200": 376.49,
       "Trend_PASS": false,
       "RS_raw": 0.0043,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 38,
       "RS_PASS": false,
       "PASS": false
@@ -3875,6 +4519,8 @@
       "MA200": 264.23,
       "Trend_PASS": false,
       "RS_raw": 0.0052,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 38,
       "RS_PASS": false,
       "PASS": false
@@ -3887,6 +4533,8 @@
       "MA200": 18.62,
       "Trend_PASS": false,
       "RS_raw": 0.0045,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 38,
       "RS_PASS": false,
       "PASS": false
@@ -3899,6 +4547,8 @@
       "MA200": 1051.76,
       "Trend_PASS": false,
       "RS_raw": 0.0032,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 37,
       "RS_PASS": false,
       "PASS": false
@@ -3911,6 +4561,8 @@
       "MA200": 62.87,
       "Trend_PASS": false,
       "RS_raw": 0.0036,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 37,
       "RS_PASS": false,
       "PASS": false
@@ -3923,6 +4575,8 @@
       "MA200": 28.24,
       "Trend_PASS": false,
       "RS_raw": 0.0039,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 37,
       "RS_PASS": false,
       "PASS": false
@@ -3935,6 +4589,8 @@
       "MA200": 13.23,
       "Trend_PASS": false,
       "RS_raw": 0.0035,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 37,
       "RS_PASS": false,
       "PASS": false
@@ -3947,6 +4603,8 @@
       "MA200": 491.23,
       "Trend_PASS": false,
       "RS_raw": 0.0036,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 37,
       "RS_PASS": false,
       "PASS": false
@@ -3959,6 +4617,8 @@
       "MA200": 48.93,
       "Trend_PASS": false,
       "RS_raw": 0.0029,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 36,
       "RS_PASS": false,
       "PASS": false
@@ -3971,6 +4631,8 @@
       "MA200": 108.94,
       "Trend_PASS": false,
       "RS_raw": 0.0031,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 36,
       "RS_PASS": false,
       "PASS": false
@@ -3983,6 +4645,8 @@
       "MA200": 68.52,
       "Trend_PASS": false,
       "RS_raw": 0.0028,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 36,
       "RS_PASS": false,
       "PASS": false
@@ -3995,6 +4659,8 @@
       "MA200": 165.72,
       "Trend_PASS": false,
       "RS_raw": 0.0027,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 36,
       "RS_PASS": false,
       "PASS": false
@@ -4007,6 +4673,8 @@
       "MA200": 90.92,
       "Trend_PASS": false,
       "RS_raw": 0.0031,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 36,
       "RS_PASS": false,
       "PASS": false
@@ -4019,6 +4687,8 @@
       "MA200": 249.56,
       "Trend_PASS": false,
       "RS_raw": 0.0026,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 36,
       "RS_PASS": false,
       "PASS": false
@@ -4031,6 +4701,8 @@
       "MA200": 136.18,
       "Trend_PASS": false,
       "RS_raw": 0.0015,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 35,
       "RS_PASS": false,
       "PASS": false
@@ -4043,6 +4715,8 @@
       "MA200": 22.94,
       "Trend_PASS": false,
       "RS_raw": 0.0018,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 35,
       "RS_PASS": false,
       "PASS": false
@@ -4055,6 +4729,8 @@
       "MA200": 188.61,
       "Trend_PASS": false,
       "RS_raw": 0.0016,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 35,
       "RS_PASS": false,
       "PASS": false
@@ -4067,6 +4743,8 @@
       "MA200": 225.33,
       "Trend_PASS": false,
       "RS_raw": 0.001,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 35,
       "RS_PASS": false,
       "PASS": false
@@ -4079,6 +4757,8 @@
       "MA200": 244.18,
       "Trend_PASS": false,
       "RS_raw": 0.0009,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 35,
       "RS_PASS": false,
       "PASS": false
@@ -4091,6 +4771,8 @@
       "MA200": 222.85,
       "Trend_PASS": false,
       "RS_raw": -0.002,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 34,
       "RS_PASS": false,
       "PASS": false
@@ -4103,6 +4785,8 @@
       "MA200": 132.82,
       "Trend_PASS": false,
       "RS_raw": -0.0001,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 34,
       "RS_PASS": false,
       "PASS": false
@@ -4115,6 +4799,8 @@
       "MA200": 467.64,
       "Trend_PASS": false,
       "RS_raw": -0.0012,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 34,
       "RS_PASS": false,
       "PASS": false
@@ -4127,6 +4813,8 @@
       "MA200": 110.54,
       "Trend_PASS": false,
       "RS_raw": 0.0003,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 34,
       "RS_PASS": false,
       "PASS": false
@@ -4139,6 +4827,8 @@
       "MA200": 92.32,
       "Trend_PASS": false,
       "RS_raw": -0.0018,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 34,
       "RS_PASS": false,
       "PASS": false
@@ -4151,6 +4841,8 @@
       "MA200": 326.97,
       "Trend_PASS": false,
       "RS_raw": -0.0035,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 33,
       "RS_PASS": false,
       "PASS": false
@@ -4163,6 +4855,8 @@
       "MA200": 569.38,
       "Trend_PASS": false,
       "RS_raw": -0.0031,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 33,
       "RS_PASS": false,
       "PASS": false
@@ -4175,6 +4869,8 @@
       "MA200": 134.52,
       "Trend_PASS": false,
       "RS_raw": -0.0032,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 33,
       "RS_PASS": false,
       "PASS": false
@@ -4187,6 +4883,8 @@
       "MA200": 295.29,
       "Trend_PASS": false,
       "RS_raw": -0.0038,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 33,
       "RS_PASS": false,
       "PASS": false
@@ -4199,6 +4897,8 @@
       "MA200": 229.15,
       "Trend_PASS": false,
       "RS_raw": -0.0022,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 33,
       "RS_PASS": false,
       "PASS": false
@@ -4211,6 +4911,8 @@
       "MA200": 63.49,
       "Trend_PASS": false,
       "RS_raw": -0.0051,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 32,
       "RS_PASS": false,
       "PASS": false
@@ -4223,6 +4925,8 @@
       "MA200": 75.2,
       "Trend_PASS": false,
       "RS_raw": -0.0065,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 32,
       "RS_PASS": false,
       "PASS": false
@@ -4235,6 +4939,8 @@
       "MA200": 208.34,
       "Trend_PASS": false,
       "RS_raw": -0.0042,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 32,
       "RS_PASS": false,
       "PASS": false
@@ -4247,6 +4953,8 @@
       "MA200": 249.17,
       "Trend_PASS": false,
       "RS_raw": -0.0038,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 32,
       "RS_PASS": false,
       "PASS": false
@@ -4259,6 +4967,8 @@
       "MA200": 75.84,
       "Trend_PASS": false,
       "RS_raw": -0.0045,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 32,
       "RS_PASS": false,
       "PASS": false
@@ -4271,6 +4981,8 @@
       "MA200": 106.76,
       "Trend_PASS": false,
       "RS_raw": -0.0065,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 32,
       "RS_PASS": false,
       "PASS": false
@@ -4283,6 +4995,8 @@
       "MA200": 41.07,
       "Trend_PASS": false,
       "RS_raw": -0.0066,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 31,
       "RS_PASS": false,
       "PASS": false
@@ -4295,6 +5009,8 @@
       "MA200": 97.77,
       "Trend_PASS": false,
       "RS_raw": -0.0067,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 31,
       "RS_PASS": false,
       "PASS": false
@@ -4307,6 +5023,8 @@
       "MA200": 322.99,
       "Trend_PASS": false,
       "RS_raw": -0.0074,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 31,
       "RS_PASS": false,
       "PASS": false
@@ -4319,6 +5037,8 @@
       "MA200": 24.24,
       "Trend_PASS": false,
       "RS_raw": -0.0072,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 31,
       "RS_PASS": false,
       "PASS": false
@@ -4331,6 +5051,8 @@
       "MA200": 81.45,
       "Trend_PASS": false,
       "RS_raw": -0.0072,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 31,
       "RS_PASS": false,
       "PASS": false
@@ -4343,6 +5065,8 @@
       "MA200": 295.83,
       "Trend_PASS": false,
       "RS_raw": -0.0076,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 30,
       "RS_PASS": false,
       "PASS": false
@@ -4355,6 +5079,8 @@
       "MA200": 83.58,
       "Trend_PASS": false,
       "RS_raw": -0.0078,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 30,
       "RS_PASS": false,
       "PASS": false
@@ -4367,6 +5093,8 @@
       "MA200": 236.15,
       "Trend_PASS": false,
       "RS_raw": -0.0077,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 30,
       "RS_PASS": false,
       "PASS": false
@@ -4379,6 +5107,8 @@
       "MA200": 61.75,
       "Trend_PASS": false,
       "RS_raw": -0.0075,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 30,
       "RS_PASS": false,
       "PASS": false
@@ -4391,6 +5121,8 @@
       "MA200": 174.65,
       "Trend_PASS": false,
       "RS_raw": -0.0078,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 30,
       "RS_PASS": false,
       "PASS": false
@@ -4403,6 +5135,8 @@
       "MA200": 96.64,
       "Trend_PASS": false,
       "RS_raw": -0.0091,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 29,
       "RS_PASS": false,
       "PASS": false
@@ -4415,6 +5149,8 @@
       "MA200": 367.15,
       "Trend_PASS": false,
       "RS_raw": -0.0086,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 29,
       "RS_PASS": false,
       "PASS": false
@@ -4427,6 +5163,8 @@
       "MA200": 130.65,
       "Trend_PASS": false,
       "RS_raw": -0.0083,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 29,
       "RS_PASS": false,
       "PASS": false
@@ -4439,6 +5177,8 @@
       "MA200": 351.56,
       "Trend_PASS": false,
       "RS_raw": -0.0086,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 29,
       "RS_PASS": false,
       "PASS": false
@@ -4451,6 +5191,8 @@
       "MA200": 151.15,
       "Trend_PASS": false,
       "RS_raw": -0.0081,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 29,
       "RS_PASS": false,
       "PASS": false
@@ -4463,6 +5205,8 @@
       "MA200": 141.14,
       "Trend_PASS": false,
       "RS_raw": -0.0094,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 29,
       "RS_PASS": false,
       "PASS": false
@@ -4475,6 +5219,8 @@
       "MA200": 42.82,
       "Trend_PASS": false,
       "RS_raw": -0.0098,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 28,
       "RS_PASS": false,
       "PASS": false
@@ -4487,6 +5233,8 @@
       "MA200": 166.49,
       "Trend_PASS": false,
       "RS_raw": -0.0101,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 28,
       "RS_PASS": false,
       "PASS": false
@@ -4499,6 +5247,8 @@
       "MA200": 170.11,
       "Trend_PASS": false,
       "RS_raw": -0.0106,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 28,
       "RS_PASS": false,
       "PASS": false
@@ -4511,6 +5261,8 @@
       "MA200": 46.82,
       "Trend_PASS": false,
       "RS_raw": -0.0096,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 28,
       "RS_PASS": false,
       "PASS": false
@@ -4523,6 +5275,8 @@
       "MA200": 62.64,
       "Trend_PASS": false,
       "RS_raw": -0.0119,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 28,
       "RS_PASS": false,
       "PASS": false
@@ -4535,6 +5289,8 @@
       "MA200": 69.67,
       "Trend_PASS": false,
       "RS_raw": -0.0148,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 27,
       "RS_PASS": false,
       "PASS": false
@@ -4547,6 +5303,8 @@
       "MA200": 27.09,
       "Trend_PASS": false,
       "RS_raw": -0.0123,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 27,
       "RS_PASS": false,
       "PASS": false
@@ -4559,6 +5317,8 @@
       "MA200": 159.6,
       "Trend_PASS": false,
       "RS_raw": -0.0123,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 27,
       "RS_PASS": false,
       "PASS": false
@@ -4571,6 +5331,8 @@
       "MA200": 236.03,
       "Trend_PASS": false,
       "RS_raw": -0.0147,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 27,
       "RS_PASS": false,
       "PASS": false
@@ -4583,6 +5345,8 @@
       "MA200": 122.5,
       "Trend_PASS": false,
       "RS_raw": -0.0143,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 27,
       "RS_PASS": false,
       "PASS": false
@@ -4595,6 +5359,8 @@
       "MA200": 54.77,
       "Trend_PASS": false,
       "RS_raw": -0.0149,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 26,
       "RS_PASS": false,
       "PASS": false
@@ -4607,6 +5373,8 @@
       "MA200": 77.03,
       "Trend_PASS": false,
       "RS_raw": -0.0154,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 26,
       "RS_PASS": false,
       "PASS": false
@@ -4619,6 +5387,8 @@
       "MA200": 137.37,
       "Trend_PASS": false,
       "RS_raw": -0.015,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 26,
       "RS_PASS": false,
       "PASS": false
@@ -4631,6 +5401,8 @@
       "MA200": 101.97,
       "Trend_PASS": false,
       "RS_raw": -0.0151,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 26,
       "RS_PASS": false,
       "PASS": false
@@ -4643,6 +5415,8 @@
       "MA200": 35.59,
       "Trend_PASS": false,
       "RS_raw": -0.016,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 26,
       "RS_PASS": false,
       "PASS": false
@@ -4655,6 +5429,8 @@
       "MA200": 187.79,
       "Trend_PASS": false,
       "RS_raw": -0.0174,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 25,
       "RS_PASS": false,
       "PASS": false
@@ -4667,6 +5443,8 @@
       "MA200": 23.23,
       "Trend_PASS": false,
       "RS_raw": -0.018,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 25,
       "RS_PASS": false,
       "PASS": false
@@ -4679,6 +5457,8 @@
       "MA200": 101.68,
       "Trend_PASS": false,
       "RS_raw": -0.0165,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 25,
       "RS_PASS": false,
       "PASS": false
@@ -4691,6 +5471,8 @@
       "MA200": 202.39,
       "Trend_PASS": false,
       "RS_raw": -0.0165,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 25,
       "RS_PASS": false,
       "PASS": false
@@ -4703,6 +5485,8 @@
       "MA200": 139.17,
       "Trend_PASS": false,
       "RS_raw": -0.0162,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 25,
       "RS_PASS": false,
       "PASS": false
@@ -4715,6 +5499,8 @@
       "MA200": 418.82,
       "Trend_PASS": false,
       "RS_raw": -0.0185,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 25,
       "RS_PASS": false,
       "PASS": false
@@ -4727,6 +5513,8 @@
       "MA200": 104.4,
       "Trend_PASS": false,
       "RS_raw": -0.0198,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 24,
       "RS_PASS": false,
       "PASS": false
@@ -4739,6 +5527,8 @@
       "MA200": 108.8,
       "Trend_PASS": false,
       "RS_raw": -0.0196,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 24,
       "RS_PASS": false,
       "PASS": false
@@ -4751,6 +5541,8 @@
       "MA200": 63.38,
       "Trend_PASS": false,
       "RS_raw": -0.0196,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 24,
       "RS_PASS": false,
       "PASS": false
@@ -4763,6 +5555,8 @@
       "MA200": 44.44,
       "Trend_PASS": false,
       "RS_raw": -0.0198,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 24,
       "RS_PASS": false,
       "PASS": false
@@ -4775,6 +5569,8 @@
       "MA200": 193.54,
       "Trend_PASS": false,
       "RS_raw": -0.0187,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 24,
       "RS_PASS": false,
       "PASS": false
@@ -4787,6 +5583,8 @@
       "MA200": 27.27,
       "Trend_PASS": false,
       "RS_raw": -0.0199,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 23,
       "RS_PASS": false,
       "PASS": false
@@ -4799,6 +5597,8 @@
       "MA200": 80.53,
       "Trend_PASS": false,
       "RS_raw": -0.0227,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 23,
       "RS_PASS": false,
       "PASS": false
@@ -4811,6 +5611,8 @@
       "MA200": 283.86,
       "Trend_PASS": false,
       "RS_raw": -0.0204,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 23,
       "RS_PASS": false,
       "PASS": false
@@ -4823,6 +5625,8 @@
       "MA200": 109.9,
       "Trend_PASS": false,
       "RS_raw": -0.0215,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 23,
       "RS_PASS": false,
       "PASS": false
@@ -4835,6 +5639,8 @@
       "MA200": 100.43,
       "Trend_PASS": false,
       "RS_raw": -0.0199,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 23,
       "RS_PASS": false,
       "PASS": false
@@ -4847,6 +5653,8 @@
       "MA200": 172.65,
       "Trend_PASS": false,
       "RS_raw": -0.0235,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 22,
       "RS_PASS": false,
       "PASS": false
@@ -4859,6 +5667,8 @@
       "MA200": 91.1,
       "Trend_PASS": false,
       "RS_raw": -0.0249,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 22,
       "RS_PASS": false,
       "PASS": false
@@ -4871,6 +5681,8 @@
       "MA200": 60.44,
       "Trend_PASS": false,
       "RS_raw": -0.0262,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 22,
       "RS_PASS": false,
       "PASS": false
@@ -4883,6 +5695,8 @@
       "MA200": 68.79,
       "Trend_PASS": false,
       "RS_raw": -0.0235,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 22,
       "RS_PASS": false,
       "PASS": false
@@ -4895,6 +5709,8 @@
       "MA200": 90.68,
       "Trend_PASS": false,
       "RS_raw": -0.0234,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 22,
       "RS_PASS": false,
       "PASS": false
@@ -4907,6 +5723,8 @@
       "MA200": 101.52,
       "Trend_PASS": false,
       "RS_raw": -0.0262,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 21,
       "RS_PASS": false,
       "PASS": false
@@ -4919,6 +5737,8 @@
       "MA200": 49.84,
       "Trend_PASS": false,
       "RS_raw": -0.0265,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 21,
       "RS_PASS": false,
       "PASS": false
@@ -4931,6 +5751,8 @@
       "MA200": 143.46,
       "Trend_PASS": false,
       "RS_raw": -0.0274,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 21,
       "RS_PASS": false,
       "PASS": false
@@ -4943,6 +5765,8 @@
       "MA200": 36.38,
       "Trend_PASS": false,
       "RS_raw": -0.0268,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 21,
       "RS_PASS": false,
       "PASS": false
@@ -4955,6 +5779,8 @@
       "MA200": 44.88,
       "Trend_PASS": false,
       "RS_raw": -0.0271,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 21,
       "RS_PASS": false,
       "PASS": false
@@ -4967,6 +5793,8 @@
       "MA200": 86.28,
       "Trend_PASS": false,
       "RS_raw": -0.0262,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 21,
       "RS_PASS": false,
       "PASS": false
@@ -4979,6 +5807,8 @@
       "MA200": 16.53,
       "Trend_PASS": false,
       "RS_raw": -0.0303,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 20,
       "RS_PASS": false,
       "PASS": false
@@ -4991,6 +5821,8 @@
       "MA200": 71.85,
       "Trend_PASS": false,
       "RS_raw": -0.0293,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 20,
       "RS_PASS": false,
       "PASS": false
@@ -5003,6 +5835,8 @@
       "MA200": 340.12,
       "Trend_PASS": false,
       "RS_raw": -0.0278,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 20,
       "RS_PASS": false,
       "PASS": false
@@ -5015,6 +5849,8 @@
       "MA200": 327.14,
       "Trend_PASS": false,
       "RS_raw": -0.0287,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 20,
       "RS_PASS": false,
       "PASS": false
@@ -5027,6 +5863,8 @@
       "MA200": 70.73,
       "Trend_PASS": false,
       "RS_raw": -0.0309,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 20,
       "RS_PASS": false,
       "PASS": false
@@ -5039,6 +5877,8 @@
       "MA200": 93.85,
       "Trend_PASS": false,
       "RS_raw": -0.0312,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 19,
       "RS_PASS": false,
       "PASS": false
@@ -5051,6 +5891,8 @@
       "MA200": 124.44,
       "Trend_PASS": false,
       "RS_raw": -0.0317,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 19,
       "RS_PASS": false,
       "PASS": false
@@ -5063,6 +5905,8 @@
       "MA200": 147.35,
       "Trend_PASS": false,
       "RS_raw": -0.0318,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 19,
       "RS_PASS": false,
       "PASS": false
@@ -5075,6 +5919,8 @@
       "MA200": 66.1,
       "Trend_PASS": false,
       "RS_raw": -0.0309,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 19,
       "RS_PASS": false,
       "PASS": false
@@ -5087,6 +5933,8 @@
       "MA200": 580.28,
       "Trend_PASS": false,
       "RS_raw": -0.0316,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 19,
       "RS_PASS": false,
       "PASS": false
@@ -5099,6 +5947,8 @@
       "MA200": 138.79,
       "Trend_PASS": false,
       "RS_raw": -0.0352,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 18,
       "RS_PASS": false,
       "PASS": false
@@ -5111,6 +5961,8 @@
       "MA200": 143.85,
       "Trend_PASS": false,
       "RS_raw": -0.033,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 18,
       "RS_PASS": false,
       "PASS": false
@@ -5123,6 +5975,8 @@
       "MA200": 143.7,
       "Trend_PASS": false,
       "RS_raw": -0.0319,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 18,
       "RS_PASS": false,
       "PASS": false
@@ -5135,6 +5989,8 @@
       "MA200": 230.83,
       "Trend_PASS": false,
       "RS_raw": -0.033,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 18,
       "RS_PASS": false,
       "PASS": false
@@ -5147,6 +6003,8 @@
       "MA200": 88.47,
       "Trend_PASS": false,
       "RS_raw": -0.0351,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 18,
       "RS_PASS": false,
       "PASS": false
@@ -5159,6 +6017,8 @@
       "MA200": 126.79,
       "Trend_PASS": false,
       "RS_raw": -0.0359,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 17,
       "RS_PASS": false,
       "PASS": false
@@ -5171,6 +6031,8 @@
       "MA200": 123.87,
       "Trend_PASS": false,
       "RS_raw": -0.0365,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 17,
       "RS_PASS": false,
       "PASS": false
@@ -5183,6 +6045,8 @@
       "MA200": 1239.14,
       "Trend_PASS": false,
       "RS_raw": -0.0392,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 17,
       "RS_PASS": false,
       "PASS": false
@@ -5195,6 +6059,8 @@
       "MA200": 165.2,
       "Trend_PASS": false,
       "RS_raw": -0.0393,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 17,
       "RS_PASS": false,
       "PASS": false
@@ -5207,6 +6073,8 @@
       "MA200": 61.45,
       "Trend_PASS": false,
       "RS_raw": -0.0381,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 17,
       "RS_PASS": false,
       "PASS": false
@@ -5219,6 +6087,8 @@
       "MA200": 243.3,
       "Trend_PASS": false,
       "RS_raw": -0.039,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 17,
       "RS_PASS": false,
       "PASS": false
@@ -5231,6 +6101,8 @@
       "MA200": 388.49,
       "Trend_PASS": false,
       "RS_raw": -0.0417,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 16,
       "RS_PASS": false,
       "PASS": false
@@ -5243,6 +6115,8 @@
       "MA200": 254.75,
       "Trend_PASS": false,
       "RS_raw": -0.0402,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 16,
       "RS_PASS": false,
       "PASS": false
@@ -5255,6 +6129,8 @@
       "MA200": 61.11,
       "Trend_PASS": false,
       "RS_raw": -0.0412,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 16,
       "RS_PASS": false,
       "PASS": false
@@ -5267,6 +6143,8 @@
       "MA200": 227.43,
       "Trend_PASS": false,
       "RS_raw": -0.0429,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 16,
       "RS_PASS": false,
       "PASS": false
@@ -5279,6 +6157,8 @@
       "MA200": 363.7,
       "Trend_PASS": false,
       "RS_raw": -0.04,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 16,
       "RS_PASS": false,
       "PASS": false
@@ -5291,6 +6171,8 @@
       "MA200": 283.98,
       "Trend_PASS": false,
       "RS_raw": -0.0433,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 15,
       "RS_PASS": false,
       "PASS": false
@@ -5303,6 +6185,8 @@
       "MA200": 77.29,
       "Trend_PASS": false,
       "RS_raw": -0.0437,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 15,
       "RS_PASS": false,
       "PASS": false
@@ -5315,6 +6199,8 @@
       "MA200": 125.09,
       "Trend_PASS": false,
       "RS_raw": -0.0475,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 15,
       "RS_PASS": false,
       "PASS": false
@@ -5327,6 +6213,8 @@
       "MA200": 590.14,
       "Trend_PASS": false,
       "RS_raw": -0.0435,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 15,
       "RS_PASS": false,
       "PASS": false
@@ -5339,6 +6227,8 @@
       "MA200": 219.64,
       "Trend_PASS": false,
       "RS_raw": -0.0449,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 15,
       "RS_PASS": false,
       "PASS": false
@@ -5351,6 +6241,8 @@
       "MA200": 184.98,
       "Trend_PASS": false,
       "RS_raw": -0.0494,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 14,
       "RS_PASS": false,
       "PASS": false
@@ -5363,6 +6255,8 @@
       "MA200": 25.66,
       "Trend_PASS": false,
       "RS_raw": -0.0504,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 14,
       "RS_PASS": false,
       "PASS": false
@@ -5375,6 +6269,8 @@
       "MA200": 22.32,
       "Trend_PASS": false,
       "RS_raw": -0.0506,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 14,
       "RS_PASS": false,
       "PASS": false
@@ -5387,6 +6283,8 @@
       "MA200": 76.47,
       "Trend_PASS": false,
       "RS_raw": -0.0519,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 14,
       "RS_PASS": false,
       "PASS": false
@@ -5399,6 +6297,8 @@
       "MA200": 3273.38,
       "Trend_PASS": false,
       "RS_raw": -0.0515,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 14,
       "RS_PASS": false,
       "PASS": false
@@ -5411,6 +6311,8 @@
       "MA200": 74.27,
       "Trend_PASS": false,
       "RS_raw": -0.0568,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 13,
       "RS_PASS": false,
       "PASS": false
@@ -5423,6 +6325,8 @@
       "MA200": 187.13,
       "Trend_PASS": false,
       "RS_raw": -0.0558,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 13,
       "RS_PASS": false,
       "PASS": false
@@ -5435,6 +6339,8 @@
       "MA200": 283.09,
       "Trend_PASS": false,
       "RS_raw": -0.0556,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 13,
       "RS_PASS": false,
       "PASS": false
@@ -5447,6 +6353,8 @@
       "MA200": 88.91,
       "Trend_PASS": false,
       "RS_raw": -0.0519,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 13,
       "RS_PASS": false,
       "PASS": false
@@ -5459,6 +6367,8 @@
       "MA200": 154.22,
       "Trend_PASS": false,
       "RS_raw": -0.0537,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 13,
       "RS_PASS": false,
       "PASS": false
@@ -5471,6 +6381,8 @@
       "MA200": 332.36,
       "Trend_PASS": false,
       "RS_raw": -0.0552,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 13,
       "RS_PASS": false,
       "PASS": false
@@ -5483,6 +6395,8 @@
       "MA200": 49.94,
       "Trend_PASS": false,
       "RS_raw": -0.0583,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 12,
       "RS_PASS": false,
       "PASS": false
@@ -5495,6 +6409,8 @@
       "MA200": 100.42,
       "Trend_PASS": false,
       "RS_raw": -0.0602,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 12,
       "RS_PASS": false,
       "PASS": false
@@ -5507,6 +6423,8 @@
       "MA200": 81.36,
       "Trend_PASS": false,
       "RS_raw": -0.0595,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 12,
       "RS_PASS": false,
       "PASS": false
@@ -5519,6 +6437,8 @@
       "MA200": 222.63,
       "Trend_PASS": false,
       "RS_raw": -0.0601,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 12,
       "RS_PASS": false,
       "PASS": false
@@ -5531,6 +6451,8 @@
       "MA200": 325.1,
       "Trend_PASS": false,
       "RS_raw": -0.059,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 12,
       "RS_PASS": false,
       "PASS": false
@@ -5543,6 +6465,8 @@
       "MA200": 305.89,
       "Trend_PASS": false,
       "RS_raw": -0.0606,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 11,
       "RS_PASS": false,
       "PASS": false
@@ -5555,6 +6479,8 @@
       "MA200": 281.18,
       "Trend_PASS": false,
       "RS_raw": -0.0617,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 11,
       "RS_PASS": false,
       "PASS": false
@@ -5567,6 +6493,8 @@
       "MA200": 179.35,
       "Trend_PASS": false,
       "RS_raw": -0.0615,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 11,
       "RS_PASS": false,
       "PASS": false
@@ -5579,6 +6507,8 @@
       "MA200": 83.0,
       "Trend_PASS": false,
       "RS_raw": -0.0617,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 11,
       "RS_PASS": false,
       "PASS": false
@@ -5591,6 +6521,8 @@
       "MA200": 38.61,
       "Trend_PASS": false,
       "RS_raw": -0.0612,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 11,
       "RS_PASS": false,
       "PASS": false
@@ -5603,6 +6535,8 @@
       "MA200": 6621.41,
       "Trend_PASS": false,
       "RS_raw": -0.0674,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 10,
       "RS_PASS": false,
       "PASS": false
@@ -5615,6 +6549,8 @@
       "MA200": 37.01,
       "Trend_PASS": false,
       "RS_raw": -0.0655,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 10,
       "RS_PASS": false,
       "PASS": false
@@ -5627,6 +6563,8 @@
       "MA200": 220.29,
       "Trend_PASS": false,
       "RS_raw": -0.0686,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 10,
       "RS_PASS": false,
       "PASS": false
@@ -5639,6 +6577,8 @@
       "MA200": 26.34,
       "Trend_PASS": false,
       "RS_raw": -0.0628,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 10,
       "RS_PASS": false,
       "PASS": false
@@ -5651,6 +6591,8 @@
       "MA200": 23.59,
       "Trend_PASS": false,
       "RS_raw": -0.0683,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 10,
       "RS_PASS": false,
       "PASS": false
@@ -5663,6 +6605,8 @@
       "MA200": 66.92,
       "Trend_PASS": false,
       "RS_raw": -0.0632,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 10,
       "RS_PASS": false,
       "PASS": false
@@ -5675,6 +6619,8 @@
       "MA200": 70.16,
       "Trend_PASS": false,
       "RS_raw": -0.0738,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 9,
       "RS_PASS": false,
       "PASS": false
@@ -5687,6 +6633,8 @@
       "MA200": 344.41,
       "Trend_PASS": false,
       "RS_raw": -0.0708,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 9,
       "RS_PASS": false,
       "PASS": false
@@ -5699,6 +6647,8 @@
       "MA200": 99.15,
       "Trend_PASS": false,
       "RS_raw": -0.0728,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 9,
       "RS_PASS": false,
       "PASS": false
@@ -5711,6 +6661,8 @@
       "MA200": 39.42,
       "Trend_PASS": false,
       "RS_raw": -0.0689,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 9,
       "RS_PASS": false,
       "PASS": false
@@ -5723,6 +6675,8 @@
       "MA200": 182.61,
       "Trend_PASS": false,
       "RS_raw": -0.0688,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 9,
       "RS_PASS": false,
       "PASS": false
@@ -5735,6 +6689,8 @@
       "MA200": 327.34,
       "Trend_PASS": false,
       "RS_raw": -0.0815,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 8,
       "RS_PASS": false,
       "PASS": false
@@ -5747,6 +6703,8 @@
       "MA200": 53.37,
       "Trend_PASS": false,
       "RS_raw": -0.0797,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 8,
       "RS_PASS": false,
       "PASS": false
@@ -5759,6 +6717,8 @@
       "MA200": 36.73,
       "Trend_PASS": false,
       "RS_raw": -0.0804,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 8,
       "RS_PASS": false,
       "PASS": false
@@ -5771,6 +6731,8 @@
       "MA200": 178.38,
       "Trend_PASS": false,
       "RS_raw": -0.0813,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 8,
       "RS_PASS": false,
       "PASS": false
@@ -5783,6 +6745,8 @@
       "MA200": 581.11,
       "Trend_PASS": false,
       "RS_raw": -0.0795,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 8,
       "RS_PASS": false,
       "PASS": false
@@ -5795,6 +6759,8 @@
       "MA200": 16.29,
       "Trend_PASS": false,
       "RS_raw": -0.0855,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 7,
       "RS_PASS": false,
       "PASS": false
@@ -5807,6 +6773,8 @@
       "MA200": 32.95,
       "Trend_PASS": false,
       "RS_raw": -0.087,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 7,
       "RS_PASS": false,
       "PASS": false
@@ -5819,6 +6787,8 @@
       "MA200": 100.8,
       "Trend_PASS": false,
       "RS_raw": -0.089,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 7,
       "RS_PASS": false,
       "PASS": false
@@ -5831,6 +6801,8 @@
       "MA200": 34.58,
       "Trend_PASS": false,
       "RS_raw": -0.0828,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 7,
       "RS_PASS": false,
       "PASS": false
@@ -5843,6 +6815,8 @@
       "MA200": 373.7,
       "Trend_PASS": false,
       "RS_raw": -0.0833,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 7,
       "RS_PASS": false,
       "PASS": false
@@ -5855,6 +6829,8 @@
       "MA200": 92.5,
       "Trend_PASS": false,
       "RS_raw": -0.0965,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 6,
       "RS_PASS": false,
       "PASS": false
@@ -5867,6 +6843,8 @@
       "MA200": 91.59,
       "Trend_PASS": false,
       "RS_raw": -0.0905,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 6,
       "RS_PASS": false,
       "PASS": false
@@ -5879,6 +6857,8 @@
       "MA200": 95.37,
       "Trend_PASS": false,
       "RS_raw": -0.0922,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 6,
       "RS_PASS": false,
       "PASS": false
@@ -5891,6 +6871,8 @@
       "MA200": 118.69,
       "Trend_PASS": false,
       "RS_raw": -0.094,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 6,
       "RS_PASS": false,
       "PASS": false
@@ -5903,6 +6885,8 @@
       "MA200": 124.82,
       "Trend_PASS": false,
       "RS_raw": -0.0937,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 6,
       "RS_PASS": false,
       "PASS": false
@@ -5915,6 +6899,8 @@
       "MA200": 238.85,
       "Trend_PASS": false,
       "RS_raw": -0.0923,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 6,
       "RS_PASS": false,
       "PASS": false
@@ -5927,6 +6913,8 @@
       "MA200": 489.57,
       "Trend_PASS": false,
       "RS_raw": -0.1098,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 5,
       "RS_PASS": false,
       "PASS": false
@@ -5939,6 +6927,8 @@
       "MA200": 187.81,
       "Trend_PASS": false,
       "RS_raw": -0.1009,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 5,
       "RS_PASS": false,
       "PASS": false
@@ -5951,6 +6941,8 @@
       "MA200": 100.5,
       "Trend_PASS": false,
       "RS_raw": -0.1143,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 5,
       "RS_PASS": false,
       "PASS": false
@@ -5963,6 +6955,8 @@
       "MA200": 23.93,
       "Trend_PASS": false,
       "RS_raw": -0.1071,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 5,
       "RS_PASS": false,
       "PASS": false
@@ -5975,6 +6969,8 @@
       "MA200": 105.68,
       "Trend_PASS": false,
       "RS_raw": -0.1069,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 5,
       "RS_PASS": false,
       "PASS": false
@@ -5987,6 +6983,8 @@
       "MA200": 159.36,
       "Trend_PASS": false,
       "RS_raw": -0.1159,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 4,
       "RS_PASS": false,
       "PASS": false
@@ -5999,6 +6997,8 @@
       "MA200": 19.11,
       "Trend_PASS": false,
       "RS_raw": -0.1214,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 4,
       "RS_PASS": false,
       "PASS": false
@@ -6011,6 +7011,8 @@
       "MA200": 139.71,
       "Trend_PASS": false,
       "RS_raw": -0.1159,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 4,
       "RS_PASS": false,
       "PASS": false
@@ -6023,6 +7025,8 @@
       "MA200": 48.77,
       "Trend_PASS": false,
       "RS_raw": -0.1202,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 4,
       "RS_PASS": false,
       "PASS": false
@@ -6035,6 +7039,8 @@
       "MA200": 137.83,
       "Trend_PASS": false,
       "RS_raw": -0.1194,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 4,
       "RS_PASS": false,
       "PASS": false
@@ -6047,6 +7053,8 @@
       "MA200": 477.4,
       "Trend_PASS": false,
       "RS_raw": -0.1264,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 3,
       "RS_PASS": false,
       "PASS": false
@@ -6059,6 +7067,8 @@
       "MA200": 59.36,
       "Trend_PASS": false,
       "RS_raw": -0.13,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 3,
       "RS_PASS": false,
       "PASS": false
@@ -6071,6 +7081,8 @@
       "MA200": 44.44,
       "Trend_PASS": false,
       "RS_raw": -0.1335,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 3,
       "RS_PASS": false,
       "PASS": false
@@ -6083,6 +7095,8 @@
       "MA200": 46.75,
       "Trend_PASS": false,
       "RS_raw": -0.1283,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 3,
       "RS_PASS": false,
       "PASS": false
@@ -6095,6 +7109,8 @@
       "MA200": 38.42,
       "Trend_PASS": false,
       "RS_raw": -0.1274,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 3,
       "RS_PASS": false,
       "PASS": false
@@ -6107,6 +7123,8 @@
       "MA200": 45.42,
       "Trend_PASS": false,
       "RS_raw": -0.165,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 2,
       "RS_PASS": false,
       "PASS": false
@@ -6119,6 +7137,8 @@
       "MA200": 18.43,
       "Trend_PASS": false,
       "RS_raw": -0.135,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 2,
       "RS_PASS": false,
       "PASS": false
@@ -6131,6 +7151,8 @@
       "MA200": 67.37,
       "Trend_PASS": false,
       "RS_raw": -0.1448,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 2,
       "RS_PASS": false,
       "PASS": false
@@ -6143,6 +7165,8 @@
       "MA200": 61.83,
       "Trend_PASS": false,
       "RS_raw": -0.1464,
+      "VCP_SCORE": 2,
+      "VCP_CANDIDATE": false,
       "RS": 2,
       "RS_PASS": false,
       "PASS": false
@@ -6155,6 +7179,8 @@
       "MA200": 78.29,
       "Trend_PASS": false,
       "RS_raw": -0.1551,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 2,
       "RS_PASS": false,
       "PASS": false
@@ -6167,6 +7193,8 @@
       "MA200": 48.03,
       "Trend_PASS": false,
       "RS_raw": -0.1368,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 2,
       "RS_PASS": false,
       "PASS": false
@@ -6179,6 +7207,8 @@
       "MA200": 436.87,
       "Trend_PASS": false,
       "RS_raw": -0.1944,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 1,
       "RS_PASS": false,
       "PASS": false
@@ -6191,6 +7221,8 @@
       "MA200": 55.77,
       "Trend_PASS": false,
       "RS_raw": -0.1697,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 1,
       "RS_PASS": false,
       "PASS": false
@@ -6203,6 +7235,8 @@
       "MA200": 186.49,
       "Trend_PASS": false,
       "RS_raw": -0.1786,
+      "VCP_SCORE": 1,
+      "VCP_CANDIDATE": false,
       "RS": 1,
       "RS_PASS": false,
       "PASS": false
@@ -6215,6 +7249,8 @@
       "MA200": 1171.72,
       "Trend_PASS": false,
       "RS_raw": -0.1917,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 1,
       "RS_PASS": false,
       "PASS": false
@@ -6227,6 +7263,8 @@
       "MA200": 170.35,
       "Trend_PASS": false,
       "RS_raw": -0.1685,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 1,
       "RS_PASS": false,
       "PASS": false
@@ -6239,6 +7277,8 @@
       "MA200": 10.26,
       "Trend_PASS": false,
       "RS_raw": -0.1812,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 1,
       "RS_PASS": false,
       "PASS": false
@@ -6251,6 +7291,8 @@
       "MA200": 80.14,
       "Trend_PASS": false,
       "RS_raw": -0.1727,
+      "VCP_SCORE": 0,
+      "VCP_CANDIDATE": false,
       "RS": 1,
       "RS_PASS": false,
       "PASS": false
