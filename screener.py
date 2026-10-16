@@ -26,6 +26,67 @@ def get_sp500_tickers():
     return [ticker.replace(".", "-") for ticker in tickers]
 
 
+# VCP（値動きの収縮）候補を判定
+def detect_vcp(df):
+    high = df["High"]
+    low = df["Low"]
+    volume = df["Volume"]
+
+    # yfinanceの複数階層カラムに対応
+    if isinstance(high, pd.DataFrame):
+        high = high.iloc[:, 0]
+    if isinstance(low, pd.DataFrame):
+        low = low.iloc[:, 0]
+    if isinstance(volume, pd.DataFrame):
+        volume = volume.iloc[:, 0]
+
+    if len(df) < 252:
+        return 0, False
+
+    # 直近60営業日を20日ずつ3区間に分割
+    ranges = []
+
+    for start, end in [(-60, -40), (-40, -20), (-20, None)]:
+        h = float(high.iloc[start:end].max())
+        l = float(low.iloc[start:end].min())
+
+        if l <= 0:
+            return 0, False
+
+        ranges.append((h - l) / h)
+
+    # 値幅が段階的に縮小
+    contraction = ranges[0] > ranges[1] > ranges[2]
+
+    # 直近10日とその前20日の出来高を比較
+    recent_volume = float(volume.iloc[-10:].mean())
+    previous_volume = float(volume.iloc[-30:-10].mean())
+
+    volume_dryup = (
+        previous_volume > 0
+        and recent_volume < previous_volume * 0.8
+    )
+
+    # 52週高値から15%以内
+    high52 = float(high.iloc[-252:].max())
+    current_price = float(df["Close"].iloc[-1].iloc[0]) \
+        if isinstance(df["Close"], pd.DataFrame) \
+        else float(df["Close"].iloc[-1])
+
+    near_high = current_price >= high52 * 0.85
+
+    # 3条件を点数化
+    score = (
+        int(contraction)
+        + int(volume_dryup)
+        + int(near_high)
+    )
+
+    # 3点ならVCP候補
+    candidate = score == 3
+
+    return score, candidate
+
 TICKERS = [
     # 半導体・AI
     "NVDA", "AMD", "AVGO", "MU", "SNDK",
