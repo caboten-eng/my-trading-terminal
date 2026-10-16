@@ -46,3 +46,28 @@ jobs:
             git commit -m "Update screening results"
             git push
           fi
+          if ! git diff --cached --quiet; then
+            git commit -m "Update screening results"
+            git push
+          fi
+          
+      - name: Deploy results to public website
+        env:
+          GH_TOKEN: ${{ secrets.WEB_DEPLOY_TOKEN }}
+        run: |
+          git clone https://x-access-token:${GH_TOKEN}@github.com/caboten-eng/my-trading-terminal-web.git /tmp/trading-web
+
+          mkdir -p /tmp/trading-web/results
+          cp results/screening.json /tmp/trading-web/results/screening.json
+
+          cd /tmp/trading-web
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add results/screening.json
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Update screening data"
+            git push
+          fi
