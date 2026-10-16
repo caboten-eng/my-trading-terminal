@@ -211,7 +211,7 @@ for ticker in TICKERS:
             "Within 25% of high": price >= high52 * 0.75,
             "30% above low": price >= low52 * 1.30
         }
-
+        vcp_score, vcp_candidate = detect_vcp(df)
         results.append({
             "Ticker": ticker,
             "Price": round(price, 2),
@@ -219,7 +219,9 @@ for ticker in TICKERS:
             "MA150": round(float(ma150.iloc[-1]), 2),
             "MA200": round(float(ma200.iloc[-1]), 2),
             "Trend_PASS": bool(all(checks.values())),
-            "RS_raw": rs_raw
+            "RS_raw": rs_raw,
+            "VCP_SCORE": vcp_score,
+            "VCP_CANDIDATE": bool(vcp_candidate)
         })
 
         print(f"{ticker}: 取得成功")
@@ -269,4 +271,5 @@ with open("results/screening.json", "w", encoding="utf-8") as f:
 print("\nスクリーニング完了")
 print(f"対象銘柄: {data['total']}")
 print(f"合格銘柄: {data['passed']}")
+print(f"VCP候補: {int(output['VCP_CANDIDATE'].sum())}銘柄")
 print(output)
