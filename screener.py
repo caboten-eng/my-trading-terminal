@@ -2,7 +2,14 @@
 import yfinance as yf
 import pandas as pd
 from pathlib import Path
+# S&P 500構成銘柄を自動取得
+def get_sp500_tickers():
+    url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
+    tables = pd.read_html(url)
+    tickers = tables[0]["Symbol"].tolist()
 
+    # Yahoo Finance形式に変換（例：BRK.B → BRK-B）
+    return [ticker.replace(".", "-") for ticker in tickers]
 
 TICKERS = [
     # 半導体・AI
