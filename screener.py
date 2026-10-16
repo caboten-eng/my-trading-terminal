@@ -2,14 +2,29 @@
 import yfinance as yf
 import pandas as pd
 from pathlib import Path
+
 # S&P 500構成銘柄を自動取得
 def get_sp500_tickers():
+    from io import StringIO
+    from urllib.request import Request, urlopen
+
     url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
-    tables = pd.read_html(url)
+
+    req = Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (compatible; StockScreener/1.0)"
+        }
+    )
+
+    with urlopen(req, timeout=30) as response:
+        html = response.read().decode("utf-8")
+
+    tables = pd.read_html(StringIO(html))
     tickers = tables[0]["Symbol"].tolist()
 
-    # Yahoo Finance形式に変換（例：BRK.B → BRK-B）
     return [ticker.replace(".", "-") for ticker in tickers]
+
 
 TICKERS = [
     # 半導体・AI
