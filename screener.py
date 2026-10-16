@@ -48,7 +48,19 @@ TICKERS = [
 
 
 # 重複銘柄を除外
-TICKERS = list(dict.fromkeys(TICKERS))
+
+# 既存の監視銘柄にS&P 500構成銘柄を追加
+try:
+    sp500_tickers = get_sp500_tickers()
+    print(f"S&P 500構成銘柄: {len(sp500_tickers)}銘柄取得")
+    TICKERS = list(dict.fromkeys(TICKERS + sp500_tickers))
+except Exception as e:
+    print(f"S&P 500取得失敗: {e}")
+    print("既存の監視銘柄のみで実行します")
+    TICKERS = list(dict.fromkeys(TICKERS))
+
+print(f"スクリーニング対象: {len(TICKERS)}銘柄")
+
 
 import json
 from datetime import datetime, timezone
