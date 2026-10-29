@@ -206,6 +206,7 @@ a{color:var(--blue)}
           <th data-sort="RS">RS</th>
           <th data-sort="Trend_PASS">TT</th>
           <th data-sort="VCP_SCORE">VCP点</th>
+          <th data-sort="SWING_VCP_SCORE">Swing VCP</th>
           <th data-sort="VCP_STAGE">VCP段階</th>
           <th data-sort="VCP_PB_SHRINK">押し目収縮</th>
           <th data-sort="Pivot_Distance_Pct">Pivot距離%</th>
@@ -255,6 +256,7 @@ const filters = [
   ['stage1','VCP形成初期'],
   ['stage2','VCP形成中'],
   ['stage3','VCP完成候補'],
+  ['swing','スイングVCP完成候補'],
   ['shrink','押し目収縮'],
   ['setup','SETUP合格']
 ];
@@ -347,6 +349,8 @@ function match(s){
       return s.VCP_STAGE==='形成中';
     case 'stage3':
       return s.VCP_STAGE==='完成候補';
+      case 'swing':
+  return s.SWING_VCP_CANDIDATE===true;
     case 'shrink':
       return s.VCP_PB_SHRINK===true;
     case 'setup':
@@ -467,6 +471,8 @@ function render(){
     put(s.RS??'—');
     put(value(s.Trend_PASS),s.Trend_PASS?'positive':'');
     put(s.VCP_SCORE??'—');
+    put(s.SWING_VCP_SCORE??'—',
+    s.SWING_VCP_CANDIDATE?'positive':'');
 
     const st=document.createElement('td');
     st.append(chip(s.VCP_STAGE||'対象外',stage(s.VCP_STAGE)));
