@@ -646,6 +646,7 @@ for ticker in TICKERS:
         )
         # ベース上限を使った新しいピボット判定
         base_breakout = detect_base_breakout(df)
+                resistance = detect_resistance_pivot(df)
         results.append({
             "BAR_DATE": df.index[-1].strftime("%Y-%m-%d"),
             "Ticker": ticker,
@@ -694,6 +695,25 @@ for ticker in TICKERS:
                 swing_vcp.get("days_since_low") if swing_vcp else None
             ),
                         # ベース上限による新しい判定（試験版）
+                        # 複数スイング高値による抵抗帯ピボット（試験版）
+            "RESISTANCE_PIVOT": (
+                resistance.get("pivot") if resistance else None
+            ),
+            "RESISTANCE_TOUCHES": (
+                resistance.get("touches", 0) if resistance else 0
+            ),
+            "RESISTANCE_PEAK_DIFF_PCT": (
+                resistance.get("peak_difference_pct")
+                if resistance else None
+            ),
+            "RESISTANCE_FIRST_PEAK_DAYS": (
+                resistance.get("first_peak_days_ago")
+                if resistance else None
+            ),
+            "RESISTANCE_LAST_PEAK_DAYS": (
+                resistance.get("last_peak_days_ago")
+                if resistance else None
+            ),
             "BASE_PIVOT": (
                 base_breakout.get("pivot")
                 if base_breakout else None
