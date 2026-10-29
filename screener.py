@@ -200,6 +200,107 @@ def detect_swing_vcp(df):
         "shrinking": bool(shrinking),
         "tight": bool(tight)
     }
+    def detect_base_breakout(df):
+    """
+    確定済みスイング高値を基準に、
+    READY / BREAKOUT / EXTENDED / FORMINGを暫定分類する。
+
+    既存のTT、VCP、SWING_VCP_READYには影響しない。
+    """
+    import numpy as np
+
+    high = one_column(df, "High").astype(float)
+    low = one_column(df, "Low").astype(float)
+    close = one_column(df, "Close").astype(float)
+    volume = one_column(df, "Volume").astype(float)
+
+    if len(df) < 120:
+        return None
+
+    h = high.to_numpy()
+    l = low.to_numpy()
+    c = close.to_numpy()
+    v = volume.to_numpy()
+
+    if not all(
+        np.isfinite(x[-120:]).all()
+        for x in (h, l, c, v)
+    ):
+        return None
+
+    if np.any(h[-120:] <= 0) or np.any(v[-50:] < 0):
+        return None
+
+    n = len(h)
+    peaks = []
+
+    # 最低10営業日前、最大90営業日前の確定高値
+    for i in range(max(3, n - 90), n - 10):
+        if (
+            h[i] > max(h[i-3:i])
+            and h[i] >= max(h[i+1:i+4])
+        ):
+            peaks.append(i)
+
+    if not peaks:
+        return None
+
+    # 直近の確定スイング高値を暫定ピボットにする
+    peak_i = peaks[-1]
+    pivot = float(h[peak_i])
+
+    if pivot <= 0:
+        return None
+
+    current = float(c[-1])
+    previous = float(c[-2])
+
+    distance = (pivot - current) / pivot * 100
+
+    # ピーク以降の調整幅
+    base_low = float(np.min(l[peak_i + 1:]))
+    depth = (pivot - base_low) / pivot * 100
+
+    # 前日までの50日平均出来高に対する当日出来高
+    avg_volume = float(np.mean(v[-51:-1]))
+    volume_ratio = (
+        float(v[-1] / avg_volume)
+        if avg_volume > 0 else 0.0
+    )
+
+    # 暫定ベースとして3〜35%の調整を要求
+    valid_base = 3 <= depth <= 35
+
+    stage = "FORMING"
+
+    if valid_base:
+        if 0 <= distance <= 5:
+            stage = "READY"
+
+        # 当日終値でピボットを上抜けた場合
+        elif previous <= pivot and current > pivot:
+            stage = (
+                "BREAKOUT"
+                if volume_ratio >= 1.5
+                else "BREAKOUT_LOW_VOLUME"
+            )
+
+        # ピボットを5%以上超えている場合
+        elif distance < -5:
+            stage = "EXTENDED"
+
+        elif distance < 0:
+            stage = "ABOVE_PIVOT"
+
+    return {
+        "pivot": round(pivot, 2),
+        "distance_pct": round(distance, 2),
+        "base_depth_pct": round(depth, 2),
+        "volume_ratio": round(volume_ratio, 2),
+        "stage": stage,
+        "valid_base": bool(valid_base),
+        "days_since_peak": int(n - 1 - peak_i)
+    }
 def setup_metrics(df):
     # Pivot: 当日を含めず、直前15営業日の高値を採用
     high = one_column(df, "High").dropna()
