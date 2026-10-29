@@ -85,7 +85,7 @@ function scanCSV(){
 @media(max-width:700px){#screening-results .statgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 <section id="screening-results" aria-label="実データスクリーニング結果">
-  <div class="dash-head"><div><h2>SEPA / VCP スクリーニング結果</h2><div class="dash-note">GitHub Actions生成の screening.json を自動取得。上部の旧サンプルとは独立した実データ一覧です。</div></div>
+  <div class="dash-head"><div><h2>SEPA / VCP スクリーニング結果</h2><div class="dash-note">GitHub Actions生成の screening.json をGitHubから自動取得。上部の旧サンプルとは独立した実データ一覧です。</div></div>
   <div class="dash-actions"><button class="btn" id="refreshScreening">↻ データ更新</button><label class="btn" for="jsonFile">JSONを手動取込</label><input type="file" id="jsonFile" accept=".json,application/json" hidden></div></div>
   <div class="dash-note" id="screeningStatus" role="status">読み込み中…</div>
   <div class="statgrid">
@@ -154,7 +154,24 @@ function loadData(data,source){if(!data||!Array.isArray(data.stocks))throw Error
  status(`${source} / 更新: ${when} JST / モード: ${data.screen_mode||'不明'}`);
  paintDetail(null);render();
 }
-async function fetchData(){status('GitHub Pages上の結果を取得中…');try{const url='./results/screening.json?_='+Date.now();const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);loadData(await response.json(),'自動取得');}catch(err){status('自動取得できません（'+err.message+'）。「JSONを手動取込」から results/screening.json を選択してください。GitHub Pagesへ results フォルダが公開されているかも確認してください。');}}
+async function fetchData(){
+ status('スクリーニング結果を取得中…');
+ const sources=[
+  'https://raw.githubusercontent.com/caboten-eng/my-trading-terminal/main/results/screening.json',
+  'https://caboten-eng.github.io/my-trading-terminal/results/screening.json'
+ ];
+ const errors=[];
+ for(const source of sources){
+  try{
+   const response=await fetch(source+'?v='+Date.now(),{cache:'no-store'});
+   if(!response.ok)throw new Error('HTTP '+response.status);
+   const data=await response.json();
+   loadData(data,source.includes('raw.githubusercontent.com')?'GitHubの最新データ':'GitHub Pages');
+   return;
+  }catch(err){errors.push(err.message);}
+ }
+ status('自動取得に失敗しました（'+errors.join(' / ')+'）。JSONを手動取込で確認してください。');
+}
 get('jsonFile').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{loadData(JSON.parse(await file.text()),'手動読込: '+file.name);}catch(err){status('JSON読込エラー: '+err.message);}});
 get('refreshScreening').addEventListener('click',fetchData);
 get('screenQuery').addEventListener('input',render);
