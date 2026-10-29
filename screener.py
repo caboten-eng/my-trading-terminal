@@ -3,6 +3,35 @@ import yfinance as yf
 import pandas as pd
 from pathlib import Path
 
+# 標準モード：既存のTT/VCP/PASSは変更せず、SETUP_PASSを追加
+SCREEN_MODE = "standard"
+RS_MIN = 70
+PIVOT_LOOKBACK = 15
+PIVOT_MAX_DISTANCE_PCT = 5.0
+VOLUME_DRY_MAX_RATIO = 0.70
+
+def one_column(df, name):
+    series = df[name]
+    return series.iloc[:, 0] if isinstance(series, pd.DataFrame) else series
+
+def setup_metrics(df):
+    # Pivot: 当日を含めず、直前15営業日の高値を採用
+    high = one_column(df, "High").dropna()
+    close = one_column(df, "Close").dropna()
+    volume = one_column(df, "Volume").dropna()
+    if len(high) < PIVOT_LOOKBACK + 1 or len(close) < 1 or len(volume) < 50:
+        return None, None, False, False
+    pivot = float(high.iloc[-(PIVOT_LOOKBACK + 1):-1].max())
+    price = float(close.iloc[-1])
+    avg5 = float(volume.iloc[-5:].mean())
+    avg50 = float(volume.iloc[-50:].mean())
+    distance_pct = (pivot / price - 1) * 100 if price > 0 else None
+    dry_ratio = avg5 / avg50 if avg50 > 0 else None
+    # 価格がピボット以下かつ距離が5%以内の未突破候補
+    near = distance_pct is not None and 0 <= distance_pct <= PIVOT_MAX_DISTANCE_PCT
+    dry = dry_ratio is not None and dry_ratio <= VOLUME_DRY_MAX_RATIO
+    return distance_pct, dry_ratio, near, dry
+
 # S&P 500構成銘柄を自動取得
 def get_sp500_tickers():
     from io import StringIO
@@ -212,6 +241,7 @@ for ticker in TICKERS:
             "30% above low": price >= low52 * 1.30
         }
         vcp_score, vcp_candidate = detect_vcp(df)
+        pivot_distance, volume_ratio, pivot_near, volume_dry = setup_metrics(df)
         results.append({
             "Ticker": ticker,
             "Price": round(price, 2),
@@ -221,7 +251,11 @@ for ticker in TICKERS:
             "Trend_PASS": bool(all(checks.values())),
             "RS_raw": rs_raw,
             "VCP_SCORE": vcp_score,
-            "VCP_CANDIDATE": bool(vcp_candidate)
+            "VCP_CANDIDATE": bool(vcp_candidate),
+            "Pivot_Distance_Pct": round(pivot_distance, 2) if pivot_distance is not None else None,
+            "Volume5_50_Ratio": round(volume_ratio, 3) if volume_ratio is not None else None,
+            "Pivot_NEAR": bool(pivot_near),
+            "Volume_DRY": bool(volume_dry)
         })
 
         print(f"{ticker}: 取得成功")
@@ -240,11 +274,20 @@ output["RS"] = (
 ).round().clip(1, 99).astype(int)
 
 # RS上位30%を判定
-output["RS_PASS"] = output["RS"] >= 70
+output["RS_PASS"] = output["RS"] >= RS_MIN
 
 # トレンド条件とRS条件を統合
 output["PASS"] = (
     output["Trend_PASS"] & output["RS_PASS"]
+)
+
+# 標準モードの追加判定。旧PASSは互換性のためそのまま保持。
+output["SETUP_PASS"] = (
+    output["Trend_PASS"]
+    & output["RS_PASS"]
+    & output["VCP_CANDIDATE"]
+    & output["Pivot_NEAR"]
+    & output["Volume_DRY"]
 )
 
 # RSの高い順に並べる
@@ -262,6 +305,9 @@ data = {
     "updated_at": datetime.now(timezone.utc).isoformat(),
     "total": len(output),
     "passed": int(output["PASS"].sum()),
+    "setup_passed": int(output["SETUP_PASS"].sum()),
+    "screen_mode": SCREEN_MODE,
+    "settings": {"rs_min": RS_MIN, "pivot_max_distance_pct": PIVOT_MAX_DISTANCE_PCT, "volume_dry_max_ratio": VOLUME_DRY_MAX_RATIO},
     "stocks": output.to_dict(orient="records")
 }
 
@@ -272,4 +318,5 @@ print("\nスクリーニング完了")
 print(f"対象銘柄: {data['total']}")
 print(f"合格銘柄: {data['passed']}")
 print(f"VCP候補: {int(output['VCP_CANDIDATE'].sum())}銘柄")
+print(f"セットアップ合格: {int(output['SETUP_PASS'].sum())}銘柄")
 print(output)
