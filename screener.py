@@ -14,6 +14,10 @@ def one_column(df, name):
     series = df[name]
     return series.iloc[:, 0] if isinstance(series, pd.DataFrame) else series
 
+def vcp_stage(score):
+    """既存VCP_SCOREを分類。形状を保証するものではない。"""
+    return {0: "対象外", 1: "形成初期", 2: "形成中", 3: "完成候補"}.get(int(score), "対象外")
+
 def setup_metrics(df):
     # Pivot: 当日を含めず、直前15営業日の高値を採用
     high = one_column(df, "High").dropna()
@@ -251,6 +255,7 @@ for ticker in TICKERS:
             "Trend_PASS": bool(all(checks.values())),
             "RS_raw": rs_raw,
             "VCP_SCORE": vcp_score,
+            "VCP_STAGE": vcp_stage(vcp_score),
             "VCP_CANDIDATE": bool(vcp_candidate),
             "Pivot_Distance_Pct": round(pivot_distance, 2) if pivot_distance is not None else None,
             "Volume5_50_Ratio": round(volume_ratio, 3) if volume_ratio is not None else None,
@@ -306,6 +311,7 @@ data = {
     "total": len(output),
     "passed": int(output["PASS"].sum()),
     "setup_passed": int(output["SETUP_PASS"].sum()),
+    "vcp_stage_counts": {label: int((output["VCP_STAGE"] == label).sum()) for label in ["対象外", "形成初期", "形成中", "完成候補"]},
     "screen_mode": SCREEN_MODE,
     "settings": {"rs_min": RS_MIN, "pivot_max_distance_pct": PIVOT_MAX_DISTANCE_PCT, "volume_dry_max_ratio": VOLUME_DRY_MAX_RATIO},
     "stocks": output.to_dict(orient="records")
@@ -320,3 +326,5 @@ print(f"合格銘柄: {data['passed']}")
 print(f"VCP候補: {int(output['VCP_CANDIDATE'].sum())}銘柄")
 print(f"セットアップ合格: {int(output['SETUP_PASS'].sum())}銘柄")
 print(output)
+
+print("VCP段階別:", data["vcp_stage_counts"])
