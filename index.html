@@ -2,7 +2,7 @@
 <style>
 .detail-screen{margin-top:22px;padding:18px;border:1px solid #263043;border-radius:14px;background:#101722}.detail-head{display:flex;justify-content:space-between;align-items:center;gap:15px}.detail-sub{font-size:12px;color:#8793a5;margin-top:3px}.score{display:flex;align-items:baseline;gap:7px;padding:8px 12px;border-radius:10px}.score b{font-size:22px}.score span{font-size:11px}.score-pass{background:#123322;color:#65d48b}.score-partial{background:#302813;color:#e7c65a}.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.check-row{display:flex;gap:10px;align-items:flex-start;padding:11px;border-radius:10px;border:1px solid #273043}.check-row.ok{border-color:#214d36;background:#0f1e17}.check-row.ng{border-color:#4b2a2a;background:#211517}.check-icon{font-size:18px;font-weight:800}.ok .check-icon{color:#59d483}.ng .check-icon{color:#ef7373}.check-main{display:flex;flex-direction:column;gap:3px}.check-main b{font-size:13px}.check-main small{color:#9ba6b6;font-size:11px}.check-main em{color:#e88989;font-size:10px;font-style:normal}.next-box{margin-top:12px;padding:10px 12px;border-radius:9px;background:#171f2c;color:#cbd5e1;font-size:13px}@media(max-width:700px){.check-grid{grid-template-columns:1fr}.detail-head{align-items:flex-start}}
 </style>
-</head><body><div class="app"><div class="top"><div><div class="brand">MY TRADING TERMINAL</div><div class="sub">個人用・チャートなし版 / Minervini監視対応</div></div><div class="search"><input id="search" placeholder="銘柄コード 例: SNDK"><button class="btn" onclick="loadTicker()">表示</button></div></div><div class="grid"><main class="card"><div class="ticker"><div><div class="symbol" id="symbol">SNDK</div><div class="sub" id="name">SanDisk</div></div><div><div class="price" id="price">$252.40</div><div class="change" id="chg">+3.18%</div></div></div><div class="tabs"><button class="btn active">1D</button><button class="btn">1W</button><button class="btn">1M</button><button class="btn">3M</button><button class="btn">1Y</button></div><div class="placeholder">ここにローソク足チャートを接続<br><br>まずはUI・銘柄分析部分を先に完成させる構成</div><div class="metrics"><div class="metric"><span class="label">52週高値</span><b>$277.47</b></div><div class="metric"><span class="label">RSI</span><b>64.2</b></div><div class="metric"><span class="label">出来高</span><b>1.24×</b></div><div class="metric"><span class="label">MA50</span><b>$221.8</b></div><div class="metric"><span class="label">MA150</span><b>$184.5</b></div><div class="metric"><span class="label">MA200</span><b>$165.2</b></div></div><section class="card" style="margin-top:14px"><div class="section-title">自動スクリーニング — Minervini Trend Template</div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px"><button class="btn" onclick="runScan()">🔎 スクリーニング実行</button><button class="btn" onclick="toggleRules()">条件を表示/非表示</button></div><div id="rules" class="checks" style="margin-bottom:12px"><div class="check"><span>株価 > MA50 / MA150 / MA200</span><span class="ok">必須</span></div><div class="check"><span>MA50 > MA150 > MA200</span><span class="ok">必須</span></div><div class="check"><span>200日線が1か月以上上向き</span><span class="ok">必須</span></div><div class="check"><span>52週高値から -25%以内</span><span class="ok">必須</span></div><div class="check"><span>52週安値から +30%以上</span><span class="ok">必須</span></div></div><div id="scanResult" class="watch"><div class="sub">スクリーニングを実行すると結果がここに表示されます。</div></div><div class="note">現在は内蔵サンプルデータ。実データAPI接続後は、日本株・米国株の監視対象を定期的に自動更新できます。</div></section>
+</head><body><div class="app"><div class="top"><div><div class="brand">MY TRADING TERMINAL</div><div class="sub">個人用・Minervini監視対応 / 上部は旧サンプル画面</div></div><div class="search"><input id="search" placeholder="銘柄コード 例: SNDK"><button class="btn" onclick="loadTicker()">表示</button></div></div><div class="grid"><main class="card"><div class="ticker"><div><div class="symbol" id="symbol">SNDK</div><div class="sub" id="name">SanDisk</div></div><div><div class="price" id="price">$252.40</div><div class="change" id="chg">+3.18%</div></div></div><div class="tabs"><button class="btn active">1D</button><button class="btn">1W</button><button class="btn">1M</button><button class="btn">3M</button><button class="btn">1Y</button></div><div class="placeholder">ここにローソク足チャートを接続<br><br>まずはUI・銘柄分析部分を先に完成させる構成</div><div class="metrics"><div class="metric"><span class="label">52週高値</span><b>$277.47</b></div><div class="metric"><span class="label">RSI</span><b>64.2</b></div><div class="metric"><span class="label">出来高</span><b>1.24×</b></div><div class="metric"><span class="label">MA50</span><b>$221.8</b></div><div class="metric"><span class="label">MA150</span><b>$184.5</b></div><div class="metric"><span class="label">MA200</span><b>$165.2</b></div></div><section class="card" style="margin-top:14px"><div class="section-title">自動スクリーニング — Minervini Trend Template</div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px"><button class="btn" onclick="runScan()">🔎 スクリーニング実行</button><button class="btn" onclick="toggleRules()">条件を表示/非表示</button></div><div id="rules" class="checks" style="margin-bottom:12px"><div class="check"><span>株価 > MA50 / MA150 / MA200</span><span class="ok">必須</span></div><div class="check"><span>MA50 > MA150 > MA200</span><span class="ok">必須</span></div><div class="check"><span>200日線が1か月以上上向き</span><span class="ok">必須</span></div><div class="check"><span>52週高値から -25%以内</span><span class="ok">必須</span></div><div class="check"><span>52週安値から +30%以上</span><span class="ok">必須</span></div></div><div id="scanResult" class="watch"><div class="sub">スクリーニングを実行すると結果がここに表示されます。</div></div><div class="note">この欄と上部の株価表示は旧サンプルです。実データの判定結果は下部の「スクリーニング結果」に表示されます。</div></section>
 <section class="card" style="margin-top:14px">
 <div class="section-title">実データスクリーニング（CSV取込）</div>
 <p class="sub">無料の株価データをCSVで取り込み、終値からMA50/150/200と52週高安値を計算します。日付・銘柄・終値（date,symbol,close）の列が必要です。最低221営業日分を推奨。</p>
@@ -22,7 +22,7 @@
  {t:"NVDA",p:183,m50:171,m150:154,m200:137,h52:191,l52:86,rising:true}
 ];
 function passes(x){return x.p>x.m50&&x.p>x.m150&&x.p>x.m200&&x.m50>x.m150&&x.m150>x.m200&&x.rising&&x.p>=x.h52*.75&&x.p>=x.l52*1.3}
-function runScan(){const r=document.getElementById("scanResult");const ok=universe.filter(passes);r.innerHTML=ok.length?ok.map(x=>`<div class="watchrow" onclick="select('${x.t}')"><span><b>${x.t}</b><br><small>Trend Template PASS</small></span><span class="up">PASS</span></div>`).join(""):`<div class="sub">条件を満たす銘柄なし</div>`;document.querySelector('#scanResult').insertAdjacentHTML('afterbegin',`<div class="sub" style="margin-bottom:6px">${ok.length}銘柄が条件を通過</div>`)}
+function runScan(){const r=document.getElementById("scanResult");const ok=universe.filter(passes);r.innerHTML=ok.length?ok.map(x=>`<div class="watchrow" onclick="selectTicker('${x.t}')"><span><b>${x.t}</b><br><small>Trend Template PASS</small></span><span class="up">PASS</span></div>`).join(""):`<div class="sub">条件を満たす銘柄なし</div>`;document.querySelector('#scanResult').insertAdjacentHTML('afterbegin',`<div class="sub" style="margin-bottom:6px">${ok.length}銘柄が条件を通過</div>`)}
 function toggleRules(){const e=document.getElementById('rules');e.style.display=e.style.display==='none'?'grid':'none'}
 const data={SNDK:['SanDisk','$252.40','+3.18%'],MU:['Micron Technology','$—','—'],NBIS:['Nebius','$—','—'],MRVL:['Marvell Technology','$—','—'],PLTR:['Palantir Technologies','$—','—'],SOFI:['SoFi Technologies','$—','—']};const watch=[['SNDK','+3.18%','up'],['MU','—',''],['NBIS','—',''],['MRVL','—',''],['PLTR','—',''],['SOFI','—','']];function render(){watchEl.innerHTML=watch.map(x=>`<div class="watchrow" onclick="selectTicker('${x[0]}')"><span><b>${x[0]}</b><br><small class="sub">監視</small></span><span class="${x[2]}">${x[1]}</span></div>`).join('')}function selectTicker(t){search.value=t;loadTicker()}function loadTicker(){const t=search.value.trim().toUpperCase()||'SNDK',d=data[t]||['未登録銘柄','$—','—'];symbol.textContent=t;name.textContent=d[0];price.textContent=d[1];chg.textContent=d[2];analysis.innerHTML=`<b>${t}：</b>銘柄ページを読み込みました。実データ接続後は株価・移動平均・出来高・RS・ニュースを自動取得し、この欄を更新できます。`}const search=document.getElementById('search'),symbol=document.getElementById('symbol'),name=document.getElementById('name'),price=document.getElementById('price'),chg=document.getElementById('chg'),analysis=document.getElementById('analysis'),watchEl=document.getElementById('watch');render();</script>
 <script>
@@ -57,99 +57,99 @@ function scanCSV(){
 }
 </script>
  
-<section id="screening-results" style="padding:24px">
-  <h2>SEPA Screening Results</h2>
 
-  <input type="file" id="jsonFile" accept=".json">
-
-  <p id="screeningStatus">
-    screening.json を選択してください
-  </p>
-
-  <div style="overflow-x:auto">
-    <table id="screeningTable"
-      style="width:100%;border-collapse:collapse">
-      <thead></thead>
-      <tbody></tbody>
-    </table>
+<style>
+#screening-results{max-width:1200px;margin:20px auto 50px;padding:0 18px;color:var(--t)}
+#screening-results .dash-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:14px}
+#screening-results h2{margin:0 0 4px;font-size:21px}
+#screening-results .dash-note{font-size:12px;color:var(--m);line-height:1.6}
+#screening-results .dash-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#screening-results .dash-actions label{cursor:pointer}
+#screening-results .statgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:14px 0}
+#screening-results .stat{background:var(--p2);border:1px solid var(--l);border-radius:10px;padding:13px}
+#screening-results .stat small{display:block;color:var(--m);font-size:11px}
+#screening-results .stat strong{display:block;font-size:23px;margin-top:5px}
+#screening-results .controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+#screening-results .controls input{background:var(--p2);border:1px solid var(--l);border-radius:9px;padding:10px;color:var(--t);max-width:220px}
+#screening-results .filterbtn[aria-pressed="true"]{background:#214b39;color:#84e6ad;border-color:#367453}
+#screening-results .tablewrap{overflow:auto;max-height:650px;border:1px solid var(--l);border-radius:10px}
+#screening-results table{width:100%;border-collapse:collapse;font-size:12px;white-space:nowrap}
+#screening-results th{background:#1b2532;color:#b5c7d8;position:sticky;top:0;z-index:1;text-align:left;padding:11px 10px;cursor:pointer}
+#screening-results td{border-top:1px solid #263140;padding:10px}
+#screening-results tr:hover td{background:#1b2530}
+#screening-results a{color:#83baff;text-decoration:none}
+#screening-results .yes{color:#57d891;font-weight:700}
+#screening-results .no{color:#8d98a6}
+#screening-results .na{color:var(--y)}
+#screening-results .detail{border-top:1px solid var(--l);padding:12px 4px;margin-top:12px;font-size:12px;line-height:1.8}
+@media(max-width:700px){#screening-results .statgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<section id="screening-results" aria-label="実データスクリーニング結果">
+  <div class="dash-head"><div><h2>SEPA / VCP スクリーニング結果</h2><div class="dash-note">GitHub Actions生成の screening.json を自動取得。上部の旧サンプルとは独立した実データ一覧です。</div></div>
+  <div class="dash-actions"><button class="btn" id="refreshScreening">↻ データ更新</button><label class="btn" for="jsonFile">JSONを手動取込</label><input type="file" id="jsonFile" accept=".json,application/json" hidden></div></div>
+  <div class="dash-note" id="screeningStatus" role="status">読み込み中…</div>
+  <div class="statgrid">
+    <div class="stat"><small>対象銘柄</small><strong id="statTotal">—</strong></div>
+    <div class="stat"><small>TT 合格</small><strong id="statTT">—</strong></div>
+    <div class="stat"><small>RS 70以上 &amp; TT</small><strong id="statPass">—</strong></div>
+    <div class="stat"><small>VCP 候補</small><strong id="statVCP">—</strong></div>
+    <div class="stat"><small>SETUP 合格</small><strong id="statSetup">—</strong></div>
   </div>
+  <div class="controls" id="screenFilters">
+    <button class="btn filterbtn" data-filter="all" aria-pressed="true">全銘柄</button>
+    <button class="btn filterbtn" data-filter="tt" aria-pressed="false">TT合格</button>
+    <button class="btn filterbtn" data-filter="vcp" aria-pressed="false">VCP候補</button>
+    <button class="btn filterbtn" data-filter="setup" aria-pressed="false">SETUP合格</button>
+    <input id="screenQuery" type="search" aria-label="銘柄検索" placeholder="銘柄検索（例：NVDA）">
+    <span class="dash-note" id="screenCount"></span>
+  </div>
+  <div class="tablewrap"><table id="screeningTable"><thead></thead><tbody></tbody></table></div>
+  <div class="detail" id="screeningDetail">銘柄行を選択すると各判定を表示します。</div>
+  <p class="dash-note">SETUP = TT合格 ＋ RS70以上 ＋ VCP候補 ＋ ピボット距離0〜5% ＋ 直近5日平均出来高/50日平均出来高 ≤70%。ピボットは直前15営業日の高値を使用。RSは対象銘柄内の相対順位です。株価データの確定日と反映時刻は異なる場合があります。</p>
 </section>
-
 <script>
-document.getElementById("jsonFile")
-  .addEventListener("change", async function(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    const status =
-      document.getElementById("screeningStatus");
-    const table =
-      document.getElementById("screeningTable");
-
-    try {
-      const data = JSON.parse(await file.text());
-      const stocks = data.stocks;
-
-      if (!Array.isArray(stocks)) {
-        throw new Error("stocks が見つかりません");
-      }
-
-      status.textContent =
-        `対象: ${data.total}銘柄 / 合格: ${data.passed}銘柄`;
-
-      const columns = stocks.length
-        ? Object.keys(stocks[0])
-        : [];
-
-      const head = table.querySelector("thead");
-      const body = table.querySelector("tbody");
-
-      head.replaceChildren();
-      body.replaceChildren();
-
-      const headerRow = document.createElement("tr");
-
-      columns.forEach(col => {
-        const th = document.createElement("th");
-        th.textContent = col;
-        th.style.padding = "10px";
-        th.style.borderBottom = "1px solid #888";
-        headerRow.appendChild(th);
-      });
-
-      head.appendChild(headerRow);
-
-      stocks.forEach(stock => {
-        const row = document.createElement("tr");
-
-        columns.forEach(col => {
-          const cell = document.createElement("td");
-          cell.style.padding = "10px";
-          cell.style.borderBottom = "1px solid #555";
-
-          if (col.toLowerCase() === "ticker") {
-            const link = document.createElement("a");
-            link.textContent = stock[col];
-            link.href =
-              "https://www.tradingview.com/chart/?symbol="
-              + encodeURIComponent(stock[col]);
-            link.target = "_blank";
-            link.rel = "noopener noreferrer";
-            cell.appendChild(link);
-          } else {
-            cell.textContent = String(stock[col] ?? "");
-          }
-
-          row.appendChild(cell);
-        });
-
-        body.appendChild(row);
-      });
-
-    } catch (err) {
-      status.textContent =
-        "読み込みエラー: " + err.message;
-    }
-  });
+(()=>{'use strict';
+const root=document.getElementById('screening-results');
+const get=id=>root.querySelector('#'+id);
+const fields=[['Ticker','銘柄'],['Price','株価'],['RS','RS'],['Trend_PASS','TT'],['VCP_SCORE','VCP点'],['VCP_CANDIDATE','VCP候補'],['Pivot_Distance_Pct','Pivot距離%'],['Pivot_NEAR','Pivot近接'],['Volume5_50_Ratio','出来高比'],['Volume_DRY','出来高枯渇'],['SETUP_PASS','SETUP'],['PASS','従来PASS']];
+const booleanFields=new Set(['Trend_PASS','VCP_CANDIDATE','Pivot_NEAR','Volume_DRY','SETUP_PASS','PASS']);
+let stocks=[],active='all',sortKey='RS',ascending=false;
+const status=message=>get('screeningStatus').textContent=message;
+const flag=(row,key)=>row[key]===true || row[key]===1 || row[key]==='true';
+const valid=(row,key)=>Object.prototype.hasOwnProperty.call(row,key) && row[key]!==null && row[key]!=='';
+const text=(value)=>value===null||value===undefined?'—':String(value);
+const mark=(row,key)=>!valid(row,key)?'—':flag(row,key)?'✓':'—';
+function paintDetail(s){const detail=get('screeningDetail');detail.replaceChildren();if(!s){detail.textContent='銘柄行を選択すると各判定を表示します。';return;}
+ const heading=document.createElement('strong');heading.textContent=s.Ticker+' — 判定内訳';detail.append(heading);
+ const info=document.createElement('div');info.textContent=`TT: ${mark(s,'Trend_PASS')} ｜ RS: ${text(s.RS)} ｜ VCP: ${mark(s,'VCP_CANDIDATE')}（スコア ${text(s.VCP_SCORE)}） ｜ Pivot: ${text(s.Pivot_Distance_Pct)}%（近接 ${mark(s,'Pivot_NEAR')}） ｜ 出来高比: ${text(s.Volume5_50_Ratio)}（枯渇 ${mark(s,'Volume_DRY')}） ｜ SETUP: ${mark(s,'SETUP_PASS')}`;detail.append(info);
+}
+function compare(a,b){const va=a[sortKey],vb=b[sortKey];const num=typeof va==='number' && typeof vb==='number';if(num)return va-vb;return String(va??'').localeCompare(String(vb??''));}
+function render(){const q=get('screenQuery').value.trim().toUpperCase();const filtered=stocks.filter(s=>{
+ if(q&&!String(s.Ticker??'').toUpperCase().includes(q))return false;
+ if(active==='tt')return flag(s,'Trend_PASS');
+ if(active==='vcp')return flag(s,'VCP_CANDIDATE');
+ if(active==='setup')return flag(s,'SETUP_PASS');return true;
+ }).sort((a,b)=>(ascending?1:-1)*compare(a,b));
+ get('screenCount').textContent=`${filtered.length} / ${stocks.length} 銘柄`;
+ const head=get('screeningTable').querySelector('thead'),body=get('screeningTable').querySelector('tbody');head.replaceChildren();body.replaceChildren();
+ const hr=document.createElement('tr');fields.forEach(([key,label])=>{const th=document.createElement('th');th.textContent=label+(sortKey===key?(ascending?' ▲':' ▼'):'');th.tabIndex=0;th.addEventListener('click',()=>{if(sortKey===key)ascending=!ascending;else{sortKey=key;ascending=key==='Ticker';}render();});th.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();th.click();}});hr.append(th);});head.append(hr);
+ for(const s of filtered){const tr=document.createElement('tr');tr.style.cursor='pointer';tr.addEventListener('click',()=>paintDetail(s));for(const [key] of fields){const td=document.createElement('td');if(key==='Ticker'){const a=document.createElement('a');a.textContent=text(s[key]);a.href='https://www.tradingview.com/chart/?symbol='+encodeURIComponent(s[key]||'');a.target='_blank';a.rel='noopener noreferrer';a.addEventListener('click',e=>e.stopPropagation());td.append(a);}else if(booleanFields.has(key)){td.textContent=valid(s,key)?(flag(s,key)?'✓ PASS':'—'):'未計算';td.className=!valid(s,key)?'na':flag(s,key)?'yes':'no';}else{td.textContent=text(s[key]);}tr.append(td);}body.append(tr);}
+ if(!filtered.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=fields.length;td.textContent='該当する銘柄はありません';tr.append(td);body.append(tr);}
+}
+function loadData(data,source){if(!data||!Array.isArray(data.stocks))throw Error('stocks配列がありません');stocks=data.stocks.filter(s=>s&&typeof s==='object');
+ get('statTotal').textContent=stocks.length;get('statTT').textContent=stocks.filter(s=>flag(s,'Trend_PASS')).length;
+ get('statPass').textContent=stocks.filter(s=>flag(s,'PASS')).length;get('statVCP').textContent=stocks.filter(s=>flag(s,'VCP_CANDIDATE')).length;
+ get('statSetup').textContent=stocks.some(s=>valid(s,'SETUP_PASS'))?stocks.filter(s=>flag(s,'SETUP_PASS')).length:'—';
+ const updated=data.updated_at?new Date(data.updated_at):null;const when=updated&&!Number.isNaN(updated.valueOf())?updated.toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'}):'日時不明';
+ status(`${source} / 更新: ${when} JST / モード: ${data.screen_mode||'不明'}`);
+ paintDetail(null);render();
+}
+async function fetchData(){status('GitHub Pages上の結果を取得中…');try{const url=new URL('./results/screening.json',window.location.href);url.searchParams.set('_',Date.now());const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);loadData(await response.json(),'自動取得');}catch(err){status('自動取得できません（'+err.message+'）。「JSONを手動取込」から results/screening.json を選択してください。GitHub Pagesへ results フォルダが公開されているかも確認してください。');}}
+get('jsonFile').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{loadData(JSON.parse(await file.text()),'手動読込: '+file.name);}catch(err){status('JSON読込エラー: '+err.message);}});
+get('refreshScreening').addEventListener('click',fetchData);
+get('screenQuery').addEventListener('input',render);
+root.querySelectorAll('.filterbtn').forEach(btn=>btn.addEventListener('click',()=>{active=btn.dataset.filter;root.querySelectorAll('.filterbtn').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));render();}));
+fetchData();
+})();
 </script>
 </body></html>
