@@ -276,6 +276,77 @@ def detect_base_breakout(df):
         "valid_base": bool(valid_base),
         "days_since_peak": int(days_since_peak),
     }
+    def detect_resistance_pivot(df):
+    """
+    複数の確定スイング高値から抵抗帯を検出する試験版。
+
+    条件:
+    - 直近90営業日を分析
+    - 左右3営業日で確定した高値
+    - 高値同士が3%以内
+    - 高値の形成間隔が5営業日以上
+    - 2回以上試された価格帯を候補にする
+
+    既存のBASE_STAGEやSETUP_PASSは変更しない。
+    """
+    import numpy as np
+
+    if len(df) < 100:
+        return None
+
+    high = one_column(df, "High").iloc[-100:]
+    high = high.to_numpy(dtype=float)
+
+    if not np.isfinite(high).all():
+        return None
+
+    peaks = []
+
+    # 右側3本が確定したスイング高値のみ
+    for i in range(10, len(high) - 3):
+
+        if (
+            high[i] > max(high[i-3:i])
+            and high[i] >= max(high[i+1:i+4])
+        ):
+            peaks.append((i, float(high[i])))
+
+    # 新しい高値の組から順番に探す
+    for j in range(len(peaks) - 1, 0, -1):
+
+        recent_i, recent_price = peaks[j]
+
+        for k in range(j - 1, -1, -1):
+
+            old_i, old_price = peaks[k]
+
+            if recent_i - old_i < 5:
+                continue
+
+            difference = (
+                abs(recent_price - old_price)
+                / max(recent_price, old_price)
+                * 100
+            )
+
+            if difference <= 3:
+                pivot = max(recent_price, old_price)
+
+                return {
+                    "pivot": round(pivot, 2),
+                    "first_peak_days_ago": int(
+                        len(high) - 1 - old_i
+                    ),
+                    "last_peak_days_ago": int(
+                        len(high) - 1 - recent_i
+                    ),
+                    "peak_difference_pct": round(
+                        difference, 2
+                    ),
+                    "touches": 2
+                }
+
+    return None
 def setup_metrics(df):
     # Pivot: 当日を含めず、直前15営業日の高値を採用
     high = one_column(df, "High").dropna()
