@@ -201,58 +201,40 @@ def detect_swing_vcp(df):
         "tight": bool(tight)
     }
 def detect_base_breakout(df):
-    """
-    確定済みのスイング高値を使い、
-    ベースの状態を暫定分類する。
-    """
+    """過去の固定期間の高値を基準にした暫定ベース判定。"""
     import numpy as np
+
+    if len(df) < 120:
+        return None
 
     high = one_column(df, "High").astype(float)
     low = one_column(df, "Low").astype(float)
     close = one_column(df, "Close").astype(float)
     volume = one_column(df, "Volume").astype(float)
 
-    if len(df) < 120:
-        return None
-
     h = high.to_numpy()
     l = low.to_numpy()
     c = close.to_numpy()
     v = volume.to_numpy()
 
-    if not all(
-        np.isfinite(x[-120:]).all()
-        for x in (h, l, c, v)
-    ):
+    if not all(np.isfinite(a[-120:]).all() for a in (h, l, c, v)):
+        return None
+    if np.any(h[-120:] <= 0) or np.any(l[-120:] <= 0):
         return None
 
-    if np.any(h[-120:] <= 0) or np.any(v[-50:] < 0):
-        return None
-
-    n = len(h)
-    peaks = []
-
-    for i in range(max(3, n - 90), n - 10):
-        if (
-            h[i] > max(h[i-3:i])
-            and h[i] >= max(h[i+1:i+4])
-        ):
-            peaks.append(i)
-
-    if not peaks:
-        return None
-
-    peak_i = peaks[-1]
-    pivot = float(h[peak_i])
-
-    if pivot <= 0:
-        return None
+    # 最近10日を除く60営業日で基準高値を固定
+    reference = h[-70:-10]
+    pivot_idx_local = int(np.argmax(reference))
+    pivot_idx = len(h) - 70 + pivot_idx_local
+    pivot = float(reference[pivot_idx_local])
 
     current = float(c[-1])
     previous = float(c[-2])
-    distance = (pivot - current) / pivot * 100
+    if pivot <= 0 or current <= 0:
+        return None
 
-    base_low = float(np.min(l[peak_i + 1:]))
+    distance = (pivot - current) / pivot * 100
+    base_low = float(np.min(l[pivot_idx + 1:]))
     depth = (pivot - base_low) / pivot * 100
 
     avg_volume = float(np.mean(v[-51:-1]))
@@ -261,13 +243,18 @@ def detect_base_breakout(df):
         if avg_volume > 0 else 0.0
     )
 
-    valid_base = 3 <= depth <= 35
+    days_since_peak = len(h) - 1 - pivot_idx
+
+    # 調整幅3〜35%、高値形成から10営業日以上
+    valid_base = (
+        3 <= depth <= 35
+        and days_since_peak >= 10
+    )
+
     stage = "FORMING"
 
     if valid_base:
-        if 0 <= distance <= 5:
-            stage = "READY"
-        elif previous <= pivot and current > pivot:
+        if previous <= pivot < current:
             stage = (
                 "BREAKOUT"
                 if volume_ratio >= 1.5
@@ -277,6 +264,8 @@ def detect_base_breakout(df):
             stage = "EXTENDED"
         elif distance < 0:
             stage = "ABOVE_PIVOT"
+        elif distance <= 5:
+            stage = "READY"
 
     return {
         "pivot": round(pivot, 2),
@@ -285,7 +274,7 @@ def detect_base_breakout(df):
         "volume_ratio": round(volume_ratio, 2),
         "stage": stage,
         "valid_base": bool(valid_base),
-        "days_since_peak": int(n - 1 - peak_i)
+        "days_since_peak": int(days_since_peak),
     }
 def setup_metrics(df):
     # Pivot: 当日を含めず、直前15営業日の高値を採用
