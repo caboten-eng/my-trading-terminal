@@ -276,7 +276,8 @@ def detect_base_breakout(df):
         "valid_base": bool(valid_base),
         "days_since_peak": int(days_since_peak),
     }
-    def detect_resistance_pivot(df):
+    
+def detect_resistance_pivot(df):
     """
     複数の確定スイング高値から抵抗帯を検出する試験版。
 
