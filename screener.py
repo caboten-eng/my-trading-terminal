@@ -576,6 +576,7 @@ for ticker in TICKERS:
         # ベース上限を使った新しいピボット判定
         base_breakout = detect_base_breakout(df)
         results.append({
+            "BAR_DATE": df.index[-1].strftime("%Y-%m-%d"),
             "Ticker": ticker,
             "Price": round(price, 2),
             "MA50": round(float(ma50.iloc[-1]), 2),
