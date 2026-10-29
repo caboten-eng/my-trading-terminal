@@ -257,6 +257,7 @@ const filters = [
   ['stage2','VCP形成中'],
   ['stage3','VCP完成候補'],
   ['swing','スイングVCP完成候補'],
+  ['swing_strong','Swing VCP＋TT＋RS70'],
   ['shrink','押し目収縮'],
   ['setup','SETUP合格']
 ];
@@ -351,6 +352,12 @@ function match(s){
       return s.VCP_STAGE==='完成候補';
       case 'swing':
   return s.SWING_VCP_CANDIDATE===true;
+      case 'swing_strong':
+  return (
+    s.SWING_VCP_CANDIDATE === true &&
+    s.Trend_PASS === true &&
+    s.RS >= 70
+  );
     case 'shrink':
       return s.VCP_PB_SHRINK===true;
     case 'setup':
