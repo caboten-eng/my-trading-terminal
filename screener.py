@@ -41,7 +41,165 @@ def vcp_pullback_depths(df):
     shrinking = all(d >= 1.0 for d in depths) and depths[0] > depths[1] > depths[2]
     ratio = depths[2] / depths[0] if depths[0] > 0 else None
     return *depths, bool(shrinking), ratio
+def detect_swing_vcp(df):
+    """
+    スイング高値・安値からVCPの収縮を検出する。
 
+    ・左右3営業日で確定した高値・安値を使用
+    ・直近120営業日の値動きを分析
+    ・直近3回の押し目の深さを比較
+    ・最後の安値が直近25営業日以内であること
+    ・最後の押し目で出来高が減少していること
+
+    既存のVCP_SCOREやSETUP_PASSは変更しない。
+    """
+    import numpy as np
+
+    high = one_column(df, "High")
+    low = one_column(df, "Low")
+    volume = one_column(df, "Volume")
+
+    if len(df) < 120:
+        return None
+
+    high = high.iloc[-120:].to_numpy(dtype=float)
+    low = low.iloc[-120:].to_numpy(dtype=float)
+    volume = volume.iloc[-120:].to_numpy(dtype=float)
+
+    if (
+        not np.isfinite(high).all()
+        or not np.isfinite(low).all()
+        or not np.isfinite(volume).all()
+        or np.any(high <= 0)
+        or np.any(low <= 0)
+    ):
+        return None
+
+    window = 3
+    swings = []
+
+    # スイング高値・安値を確定
+    for i in range(window, len(high) - window):
+
+        h = high[i]
+        l = low[i]
+
+        is_peak = (
+            h > max(high[i-window:i])
+            and h >= max(high[i+1:i+window+1])
+        )
+
+        is_trough = (
+            l < min(low[i-window:i])
+            and l <= min(low[i+1:i+window+1])
+        )
+
+        # 同じ足が高値・安値の両方なら除外
+        if is_peak == is_trough:
+            continue
+
+        kind = "H" if is_peak else "L"
+        price = h if is_peak else l
+
+        # 同種類の山・谷は極値だけ残す
+        if swings and swings[-1][0] == kind:
+
+            old_kind, old_i, old_price = swings[-1]
+
+            better = (
+                price > old_price
+                if kind == "H"
+                else price < old_price
+            )
+
+            if better:
+                swings[-1] = (kind, i, price)
+
+        else:
+            swings.append((kind, i, price))
+
+    contractions = []
+
+    # 高値 → 安値の組を抽出
+    for a, b in zip(swings, swings[1:]):
+
+        if a[0] != "H" or b[0] != "L":
+            continue
+
+        peak = a[2]
+        trough = b[2]
+
+        if peak <= 0 or trough >= peak:
+            continue
+
+        depth = (peak - trough) / peak * 100
+
+        # 小さすぎるノイズや極端な下落は除外
+        if not 2 <= depth <= 45:
+            continue
+
+        contractions.append({
+            "peak_index": a[1],
+            "low_index": b[1],
+            "depth": depth
+        })
+
+    if len(contractions) < 3:
+        return {
+            "score": 0,
+            "candidate": False,
+            "depths": [],
+            "reason": "押し目が3回未満"
+        }
+
+    recent = contractions[-3:]
+    depths = [x["depth"] for x in recent]
+
+    # 3回の押し目が順次浅くなる
+    shrinking = (
+        depths[0] > depths[1] > depths[2]
+    )
+
+    # 最後の谷が最近形成されている
+    days_since_low = (
+        len(high) - 1 - recent[-1]["low_index"]
+    )
+
+    recent_low = days_since_low <= 25
+
+    # 最後の押し目の出来高と前の押し目を比較
+    def avg_volume(c):
+        start = c["peak_index"]
+        end = c["low_index"] + 1
+        return float(np.mean(volume[start:end]))
+
+    previous_vol = avg_volume(recent[-2])
+    latest_vol = avg_volume(recent[-1])
+
+    volume_shrinking = (
+        previous_vol > 0
+        and latest_vol < previous_vol * 0.85
+    )
+
+    # 最後の押し目が最初の60%以下
+    tight = depths[2] <= depths[0] * 0.6
+
+    score = sum([
+        shrinking,
+        recent_low,
+        volume_shrinking,
+        tight
+    ])
+
+    return {
+        "score": int(score),
+        "candidate": bool(score == 4),
+        "depths": [round(x, 2) for x in depths],
+        "days_since_low": int(days_since_low),
+        "volume_shrinking": bool(volume_shrinking),
+        "shrinking": bool(shrinking),
+        "tight": bool(tight)
+    }
 def setup_metrics(df):
     # Pivot: 当日を含めず、直前15営業日の高値を採用
     high = one_column(df, "High").dropna()
