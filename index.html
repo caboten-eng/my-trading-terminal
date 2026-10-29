@@ -507,6 +507,22 @@ function showDetail(ticker,rerender=true){
     ['TT',value(s.Trend_PASS)],
     ['VCP段階',s.VCP_STAGE],
     ['VCPスコア',s.VCP_SCORE],
+        // 新旧VCP判定の比較
+    ['従来VCPスコア（3点満点）',s.VCP_SCORE],
+    ['スイングVCPスコア（4点満点）',s.SWING_VCP_SCORE ?? '—'],
+    ['スイングVCP完成候補',value(s.SWING_VCP_CANDIDATE)],
+    ['スイング押し目収縮',value(s.SWING_VCP_SHRINK)],
+    ['スイング出来高収縮',value(s.SWING_VCP_VOLUME_SHRINK)],
+    ['直近安値からの営業日数',s.SWING_VCP_DAYS_SINCE_LOW ?? '—'],
+    ['スイング押し目①',
+      s.SWING_VCP_DEPTHS?.[0] != null
+        ? num(s.SWING_VCP_DEPTHS[0])+'%' : '—'],
+    ['スイング押し目②',
+      s.SWING_VCP_DEPTHS?.[1] != null
+        ? num(s.SWING_VCP_DEPTHS[1])+'%' : '—'],
+    ['スイング押し目③',
+      s.SWING_VCP_DEPTHS?.[2] != null
+        ? num(s.SWING_VCP_DEPTHS[2])+'%' : '—'],
     ['押し目収縮',value(s.VCP_PB_SHRINK)],
     ['押し目①',num(s.VCP_PB1_PCT)+'%'],
     ['押し目②',num(s.VCP_PB2_PCT)+'%'],
