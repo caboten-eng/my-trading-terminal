@@ -577,7 +577,8 @@ for ticker in TICKERS:
             and swing_range_tight
             and swing_pivot_ready
         )
-
+        # ベース上限を使った新しいピボット判定
+        base_breakout = detect_base_breakout(df)
         results.append({
             "Ticker": ticker,
             "Price": round(price, 2),
@@ -623,6 +624,35 @@ for ticker in TICKERS:
             ),
             "SWING_VCP_DAYS_SINCE_LOW": (
                 swing_vcp.get("days_since_low") if swing_vcp else None
+            ),
+                        # ベース上限による新しい判定（試験版）
+            "BASE_PIVOT": (
+                base_breakout.get("pivot")
+                if base_breakout else None
+            ),
+            "BASE_STAGE": (
+                base_breakout.get("stage", "NO_DATA")
+                if base_breakout else "NO_DATA"
+            ),
+            "BASE_DISTANCE_PCT": (
+                base_breakout.get("distance_pct")
+                if base_breakout else None
+            ),
+            "BASE_DEPTH_PCT": (
+                base_breakout.get("base_depth_pct")
+                if base_breakout else None
+            ),
+            "BASE_VOLUME_RATIO": (
+                base_breakout.get("volume_ratio")
+                if base_breakout else None
+            ),
+            "BASE_VALID": (
+                base_breakout.get("valid_base", False)
+                if base_breakout else False
+            ),
+            "BASE_DAYS_SINCE_PEAK": (
+                base_breakout.get("days_since_peak")
+                if base_breakout else None
             ),
             "Pivot_Distance_Pct": round(pivot_distance, 2) if pivot_distance is not None else None,
             "Volume5_50_Ratio": round(volume_ratio, 3) if volume_ratio is not None else None,
