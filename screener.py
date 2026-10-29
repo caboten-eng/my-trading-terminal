@@ -493,10 +493,7 @@ for ticker in TICKERS:
             "VCP_PB_SHRINK": bool(pb_shrinking),
             "VCP_PB_RATIO": round(pb_ratio, 3) if pb_ratio is not None else None,
             "VCP_CANDIDATE": bool(vcp_candidate),
-                        # スイング高値・安値による新VCP判定（試験版）
-            "SWING_VCP_SCORE": (
-            # スイングVCPスコア
-            "SWING_VCP_SCORE": (
+
             # スイングVCPスコア
             "SWING_VCP_SCORE": (
                 swing_vcp.get("score", 0) if swing_vcp else 0
