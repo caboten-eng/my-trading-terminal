@@ -579,6 +579,30 @@ function showDetail(ticker,rerender=true){
     ['押し目③',num(s.VCP_PB3_PCT)+'%'],
     ['Pivot距離',num(s.Pivot_Distance_Pct)+'%'],
         // 新しいベース判定（試験版）
+        // 新旧ピボットの比較診断
+    ['従来Pivot価格（15日）',
+      s.Pivot_Distance_Pct != null && s.Price != null
+        ? num(s.Price * (1 + s.Pivot_Distance_Pct / 100))
+        : '—'],
+
+    ['新Pivot価格（60日）',
+      num(s.BASE_PIVOT)],
+
+    ['従来Pivotまでの距離',
+      s.Pivot_Distance_Pct != null
+        ? num(s.Pivot_Distance_Pct) + '%'
+        : '—'],
+
+    ['新Pivotまでの距離',
+      s.BASE_DISTANCE_PCT != null
+        ? num(s.BASE_DISTANCE_PCT) + '%'
+        : '—'],
+
+    ['従来Pivot判定',
+      value(s.Pivot_NEAR)],
+
+    ['新ベース判定',
+      s.BASE_STAGE ?? '—'],
     ['ベース判定',s.BASE_STAGE ?? '—'],
     ['ベースPivot価格',num(s.BASE_PIVOT)],
     ['ベースPivot距離',num(s.BASE_DISTANCE_PCT)+'%'],
