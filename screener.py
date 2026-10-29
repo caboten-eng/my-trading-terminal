@@ -431,6 +431,52 @@ for ticker in TICKERS:
         pivot_distance, volume_ratio, pivot_near, volume_dry = setup_metrics(df)
         pb1, pb2, pb3, pb_shrinking, pb_ratio = vcp_pullback_depths(df)
         swing_vcp = detect_swing_vcp(df)
+        
+        # Swing VCPのブレイクアウト準備判定
+        # 既存のVCPスコア・SETUP判定は変更しない
+
+        swing_depths = (
+            swing_vcp.get("depths", [])
+            if swing_vcp else []
+        )
+
+        # 最後の押し目が10%以下
+        swing_final_tight = (
+            len(swing_depths) == 3
+            and 2 <= swing_depths[-1] <= 10
+        )
+
+        # 直近10営業日の高値・安値による値幅
+        recent_high = float(
+            one_column(df, "High").iloc[-10:].max()
+        )
+        recent_low = float(
+            one_column(df, "Low").iloc[-10:].min()
+        )
+
+        swing_range_10d = (
+            (recent_high - recent_low) / recent_high * 100
+            if recent_high > 0 else None
+        )
+
+        # 直近10営業日の値幅10%以下
+        swing_range_tight = (
+            swing_range_10d is not None
+            and swing_range_10d <= 10
+        )
+
+        # 直近15日高値をピボットとして5%以内
+        swing_pivot_ready = bool(pivot_near)
+
+        # 4点満点 + 追加3条件を満たす
+        swing_vcp_ready = bool(
+            swing_vcp
+            and swing_vcp.get("candidate", False)
+            and swing_final_tight
+            and swing_range_tight
+            and swing_pivot_ready
+        )
+
         results.append({
             "Ticker": ticker,
             "Price": round(price, 2),
@@ -449,6 +495,17 @@ for ticker in TICKERS:
             "VCP_CANDIDATE": bool(vcp_candidate),
                         # スイング高値・安値による新VCP判定（試験版）
             "SWING_VCP_SCORE": (
+                
+            # Swing VCPのブレイクアウト準備判定
+            "SWING_VCP_READY": bool(swing_vcp_ready),
+            "SWING_VCP_FINAL_TIGHT": bool(swing_final_tight),
+            "SWING_VCP_RANGE_10D_PCT": (
+                round(swing_range_10d, 2)
+                if swing_range_10d is not None else None
+            ),
+            "SWING_VCP_RANGE_TIGHT": bool(swing_range_tight),
+            "SWING_VCP_PIVOT_READY": bool(swing_pivot_ready),
+
                 swing_vcp.get("score", 0) if swing_vcp else 0
             ),
             "SWING_VCP_CANDIDATE": (
