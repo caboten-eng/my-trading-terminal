@@ -392,7 +392,32 @@ function render(){
     ['VCP形成初期',stocks.filter(s=>s.VCP_STAGE==='形成初期').length],
     ['VCP形成中',stocks.filter(s=>s.VCP_STAGE==='形成中').length],
     ['VCP完成候補',stocks.filter(s=>s.VCP_STAGE==='完成候補').length],
-    ['押し目収縮',stocks.filter(s=>s.VCP_PB_SHRINK===true).length]
+['押し目収縮',stocks.filter(s=>s.VCP_PB_SHRINK===true).length],
+
+['Swing VCP 4点',stocks.filter(s=>
+  s.SWING_VCP_CANDIDATE===true
+).length],
+
+['Swing VCP＋TT＋RS70',stocks.filter(s=>
+  s.SWING_VCP_CANDIDATE===true &&
+  s.Trend_PASS===true &&
+  s.RS>=70
+).length],
+
+['Swing VCP＋TT＋RS70＋従来READY',stocks.filter(s=>
+  s.SWING_VCP_CANDIDATE===true &&
+  s.Trend_PASS===true &&
+  s.RS>=70 &&
+  s.SWING_VCP_READY===true
+).length],
+
+['VCPエントリー候補',stocks.filter(s=>
+  s.SWING_VCP_CANDIDATE===true &&
+  s.Trend_PASS===true &&
+  s.RS>=70 &&
+  s.SWING_VCP_READY===true &&
+  s.BASE_STAGE==='READY'
+).length]
   ];
 
   $('stats').replaceChildren(...groups.map(([label,n])=>{
