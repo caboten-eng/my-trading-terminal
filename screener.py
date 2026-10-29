@@ -196,6 +196,7 @@ print(f"スクリーニング対象: {len(TICKERS)}銘柄")
 
 
 import json
+import math
 from datetime import datetime, timezone
 
 results = []
@@ -345,11 +346,11 @@ data = {
     "vcp_stage_counts": {label: int((output["VCP_STAGE"] == label).sum()) for label in ["対象外", "形成初期", "形成中", "完成候補"]},
     "screen_mode": SCREEN_MODE,
     "settings": {"rs_min": RS_MIN, "pivot_max_distance_pct": PIVOT_MAX_DISTANCE_PCT, "volume_dry_max_ratio": VOLUME_DRY_MAX_RATIO},
-    "stocks": output.to_dict(orient="records")
+    "stocks": output.astype(object).where(pd.notna(output), None).to_dict(orient="records")
 }
 
 with open("results/screening.json", "w", encoding="utf-8") as f:
-    json.dump(data, f, ensure_ascii=False, indent=2)
+    json.dump(data, f, ensure_ascii=False, indent=2, allow_nan=False)
 
 print("\nスクリーニング完了")
 print(f"対象銘柄: {data['total']}")
@@ -359,3 +360,4 @@ print(f"セットアップ合格: {int(output['SETUP_PASS'].sum())}銘柄")
 print(output)
 
 print("VCP段階別:", data["vcp_stage_counts"])
+
