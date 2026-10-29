@@ -18,6 +18,30 @@ def vcp_stage(score):
     """既存VCP_SCOREを分類。形状を保証するものではない。"""
     return {0: "対象外", 1: "形成初期", 2: "形成中", 3: "完成候補"}.get(int(score), "対象外")
 
+def vcp_pullback_depths(df):
+    """直近60日を古い順に20日×3区間とし、各区間の最大ピーク→その後の安値の下落率を測定。
+
+    ※固定区間ベースの簡易近似。スイング高安の自動認識ではない。
+    高値は当日までの累積最大、安値はその日の日中安値を使い、未来の高値を参照しない。
+    """
+    high = one_column(df, "High")
+    low = one_column(df, "Low")
+    if len(high) < 60 or len(low) < 60:
+        return None, None, None, False, None
+    depths = []
+    for start, end in [(-60, -40), (-40, -20), (-20, None)]:
+        h = high.iloc[start:end].astype(float)
+        l = low.iloc[start:end].astype(float)
+        if len(h) != 20 or len(l) != 20 or h.isna().any() or l.isna().any() or (h <= 0).any() or (l <= 0).any():
+            return None, None, None, False, None
+        peaks = h.cummax()
+        drop = ((peaks - l) / peaks * 100).clip(lower=0)
+        depths.append(float(drop.max()))
+    # ゼロ近辺はノイズに敏感なので各区間1%以上の下落を要求
+    shrinking = all(d >= 1.0 for d in depths) and depths[0] > depths[1] > depths[2]
+    ratio = depths[2] / depths[0] if depths[0] > 0 else None
+    return *depths, bool(shrinking), ratio
+
 def setup_metrics(df):
     # Pivot: 当日を含めず、直前15営業日の高値を採用
     high = one_column(df, "High").dropna()
@@ -246,6 +270,7 @@ for ticker in TICKERS:
         }
         vcp_score, vcp_candidate = detect_vcp(df)
         pivot_distance, volume_ratio, pivot_near, volume_dry = setup_metrics(df)
+        pb1, pb2, pb3, pb_shrinking, pb_ratio = vcp_pullback_depths(df)
         results.append({
             "Ticker": ticker,
             "Price": round(price, 2),
@@ -256,6 +281,11 @@ for ticker in TICKERS:
             "RS_raw": rs_raw,
             "VCP_SCORE": vcp_score,
             "VCP_STAGE": vcp_stage(vcp_score),
+            "VCP_PB1_PCT": round(pb1, 2) if pb1 is not None else None,
+            "VCP_PB2_PCT": round(pb2, 2) if pb2 is not None else None,
+            "VCP_PB3_PCT": round(pb3, 2) if pb3 is not None else None,
+            "VCP_PB_SHRINK": bool(pb_shrinking),
+            "VCP_PB_RATIO": round(pb_ratio, 3) if pb_ratio is not None else None,
             "VCP_CANDIDATE": bool(vcp_candidate),
             "Pivot_Distance_Pct": round(pivot_distance, 2) if pivot_distance is not None else None,
             "Volume5_50_Ratio": round(volume_ratio, 3) if volume_ratio is not None else None,
@@ -311,6 +341,7 @@ data = {
     "total": len(output),
     "passed": int(output["PASS"].sum()),
     "setup_passed": int(output["SETUP_PASS"].sum()),
+    "vcp_pullback_shrinking": int(output["VCP_PB_SHRINK"].sum()),
     "vcp_stage_counts": {label: int((output["VCP_STAGE"] == label).sum()) for label in ["対象外", "形成初期", "形成中", "完成候補"]},
     "screen_mode": SCREEN_MODE,
     "settings": {"rs_min": RS_MIN, "pivot_max_distance_pct": PIVOT_MAX_DISTANCE_PCT, "volume_dry_max_ratio": VOLUME_DRY_MAX_RATIO},
