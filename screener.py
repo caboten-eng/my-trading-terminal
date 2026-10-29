@@ -497,10 +497,12 @@ for ticker in TICKERS:
             "SWING_VCP_SCORE": (
             # スイングVCPスコア
             "SWING_VCP_SCORE": (
+            # スイングVCPスコア
+            "SWING_VCP_SCORE": (
                 swing_vcp.get("score", 0) if swing_vcp else 0
             ),
 
-            # スイングVCPのブレイクアウト準備判定
+            # ブレイクアウト準備判定
             "SWING_VCP_READY": bool(swing_vcp_ready),
             "SWING_VCP_FINAL_TIGHT": bool(swing_final_tight),
             "SWING_VCP_RANGE_10D_PCT": (
