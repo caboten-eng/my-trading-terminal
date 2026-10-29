@@ -116,8 +116,8 @@ function scanCSV(){
 (()=>{'use strict';
 const root=document.getElementById('screening-results');
 const get=id=>root.querySelector('#'+id);
-const fields=[['Ticker','銘柄'],['Price','株価'],['RS','RS'],['Trend_PASS','TT'],['VCP_SCORE','VCP点'],['VCP_STAGE','VCP段階'],['VCP_CANDIDATE','VCP候補'],['Pivot_Distance_Pct','Pivot距離%'],['Pivot_NEAR','Pivot近接'],['Volume5_50_Ratio','出来高比'],['Volume_DRY','出来高枯渇'],['SETUP_PASS','SETUP'],['PASS','従来PASS']];
-const booleanFields=new Set(['Trend_PASS','VCP_CANDIDATE','Pivot_NEAR','Volume_DRY','SETUP_PASS','PASS']);
+const fields=[['Ticker','銘柄'],['Price','株価'],['RS','RS'],['Trend_PASS','TT'],['VCP_SCORE','VCP点'],['VCP_STAGE','VCP段階'],['VCP_PB1_PCT','押し目①%'],['VCP_PB2_PCT','押し目②%'],['VCP_PB3_PCT','押し目③%'],['VCP_PB_SHRINK','押し目収縮'],['VCP_CANDIDATE','VCP候補'],['Pivot_Distance_Pct','Pivot距離%'],['Pivot_NEAR','Pivot近接'],['Volume5_50_Ratio','出来高比'],['Volume_DRY','出来高枯渇'],['SETUP_PASS','SETUP'],['PASS','従来PASS']];
+const booleanFields=new Set(['Trend_PASS','VCP_PB_SHRINK','VCP_CANDIDATE','Pivot_NEAR','Volume_DRY','SETUP_PASS','PASS']);
 let stocks=[],active='all',sortKey='RS',ascending=false;
 const status=message=>get('screeningStatus').textContent=message;
 const flag=(row,key)=>row[key]===true || row[key]===1 || row[key]==='true';
@@ -126,7 +126,7 @@ const text=(value)=>value===null||value===undefined?'—':String(value);
 const mark=(row,key)=>!valid(row,key)?'—':flag(row,key)?'✓':'—';
 function paintDetail(s){const detail=get('screeningDetail');detail.replaceChildren();if(!s){detail.textContent='銘柄行を選択すると各判定を表示します。';return;}
  const heading=document.createElement('strong');heading.textContent=s.Ticker+' — 判定内訳';detail.append(heading);
- const info=document.createElement('div');info.textContent=`TT: ${mark(s,'Trend_PASS')} ｜ RS: ${text(s.RS)} ｜ VCP: ${mark(s,'VCP_CANDIDATE')}（スコア ${text(s.VCP_SCORE)}・${text(s.VCP_STAGE)}） ｜ Pivot: ${text(s.Pivot_Distance_Pct)}%（近接 ${mark(s,'Pivot_NEAR')}） ｜ 出来高比: ${text(s.Volume5_50_Ratio)}（枯渇 ${mark(s,'Volume_DRY')}） ｜ SETUP: ${mark(s,'SETUP_PASS')}`;detail.append(info);
+ const info=document.createElement('div');info.textContent=`TT: ${mark(s,'Trend_PASS')} ｜ RS: ${text(s.RS)} ｜ VCP: ${mark(s,'VCP_CANDIDATE')}（スコア ${text(s.VCP_SCORE)}・${text(s.VCP_STAGE)}） ｜ 押し目(古→新): ${text(s.VCP_PB1_PCT)}% → ${text(s.VCP_PB2_PCT)}% → ${text(s.VCP_PB3_PCT)}%（段階縮小 ${mark(s,'VCP_PB_SHRINK')}） ｜ Pivot: ${text(s.Pivot_Distance_Pct)}%（近接 ${mark(s,'Pivot_NEAR')}） ｜ 出来高比: ${text(s.Volume5_50_Ratio)}（枯渇 ${mark(s,'Volume_DRY')}） ｜ SETUP: ${mark(s,'SETUP_PASS')}`;detail.append(info);
 }
 function compare(a,b){const va=a[sortKey],vb=b[sortKey];const num=typeof va==='number' && typeof vb==='number';if(num)return va-vb;return String(va??'').localeCompare(String(vb??''));}
 function render(){const q=get('screenQuery').value.trim().toUpperCase();const filtered=stocks.filter(s=>{
