@@ -430,6 +430,7 @@ for ticker in TICKERS:
         vcp_score, vcp_candidate = detect_vcp(df)
         pivot_distance, volume_ratio, pivot_near, volume_dry = setup_metrics(df)
         pb1, pb2, pb3, pb_shrinking, pb_ratio = vcp_pullback_depths(df)
+        swing_vcp = detect_swing_vcp(df)
         results.append({
             "Ticker": ticker,
             "Price": round(price, 2),
@@ -446,6 +447,25 @@ for ticker in TICKERS:
             "VCP_PB_SHRINK": bool(pb_shrinking),
             "VCP_PB_RATIO": round(pb_ratio, 3) if pb_ratio is not None else None,
             "VCP_CANDIDATE": bool(vcp_candidate),
+                        # スイング高値・安値による新VCP判定（試験版）
+            "SWING_VCP_SCORE": (
+                swing_vcp.get("score", 0) if swing_vcp else 0
+            ),
+            "SWING_VCP_CANDIDATE": (
+                swing_vcp.get("candidate", False) if swing_vcp else False
+            ),
+            "SWING_VCP_DEPTHS": (
+                swing_vcp.get("depths", []) if swing_vcp else []
+            ),
+            "SWING_VCP_SHRINK": (
+                swing_vcp.get("shrinking", False) if swing_vcp else False
+            ),
+            "SWING_VCP_VOLUME_SHRINK": (
+                swing_vcp.get("volume_shrinking", False) if swing_vcp else False
+            ),
+            "SWING_VCP_DAYS_SINCE_LOW": (
+                swing_vcp.get("days_since_low") if swing_vcp else None
+            ),
             "Pivot_Distance_Pct": round(pivot_distance, 2) if pivot_distance is not None else None,
             "Volume5_50_Ratio": round(volume_ratio, 3) if volume_ratio is not None else None,
             "Pivot_NEAR": bool(pivot_near),
