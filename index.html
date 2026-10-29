@@ -154,7 +154,7 @@ function loadData(data,source){if(!data||!Array.isArray(data.stocks))throw Error
  status(`${source} / 更新: ${when} JST / モード: ${data.screen_mode||'不明'}`);
  paintDetail(null);render();
 }
-async function fetchData(){status('GitHub Pages上の結果を取得中…');try{const url=new URL('./results/screening.json',window.location.href);url.searchParams.set('_',Date.now());const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);loadData(await response.json(),'自動取得');}catch(err){status('自動取得できません（'+err.message+'）。「JSONを手動取込」から results/screening.json を選択してください。GitHub Pagesへ results フォルダが公開されているかも確認してください。');}}
+async function fetchData(){status('GitHub Pages上の結果を取得中…');try{const url='./results/screening.json?_='+Date.now();const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);loadData(await response.json(),'自動取得');}catch(err){status('自動取得できません（'+err.message+'）。「JSONを手動取込」から results/screening.json を選択してください。GitHub Pagesへ results フォルダが公開されているかも確認してください。');}}
 get('jsonFile').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{loadData(JSON.parse(await file.text()),'手動読込: '+file.name);}catch(err){status('JSON読込エラー: '+err.message);}});
 get('refreshScreening').addEventListener('click',fetchData);
 get('screenQuery').addEventListener('input',render);
