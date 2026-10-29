@@ -646,8 +646,12 @@ for ticker in TICKERS:
             and swing_pivot_ready
         )
         # ベース上限を使った新しいピボット判定
+        # ベース上限を使ったピボット判定
         base_breakout = detect_base_breakout(df)
-                resistance = detect_resistance_pivot(df)
+
+        # 複数スイング高値による抵抗帯判定
+        resistance = detect_resistance_pivot(df)
+
         results.append({
             "BAR_DATE": df.index[-1].strftime("%Y-%m-%d"),
             "Ticker": ticker,
