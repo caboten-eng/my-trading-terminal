@@ -208,6 +208,7 @@ a{color:var(--blue)}
           <th data-sort="VCP_SCORE">VCP点</th>
           <th data-sort="SWING_VCP_SCORE">Swing VCP</th>
           <th data-sort="VCP_STAGE">VCP段階</th>
+          <th data-sort="BASE_STAGE">ベース判定</th>
           <th data-sort="VCP_PB_SHRINK">押し目収縮</th>
           <th data-sort="Pivot_Distance_Pct">Pivot距離%</th>
           <th data-sort="Volume5_50_Ratio">出来高比</th>
@@ -537,6 +538,23 @@ function render(){
     const st=document.createElement('td');
     st.append(chip(s.VCP_STAGE||'対象外',stage(s.VCP_STAGE)));
     tr.append(st);
+    const baseStage = s.BASE_STAGE ?? 'NO_DATA';
+
+const baseLabels = {
+  READY: '準備完了',
+  BREAKOUT: '上抜け',
+  BREAKOUT_LOW_VOLUME: '上抜け(低出来高)',
+  ABOVE_PIVOT: 'Pivot超え',
+  EXTENDED: '上昇済み',
+  FORMING: '形成中',
+  NO_DATA: 'データなし'
+};
+
+put(
+  baseLabels[baseStage] ?? baseStage,
+  baseStage === 'READY' ? 'positive' :
+  baseStage === 'EXTENDED' ? 'negative' : ''
+);
 
     put(value(s.VCP_PB_SHRINK),s.VCP_PB_SHRINK?'positive':'');
     put(num(s.Pivot_Distance_Pct));
