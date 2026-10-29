@@ -94,24 +94,29 @@ function scanCSV(){
     <div class="stat"><small>RS 70以上 &amp; TT</small><strong id="statPass">—</strong></div>
     <div class="stat"><small>VCP 候補</small><strong id="statVCP">—</strong></div>
     <div class="stat"><small>SETUP 合格</small><strong id="statSetup">—</strong></div>
+    <div class="stat"><small>VCP 形成初期（1点）</small><strong id="statEarly">—</strong></div>
+    <div class="stat"><small>VCP 形成中（2点）</small><strong id="statForming">—</strong></div>
+    <div class="stat"><small>VCP 完成候補（3点）</small><strong id="statComplete">—</strong></div>
   </div>
   <div class="controls" id="screenFilters">
     <button class="btn filterbtn" data-filter="all" aria-pressed="true">全銘柄</button>
     <button class="btn filterbtn" data-filter="tt" aria-pressed="false">TT合格</button>
-    <button class="btn filterbtn" data-filter="vcp" aria-pressed="false">VCP候補</button>
+    <button class="btn filterbtn" data-filter="early" aria-pressed="false">VCP形成初期</button>
+    <button class="btn filterbtn" data-filter="forming" aria-pressed="false">VCP形成中</button>
+    <button class="btn filterbtn" data-filter="vcp" aria-pressed="false">VCP完成候補</button>
     <button class="btn filterbtn" data-filter="setup" aria-pressed="false">SETUP合格</button>
     <input id="screenQuery" type="search" aria-label="銘柄検索" placeholder="銘柄検索（例：NVDA）">
     <span class="dash-note" id="screenCount"></span>
   </div>
   <div class="tablewrap"><table id="screeningTable"><thead></thead><tbody></tbody></table></div>
   <div class="detail" id="screeningDetail">銘柄行を選択すると各判定を表示します。</div>
-  <p class="dash-note">SETUP = TT合格 ＋ RS70以上 ＋ VCP候補 ＋ ピボット距離0〜5% ＋ 直近5日平均出来高/50日平均出来高 ≤70%。ピボットは直前15営業日の高値を使用。RSは対象銘柄内の相対順位です。株価データの確定日と反映時刻は異なる場合があります。</p>
+  <p class="dash-note">SETUP = TT合格 ＋ RS70以上 ＋ VCP候補 ＋ ピボット距離0〜5% ＋ 直近5日平均出来高/50日平均出来高 ≤70%。ピボットは直前15営業日の高値を使用。VCP段階は既存の3条件の合格数による暫定分類で、実際のVCP形成段階を保証しません。RSは対象銘柄内の相対順位です。株価データの確定日と反映時刻は異なる場合があります。</p>
 </section>
 <script>
 (()=>{'use strict';
 const root=document.getElementById('screening-results');
 const get=id=>root.querySelector('#'+id);
-const fields=[['Ticker','銘柄'],['Price','株価'],['RS','RS'],['Trend_PASS','TT'],['VCP_SCORE','VCP点'],['VCP_CANDIDATE','VCP候補'],['Pivot_Distance_Pct','Pivot距離%'],['Pivot_NEAR','Pivot近接'],['Volume5_50_Ratio','出来高比'],['Volume_DRY','出来高枯渇'],['SETUP_PASS','SETUP'],['PASS','従来PASS']];
+const fields=[['Ticker','銘柄'],['Price','株価'],['RS','RS'],['Trend_PASS','TT'],['VCP_SCORE','VCP点'],['VCP_STAGE','VCP段階'],['VCP_CANDIDATE','VCP候補'],['Pivot_Distance_Pct','Pivot距離%'],['Pivot_NEAR','Pivot近接'],['Volume5_50_Ratio','出来高比'],['Volume_DRY','出来高枯渇'],['SETUP_PASS','SETUP'],['PASS','従来PASS']];
 const booleanFields=new Set(['Trend_PASS','VCP_CANDIDATE','Pivot_NEAR','Volume_DRY','SETUP_PASS','PASS']);
 let stocks=[],active='all',sortKey='RS',ascending=false;
 const status=message=>get('screeningStatus').textContent=message;
@@ -121,12 +126,14 @@ const text=(value)=>value===null||value===undefined?'—':String(value);
 const mark=(row,key)=>!valid(row,key)?'—':flag(row,key)?'✓':'—';
 function paintDetail(s){const detail=get('screeningDetail');detail.replaceChildren();if(!s){detail.textContent='銘柄行を選択すると各判定を表示します。';return;}
  const heading=document.createElement('strong');heading.textContent=s.Ticker+' — 判定内訳';detail.append(heading);
- const info=document.createElement('div');info.textContent=`TT: ${mark(s,'Trend_PASS')} ｜ RS: ${text(s.RS)} ｜ VCP: ${mark(s,'VCP_CANDIDATE')}（スコア ${text(s.VCP_SCORE)}） ｜ Pivot: ${text(s.Pivot_Distance_Pct)}%（近接 ${mark(s,'Pivot_NEAR')}） ｜ 出来高比: ${text(s.Volume5_50_Ratio)}（枯渇 ${mark(s,'Volume_DRY')}） ｜ SETUP: ${mark(s,'SETUP_PASS')}`;detail.append(info);
+ const info=document.createElement('div');info.textContent=`TT: ${mark(s,'Trend_PASS')} ｜ RS: ${text(s.RS)} ｜ VCP: ${mark(s,'VCP_CANDIDATE')}（スコア ${text(s.VCP_SCORE)}・${text(s.VCP_STAGE)}） ｜ Pivot: ${text(s.Pivot_Distance_Pct)}%（近接 ${mark(s,'Pivot_NEAR')}） ｜ 出来高比: ${text(s.Volume5_50_Ratio)}（枯渇 ${mark(s,'Volume_DRY')}） ｜ SETUP: ${mark(s,'SETUP_PASS')}`;detail.append(info);
 }
 function compare(a,b){const va=a[sortKey],vb=b[sortKey];const num=typeof va==='number' && typeof vb==='number';if(num)return va-vb;return String(va??'').localeCompare(String(vb??''));}
 function render(){const q=get('screenQuery').value.trim().toUpperCase();const filtered=stocks.filter(s=>{
  if(q&&!String(s.Ticker??'').toUpperCase().includes(q))return false;
  if(active==='tt')return flag(s,'Trend_PASS');
+ if(active==='early')return Number(s.VCP_SCORE)===1;
+ if(active==='forming')return Number(s.VCP_SCORE)===2;
  if(active==='vcp')return flag(s,'VCP_CANDIDATE');
  if(active==='setup')return flag(s,'SETUP_PASS');return true;
  }).sort((a,b)=>(ascending?1:-1)*compare(a,b));
@@ -140,6 +147,9 @@ function loadData(data,source){if(!data||!Array.isArray(data.stocks))throw Error
  get('statTotal').textContent=stocks.length;get('statTT').textContent=stocks.filter(s=>flag(s,'Trend_PASS')).length;
  get('statPass').textContent=stocks.filter(s=>flag(s,'PASS')).length;get('statVCP').textContent=stocks.filter(s=>flag(s,'VCP_CANDIDATE')).length;
  get('statSetup').textContent=stocks.some(s=>valid(s,'SETUP_PASS'))?stocks.filter(s=>flag(s,'SETUP_PASS')).length:'—';
+ for(const [id,score] of [['statEarly',1],['statForming',2],['statComplete',3]]){
+   get(id).textContent=stocks.some(s=>valid(s,'VCP_SCORE'))?stocks.filter(s=>Number(s.VCP_SCORE)===score).length:'—';
+ }
  const updated=data.updated_at?new Date(data.updated_at):null;const when=updated&&!Number.isNaN(updated.valueOf())?updated.toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'}):'日時不明';
  status(`${source} / 更新: ${when} JST / モード: ${data.screen_mode||'不明'}`);
  paintDetail(null);render();
