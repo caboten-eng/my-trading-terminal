@@ -637,6 +637,30 @@ function showDetail(ticker,rerender=true){
 
     ['新ベース判定',
       s.BASE_STAGE ?? '—'],
+        // 複数スイング高値による抵抗帯Pivot（試験版）
+    ['抵抗帯Pivot価格',
+      num(s.RESISTANCE_PIVOT)],
+
+    ['抵抗帯Pivotまでの距離',
+      s.RESISTANCE_PIVOT != null &&
+      s.RESISTANCE_PIVOT > 0 &&
+      s.Price != null
+        ? num(
+            (s.RESISTANCE_PIVOT - s.Price) /
+            s.RESISTANCE_PIVOT * 100
+          ) + '%'
+        : '—'],
+
+    ['抵抗帯の検出回数',
+      s.RESISTANCE_TOUCHES ?? 0],
+
+    ['2つの高値の価格差',
+      s.RESISTANCE_PEAK_DIFF_PCT != null
+        ? num(s.RESISTANCE_PEAK_DIFF_PCT) + '%'
+        : '—'],
+
+    ['直近抵抗帯高値からの営業日数',
+      s.RESISTANCE_LAST_PEAK_DAYS ?? '—'],
     ['ベース判定',s.BASE_STAGE ?? '—'],
     ['ベースPivot価格',num(s.BASE_PIVOT)],
     ['ベースPivot距離',num(s.BASE_DISTANCE_PCT)+'%'],
