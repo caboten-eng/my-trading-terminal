@@ -447,6 +447,27 @@ for ticker in TICKERS:
         if df.empty:
             print(f"{ticker}: データ不足")
             continue
+                    # 米国市場の未確定日足を除外
+        # ニューヨーク時間で16:30より前は当日足を使用しない
+        from datetime import datetime, time
+        from zoneinfo import ZoneInfo
+
+        ny_now = datetime.now(ZoneInfo("America/New_York"))
+        last_bar_date = df.index[-1].date()
+
+        if (
+            last_bar_date == ny_now.date()
+            and ny_now.time() < time(16, 30)
+        ):
+            df = df.iloc[:-1].copy()
+            print(
+                f"{ticker}: 未確定日足 "
+                f"{last_bar_date} を除外"
+            )
+
+        if df.empty:
+            print(f"{ticker}: 確定日足なし")
+            continue
 
         close = df["Close"]
         if isinstance(close, pd.DataFrame):
