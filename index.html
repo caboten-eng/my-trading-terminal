@@ -1,182 +1,572 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>My Trading Terminal</title><style>:root{color-scheme:dark;--bg:#0b0f14;--p:#121821;--p2:#171f2a;--l:#263140;--t:#edf2f7;--m:#8e9aaa;--g:#35d07f;--r:#ff5d68;--y:#e9bd55}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.app{max-width:1200px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}.brand{font-weight:800;font-size:20px}.sub,.label{font-size:12px;color:var(--m)}.search{display:flex;gap:8px}.search input{width:170px;background:var(--p);border:1px solid var(--l);color:var(--t);padding:10px 12px;border-radius:10px;outline:0}.btn{border:1px solid var(--l);background:var(--p);color:var(--t);padding:9px 12px;border-radius:9px;cursor:pointer}.btn:hover,.active{background:#25354a}.grid{display:grid;grid-template-columns:1.65fr .9fr;gap:14px}.card{background:var(--p);border:1px solid var(--l);border-radius:14px;padding:15px}.ticker{display:flex;justify-content:space-between}.symbol{font-size:25px;font-weight:800}.price{font-size:25px;font-weight:750}.change{color:var(--g);font-size:13px;text-align:right}.tabs{display:flex;gap:7px;margin:15px 0}.placeholder{height:330px;border:1px dashed #344252;border-radius:10px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--m);background:linear-gradient(180deg,#101720,#0d131a)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}.metric{background:var(--p2);border-radius:10px;padding:11px}.metric b{display:block;font-size:16px;margin-top:4px}.section-title{font-size:14px;font-weight:750;margin-bottom:10px}.watch{display:grid;gap:7px}.watchrow{display:flex;justify-content:space-between;padding:10px;background:var(--p2);border-radius:9px;cursor:pointer}.watchrow:hover{outline:1px solid #33465c}.up{color:var(--g)}.down{color:var(--r)}.checks{display:grid;gap:7px}.check{display:flex;justify-content:space-between;gap:8px;padding:9px 10px;border-radius:9px;background:var(--p2);font-size:12px}.ok{color:var(--g);font-weight:700}.neutral{color:var(--y);font-weight:700}.ai{line-height:1.65;font-size:13px;color:#cbd4df}.bottom{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:14px}.footer{padding:18px 0 4px;color:#687383;font-size:11px}@media(max-width:800px){.app{padding:12px}.top{align-items:flex-start;flex-direction:column}.search{width:100%}.search input{flex:1;width:auto}.grid,.bottom{grid-template-columns:1fr}.placeholder{height:250px}.metrics{grid-template-columns:repeat(2,1fr)}}</style>
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Trading Terminal | Screener</title>
 <style>
-.detail-screen{margin-top:22px;padding:18px;border:1px solid #263043;border-radius:14px;background:#101722}.detail-head{display:flex;justify-content:space-between;align-items:center;gap:15px}.detail-sub{font-size:12px;color:#8793a5;margin-top:3px}.score{display:flex;align-items:baseline;gap:7px;padding:8px 12px;border-radius:10px}.score b{font-size:22px}.score span{font-size:11px}.score-pass{background:#123322;color:#65d48b}.score-partial{background:#302813;color:#e7c65a}.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:14px}.check-row{display:flex;gap:10px;align-items:flex-start;padding:11px;border-radius:10px;border:1px solid #273043}.check-row.ok{border-color:#214d36;background:#0f1e17}.check-row.ng{border-color:#4b2a2a;background:#211517}.check-icon{font-size:18px;font-weight:800}.ok .check-icon{color:#59d483}.ng .check-icon{color:#ef7373}.check-main{display:flex;flex-direction:column;gap:3px}.check-main b{font-size:13px}.check-main small{color:#9ba6b6;font-size:11px}.check-main em{color:#e88989;font-size:10px;font-style:normal}.next-box{margin-top:12px;padding:10px 12px;border-radius:9px;background:#171f2c;color:#cbd5e1;font-size:13px}@media(max-width:700px){.check-grid{grid-template-columns:1fr}.detail-head{align-items:flex-start}}
-</style>
-</head><body><div class="app"><div class="top"><div><div class="brand">MY TRADING TERMINAL</div><div class="sub">個人用・Minervini監視対応 / 上部は旧サンプル画面</div></div><div class="search"><input id="search" placeholder="銘柄コード 例: SNDK"><button class="btn" onclick="loadTicker()">表示</button></div></div><div class="grid"><main class="card"><div class="ticker"><div><div class="symbol" id="symbol">SNDK</div><div class="sub" id="name">SanDisk</div></div><div><div class="price" id="price">$252.40</div><div class="change" id="chg">+3.18%</div></div></div><div class="tabs"><button class="btn active">1D</button><button class="btn">1W</button><button class="btn">1M</button><button class="btn">3M</button><button class="btn">1Y</button></div><div class="placeholder">ここにローソク足チャートを接続<br><br>まずはUI・銘柄分析部分を先に完成させる構成</div><div class="metrics"><div class="metric"><span class="label">52週高値</span><b>$277.47</b></div><div class="metric"><span class="label">RSI</span><b>64.2</b></div><div class="metric"><span class="label">出来高</span><b>1.24×</b></div><div class="metric"><span class="label">MA50</span><b>$221.8</b></div><div class="metric"><span class="label">MA150</span><b>$184.5</b></div><div class="metric"><span class="label">MA200</span><b>$165.2</b></div></div><section class="card" style="margin-top:14px"><div class="section-title">自動スクリーニング — Minervini Trend Template</div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px"><button class="btn" onclick="runScan()">🔎 スクリーニング実行</button><button class="btn" onclick="toggleRules()">条件を表示/非表示</button></div><div id="rules" class="checks" style="margin-bottom:12px"><div class="check"><span>株価 > MA50 / MA150 / MA200</span><span class="ok">必須</span></div><div class="check"><span>MA50 > MA150 > MA200</span><span class="ok">必須</span></div><div class="check"><span>200日線が1か月以上上向き</span><span class="ok">必須</span></div><div class="check"><span>52週高値から -25%以内</span><span class="ok">必須</span></div><div class="check"><span>52週安値から +30%以上</span><span class="ok">必須</span></div></div><div id="scanResult" class="watch"><div class="sub">スクリーニングを実行すると結果がここに表示されます。</div></div><div class="note">この欄と上部の株価表示は旧サンプルです。実データの判定結果は下部の「スクリーニング結果」に表示されます。</div></section>
-<section class="card" style="margin-top:14px">
-<div class="section-title">実データスクリーニング（CSV取込）</div>
-<p class="sub">無料の株価データをCSVで取り込み、終値からMA50/150/200と52週高安値を計算します。日付・銘柄・終値（date,symbol,close）の列が必要です。最低221営業日分を推奨。</p>
-<input type="file" id="csvInput" accept=".csv,text/csv" style="max-width:100%">
-<button class="btn" onclick="scanCSV()">CSVを解析</button>
-<div id="csvStatus" class="sub" style="margin-top:10px">未読込</div>
-<div id="csvResults" class="watch" style="margin-top:10px"></div>
-</section>
-</main><aside><div class="card"><div class="section-title">ウォッチリスト</div><div class="watch" id="watch"></div></div><div class="card" style="margin-top:14px"><div class="section-title">Minervini / SEPA</div><div class="checks"><div class="check"><span>株価 &gt; MA50</span><span class="ok">✓ PASS</span></div><div class="check"><span>株価 &gt; MA150</span><span class="ok">✓ PASS</span></div><div class="check"><span>株価 &gt; MA200</span><span class="ok">✓ PASS</span></div><div class="check"><span>MA50 &gt; MA150 &gt; MA200</span><span class="ok">✓ PASS</span></div><div class="check"><span>200日線が上向き</span><span class="ok">✓ PASS</span></div><div class="check"><span>52週高値への距離</span><span class="neutral">△ 要確認</span></div></div></div></aside></div><div class="bottom"><div class="card"><div class="section-title">AI分析</div><div class="ai" id="analysis"><b>SNDK：</b>現在は長期移動平均線の上に位置する想定。トレンド、出来高、52週高値からの距離を組み合わせて判定する欄です。<br><br>※現在はデータ未接続の試作版です。</div></div><div class="card"><div class="section-title">次に追加できる機能</div><div class="checks"><div class="check"><span>リアルタイム株価API</span><span class="neutral">NEXT</span></div><div class="check"><span>ローソク足＋MA50/150/200</span><span class="neutral">NEXT</span></div><div class="check"><span>Minervini自動スクリーニング</span><span class="neutral">NEXT</span></div><div class="check"><span>ニュース＋決算＋AI分析</span><span class="neutral">NEXT</span></div><div class="check"><span>日本株・米国株対応</span><span class="neutral">NEXT</span></div></div></div></div><div class="footer">Personal Trading Terminal — prototype. 表示価格・指標はUI試作用サンプルです。</div></div><script>const universe=[
- {t:"SNDK",p:252.4,m50:221.8,m150:184.5,m200:165.2,h52:277.47,l52:85.2,rising:true},
- {t:"MU",p:188,m50:176,m150:142,m200:121,h52:195,l52:61,rising:true},
- {t:"NBIS",p:112,m50:118,m150:96,m200:82,h52:137,l52:19,rising:true},
- {t:"MRVL",p:78,m50:71,m150:69,m200:72,h52:101,l52:53,rising:false},
- {t:"PLTR",p:160,m50:149,m150:132,m200:118,h52:170,l52:20,rising:true},
- {t:"SOFI",p:24,m50:21,m150:18,m200:16,h52:25,l52:6,rising:true},
- {t:"ARM",p:154,m50:151,m150:132,m200:126,h52:188,l52:58,rising:true},
- {t:"NVDA",p:183,m50:171,m150:154,m200:137,h52:191,l52:86,rising:true}
-];
-function passes(x){return x.p>x.m50&&x.p>x.m150&&x.p>x.m200&&x.m50>x.m150&&x.m150>x.m200&&x.rising&&x.p>=x.h52*.75&&x.p>=x.l52*1.3}
-function runScan(){const r=document.getElementById("scanResult");const ok=universe.filter(passes);r.innerHTML=ok.length?ok.map(x=>`<div class="watchrow" onclick="selectTicker('${x.t}')"><span><b>${x.t}</b><br><small>Trend Template PASS</small></span><span class="up">PASS</span></div>`).join(""):`<div class="sub">条件を満たす銘柄なし</div>`;document.querySelector('#scanResult').insertAdjacentHTML('afterbegin',`<div class="sub" style="margin-bottom:6px">${ok.length}銘柄が条件を通過</div>`)}
-function toggleRules(){const e=document.getElementById('rules');e.style.display=e.style.display==='none'?'grid':'none'}
-const data={SNDK:['SanDisk','$252.40','+3.18%'],MU:['Micron Technology','$—','—'],NBIS:['Nebius','$—','—'],MRVL:['Marvell Technology','$—','—'],PLTR:['Palantir Technologies','$—','—'],SOFI:['SoFi Technologies','$—','—']};const watch=[['SNDK','+3.18%','up'],['MU','—',''],['NBIS','—',''],['MRVL','—',''],['PLTR','—',''],['SOFI','—','']];function render(){watchEl.innerHTML=watch.map(x=>`<div class="watchrow" onclick="selectTicker('${x[0]}')"><span><b>${x[0]}</b><br><small class="sub">監視</small></span><span class="${x[2]}">${x[1]}</span></div>`).join('')}function selectTicker(t){search.value=t;loadTicker()}function loadTicker(){const t=search.value.trim().toUpperCase()||'SNDK',d=data[t]||['未登録銘柄','$—','—'];symbol.textContent=t;name.textContent=d[0];price.textContent=d[1];chg.textContent=d[2];analysis.innerHTML=`<b>${t}：</b>銘柄ページを読み込みました。実データ接続後は株価・移動平均・出来高・RS・ニュースを自動取得し、この欄を更新できます。`}const search=document.getElementById('search'),symbol=document.getElementById('symbol'),name=document.getElementById('name'),price=document.getElementById('price'),chg=document.getElementById('chg'),analysis=document.getElementById('analysis'),watchEl=document.getElementById('watch');render();</script>
-<script>
-function parseCSVLine(line){const a=[];let q=false,v='';for(let i=0;i<line.length;i++){let c=line[i];if(c==='"'){if(q&&line[i+1]==='"'){v+='"';i++}else q=!q}else if(c===','&&!q){a.push(v.trim());v=''}else v+=c}a.push(v.trim());return a}
-function scanCSV(){
- const file=document.getElementById('csvInput').files[0],status=document.getElementById('csvStatus'),out=document.getElementById('csvResults');
- if(!file){status.textContent='CSVを選択してください';return}
- file.text().then(raw=>{
- const lines=raw.replace(/^\uFEFF/,'').split(/\r?\n/).filter(x=>x.trim());
- const hdr=parseCSVLine(lines.shift()).map(x=>x.toLowerCase());
- const col=k=>hdr.indexOf(k);
- if(['date','symbol','close'].some(k=>col(k)<0)){status.textContent='必要列: date,symbol,close';return}
- const grouped={};
- for(const line of lines){const v=parseCSVLine(line),sym=v[col('symbol')].toUpperCase(),price=Number(v[col('close')]);if(!sym||!Number.isFinite(price)||price<=0)continue;(grouped[sym]??=[]).push({date:v[col('date')],price})}
- const results=[];
- for(const [sym,rows] of Object.entries(grouped)){
- rows.sort((a,b)=>a.date.localeCompare(b.date));
- const unique=[...new Map(rows.map(r=>[r.date,r])).values()];
- if(unique.length<221){results.push({sym,pass:false,why:'履歴不足 ('+unique.length+'日)'});continue}
- const p=unique.map(r=>r.price),n=p.length,avg=k=>p.slice(-k).reduce((a,b)=>a+b,0)/k;
- const m50=avg(50),m150=avg(150),m200=avg(200);
- const previous200=p.slice(n-221,n-21).reduce((a,b)=>a+b,0)/200;
- const year=p.slice(-252),hi=Math.max(...year),lo=Math.min(...year),last=p[n-1];
- const checks=[last>m50&&last>m150&&last>m200,m50>m150&&m150>m200,m200>previous200,last>=hi*.75,last>=lo*1.3];
- results.push({sym,pass:checks.every(Boolean),why:checks.every(Boolean)?'全5条件PASS':'不合格: '+checks.map((v,i)=>v?'':String(i+1)).filter(Boolean).join(','),last,m50,m150,m200});
- }
- results.sort((a,b)=>Number(b.pass)-Number(a.pass)||a.sym.localeCompare(b.sym));
- status.textContent=`${Object.keys(grouped).length}銘柄を解析 / ${results.filter(x=>x.pass).length}銘柄PASS（CSV内のみ）`;
- out.replaceChildren();
- for(const r of results){const row=document.createElement('div');row.className='watchrow';const left=document.createElement('span');left.textContent=r.sym+' — '+r.why;const right=document.createElement('span');right.className=r.pass?'up':'down';right.textContent=r.pass?'PASS':'FAIL';row.append(left,right);out.append(row)}
- }).catch(e=>status.textContent='読み込み失敗: '+e.message)
+:root{
+  color-scheme:dark;
+  --bg:#0b1016;
+  --panel:#121b27;
+  --panel2:#172333;
+  --line:#2a394d;
+  --text:#edf4fa;
+  --muted:#99a9bd;
+  --green:#4dde9e;
+  --red:#ff788a;
+  --yellow:#f2c86b;
+  --blue:#82baff;
 }
-</script>
- 
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+main{max-width:1370px;padding:24px 22px 65px;margin:auto}
+header{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:24px;
+}
+h1{font-size:24px;margin:0 0 4px}
+h2{font-size:18px;margin:0 0 15px}
+.muted,.meta{color:var(--muted)}
+.meta{font-size:12px}
+button,.upload{
+  font:inherit;
+  color:var(--text);
+  border:1px solid var(--line);
+  background:var(--panel2);
+  border-radius:9px;
+  padding:10px 13px;
+  cursor:pointer;
+}
+button:hover,.upload:hover{border-color:var(--blue)}
+button.selected{
+  background:#194a3a;
+  border-color:#2f8264;
+  color:#b7f9d7;
+}
+input[type=text]{
+  font:inherit;
+  background:var(--panel);
+  border:1px solid var(--line);
+  color:var(--text);
+  border-radius:9px;
+  padding:11px;
+  min-width:180px;
+}
+input[type=file]{display:none}
+.controls,.filters,.rightcontrols{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  flex-wrap:wrap;
+}
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin:18px 0 25px;
+}
+.stat{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:17px;
+}
+.stat small{color:var(--muted);display:block}
+.stat strong{font-size:30px;display:block;margin:5px 0}
+.panel{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:17px;
+  margin-bottom:15px;
+}
+.filters{margin:12px 0}
+.filterbar{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.tablewrap{overflow:auto;max-height:680px}
+table{border-collapse:collapse;width:100%;min-width:1010px}
+th{
+  position:sticky;
+  top:0;
+  background:#1a2838;
+  color:#b8cadc;
+  white-space:nowrap;
+  text-align:right;
+  font-weight:600;
+  cursor:pointer;
+}
+td,th{
+  padding:12px 11px;
+  border-bottom:1px solid var(--line);
+  font-variant-numeric:tabular-nums;
+}
+td{text-align:right}
+th:first-child,td:first-child{text-align:left}
+tr:hover td{background:#1b2b3a}
+tr.active td{background:#163a36}
+.positive{color:var(--green);font-weight:600}
+.negative{color:var(--red)}
+a{color:var(--blue)}
+.pill{
+  font-size:11px;
+  padding:4px 7px;
+  border:1px solid var(--line);
+  border-radius:99px;
+  white-space:nowrap;
+}
+.stage3{color:var(--green);border-color:#28704d}
+.stage2{color:var(--yellow)}
+.stage1{color:#a5c7f5}
+.details{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+}
+.detail{background:var(--panel2);border-radius:9px;padding:12px}
+.detail small{
+  display:block;
+  color:var(--muted);
+  font-size:11px;
+  margin-bottom:7px;
+}
+.detail b{font-size:17px}
+.note{
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.7;
+}
+.status{margin-top:10px;font-size:12px;color:var(--muted)}
+@media(max-width:800px){
+  main{padding:15px 12px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .details{grid-template-columns:repeat(2,1fr)}
+  .stat strong{font-size:24px}
+  h1{font-size:20px}
+}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div>
+    <h1>MY TRADING TERMINAL</h1>
+    <div class="muted">
+      Minervini Trend Template · VCP · RS · Pivot / 米国株スクリーナー
+    </div>
+    <div class="status" id="status" role="status">
+      データを読み込み中…
+    </div>
+  </div>
+  <div class="controls">
+    <button type="button" id="refresh">↻ データ更新</button>
+    <label class="upload" for="jsonFile">JSONを手動取込</label>
+    <input id="jsonFile" type="file" accept=".json,application/json">
+  </div>
+</header>
 
-<style>
-#screening-results{max-width:1200px;margin:20px auto 50px;padding:0 18px;color:var(--t)}
-#screening-results .dash-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:14px}
-#screening-results h2{margin:0 0 4px;font-size:21px}
-#screening-results .dash-note{font-size:12px;color:var(--m);line-height:1.6}
-#screening-results .dash-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-#screening-results .dash-actions label{cursor:pointer}
-#screening-results .statgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:14px 0}
-#screening-results .stat{background:var(--p2);border:1px solid var(--l);border-radius:10px;padding:13px}
-#screening-results .stat small{display:block;color:var(--m);font-size:11px}
-#screening-results .stat strong{display:block;font-size:23px;margin-top:5px}
-#screening-results .controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
-#screening-results .controls input{background:var(--p2);border:1px solid var(--l);border-radius:9px;padding:10px;color:var(--t);max-width:220px}
-#screening-results .filterbtn[aria-pressed="true"]{background:#214b39;color:#84e6ad;border-color:#367453}
-#screening-results .tablewrap{overflow:auto;max-height:650px;border:1px solid var(--l);border-radius:10px}
-#screening-results table{width:100%;border-collapse:collapse;font-size:12px;white-space:nowrap}
-#screening-results th{background:#1b2532;color:#b5c7d8;position:sticky;top:0;z-index:1;text-align:left;padding:11px 10px;cursor:pointer}
-#screening-results td{border-top:1px solid #263140;padding:10px}
-#screening-results tr:hover td{background:#1b2530}
-#screening-results a{color:#83baff;text-decoration:none}
-#screening-results .yes{color:#57d891;font-weight:700}
-#screening-results .no{color:#8d98a6}
-#screening-results .na{color:var(--y)}
-#screening-results .detail{border-top:1px solid var(--l);padding:12px 4px;margin-top:12px;font-size:12px;line-height:1.8}
-@media(max-width:700px){#screening-results .statgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-</style>
-<section id="screening-results" aria-label="実データスクリーニング結果">
-  <div class="dash-head"><div><h2>SEPA / VCP スクリーニング結果</h2><div class="dash-note">GitHub Actions生成の screening.json をGitHubから自動取得。上部の旧サンプルとは独立した実データ一覧です。</div></div>
-  <div class="dash-actions"><button class="btn" id="refreshScreening">↻ データ更新</button><label class="btn" for="jsonFile">JSONを手動取込</label><input type="file" id="jsonFile" accept=".json,application/json" hidden></div></div>
-  <div class="dash-note" id="screeningStatus" role="status">読み込み中…</div>
-  <div class="statgrid">
-    <div class="stat"><small>対象銘柄</small><strong id="statTotal">—</strong></div>
-    <div class="stat"><small>TT 合格</small><strong id="statTT">—</strong></div>
-    <div class="stat"><small>RS 70以上 &amp; TT</small><strong id="statPass">—</strong></div>
-    <div class="stat"><small>VCP 候補</small><strong id="statVCP">—</strong></div>
-    <div class="stat"><small>SETUP 合格</small><strong id="statSetup">—</strong></div>
-    <div class="stat"><small>VCP 形成初期（1点）</small><strong id="statEarly">—</strong></div>
-    <div class="stat"><small>VCP 形成中（2点）</small><strong id="statForming">—</strong></div>
-    <div class="stat"><small>VCP 完成候補（3点）</small><strong id="statComplete">—</strong></div>
+<section class="stats" id="stats"></section>
+
+<section class="panel">
+  <div class="filterbar">
+    <div>
+      <h2>スクリーニング結果</h2>
+      <div class="meta" id="summary">—</div>
+    </div>
+    <div class="rightcontrols">
+      <input type="text" id="search"
+        placeholder="銘柄検索（例: NVDA）"
+        aria-label="銘柄検索">
+      <span class="meta" id="count"></span>
+    </div>
   </div>
-  <div class="controls" id="screenFilters">
-    <button class="btn filterbtn" data-filter="all" aria-pressed="true">全銘柄</button>
-    <button class="btn filterbtn" data-filter="tt" aria-pressed="false">TT合格</button>
-    <button class="btn filterbtn" data-filter="early" aria-pressed="false">VCP形成初期</button>
-    <button class="btn filterbtn" data-filter="forming" aria-pressed="false">VCP形成中</button>
-    <button class="btn filterbtn" data-filter="vcp" aria-pressed="false">VCP完成候補</button>
-    <button class="btn filterbtn" data-filter="setup" aria-pressed="false">SETUP合格</button>
-    <input id="screenQuery" type="search" aria-label="銘柄検索" placeholder="銘柄検索（例：NVDA）">
-    <span class="dash-note" id="screenCount"></span>
+
+  <div class="filters" id="filters"></div>
+
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th data-sort="Ticker">銘柄</th>
+          <th data-sort="Price">株価</th>
+          <th data-sort="RS">RS</th>
+          <th data-sort="Trend_PASS">TT</th>
+          <th data-sort="VCP_SCORE">VCP点</th>
+          <th data-sort="VCP_STAGE">VCP段階</th>
+          <th data-sort="VCP_PB_SHRINK">押し目収縮</th>
+          <th data-sort="Pivot_Distance_Pct">Pivot距離%</th>
+          <th data-sort="Volume5_50_Ratio">出来高比</th>
+          <th data-sort="SETUP_PASS">SETUP</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
   </div>
-  <div class="tablewrap"><table id="screeningTable"><thead></thead><tbody></tbody></table></div>
-  <div class="detail" id="screeningDetail">銘柄行を選択すると各判定を表示します。</div>
-  <p class="dash-note">SETUP = TT合格 ＋ RS70以上 ＋ VCP候補 ＋ ピボット距離0〜5% ＋ 直近5日平均出来高/50日平均出来高 ≤70%。ピボットは直前15営業日の高値を使用。VCP段階は既存の3条件の合格数による暫定分類で、実際のVCP形成段階を保証しません。RSは対象銘柄内の相対順位です。株価データの確定日と反映時刻は異なる場合があります。</p>
 </section>
+
+<section class="panel" id="detailpanel">
+  <h2 id="detailtitle">銘柄詳細</h2>
+  <div class="details" id="details">
+    <div class="muted">
+      一覧で銘柄をクリックすると判定の内訳を表示します。
+    </div>
+  </div>
+</section>
+
+<p class="note">
+データはGitHub Actionsの確定日足集計であり、
+リアルタイム株価ではありません。
+RSは対象銘柄内の相対順位。
+VCP段階は既存3条件の合格数による暫定分類、
+押し目収縮は固定20営業日区間の簡易指標です。
+実際のチャートによる確認が必要です。
+</p>
+</main>
+
 <script>
-(()=>{'use strict';
-const root=document.getElementById('screening-results');
-const get=id=>root.querySelector('#'+id);
-const fields=[['Ticker','銘柄'],['Price','株価'],['RS','RS'],['Trend_PASS','TT'],['VCP_SCORE','VCP点'],['VCP_STAGE','VCP段階'],['VCP_PB1_PCT','押し目①%'],['VCP_PB2_PCT','押し目②%'],['VCP_PB3_PCT','押し目③%'],['VCP_PB_SHRINK','押し目収縮'],['VCP_CANDIDATE','VCP候補'],['Pivot_Distance_Pct','Pivot距離%'],['Pivot_NEAR','Pivot近接'],['Volume5_50_Ratio','出来高比'],['Volume_DRY','出来高枯渇'],['SETUP_PASS','SETUP'],['PASS','従来PASS']];
-const booleanFields=new Set(['Trend_PASS','VCP_PB_SHRINK','VCP_CANDIDATE','Pivot_NEAR','Volume_DRY','SETUP_PASS','PASS']);
-let stocks=[],active='all',sortKey='RS',ascending=false;
-const status=message=>get('screeningStatus').textContent=message;
-const flag=(row,key)=>row[key]===true || row[key]===1 || row[key]==='true';
-const valid=(row,key)=>Object.prototype.hasOwnProperty.call(row,key) && row[key]!==null && row[key]!=='';
-const text=(value)=>value===null||value===undefined?'—':String(value);
-const mark=(row,key)=>!valid(row,key)?'—':flag(row,key)?'✓':'—';
-function paintDetail(s){const detail=get('screeningDetail');detail.replaceChildren();if(!s){detail.textContent='銘柄行を選択すると各判定を表示します。';return;}
- const heading=document.createElement('strong');heading.textContent=s.Ticker+' — 判定内訳';detail.append(heading);
- const info=document.createElement('div');info.textContent=`TT: ${mark(s,'Trend_PASS')} ｜ RS: ${text(s.RS)} ｜ VCP: ${mark(s,'VCP_CANDIDATE')}（スコア ${text(s.VCP_SCORE)}・${text(s.VCP_STAGE)}） ｜ 押し目(古→新): ${text(s.VCP_PB1_PCT)}% → ${text(s.VCP_PB2_PCT)}% → ${text(s.VCP_PB3_PCT)}%（段階縮小 ${mark(s,'VCP_PB_SHRINK')}） ｜ Pivot: ${text(s.Pivot_Distance_Pct)}%（近接 ${mark(s,'Pivot_NEAR')}） ｜ 出来高比: ${text(s.Volume5_50_Ratio)}（枯渇 ${mark(s,'Volume_DRY')}） ｜ SETUP: ${mark(s,'SETUP_PASS')}`;detail.append(info);
+'use strict';
+
+const $ = id => document.getElementById(id);
+
+let data = null;
+let filter = 'all';
+let sortKey = 'RS';
+let desc = true;
+let selected = null;
+
+const filters = [
+  ['all','全銘柄'],
+  ['tt','TT合格'],
+  ['rs','TT＋RS70'],
+  ['stage1','VCP形成初期'],
+  ['stage2','VCP形成中'],
+  ['stage3','VCP完成候補'],
+  ['shrink','押し目収縮'],
+  ['setup','SETUP合格']
+];
+
+const num = (v,d=2) =>
+  typeof v==='number' && Number.isFinite(v)
+    ? v.toFixed(d) : '—';
+
+const value = v =>
+  v===true ? '✓ PASS' :
+  v===false ? '—' :
+  v==null ? '—' : String(v);
+
+const stage = s =>
+  s==='完成候補' ? 'stage3' :
+  s==='形成中' ? 'stage2' : 'stage1';
+
+function chip(t,cls=''){
+  const e=document.createElement('span');
+  e.className='pill '+cls;
+  e.textContent=t;
+  return e;
 }
-function compare(a,b){const va=a[sortKey],vb=b[sortKey];const num=typeof va==='number' && typeof vb==='number';if(num)return va-vb;return String(va??'').localeCompare(String(vb??''));}
-function render(){const q=get('screenQuery').value.trim().toUpperCase();const filtered=stocks.filter(s=>{
- if(q&&!String(s.Ticker??'').toUpperCase().includes(q))return false;
- if(active==='tt')return flag(s,'Trend_PASS');
- if(active==='early')return Number(s.VCP_SCORE)===1;
- if(active==='forming')return Number(s.VCP_SCORE)===2;
- if(active==='vcp')return flag(s,'VCP_CANDIDATE');
- if(active==='setup')return flag(s,'SETUP_PASS');return true;
- }).sort((a,b)=>(ascending?1:-1)*compare(a,b));
- get('screenCount').textContent=`${filtered.length} / ${stocks.length} 銘柄`;
- const head=get('screeningTable').querySelector('thead'),body=get('screeningTable').querySelector('tbody');head.replaceChildren();body.replaceChildren();
- const hr=document.createElement('tr');fields.forEach(([key,label])=>{const th=document.createElement('th');th.textContent=label+(sortKey===key?(ascending?' ▲':' ▼'):'');th.tabIndex=0;th.addEventListener('click',()=>{if(sortKey===key)ascending=!ascending;else{sortKey=key;ascending=key==='Ticker';}render();});th.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();th.click();}});hr.append(th);});head.append(hr);
- for(const s of filtered){const tr=document.createElement('tr');tr.style.cursor='pointer';tr.addEventListener('click',()=>paintDetail(s));for(const [key] of fields){const td=document.createElement('td');if(key==='Ticker'){const a=document.createElement('a');a.textContent=text(s[key]);a.href='https://www.tradingview.com/chart/?symbol='+encodeURIComponent(s[key]||'');a.target='_blank';a.rel='noopener noreferrer';a.addEventListener('click',e=>e.stopPropagation());td.append(a);}else if(booleanFields.has(key)){td.textContent=valid(s,key)?(flag(s,key)?'✓ PASS':'—'):'未計算';td.className=!valid(s,key)?'na':flag(s,key)?'yes':'no';}else{td.textContent=text(s[key]);}tr.append(td);}body.append(tr);}
- if(!filtered.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=fields.length;td.textContent='該当する銘柄はありません';tr.append(td);body.append(tr);}
-}
-function loadData(data,source){if(!data||!Array.isArray(data.stocks))throw Error('stocks配列がありません');stocks=data.stocks.filter(s=>s&&typeof s==='object');
- get('statTotal').textContent=stocks.length;get('statTT').textContent=stocks.filter(s=>flag(s,'Trend_PASS')).length;
- get('statPass').textContent=stocks.filter(s=>flag(s,'PASS')).length;get('statVCP').textContent=stocks.filter(s=>flag(s,'VCP_CANDIDATE')).length;
- get('statSetup').textContent=stocks.some(s=>valid(s,'SETUP_PASS'))?stocks.filter(s=>flag(s,'SETUP_PASS')).length:'—';
- for(const [id,score] of [['statEarly',1],['statForming',2],['statComplete',3]]){
-   get(id).textContent=stocks.some(s=>valid(s,'VCP_SCORE'))?stocks.filter(s=>Number(s.VCP_SCORE)===score).length:'—';
- }
- const updated=data.updated_at?new Date(data.updated_at):null;const when=updated&&!Number.isNaN(updated.valueOf())?updated.toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'}):'日時不明';
- status(`${source} / 更新: ${when} JST / モード: ${data.screen_mode||'不明'}`);
- paintDetail(null);render();
-}
-async function fetchData(){
- status('スクリーニング結果を取得中…');
- const sources=[
-  'https://raw.githubusercontent.com/caboten-eng/my-trading-terminal/main/results/screening.json',
-  'https://caboten-eng.github.io/my-trading-terminal/results/screening.json'
- ];
- const errors=[];
- for(const source of sources){
+
+function safeParse(raw){
   try{
-   const response=await fetch(source+'?v='+Date.now(),{cache:'no-store'});
-   if(!response.ok)throw new Error('HTTP '+response.status);
-   const data=await response.json();
-   loadData(data,source.includes('raw.githubusercontent.com')?'GitHubの最新データ':'GitHub Pages');
-   return;
-  }catch(err){errors.push(err.message);}
- }
- status('自動取得に失敗しました（'+errors.join(' / ')+'）。JSONを手動取込で確認してください。');
+    return JSON.parse(raw);
+  }catch(e){
+    throw new Error(
+      'JSON形式エラー: '+e.message+
+      '。Stock Screenerの出力JSONを確認してください。'
+    );
+  }
 }
-get('jsonFile').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{loadData(JSON.parse(await file.text()),'手動読込: '+file.name);}catch(err){status('JSON読込エラー: '+err.message);}});
-get('refreshScreening').addEventListener('click',fetchData);
-get('screenQuery').addEventListener('input',render);
-root.querySelectorAll('.filterbtn').forEach(btn=>btn.addEventListener('click',()=>{active=btn.dataset.filter;root.querySelectorAll('.filterbtn').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));render();}));
-fetchData();
-})();
+
+function validate(obj){
+  if(!obj || !Array.isArray(obj.stocks)){
+    throw new Error('stocks配列が見つかりません');
+  }
+  return obj;
+}
+
+function load(raw,label){
+  data=validate(safeParse(raw));
+  selected=null;
+  filter='all';
+  $('search').value='';
+
+  $('status').textContent=
+    label+' / 更新: '+
+    (data.updated_at
+      ? new Date(data.updated_at).toLocaleString(
+          'ja-JP',{timeZone:'Asia/Tokyo'})
+      : '不明')+' JST';
+
+  render();
+}
+
+async function autoLoad(){
+  $('status').textContent='データ取得中…';
+
+  try{
+    const resp=await fetch(
+      'results/screening.json?ts='+Date.now(),
+      {cache:'no-store'}
+    );
+
+    if(!resp.ok){
+      throw new Error('HTTP '+resp.status);
+    }
+
+    load(await resp.text(),'自動取得');
+
+  }catch(err){
+    $('status').textContent=
+      '自動取得失敗: '+err.message+
+      '。JSONを手動取込で確認できます。';
+  }
+}
+
+function match(s){
+  switch(filter){
+    case 'tt':
+      return s.Trend_PASS===true;
+    case 'rs':
+      return s.Trend_PASS===true && s.RS>=70;
+    case 'stage1':
+      return s.VCP_STAGE==='形成初期';
+    case 'stage2':
+      return s.VCP_STAGE==='形成中';
+    case 'stage3':
+      return s.VCP_STAGE==='完成候補';
+    case 'shrink':
+      return s.VCP_PB_SHRINK===true;
+    case 'setup':
+      return s.SETUP_PASS===true;
+    default:
+      return true;
+  }
+}
+
+function render(){
+  if(!data)return;
+
+  const stocks=data.stocks;
+
+  const groups=[
+    ['対象銘柄',stocks.length],
+    ['TT合格',stocks.filter(s=>s.Trend_PASS===true).length],
+    ['TT＋RS70',stocks.filter(s=>s.PASS===true).length],
+    ['SETUP合格',stocks.filter(s=>s.SETUP_PASS===true).length],
+    ['VCP形成初期',stocks.filter(s=>s.VCP_STAGE==='形成初期').length],
+    ['VCP形成中',stocks.filter(s=>s.VCP_STAGE==='形成中').length],
+    ['VCP完成候補',stocks.filter(s=>s.VCP_STAGE==='完成候補').length],
+    ['押し目収縮',stocks.filter(s=>s.VCP_PB_SHRINK===true).length]
+  ];
+
+  $('stats').replaceChildren(...groups.map(([label,n])=>{
+    const e=document.createElement('div');
+    e.className='stat';
+
+    const a=document.createElement('small');
+    const b=document.createElement('strong');
+
+    a.textContent=label;
+    b.textContent=n;
+
+    e.append(a,b);
+    return e;
+  }));
+
+  $('summary').textContent=
+    '判定モード: '+(data.screen_mode||'—')+
+    ' / RS ≥ '+(data.settings?.rs_min??70)+
+    ' / Pivot ≤ '+(data.settings?.pivot_max_distance_pct??5)+'%'+
+    ' / 出来高比 ≤ '+(data.settings?.volume_dry_max_ratio??0.7);
+
+  $('filters').replaceChildren(...filters.map(([id,label])=>{
+    const e=document.createElement('button');
+    e.textContent=label;
+    e.type='button';
+    e.className=id===filter?'selected':'';
+    e.onclick=()=>{
+      filter=id;
+      render();
+    };
+    return e;
+  }));
+
+  const q=$('search').value.trim().toUpperCase();
+
+  let items=stocks.filter(s=>
+    match(s) &&
+    String(s.Ticker??'').toUpperCase().includes(q)
+  );
+
+  items.sort((a,b)=>{
+    let x=a[sortKey],y=b[sortKey];
+    if(typeof x==='boolean')x=Number(x);
+    if(typeof y==='boolean')y=Number(y);
+
+    const order=
+      typeof x==='number' && typeof y==='number'
+        ? x-y
+        : String(x??'').localeCompare(String(y??''));
+
+    return desc?-order:order;
+  });
+
+  $('count').textContent=
+    items.length+' / '+stocks.length+' 銘柄';
+
+  const body=$('rows');
+  body.replaceChildren();
+
+  const fragment=document.createDocumentFragment();
+
+  for(const s of items){
+    const tr=document.createElement('tr');
+
+    if(s.Ticker===selected)tr.className='active';
+
+    tr.tabIndex=0;
+    tr.onclick=()=>showDetail(s.Ticker);
+    tr.onkeydown=e=>{
+      if(e.key==='Enter')showDetail(s.Ticker);
+    };
+
+    const put=(v,cls)=>{
+      const td=document.createElement('td');
+      if(cls)td.className=cls;
+      td.textContent=v;
+      tr.append(td);
+    };
+
+    const td=document.createElement('td');
+    const a=document.createElement('a');
+
+    a.textContent=s.Ticker??'—';
+    a.href='https://www.tradingview.com/chart/?symbol='+
+      encodeURIComponent(s.Ticker??'');
+    a.target='_blank';
+    a.rel='noopener noreferrer';
+    a.onclick=e=>e.stopPropagation();
+
+    td.append(a);
+    tr.append(td);
+
+    put(num(s.Price));
+    put(s.RS??'—');
+    put(value(s.Trend_PASS),s.Trend_PASS?'positive':'');
+    put(s.VCP_SCORE??'—');
+
+    const st=document.createElement('td');
+    st.append(chip(s.VCP_STAGE||'対象外',stage(s.VCP_STAGE)));
+    tr.append(st);
+
+    put(value(s.VCP_PB_SHRINK),s.VCP_PB_SHRINK?'positive':'');
+    put(num(s.Pivot_Distance_Pct));
+    put(num(s.Volume5_50_Ratio,3));
+    put(value(s.SETUP_PASS),s.SETUP_PASS?'positive':'');
+
+    fragment.append(tr);
+  }
+
+  body.append(fragment);
+
+  if(!items.length){
+    const tr=document.createElement('tr');
+    const td=document.createElement('td');
+    td.colSpan=10;
+    td.textContent='該当する銘柄がありません';
+    tr.append(td);
+    body.append(tr);
+  }
+
+  if(selected)showDetail(selected,false);
+}
+
+function showDetail(ticker,rerender=true){
+  const s=data?.stocks.find(x=>x.Ticker===ticker);
+  if(!s)return;
+
+  selected=ticker;
+  $('detailtitle').textContent=ticker+' — 判定詳細';
+
+  const fields=[
+    ['株価',num(s.Price)],
+    ['RS',s.RS],
+    ['TT',value(s.Trend_PASS)],
+    ['VCP段階',s.VCP_STAGE],
+    ['VCPスコア',s.VCP_SCORE],
+    ['押し目収縮',value(s.VCP_PB_SHRINK)],
+    ['押し目①',num(s.VCP_PB1_PCT)+'%'],
+    ['押し目②',num(s.VCP_PB2_PCT)+'%'],
+    ['押し目③',num(s.VCP_PB3_PCT)+'%'],
+    ['Pivot距離',num(s.Pivot_Distance_Pct)+'%'],
+    ['Pivot接近',value(s.Pivot_NEAR)],
+    ['出来高5日/50日',num(s.Volume5_50_Ratio,3)],
+    ['出来高枯渇',value(s.Volume_DRY)],
+    ['SETUP',value(s.SETUP_PASS)],
+    ['MA50',num(s.MA50)],
+    ['MA150',num(s.MA150)],
+    ['MA200',num(s.MA200)]
+  ];
+
+  $('details').replaceChildren(...fields.map(([k,v])=>{
+    const d=document.createElement('div');
+    d.className='detail';
+
+    const label=document.createElement('small');
+    const b=document.createElement('b');
+
+    label.textContent=k;
+    b.textContent=v;
+
+    d.append(label,b);
+    return d;
+  }));
+
+  if(rerender)render();
+}
+
+$('search').oninput=render;
+$('refresh').onclick=autoLoad;
+
+$('jsonFile').onchange=async e=>{
+  const f=e.target.files[0];
+  if(!f)return;
+
+  try{
+    load(await f.text(),'手動取込: '+f.name);
+  }catch(err){
+    $('status').textContent=err.message;
+  }
+};
+
+document.querySelectorAll('th[data-sort]').forEach(th=>{
+  th.onclick=()=>{
+    const k=th.dataset.sort;
+
+    if(sortKey===k)desc=!desc;
+    else{
+      sortKey=k;
+      desc=k!=='Ticker';
+    }
+
+    render();
+  };
+});
+
+autoLoad();
 </script>
-</body></html>
+</body>
+</html>
