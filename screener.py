@@ -495,8 +495,12 @@ for ticker in TICKERS:
             "VCP_CANDIDATE": bool(vcp_candidate),
                         # スイング高値・安値による新VCP判定（試験版）
             "SWING_VCP_SCORE": (
-                
-            # Swing VCPのブレイクアウト準備判定
+            # スイングVCPスコア
+            "SWING_VCP_SCORE": (
+                swing_vcp.get("score", 0) if swing_vcp else 0
+            ),
+
+            # スイングVCPのブレイクアウト準備判定
             "SWING_VCP_READY": bool(swing_vcp_ready),
             "SWING_VCP_FINAL_TIGHT": bool(swing_final_tight),
             "SWING_VCP_RANGE_10D_PCT": (
@@ -505,9 +509,6 @@ for ticker in TICKERS:
             ),
             "SWING_VCP_RANGE_TIGHT": bool(swing_range_tight),
             "SWING_VCP_PIVOT_READY": bool(swing_pivot_ready),
-
-                swing_vcp.get("score", 0) if swing_vcp else 0
-            ),
             "SWING_VCP_CANDIDATE": (
                 swing_vcp.get("candidate", False) if swing_vcp else False
             ),
