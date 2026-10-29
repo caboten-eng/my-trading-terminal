@@ -314,7 +314,23 @@ function load(raw,label){
       ? new Date(data.updated_at).toLocaleString(
           'ja-JP',{timeZone:'Asia/Tokyo'})
       : '不明')+' JST';
+  // 実際にスクリーニングに使用した日足の日付
+  const barDates = data.stocks
+    .map(s => s.BAR_DATE)
+    .filter(d => typeof d === 'string' && d.length === 10)
+    .sort();
 
+  if (barDates.length > 0) {
+    const oldest = barDates[0];
+    const newest = barDates[barDates.length - 1];
+
+    const dateLabel = oldest === newest
+      ? newest
+      : oldest + ' ～ ' + newest;
+
+    $('status').textContent +=
+      ' / 使用日足: ' + dateLabel;
+  }
   render();
 }
 
