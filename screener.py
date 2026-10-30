@@ -770,6 +770,14 @@ for ticker in TICKERS:
             ),
                         # ベース上限による新しい判定（試験版）
                         # 複数スイング高値による抵抗帯ピボット（試験版）
+                        # 抵抗帯Pivotを基準にしたREADY判定
+            "RESISTANCE_READY": bool(resistance_ready),
+
+            "RESISTANCE_DISTANCE_PCT": (
+                round(resistance_distance, 2)
+                if resistance_distance is not None
+                else None
+            ),
             "RESISTANCE_PIVOT": (
                 resistance.get("pivot") if resistance else None
             ),
