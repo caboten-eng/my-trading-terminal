@@ -279,14 +279,14 @@ def detect_base_breakout(df):
     
 def detect_resistance_pivot(df):
     """
-    複数の確定スイング高値から抵抗帯を検出する試験版。
+    複数のスイング高値から抵抗帯Pivotを検出する。
 
-    条件:
-    - 直近90営業日を分析
-    - 左右3営業日で確定した高値
-    - 高値同士が3%以内
-    - 高値の形成間隔が5営業日以上
-    - 2回以上試された価格帯を候補にする
+    ・直近90営業日を分析
+    ・左右3営業日で確定した高値を使用
+    ・高値同士の価格差は3%以内
+    ・高値の間隔は5営業日以上
+    ・現在株価より上の抵抗帯を優先
+    ・すべて突破済みなら最も近い下の抵抗帯を採用
 
     既存のBASE_STAGEやSETUP_PASSは変更しない。
     """
@@ -296,29 +296,39 @@ def detect_resistance_pivot(df):
         return None
 
     high = one_column(df, "High").iloc[-100:]
-    high = high.to_numpy(dtype=float)
+    close = one_column(df, "Close").iloc[-100:]
 
-    if not np.isfinite(high).all():
+    h = high.to_numpy(dtype=float)
+    c = close.to_numpy(dtype=float)
+
+    if (
+        not np.isfinite(h).all()
+        or not np.isfinite(c).all()
+        or np.any(h <= 0)
+        or c[-1] <= 0
+    ):
         return None
+
+    current = float(c[-1])
+    n = len(h)
 
     peaks = []
 
-    # 右側3本が確定したスイング高値のみ
-    for i in range(10, len(high) - 3):
-
+    # 確定済みスイング高値を検出
+    for i in range(10, n - 3):
         if (
-            high[i] > max(high[i-3:i])
-            and high[i] >= max(high[i+1:i+4])
+            h[i] > max(h[i-3:i])
+            and h[i] >= max(h[i+1:i+4])
         ):
-            peaks.append((i, float(high[i])))
+            peaks.append((i, float(h[i])))
 
-    # 新しい高値の組から順番に探す
-    for j in range(len(peaks) - 1, 0, -1):
+    candidates = []
 
+    # すべての高値ペアを調べる
+    for j in range(1, len(peaks)):
         recent_i, recent_price = peaks[j]
 
-        for k in range(j - 1, -1, -1):
-
+        for k in range(j):
             old_i, old_price = peaks[k]
 
             if recent_i - old_i < 5:
@@ -330,24 +340,66 @@ def detect_resistance_pivot(df):
                 * 100
             )
 
-            if difference <= 3:
-                pivot = max(recent_price, old_price)
+            if difference > 3:
+                continue
 
-                return {
-                    "pivot": round(pivot, 2),
-                    "first_peak_days_ago": int(
-                        len(high) - 1 - old_i
-                    ),
-                    "last_peak_days_ago": int(
-                        len(high) - 1 - recent_i
-                    ),
-                    "peak_difference_pct": round(
-                        difference, 2
-                    ),
-                    "touches": 2
-                }
+            pivot = max(recent_price, old_price)
 
-    return None
+            candidates.append({
+                "pivot": float(pivot),
+                "first_i": old_i,
+                "last_i": recent_i,
+                "difference": float(difference)
+            })
+
+    if not candidates:
+        return None
+
+    # 現在株価以上の抵抗帯を優先
+    above = [
+        x for x in candidates
+        if x["pivot"] >= current
+    ]
+
+    if above:
+        # 現在株価に最も近い上値抵抗帯
+        best = min(
+            above,
+            key=lambda x: (
+                x["pivot"] - current,
+                -x["last_i"]
+            )
+        )
+    else:
+        # すべて突破済みなら最も近い下の抵抗帯
+        best = max(
+            candidates,
+            key=lambda x: (
+                x["pivot"],
+                x["last_i"]
+            )
+        )
+
+    pivot = best["pivot"]
+
+    return {
+        "pivot": round(pivot, 2),
+        "first_peak_days_ago": int(
+            n - 1 - best["first_i"]
+        ),
+        "last_peak_days_ago": int(
+            n - 1 - best["last_i"]
+        ),
+        "peak_difference_pct": round(
+            best["difference"], 2
+        ),
+        "touches": 2,
+        "position": (
+            "BELOW_PIVOT"
+            if current <= pivot
+            else "ABOVE_PIVOT"
+        )
+    }
 def setup_metrics(df):
     # Pivot: 当日を含めず、直前15営業日の高値を採用
     high = one_column(df, "High").dropna()
