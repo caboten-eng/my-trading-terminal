@@ -703,6 +703,23 @@ for ticker in TICKERS:
 
         # 複数スイング高値による抵抗帯判定
         resistance = detect_resistance_pivot(df)
+                # 抵抗帯Pivot基準の準備判定（試験版）
+        resistance_pivot = (
+            resistance.get("pivot") if resistance else None
+        )
+
+        resistance_distance = (
+            (resistance_pivot - price) / resistance_pivot * 100
+            if resistance_pivot is not None and resistance_pivot > 0
+            else None
+        )
+
+        resistance_ready = bool(
+            resistance_distance is not None
+            and 0 <= resistance_distance <= 5
+            and swing_vcp_ready
+            and all(checks.values())
+        )
 
         results.append({
             "BAR_DATE": df.index[-1].strftime("%Y-%m-%d"),
