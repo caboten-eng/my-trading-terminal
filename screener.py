@@ -757,6 +757,16 @@ for ticker in TICKERS:
         # 複数スイング高値による抵抗帯判定
         resistance = detect_resistance_pivot(df)
         single_peak = detect_single_peak_pivot(df)
+
+        unified = resistance if resistance is not None else single_peak
+        unified_pivot = unified["pivot"] if unified else None
+        unified_pivot_type = (
+            "MULTI_PEAK" if resistance is not None
+            else "SINGLE_PEAK" if single_peak is not None
+            else None
+        )
+        # CSXの抵抗帯候補を診断（判定には影響しない）
+        if ticker == "CSX":
         # CSXの抵抗帯候補を診断（判定には影響しない）
         if ticker == "CSX":
             hh = one_column(df, "High").iloc[-100:].to_numpy(dtype=float)
