@@ -718,6 +718,59 @@ for ticker in TICKERS:
 
         # 複数スイング高値による抵抗帯判定
         resistance = detect_resistance_pivot(df)
+        # CSXの抵抗帯候補を診断（判定には影響しない）
+        if ticker == "CSX":
+            hh = one_column(df, "High").iloc[-100:].to_numpy(dtype=float)
+            ll = one_column(df, "Low").iloc[-100:].to_numpy(dtype=float)
+            current = price
+            n = len(hh)
+
+            peaks = [
+                (i, float(hh[i]))
+                for i in range(10, n - 3)
+                if hh[i] > max(hh[i-3:i])
+                and hh[i] >= max(hh[i+1:i+4])
+            ]
+
+            counts = {
+                "間隔OK": 0,
+                "直近OK": 0,
+                "高値差OK": 0,
+                "深さOK": 0,
+                "上値OK": 0
+            }
+
+            for j in range(1, len(peaks)):
+                ri, rp = peaks[j]
+                for k in range(j):
+                    oi, op = peaks[k]
+
+                    if not 5 <= ri - oi <= 40:
+                        continue
+                    counts["間隔OK"] += 1
+
+                    if n - 1 - ri > 20:
+                        continue
+                    counts["直近OK"] += 1
+
+                    pivot = max(rp, op)
+                    diff = abs(rp - op) / pivot * 100
+                    if diff > 3:
+                        continue
+                    counts["高値差OK"] += 1
+
+                    depth = (
+                        (pivot - min(ll[oi:ri+1])) / pivot * 100
+                    )
+                    if not 3 <= depth <= 25:
+                        continue
+                    counts["深さOK"] += 1
+
+                    if pivot < current:
+                        continue
+                    counts["上値OK"] += 1
+
+            print(f"CSX 抵抗帯診断: {counts}")
                 # 抵抗帯Pivot基準の準備判定（試験版）
         resistance_pivot = (
             resistance.get("pivot") if resistance else None
