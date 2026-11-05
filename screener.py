@@ -350,6 +350,21 @@ def detect_resistance_pivot(df):
                 continue
 
             pivot = max(recent_price, old_price)
+            # 2つの高値の間の調整幅を計算
+            low_between = float(
+                one_column(df, "Low")
+                .iloc[-100:]
+                .iloc[old_i:recent_i + 1]
+                .min()
+            )
+
+            base_depth = (
+                (pivot - low_between) / pivot * 100
+            )
+
+            # 調整幅3〜25%のベースに限定（試験版）
+            if not 3 <= base_depth <= 25:
+                continue
 
             candidates.append({
                 "pivot": float(pivot),
