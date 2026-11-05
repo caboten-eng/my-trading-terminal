@@ -731,7 +731,16 @@ for ticker in TICKERS:
                 if hh[i] > max(hh[i-3:i])
                 and hh[i] >= max(hh[i+1:i+4])
             ]
-
+            print("CSX 直近20営業日のスイング高値:")
+            recent_peaks = [
+                (n - 1 - i, p)
+                for i, p in peaks
+                if n - 1 - i <= 20
+            ]
+            for days, p in recent_peaks:
+                print(f"CSX高値 {days}営業日前: {p:.2f}")
+            if not recent_peaks:
+                print("CSX高値 該当なし")
             counts = {
                 "間隔OK": 0,
                 "直近OK": 0,
