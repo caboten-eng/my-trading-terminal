@@ -390,16 +390,10 @@ def detect_resistance_pivot(df):
                 x["pivot"] - current,
                 -x["last_i"]
             )
-        )
+        )    
     else:
-        # すべて突破済みなら最も近い下の抵抗帯
-        best = max(
-            candidates,
-            key=lambda x: (
-                x["pivot"],
-                x["last_i"]
-            )
-        )
+        # 上値抵抗帯がない場合はREADY候補なし
+        return None
 
     pivot = best["pivot"]
 
