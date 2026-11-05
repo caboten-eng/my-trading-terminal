@@ -415,6 +415,44 @@ def detect_resistance_pivot(df):
             else "ABOVE_PIVOT"
         )
     }
+def detect_single_peak_pivot(df):
+    import numpy as np
+
+    if len(df) < 100:
+        return None
+
+    h = one_column(df, "High").iloc[-100:].to_numpy(dtype=float)
+    c = one_column(df, "Close").iloc[-100:].to_numpy(dtype=float)
+
+    if not np.isfinite(h).all() or not np.isfinite(c).all():
+        return None
+
+    current = float(c[-1])
+    if current <= 0:
+        return None
+
+    n = len(h)
+    candidates = []
+
+    for i in range(n - 21, n - 3):
+        if h[i] > max(h[i-3:i]) and h[i] >= max(h[i+1:i+4]):
+            pivot = float(h[i])
+            distance = (pivot - current) / pivot * 100
+
+            if 0 <= distance <= 5:
+                candidates.append((pivot, n - 1 - i))
+
+    if not candidates:
+        return None
+
+    pivot, days = min(candidates, key=lambda x: x[0])
+
+    return {
+        "pivot": round(pivot, 2),
+        "distance_pct": round((pivot - current) / pivot * 100, 2),
+        "days_since_peak": int(days),
+        "type": "SINGLE_PEAK"
+    }
 def setup_metrics(df):
     # Pivot: 当日を含めず、直前15営業日の高値を採用
     high = one_column(df, "High").dropna()
