@@ -331,9 +331,13 @@ def detect_resistance_pivot(df):
         for k in range(j):
             old_i, old_price = peaks[k]
             # 同じベース内の高値候補に限定（試験版）
-            peak_gap = recent_i - old_i
-
+                        peak_gap = recent_i - old_i
             if not 5 <= peak_gap <= 40:
+                continue
+
+            # 直近20営業日以内に試された抵抗帯だけ採用
+            days_since_recent_peak = n - 1 - recent_i
+            if days_since_recent_peak > 20:
                 continue
 
             difference = (
