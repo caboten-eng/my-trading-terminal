@@ -647,6 +647,9 @@ function showDetail(ticker,rerender=true){
     ['新ベース判定',
       s.BASE_STAGE ?? '—'],
         // 複数スイング高値による抵抗帯Pivot（試験版）
+    ['単一高値Pivot', s.SINGLE_PEAK_PIVOT != null ? num(s.SINGLE_PEAK_PIVOT) : '—'],
+    ['単一高値Pivotまでの距離', s.SINGLE_PEAK_DISTANCE_PCT != null ? num(s.SINGLE_PEAK_DISTANCE_PCT) + '%' : '—'],
+    ['単一高値形成からの営業日数', s.SINGLE_PEAK_DAYS ?? '—'],
     ['抵抗帯Pivot価格',
       num(s.RESISTANCE_PIVOT)],
 
