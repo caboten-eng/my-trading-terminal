@@ -896,6 +896,9 @@ for ticker in TICKERS:
                 if resistance_distance is not None
                 else None
             ),
+            "SINGLE_PEAK_PIVOT": single_peak.get("pivot") if single_peak else None,
+            "SINGLE_PEAK_DISTANCE_PCT": single_peak.get("distance_pct") if single_peak else None,
+            "SINGLE_PEAK_DAYS": single_peak.get("days_since_peak") if single_peak else None,
             "RESISTANCE_PIVOT": (
                 resistance.get("pivot") if resistance else None
             ),
