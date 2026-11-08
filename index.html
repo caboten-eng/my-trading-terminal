@@ -265,6 +265,7 @@ const filters = [
   ['entry_ready','VCP エントリー候補'],
   ['resistance_ready','抵抗帯READY＋RS70'],
   ['unified_ready','統合Pivot READY'],
+  ['minervini_entry','SEPAエントリー接近'],
   ['shrink','押し目収縮'],
   ['setup','SETUP合格']
 ];
@@ -398,9 +399,18 @@ function match(s){
         s.RESISTANCE_READY === true &&
         s.SWING_VCP_CANDIDATE === true &&
         s.RS >= 70
-      );
+      );    
     case 'unified_ready':
       return s.UNIFIED_READY === true;
+    case 'minervini_entry':
+      return (
+        s.Trend_PASS === true &&
+        s.RS >= 70 &&
+        s.SWING_VCP_SCORE >= 3 &&
+        Number(s.UNIFIED_PIVOT) > 0 &&
+        (s.UNIFIED_PIVOT - s.Price) / s.UNIFIED_PIVOT * 100 >= 0 &&
+        (s.UNIFIED_PIVOT - s.Price) / s.UNIFIED_PIVOT * 100 <= 5
+      );
     case 'shrink':
       return s.VCP_PB_SHRINK===true;
     case 'setup':
