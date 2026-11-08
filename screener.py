@@ -865,6 +865,9 @@ for ticker in TICKERS:
         resistance = detect_resistance_pivot(df)
         single_peak = detect_single_peak_pivot(df)
         minervini_vcp = calculate_minervini_contractions(df)
+        if ticker == "CSX":
+            sw = detect_minervini_swings(df)
+            print("CSX VCP診断:", "高値", sw["peaks"][-8:], "安値", sw["troughs"][-8:], "収縮", minervini_vcp) if sw else print("CSX VCP診断: データ不足")
 
         unified = resistance if resistance is not None else single_peak
         unified_pivot = unified["pivot"] if unified else None
