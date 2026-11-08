@@ -211,6 +211,7 @@ a{color:var(--blue)}
           <th data-sort="BASE_STAGE">ベース判定</th>
           <th data-sort="VCP_PB_SHRINK">押し目収縮</th>
           <th data-sort="Pivot_Distance_Pct">Pivot距離%</th>
+          <th>統合Pivot距離%</th>
           <th data-sort="Volume5_50_Ratio">出来高比</th>
           <th data-sort="SETUP_PASS">SETUP</th>
         </tr>
@@ -570,6 +571,13 @@ put(
 
     put(value(s.VCP_PB_SHRINK),s.VCP_PB_SHRINK?'positive':'');
     put(num(s.Pivot_Distance_Pct));
+    put(
+      typeof s.UNIFIED_PIVOT === 'number' &&
+      s.UNIFIED_PIVOT > 0 &&
+      typeof s.Price === 'number'
+        ? num((s.UNIFIED_PIVOT - s.Price) / s.UNIFIED_PIVOT * 100) + '%'
+        : '—'
+    );
     put(num(s.Volume5_50_Ratio,3));
     put(value(s.SETUP_PASS),s.SETUP_PASS?'positive':'');
 
