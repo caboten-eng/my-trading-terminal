@@ -158,6 +158,17 @@ a{color:var(--blue)}
   .stat strong{font-size:24px}
   h1{font-size:20px}
 }
+
+.market-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.market-cell{background:var(--panel2);border-radius:9px;padding:12px;line-height:1.7}
+.market-cell small{display:block;color:var(--muted);margin-bottom:4px}
+.market-cell b{font-size:18px}
+.market-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.market-tag{padding:5px 12px;border-radius:99px;border:1px solid var(--line);font-weight:700}
+.market-tag.bull{color:var(--green);border-color:#28704d}
+.market-tag.neutral{color:var(--yellow);border-color:#927034}
+.market-tag.caution{color:var(--red);border-color:#914654}
+@media(max-width:800px){.market-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
 <body>
@@ -178,6 +189,15 @@ a{color:var(--blue)}
     <input id="jsonFile" type="file" accept=".json,application/json">
   </div>
 </header>
+
+<section class="panel" id="market-panel" hidden>
+  <div class="market-heading">
+    <h2>米国マーケット環境 <span class="meta">（試験的な独自判定）</span></h2>
+    <span class="market-tag" id="market-regime">—</span>
+  </div>
+  <div class="market-grid" id="market-metrics"></div>
+  <p class="note" id="market-footnote">指数・市場の広がり・先導株の強さを確認。売買の自動判断には使用しません。</p>
+</section>
 
 <section class="stats" id="stats"></section>
 
@@ -429,8 +449,43 @@ function match(s){
   }
 }
 
+function renderUsMarket(){
+  const panel=$('market-panel');
+  panel.hidden=market!=='US';
+  if(market!=='US')return;
+  const m=data?.market_environment;
+  const tag=$('market-regime');
+  const grid=$('market-metrics');
+  grid.replaceChildren();
+  if(!m){
+    tag.textContent='未取得';
+    tag.className='market-tag';
+    $('market-footnote').textContent='米国株用スクリーナーを更新すると、ここに地合い判定が表示されます。';
+    return;
+  }
+  tag.textContent=m.regime+(m.score==null?'':'（'+m.score+'/4）');
+  tag.className='market-tag '+(m.regime==='強気'?'bull':m.regime==='警戒'?'caution':'neutral');
+  const i=m.indexes||{};
+  const cells=[
+    ['S&P500 / SPY',i.SPY?(i.SPY.trend_positive?'上昇トレンド':'要注意'):'取得不可',i.SPY?.bar_date||'—'],
+    ['NASDAQ100 / QQQ',i.QQQ?(i.QQQ.trend_positive?'上昇トレンド':'要注意'):'取得不可',i.QQQ?.bar_date||'—'],
+    ['50日線より上の銘柄',m.breadth_above_ma50_pct==null?'—':m.breadth_above_ma50_pct.toFixed(1)+'%',(m.breadth_coverage??0)+'銘柄で集計'],
+    ['TT＋RS70先導株',m.leader_pct==null?'—':m.leader_pct.toFixed(1)+'%',(m.leader_count??0)+' / '+(m.universe_count??0)+'銘柄']
+  ];
+  for(const [label,val,sub] of cells){
+    const cell=document.createElement('div');
+    cell.className='market-cell';
+    const a=document.createElement('small');a.textContent=label;
+    const b=document.createElement('b');b.textContent=val;
+    const c=document.createElement('div');c.className='meta';c.textContent=sub;
+    cell.append(a,b,c);grid.append(cell);
+  }
+  $('market-footnote').textContent='独自の試験判定（ミネルヴィニ公式モデルではありません）。指数はSPY・QQQで代用。指数トレンド2点＋Breadth55%以上1点＋先導株10%以上1点。3～4点＝強気、2点＝中立、0～1点＝警戒。株式の候補抽出には影響しません。';
+}
+
 function render(){
   if(!data)return;
+  renderUsMarket();
 
   const stocks=data.stocks;
 
