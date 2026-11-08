@@ -914,7 +914,15 @@ for ticker in TICKERS:
                 past_close = float(one_column(past_df, "Close").iloc[-1])
                 provisional_distance = (provisional_pivot - past_close) / provisional_pivot * 100
                 print(f"EBAY 暫定Pivot: {provisional_pivot:.2f} 距離: {provisional_distance:.2f}%")
-                print("複数Pivot:", past_multi)
+                hi = one_column(past_df, "High")
+                lo = one_column(past_df, "Low")
+                vol = one_column(past_df, "Volume")
+                range5 = (hi.iloc[-5:].max() - lo.iloc[-5:].min()) / hi.iloc[-5:].max() * 100
+                range10 = (hi.iloc[-15:-5].max() - lo.iloc[-15:-5].min()) / hi.iloc[-15:-5].max() * 100
+                volume5 = vol.iloc[-5:].mean()
+                volume10 = vol.iloc[-15:-5].mean()
+                print(f"EBAY 値幅診断: 直近5日={range5:.2f}% 以前10日={range10:.2f}%")
+                print(f"EBAY 出来高診断: 直近5日/以前10日={volume5 / volume10:.2f}倍")                print("複数Pivot:", past_multi)
         if ticker == "CSX":
             sw = detect_minervini_swings(df)
             print("CSX VCP診断:", "高値", sw["peaks"][-8:], "安値", sw["troughs"][-8:], "収縮", minervini_vcp) if sw else print("CSX VCP診断: データ不足")
