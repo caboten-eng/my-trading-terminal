@@ -706,19 +706,23 @@ def get_prime_tickers():
     with urlopen(req, timeout=60) as response:
         content = response.read()
     listing = pd.read_excel(BytesIO(content), dtype=str, engine="openpyxl")
-    required = {"コード", "市場・商品区分"}
+    required = {"コード", "銘柄名", "市場・商品区分"}
     if not required.issubset(set(listing.columns)):
         raise RuntimeError(f"JPXの列形式が変更されました: {list(listing.columns)}")
     prime = listing[listing["市場・商品区分"].astype(str).str.strip() == "プライム（内国株式）"]
-    codes = prime["コード"].dropna().astype(str).str.strip().tolist()
-    codes = list(dict.fromkeys(c for c in codes if re.fullmatch(r"[0-9]{4}|[0-9]{3}[A-Z]", c)))
-    if len(codes) < 1000:
-        raise RuntimeError(f"東証プライム銘柄が少なすぎます（{len(codes)}）。JPXの形式を確認してください")
-    return codes
+    code_to_name = {}
+    for _, entry in prime.iterrows():
+        code = str(entry["コード"]).strip()
+        if re.fullmatch(r"[0-9]{4}|[0-9]{3}[A-Z]", code):
+            company = entry["銘柄名"]
+            code_to_name[code] = str(company).strip() if pd.notna(company) else ""
+    if len(code_to_name) < 1000:
+        raise RuntimeError(f"東証プライム銘柄が少なすぎます（{len(code_to_name)}）。JPXの形式を確認してください")
+    return code_to_name
 
 # JPXの銘柄リストが取得できない場合は古い結果を上書きせず停止
-CODES = get_prime_tickers()
-TICKERS = [code + ".T" for code in CODES]
+CODE_TO_NAME = get_prime_tickers()
+TICKERS = [code + ".T" for code in CODE_TO_NAME]
 print(f"東証プライム: {len(TICKERS)}銘柄（JPX月次リスト）")
 
 import json
@@ -951,6 +955,7 @@ for ticker in TICKERS:
             "SIMPLE_PIVOT_NEAR": simple_pivot_near,
             "BAR_DATE": df.index[-1].strftime("%Y-%m-%d"),
             "Ticker": ticker.removesuffix(".T"),
+            "Name": CODE_TO_NAME.get(ticker.removesuffix(".T"), ""),
             "Market": "JP",
             "YahooSymbol": ticker,
             "Price": round(price, 2),
