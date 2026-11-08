@@ -165,12 +165,14 @@ a{color:var(--blue)}
 <header>
   <div>
     <h1>MY TRADING TERMINAL</h1>
-    <div class="muted">Minervini Trend Template · RS · ブレイク前監視 / 米国株スクリーナー</div>
+    <div class="muted">Minervini Trend Template · RS · ブレイク前監視 / 日米株スクリーナー</div>
     <div class="status" id="status" role="status">
       データを読み込み中…
     </div>
   </div>
   <div class="controls">
+    <button type="button" class="selected" id="market-us">米国株</button>
+    <button type="button" id="market-jp">日本株</button>
     <button type="button" id="refresh">↻ データ更新</button>
     <label class="upload" for="jsonFile">JSONを手動取込</label>
     <input id="jsonFile" type="file" accept=".json,application/json">
@@ -237,6 +239,7 @@ RSはスクリーニング対象内の相対順位です。
 const $ = id => document.getElementById(id);
 
 let data = null;
+let market = 'US';
 let filter = 'no_recent_break';
 let sortKey = 'RS';
 let desc = true;
@@ -310,11 +313,11 @@ function load(raw,label){
 }
 
 async function autoLoad(){
-  $('status').textContent='データ取得中…';
+  $('status').textContent=(market === 'JP' ? '日本株' : '米国株')+'：データ取得中…';
 
   try{
     const resp=await fetch(
-      'results/screening.json?ts='+Date.now(),
+      (market === 'JP' ? 'results/screening_jp.json' : 'results/screening.json')+'?ts='+Date.now(),
       {cache:'no-store'}
     );
 
@@ -322,7 +325,7 @@ async function autoLoad(){
       throw new Error('HTTP '+resp.status);
     }
 
-    load(await resp.text(),'自動取得');
+    load(await resp.text(),(market === 'JP' ? '日本株' : '米国株')+'／自動取得');
 
   }catch(err){
     $('status').textContent=
@@ -525,7 +528,7 @@ function render(){
 
     a.textContent=s.Ticker??'—';
     a.href='https://www.tradingview.com/chart/?symbol='+
-      encodeURIComponent(s.Ticker??'');
+      encodeURIComponent(market === 'JP' ? 'TSE:'+String(s.Ticker??'') : String(s.Ticker??''));
     a.target='_blank';
     a.rel='noopener noreferrer';
     a.onclick=e=>e.stopPropagation();
@@ -602,6 +605,20 @@ function showDetail(ticker,rerender=true){
 
 $('search').oninput=render;
 $('refresh').onclick=autoLoad;
+function switchMarket(next){
+  if(market === next) return;
+  market=next;
+  data=null;
+  selected=null;
+  $('market-us').classList.toggle('selected', market==='US');
+  $('market-jp').classList.toggle('selected', market==='JP');
+  $('rows').replaceChildren();
+  $('stats').replaceChildren();
+  $('count').textContent='';
+  autoLoad();
+}
+$('market-us').onclick=()=>switchMarket('US');
+$('market-jp').onclick=()=>switchMarket('JP');
 
 $('jsonFile').onchange=async e=>{
   const f=e.target.files[0];
