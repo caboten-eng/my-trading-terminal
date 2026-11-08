@@ -868,6 +868,7 @@ for ticker in TICKERS:
         if ticker == "CSX":
             sw = detect_minervini_swings(df)
             print("CSX VCP診断:", "高値", sw["peaks"][-8:], "安値", sw["troughs"][-8:], "収縮", minervini_vcp) if sw else print("CSX VCP診断: データ不足")
+            import numpy as np
             if len(df) >= 120:
                 base_high = one_column(df, "High").iloc[-120:].to_numpy(dtype=float)
                 base_low = one_column(df, "Low").iloc[-120:].to_numpy(dtype=float)
