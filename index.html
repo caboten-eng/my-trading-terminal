@@ -680,6 +680,9 @@ function showDetail(ticker,rerender=true){
       s.BASE_STAGE ?? '—'],
         // 複数スイング高値による抵抗帯Pivot（試験版）
     ['監視優先度', s.UNIFIED_PIVOT == null || !(s.UNIFIED_PIVOT > 0) ? 'C：Pivot未検出' : (s.UNIFIED_PIVOT - s.Price) / s.UNIFIED_PIVOT * 100 <= 2 ? 'A：Pivot直前' : 'B：Pivot接近'],
+    ['VCP収縮回数', s.MINERVINI_T_COUNT ?? 0],
+    ['VCP収縮率 T1→T4', Array.isArray(s.MINERVINI_T_DEPTHS) && s.MINERVINI_T_DEPTHS.length ? s.MINERVINI_T_DEPTHS.map(v => Number(v).toFixed(1) + '%').join(' → ') : '—'],
+    ['段階的な収縮', s.MINERVINI_SHRINKING === true ? 'YES' : 'NO'],
     ['単一高値Pivot', s.SINGLE_PEAK_PIVOT != null ? num(s.SINGLE_PEAK_PIVOT) : '—'],
     ['単一高値Pivotまでの距離', s.SINGLE_PEAK_DISTANCE_PCT != null ? num(s.SINGLE_PEAK_DISTANCE_PCT) + '%' : '—'],
     ['単一高値形成からの営業日数', s.SINGLE_PEAK_DAYS ?? '—'],
