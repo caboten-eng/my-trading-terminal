@@ -878,6 +878,19 @@ for ticker in TICKERS:
                 depth = (peak - bottom) / peak * 100
                 days = len(base_high) - 1 - start
                 print(f"CSX ベース仮候補: 開始={days}営業日前 高値={peak:.2f} 最安値={bottom:.2f} 調整幅={depth:.2f}%")
+                base_peaks = [p for p in sw["peaks"] if p["index"] >= start] if sw else []
+                base_troughs = [t for t in sw["troughs"] if t["index"] >= start] if sw else []
+                print("CSX ベース内の高値:", base_peaks)
+                print("CSX ベース内の安値:", base_troughs)
+                base_depths = []
+                for i in range(len(base_peaks) - 1):
+                    p1 = base_peaks[i]
+                    p2 = base_peaks[i + 1]
+                    lows = [t["price"] for t in base_troughs if p1["index"] < t["index"] < p2["index"]]
+                    if lows:
+                        contraction = (p1["price"] - min(lows)) / p1["price"] * 100
+                        base_depths.append(round(contraction, 2))
+                print("CSX ベース内収縮率:", base_depths)
         unified = resistance if resistance is not None else single_peak
         unified_pivot = unified["pivot"] if unified else None
         unified_pivot_type = (
