@@ -262,6 +262,7 @@ const filters = [
   ['swing_ready','Swing VCP READY'],
   ['entry_ready','VCP エントリー候補'],
   ['resistance_ready','抵抗帯READY＋RS70'],
+  ['unified_ready','統合Pivot READY'],
   ['shrink','押し目収縮'],
   ['setup','SETUP合格']
 ];
@@ -396,6 +397,8 @@ function match(s){
         s.SWING_VCP_CANDIDATE === true &&
         s.RS >= 70
       );
+    case 'unified_ready':
+      return s.UNIFIED_READY === true;
     case 'shrink':
       return s.VCP_PB_SHRINK===true;
     case 'setup':
