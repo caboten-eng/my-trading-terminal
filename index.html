@@ -211,6 +211,7 @@ a{color:var(--blue)}
           <th data-sort="BASE_STAGE">ベース判定</th>
           <th data-sort="VCP_PB_SHRINK">押し目収縮</th>
           <th data-sort="Pivot_Distance_Pct">Pivot距離%</th>
+          <th>監視優先度</th>
           <th>統合Pivot距離%</th>
           <th data-sort="Volume5_50_Ratio">出来高比</th>
           <th data-sort="SETUP_PASS">SETUP</th>
@@ -571,6 +572,8 @@ put(
 
     put(value(s.VCP_PB_SHRINK),s.VCP_PB_SHRINK?'positive':'');
     put(num(s.Pivot_Distance_Pct));
+    const d = s.UNIFIED_PIVOT > 0 ? (s.UNIFIED_PIVOT - s.Price) / s.UNIFIED_PIVOT * 100 : null;
+    put(d === null ? 'C：未検出' : d < 0 ? '突破済み' : d <= 2 ? 'A：直前' : d <= 5 ? 'B：接近' : 'C：形成中');
     put(
       typeof s.UNIFIED_PIVOT === 'number' &&
       s.UNIFIED_PIVOT > 0 &&
