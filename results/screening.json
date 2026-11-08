@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T11:33:26.954079+00:00",
+  "updated_at": "2026-11-08T11:48:57.177943+00:00",
   "total": 522,
   "passed": 73,
   "setup_passed": 0,
@@ -22383,8 +22383,8 @@
       "UNIFIED_PIVOT": null,
       "MINERVINI_T_COUNT": 4,
       "MINERVINI_T_DEPTHS": [
+        7.81,
         4.71,
-        2.47,
         13.22,
         3.4
       ],
