@@ -379,6 +379,22 @@ function match(s){
       return s.VCP_STAGE==='完成候補';
       case 'swing':
   return s.SWING_VCP_CANDIDATE===true;
+    case 'pre_breakout': {
+      const depths = s.MINERVINI_T_DEPTHS;
+      const distance = Number(s.PROVISIONAL_DISTANCE_PCT);
+      return (
+        s.Trend_PASS === true &&
+        s.RS >= 70 &&
+        Array.isArray(depths) &&
+        depths.length >= 2 &&
+        depths[depths.length - 2] > depths[depths.length - 1] &&
+        Number.isInteger(s.MINERVINI_LAST_T_DAYS) &&
+        s.MINERVINI_LAST_T_DAYS <= 20 &&
+        s.PROVISIONAL_DISTANCE_PCT != null &&
+        distance >= 0 &&
+        distance <= 5
+      );
+    }
     case 'minervini_vcp': {
       const depths = s.MINERVINI_T_DEPTHS;
       return (
