@@ -560,6 +560,37 @@ def calculate_minervini_contractions(df):
         "depths_pct": depths,
         "shrinking": bool(shrinking)
     }
+    def detect_provisional_pivot(df):
+    import numpy as np
+
+    if len(df) < 21:
+        return None
+
+    high = one_column(df, "High").iloc[-21:-1].to_numpy(dtype=float)
+    close = float(one_column(df, "Close").iloc[-1])
+
+    if not np.isfinite(high).all() or not np.isfinite(close):
+        return None
+
+    pivot = float(np.max(high))
+
+    if pivot <= 0:
+        return None
+
+    distance = (pivot - close) / pivot * 100
+
+    if distance < 0:
+        stage = "ABOVE_PIVOT"
+    elif distance <= 5:
+        stage = "NEAR_PIVOT"
+    else:
+        stage = "FORMING"
+
+    return {
+        "pivot": round(pivot, 2),
+        "distance_pct": round(distance, 2),
+        "stage": stage
+    }
 def setup_metrics(df):
     # Pivot: 当日を含めず、直前15営業日の高値を採用
     high = one_column(df, "High").dropna()
