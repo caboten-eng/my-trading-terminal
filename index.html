@@ -239,7 +239,7 @@ RSは対象銘柄内の相対順位。
 VCP段階は既存3条件の合格数による暫定分類、
 押し目収縮は固定20営業日区間の簡易指標です。
 シンプルVCP候補は値幅縮小または出来高減少と高値接近による監視用の近似判定です。
-実際のチャートによる確認が必要です。
+シンプルVCPは監視候補の近似判定で、ブレイク後の銘柄も含む場合があります。実際のチャートによる確認が必要です。
 </p>
 </main>
 
@@ -249,30 +249,16 @@ VCP段階は既存3条件の合格数による暫定分類、
 const $ = id => document.getElementById(id);
 
 let data = null;
-let filter = 'all';
+let filter = 'simple_vcp';
 let sortKey = 'RS';
 let desc = true;
 let selected = null;
 
 const filters = [
-  ['all','全銘柄'],
   ['simple_vcp','シンプルVCP候補'],
-  ['tt','TT合格'],
+  ['all','全銘柄'],
   ['rs','TT＋RS70'],
-  ['stage1','VCP形成初期'],
-  ['stage2','VCP形成中'],
-  ['stage3','VCP完成候補'],
-  ['swing','スイングVCP完成候補'],
-  ['swing_strong','VCP形成候補（3点以上）'],
-  ['minervini_vcp','ミネルヴィニVCP候補'],
-  ['pre_breakout','VCPブレイク前候補'],
-  ['swing_ready','Swing VCP READY'],
-  ['entry_ready','VCP エントリー候補'],
-  ['resistance_ready','抵抗帯READY＋RS70'],
-  ['unified_ready','統合Pivot READY'],
-  ['minervini_entry','SEPAエントリー接近'],
-  ['shrink','押し目収縮'],
-  ['setup','SETUP合格']
+  ['minervini_vcp','旧VCP候補（比較用）']
 ];
 
 const num = (v,d=2) =>
@@ -316,7 +302,7 @@ function validate(obj){
 function load(raw,label){
   data=validate(safeParse(raw));
   selected=null;
-  filter='all';
+  filter='simple_vcp';
   $('search').value='';
 
   $('status').textContent=
