@@ -211,7 +211,7 @@ a{color:var(--blue)}
           <th data-sort="BASE_STAGE">ベース判定</th>
           <th data-sort="VCP_PB_SHRINK">押し目収縮</th>
           <th data-sort="Pivot_Distance_Pct">Pivot距離%</th>
-          <th>監視優先度</th>
+          <th data-sort="WATCH_PRIORITY">監視優先度</th>
           <th>統合Pivot距離%</th>
           <th data-sort="Volume5_50_Ratio">出来高比</th>
           <th data-sort="SETUP_PASS">SETUP</th>
@@ -490,8 +490,16 @@ function render(){
     String(s.Ticker??'').toUpperCase().includes(q)
   );
 
-  items.sort((a,b)=>{
-    let x=a[sortKey],y=b[sortKey];
+  items.sort((a,b)=>{    
+    const priority = s => {
+      const p = Number(s.UNIFIED_PIVOT);
+      const price = Number(s.Price);
+      if (!p || !price) return 1;
+      const d = (p - price) / p * 100;
+      return d < 0 ? 0 : d <= 2 ? 3 : d <= 5 ? 2 : 1;
+    };
+    let x = sortKey === 'WATCH_PRIORITY' ? priority(a) : a[sortKey];
+    let y = sortKey === 'WATCH_PRIORITY' ? priority(b) : b[sortKey];
     if(typeof x==='boolean')x=Number(x);
     if(typeof y==='boolean')y=Number(y);
 
