@@ -473,7 +473,7 @@ function render(){
 
   let items=stocks.filter(s=>
     match(s) &&
-    String(s.Ticker??'').toUpperCase().includes(q)
+    (String(s.Ticker??'')+' '+String(s.Name??'')).toUpperCase().includes(q)
   );
 
   items.sort((a,b)=>{    
@@ -534,6 +534,13 @@ function render(){
     a.onclick=e=>e.stopPropagation();
 
     td.append(a);
+    if(market === 'JP' && s.Name){
+      const name=document.createElement('span');
+      name.textContent='  '+s.Name;
+      name.style.marginLeft='9px';
+      name.style.color='var(--text)';
+      td.append(name);
+    }
     tr.append(td);
 
     put(s.RS??'—');
@@ -567,7 +574,7 @@ function showDetail(ticker,rerender=true){
   if(!s)return;
 
   selected=ticker;
-  $('detailtitle').textContent=ticker+' — 判定詳細';
+  $('detailtitle').textContent=ticker+(market === 'JP' && s.Name ? ' '+s.Name : '')+' — 判定詳細';
 
   const fields=[
     ['判定使用日足',s.BAR_DATE ?? '—'],
