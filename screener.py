@@ -1234,6 +1234,76 @@ def flag_new_prebreak(data, result_file):
 
 flag_new_prebreak(data, "results/screening.json")
 
+# 米国市場環境（独自の参考判定。Minervini公式リスクモデルではない）
+def compute_us_market_environment(data):
+    from datetime import time
+    from zoneinfo import ZoneInfo
+
+    indexes = {}
+    for symbol, label in (("SPY", "S&P500（SPY）"), ("QQQ", "NASDAQ100（QQQ）")):
+        try:
+            bars = yf.download(symbol, period="2y", auto_adjust=True, progress=False)
+            if bars.empty:
+                raise ValueError("株価データがありません")
+            ny_now = datetime.now(ZoneInfo("America/New_York"))
+            if bars.index[-1].date() == ny_now.date() and ny_now.time() < time(16, 30):
+                bars = bars.iloc[:-1].copy()
+            prices = one_column(bars, "Close").dropna().astype(float)
+            if len(prices) < 200:
+                raise ValueError("200日線の計算に必要な日足が不足")
+            ma50 = float(prices.iloc[-50:].mean())
+            ma200 = float(prices.iloc[-200:].mean())
+            current = float(prices.iloc[-1])
+            indexes[symbol] = {
+                "label": label,
+                "bar_date": prices.index[-1].strftime("%Y-%m-%d"),
+                "close": round(current, 2),
+                "ma50": round(ma50, 2),
+                "ma200": round(ma200, 2),
+                "above_ma50": bool(current > ma50),
+                "above_ma200": bool(current > ma200),
+                "trend_positive": bool(current > ma50 and ma50 > ma200),
+            }
+        except Exception as exc:
+            print(f"米国市場環境 {symbol}: 取得失敗: {exc}")
+            indexes[symbol] = None
+
+    # 個別株の集計は、実際に取得できた米国株のみが母集団
+    stocks = data["stocks"]
+    valid = [s for s in stocks if isinstance(s.get("Price"), (float, int))
+             and isinstance(s.get("MA50"), (float, int)) and s["MA50"] > 0]
+    breadth = (sum(s["Price"] > s["MA50"] for s in valid) / len(valid) * 100) if valid else None
+    leaders = sum(s.get("Trend_PASS") is True and (s.get("RS") or 0) >= 70 for s in stocks)
+    leaders_pct = (leaders / len(stocks) * 100) if stocks else None
+
+    # 指数2項目、Breadth1項目、先導株1項目の合計4点。閾値は検証前の試験値。
+    indicators = [indexes["SPY"], indexes["QQQ"]]
+    if any(item is None for item in indicators) or breadth is None or leaders_pct is None:
+        regime, score = "データ不足", None
+    else:
+        score = (sum(int(item["trend_positive"]) for item in indicators)
+                 + int(breadth >= 55) + int(leaders_pct >= 10))
+        regime = "強気" if score >= 3 else "中立" if score == 2 else "警戒"
+
+    return {
+        "model": "US market monitor (experimental, not Minervini proprietary model)",
+        "regime": regime,
+        "score": score,
+        "max_score": 4,
+        "indexes": indexes,
+        "breadth_above_ma50_pct": round(breadth, 1) if breadth is not None else None,
+        "breadth_coverage": len(valid),
+        "leader_count": leaders,
+        "leader_pct": round(leaders_pct, 1) if leaders_pct is not None else None,
+        "universe_count": len(stocks),
+    }
+
+
+data["market_environment"] = compute_us_market_environment(data)
+print("米国市場環境:", data["market_environment"]["regime"],
+      data["market_environment"]["score"], "/ 4")
+
+
 with open("results/screening.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2, allow_nan=False)
 
