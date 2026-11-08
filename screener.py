@@ -868,15 +868,15 @@ for ticker in TICKERS:
         if ticker == "CSX":
             sw = detect_minervini_swings(df)
             print("CSX VCP診断:", "高値", sw["peaks"][-8:], "安値", sw["troughs"][-8:], "収縮", minervini_vcp) if sw else print("CSX VCP診断: データ不足")
-        if len(df) >= 120:
-            base_high = one_column(df, "High").iloc[-120:].to_numpy(dtype=float)
-            base_low = one_column(df, "Low").iloc[-120:].to_numpy(dtype=float)
-            start = int(np.argmax(base_high))
-            peak = float(base_high[start])
-            bottom = float(np.min(base_low[start:]))
-            depth = (peak - bottom) / peak * 100
-            days = len(base_high) - 1 - start
-            print(f"CSX ベース仮候補: 開始={days}営業日前 高値={peak:.2f} 最安値={bottom:.2f} 調整幅={depth:.2f}%")
+            if len(df) >= 120:
+                base_high = one_column(df, "High").iloc[-120:].to_numpy(dtype=float)
+                base_low = one_column(df, "Low").iloc[-120:].to_numpy(dtype=float)
+                start = int(np.argmax(base_high))
+                peak = float(base_high[start])
+                bottom = float(np.min(base_low[start:]))
+                depth = (peak - bottom) / peak * 100
+                days = len(base_high) - 1 - start
+                print(f"CSX ベース仮候補: 開始={days}営業日前 高値={peak:.2f} 最安値={bottom:.2f} 調整幅={depth:.2f}%")
         unified = resistance if resistance is not None else single_peak
         unified_pivot = unified["pivot"] if unified else None
         unified_pivot_type = (
