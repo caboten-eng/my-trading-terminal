@@ -238,6 +238,7 @@ a{color:var(--blue)}
 RSは対象銘柄内の相対順位。
 VCP段階は既存3条件の合格数による暫定分類、
 押し目収縮は固定20営業日区間の簡易指標です。
+シンプルVCP候補は値幅縮小または出来高減少と高値接近による監視用の近似判定です。
 実際のチャートによる確認が必要です。
 </p>
 </main>
@@ -255,6 +256,7 @@ let selected = null;
 
 const filters = [
   ['all','全銘柄'],
+  ['simple_vcp','シンプルVCP候補'],
   ['tt','TT合格'],
   ['rs','TT＋RS70'],
   ['stage1','VCP形成初期'],
@@ -367,6 +369,8 @@ async function autoLoad(){
 
 function match(s){
   switch(filter){
+    case 'simple_vcp':
+      return s.SIMPLE_VCP_CANDIDATE === true;
     case 'tt':
       return s.Trend_PASS===true;
     case 'rs':
@@ -459,6 +463,7 @@ function render(){
     ['対象銘柄',stocks.length],
     ['TT合格',stocks.filter(s=>s.Trend_PASS===true).length],
     ['TT＋RS70',stocks.filter(s=>s.PASS===true).length],
+    ['シンプルVCP候補',stocks.filter(s=>s.SIMPLE_VCP_CANDIDATE===true).length],
     ['SETUP合格',stocks.filter(s=>s.SETUP_PASS===true).length],
     ['VCP形成初期',stocks.filter(s=>s.VCP_STAGE==='形成初期').length],
     ['VCP形成中',stocks.filter(s=>s.VCP_STAGE==='形成中').length],
@@ -665,6 +670,9 @@ function showDetail(ticker,rerender=true){
     ['株価',num(s.Price)],
     ['RS',s.RS],
     ['TT',value(s.Trend_PASS)],
+    ['シンプルVCP候補',value(s.SIMPLE_VCP_CANDIDATE)],
+    ['シンプルVCP収縮兆候',value(s.SIMPLE_VCP_SHAPE)],
+    ['シンプルPivot接近',value(s.SIMPLE_PIVOT_NEAR)],
     ['VCP段階',s.VCP_STAGE],
     ['VCPスコア',s.VCP_SCORE],
         // 新旧VCP判定の比較
