@@ -1040,6 +1040,7 @@ for ticker in TICKERS:
             "UNIFIED_PIVOT": unified_pivot,
             "MINERVINI_T_COUNT": minervini_vcp["contraction_count"] if minervini_vcp else 0,
             "MINERVINI_T_DEPTHS": minervini_vcp["depths_pct"] if minervini_vcp else [],
+            "MINERVINI_LAST_T_DAYS": minervini_vcp["contractions"][-1]["trough_days_ago"] if minervini_vcp and minervini_vcp["contractions"] else None,
             "MINERVINI_SHRINKING": minervini_vcp["shrinking"] if minervini_vcp else False,
             "UNIFIED_PIVOT_TYPE": unified_pivot_type,
             "SINGLE_PEAK_PIVOT": single_peak.get("pivot") if single_peak else None,
