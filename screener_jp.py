@@ -1153,6 +1153,61 @@ data = {
     "stocks": output.astype(object).where(pd.notna(output), None).to_dict(orient="records")
 }
 
+
+# 前回の確定日足と比較して、新たに「ブレイク前監視候補」になった銘柄を記録。
+# 同じ日足で再実行した際は新規判定を引き継ぎ、比較元がない場合は未判定にする。
+def flag_new_prebreak(data, result_file):
+    old = None
+    try:
+        if Path(result_file).is_file():
+            with open(result_file, encoding="utf-8") as f:
+                old = json.load(f)
+    except (OSError, ValueError) as exc:
+        print(f"前回データを読み込めません: {exc}")
+
+    rows = data["stocks"]
+    dates = [s.get("BAR_DATE") for s in rows if s.get("BAR_DATE")]
+    current_date = max(dates) if dates else None
+    previous_rows = old.get("stocks", []) if isinstance(old, dict) else []
+    previous_dates = [s.get("BAR_DATE") for s in previous_rows if s.get("BAR_DATE")]
+    previous_date = max(previous_dates) if previous_dates else None
+    same_session = bool(current_date and current_date == previous_date)
+    comparable = bool(previous_date and current_date and previous_date < current_date)
+    previous_map = {str(s.get("Ticker")): s for s in previous_rows}
+
+    for s in rows:
+        is_prebreak = (s.get("SIMPLE_VCP_CANDIDATE") is True
+                       and s.get("RECENT_20D_HIGH_BREAK") is False)
+        before = previous_map.get(str(s.get("Ticker")))
+        if same_session:
+            # 同じ日足を再計算した場合、新規表示を失わないよう前回を継承
+            s["NEW_PREBREAK_CANDIDATE"] = bool(
+                is_prebreak and before and before.get("NEW_PREBREAK_CANDIDATE") is True
+            )
+        elif comparable:
+            # 前回未取得だった銘柄を誤って新規と扱わない
+            s["NEW_PREBREAK_CANDIDATE"] = bool(
+                is_prebreak and before and not (
+                    before.get("SIMPLE_VCP_CANDIDATE") is True
+                    and before.get("RECENT_20D_HIGH_BREAK") is False
+                )
+            )
+        else:
+            s["NEW_PREBREAK_CANDIDATE"] = False
+
+    data["new_prebreak_count"] = sum(
+        s["NEW_PREBREAK_CANDIDATE"] for s in rows
+    )
+    data["comparison_available"] = bool(comparable or (same_session and old.get("comparison_available"))) if isinstance(old, dict) else False
+    data["comparison_bar_date"] = (
+        old.get("comparison_bar_date") if same_session and isinstance(old, dict)
+        else previous_date if comparable else None
+    )
+    print(f"新規ブレイク前候補: {data['new_prebreak_count']}銘柄 / 前回日足: {data['comparison_bar_date'] or '比較なし'}")
+
+
+flag_new_prebreak(data, "results/screening_jp.json")
+
 with open("results/screening_jp.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2, allow_nan=False)
 
