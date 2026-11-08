@@ -765,9 +765,7 @@ for ticker in TICKERS:
             else "SINGLE_PEAK" if single_peak is not None
             else None
         )
-        # CSXの抵抗帯候補を診断（判定には影響しない）
-        if ticker == "CSX":
-        # CSXの抵抗帯候補を診断（判定には影響しない）
+
         if ticker == "CSX":
             hh = one_column(df, "High").iloc[-100:].to_numpy(dtype=float)
             ll = one_column(df, "Low").iloc[-100:].to_numpy(dtype=float)
