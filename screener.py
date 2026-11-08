@@ -875,6 +875,11 @@ for ticker in TICKERS:
                 print("終値:", float(one_column(past_df, "Close").iloc[-1]))
                 print("収縮:", past_vcp)
                 print("単一Pivot:", past_single)
+                recent_high = one_column(past_df, "High").iloc[-21:-1]
+                provisional_pivot = float(recent_high.max())
+                past_close = float(one_column(past_df, "Close").iloc[-1])
+                provisional_distance = (provisional_pivot - past_close) / provisional_pivot * 100
+                print(f"EBAY 暫定Pivot: {provisional_pivot:.2f} 距離: {provisional_distance:.2f}%")
                 print("複数Pivot:", past_multi)
         if ticker == "CSX":
             sw = detect_minervini_swings(df)
