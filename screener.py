@@ -865,6 +865,17 @@ for ticker in TICKERS:
         resistance = detect_resistance_pivot(df)
         single_peak = detect_single_peak_pivot(df)
         minervini_vcp = calculate_minervini_contractions(df)
+        if ticker == "EBAY":
+            past_df = df.loc[df.index.strftime("%Y-%m-%d") <= "2026-10-14"].copy()
+            if len(past_df) >= 120:
+                past_vcp = calculate_minervini_contractions(past_df)
+                past_single = detect_single_peak_pivot(past_df)
+                past_multi = detect_resistance_pivot(past_df)
+                print("EBAY 10/14検証:")
+                print("終値:", float(one_column(past_df, "Close").iloc[-1]))
+                print("収縮:", past_vcp)
+                print("単一Pivot:", past_single)
+                print("複数Pivot:", past_multi)
         if ticker == "CSX":
             sw = detect_minervini_swings(df)
             print("CSX VCP診断:", "高値", sw["peaks"][-8:], "安値", sw["troughs"][-8:], "収縮", minervini_vcp) if sw else print("CSX VCP診断: データ不足")
