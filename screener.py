@@ -453,6 +453,53 @@ def detect_single_peak_pivot(df):
         "days_since_peak": int(days),
         "type": "SINGLE_PEAK"
     }
+def detect_minervini_swings(df):
+    import numpy as np
+
+    window = 120
+
+    if len(df) < window:
+        return None
+
+    data = df.iloc[-window:]
+
+    high = one_column(data, "High").to_numpy(dtype=float)
+    low = one_column(data, "Low").to_numpy(dtype=float)
+
+    if not np.isfinite(high).all():
+        return None
+    if not np.isfinite(low).all():
+        return None
+
+    peaks = []
+    troughs = []
+
+    for i in range(3, len(data) - 3):
+
+        if (
+            high[i] > max(high[i-3:i])
+            and high[i] >= max(high[i+1:i+4])
+        ):
+            peaks.append({
+                "index": i,
+                "price": round(float(high[i]), 2),
+                "days_ago": len(data) - 1 - i
+            })
+
+        if (
+            low[i] < min(low[i-3:i])
+            and low[i] <= min(low[i+1:i+4])
+        ):
+            troughs.append({
+                "index": i,
+                "price": round(float(low[i]), 2),
+                "days_ago": len(data) - 1 - i
+            })
+
+    return {
+        "peaks": peaks,
+        "troughs": troughs
+    }
 def setup_metrics(df):
     # Pivot: 当日を含めず、直前15営業日の高値を採用
     high = one_column(df, "High").dropna()
