@@ -500,6 +500,66 @@ def detect_minervini_swings(df):
         "peaks": peaks,
         "troughs": troughs
     }
+def calculate_minervini_contractions(df):
+    swings = detect_minervini_swings(df)
+
+    if swings is None:
+        return None
+
+    peaks = swings["peaks"]
+    troughs = swings["troughs"]
+
+    if len(peaks) < 2:
+        return None
+
+    contractions = []
+
+    for i in range(len(peaks) - 1):
+        first = peaks[i]
+        second = peaks[i + 1]
+
+        between = [
+            t for t in troughs
+            if first["index"] < t["index"] < second["index"]
+        ]
+
+        if not between:
+            continue
+
+        bottom = min(between, key=lambda x: x["price"])
+        high = first["price"]
+        low = bottom["price"]
+
+        if high <= 0 or low >= high:
+            continue
+
+        depth = (high - low) / high * 100
+
+        contractions.append({
+            "high": high,
+            "low": low,
+            "depth_pct": round(depth, 2),
+            "peak_days_ago": first["days_ago"],
+            "trough_days_ago": bottom["days_ago"]
+        })
+
+    if len(contractions) < 2:
+        return None
+
+    recent = contractions[-4:]
+    depths = [x["depth_pct"] for x in recent]
+
+    shrinking = all(
+        depths[i] > depths[i + 1]
+        for i in range(len(depths) - 1)
+    )
+
+    return {
+        "contraction_count": len(recent),
+        "contractions": recent,
+        "depths_pct": depths,
+        "shrinking": bool(shrinking)
+    }
 def setup_metrics(df):
     # Pivot: 当日を含めず、直前15営業日の高値を採用
     high = one_column(df, "High").dropna()
