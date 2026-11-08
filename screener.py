@@ -864,6 +864,7 @@ for ticker in TICKERS:
         # 複数スイング高値による抵抗帯判定
         resistance = detect_resistance_pivot(df)
         single_peak = detect_single_peak_pivot(df)
+        minervini_vcp = calculate_minervini_contractions(df)
 
         unified = resistance if resistance is not None else single_peak
         unified_pivot = unified["pivot"] if unified else None
@@ -1012,6 +1013,9 @@ for ticker in TICKERS:
                 else None
             ),            
             "UNIFIED_PIVOT": unified_pivot,
+            "MINERVINI_T_COUNT": minervini_vcp["contraction_count"] if minervini_vcp else 0,
+            "MINERVINI_T_DEPTHS": minervini_vcp["depths_pct"] if minervini_vcp else [],
+            "MINERVINI_SHRINKING": minervini_vcp["shrinking"] if minervini_vcp else False,
             "UNIFIED_PIVOT_TYPE": unified_pivot_type,
             "SINGLE_PEAK_PIVOT": single_peak.get("pivot") if single_peak else None,
             "SINGLE_PEAK_DISTANCE_PCT": single_peak.get("distance_pct") if single_peak else None,
