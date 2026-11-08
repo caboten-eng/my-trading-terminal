@@ -228,6 +228,7 @@ a{color:var(--blue)}
 株価はGitHub Actionsで取得した確定日足に基づき、リアルタイムではありません。
 RSはスクリーニング対象内の相対順位です。
 「ブレイク前監視候補」はシンプルVCP候補のうち、直近10営業日でそれ以前の20日高値を終値突破していない銘柄です。
+「新規候補」は前回の確定日足では対象外、今回新たにブレイク前監視候補となった銘柄です。初回は比較できず、同じ日足の再実行でも新規表示は維持されます。
 これはVCP確定や未突破の保証ではなく、より以前のブレイクを含む場合があります。
 「暫定高値距離」は過去20営業日高値との距離で、ミネルヴィニの正式Pivotではありません。最終判断はチャートで行ってください。
 </p>
@@ -246,8 +247,9 @@ let desc = true;
 let selected = null;
 
 const filters = [
-  ['simple_vcp','監視候補（全件）'],
+  ['new_prebreak','★ 新規候補'],
   ['no_recent_break','ブレイク前監視候補'],
+  ['simple_vcp','監視候補（全件）'],
   ['recent_break','直近高値突破あり（参考）'],
   ['all','全銘柄'],
   ['rs','TT＋RS70'],
@@ -340,6 +342,8 @@ function match(s){
       return s.SIMPLE_VCP_CANDIDATE === true;
     case 'no_recent_break':
       return s.SIMPLE_VCP_CANDIDATE === true && s.RECENT_20D_HIGH_BREAK === false;
+    case 'new_prebreak':
+      return s.NEW_PREBREAK_CANDIDATE === true;
     case 'recent_break':
       return s.SIMPLE_VCP_CANDIDATE === true && s.RECENT_20D_HIGH_BREAK === true;
     case 'tt':
@@ -434,7 +438,8 @@ function render(){
     ['対象銘柄',stocks.length],
     ['TT＋RS70',stocks.filter(s=>s.Trend_PASS===true && s.RS>=70).length],
     ['監視候補（全件）',stocks.filter(s=>s.SIMPLE_VCP_CANDIDATE===true).length],
-    ['ブレイク前監視候補',stocks.filter(s=>s.SIMPLE_VCP_CANDIDATE===true && s.RECENT_20D_HIGH_BREAK===false).length]
+    ['ブレイク前監視候補',stocks.filter(s=>s.SIMPLE_VCP_CANDIDATE===true && s.RECENT_20D_HIGH_BREAK===false).length],
+    ['新規候補', data.comparison_available ? stocks.filter(s=>s.NEW_PREBREAK_CANDIDATE===true).length : '—']
   ];
 
   $('stats').replaceChildren(...groups.map(([label,n])=>{
@@ -456,6 +461,9 @@ function render(){
     ' / RS ≥ '+(data.settings?.rs_min??70)+
     ' / Pivot ≤ '+(data.settings?.pivot_max_distance_pct??5)+'%'+
     ' / 出来高比 ≤ '+(data.settings?.volume_dry_max_ratio??0.7);
+  $('summary').textContent += data.comparison_available
+    ? ' / 前回比較：'+(data.comparison_bar_date||'前回日足不明')
+    : ' / 新規候補：次回の日足更新から判定';
 
   $('filters').replaceChildren(...filters.map(([id,label])=>{
     const e=document.createElement('button');
@@ -534,6 +542,13 @@ function render(){
     a.onclick=e=>e.stopPropagation();
 
     td.append(a);
+    if(s.NEW_PREBREAK_CANDIDATE === true){
+      const marker=document.createElement('span');
+      marker.textContent=' NEW';
+      marker.className='positive';
+      marker.style.marginLeft='6px';
+      td.append(marker);
+    }
     if(market === 'JP' && s.Name){
       const name=document.createElement('span');
       name.textContent='  '+s.Name;
@@ -582,6 +597,7 @@ function showDetail(ticker,rerender=true){
     ['RS',s.RS ?? '—'],
     ['Trend Template',value(s.Trend_PASS)],
     ['監視候補',value(s.SIMPLE_VCP_CANDIDATE)],
+    ['前回から新規',data.comparison_available ? value(s.NEW_PREBREAK_CANDIDATE) : '初回比較待ち'],
     ['直近高値突破',s.RECENT_20D_HIGH_BREAK == null ? '不明' : s.RECENT_20D_HIGH_BREAK ? 'あり' : 'なし'],
     ['最後の高値突破（営業日前）',s.RECENT_BREAK_DAYS_AGO ?? '—'],
     ['暫定20日高値',num(s.PROVISIONAL_PIVOT)],
