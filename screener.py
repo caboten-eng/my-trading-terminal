@@ -979,6 +979,20 @@ output["RS"] = (
 # RS上位30%を判定
 output["RS_PASS"] = output["RS"] >= RS_MIN
 
+unified_pivot_series = pd.to_numeric(output["UNIFIED_PIVOT"], errors="coerce")
+unified_distance = (
+    (unified_pivot_series - output["Price"])
+    / unified_pivot_series * 100
+)
+
+output["UNIFIED_READY"] = (
+    output["Trend_PASS"]
+    & output["RS_PASS"]
+    & (output["SWING_VCP_SCORE"] == 4)
+    & output["SWING_VCP_READY"]
+    & unified_distance.between(0, 5)
+)
+
 # トレンド条件とRS条件を統合
 output["PASS"] = (
     output["Trend_PASS"] & output["RS_PASS"]
