@@ -99,7 +99,7 @@ input[type=file]{display:none}
   flex-wrap:wrap;
 }
 .tablewrap{overflow:auto;max-height:680px}
-table{border-collapse:collapse;width:100%;min-width:1010px}
+table{border-collapse:collapse;width:100%;min-width:720px}
 th{
   position:sticky;
   top:0;
@@ -150,7 +150,7 @@ a{color:var(--blue)}
   color:var(--muted);
   line-height:1.7;
 }
-.status{margin-top:10px;font-size:12px;color:var(--muted)}
+.status{margin-top:12px;font-size:13px;font-weight:600;color:#b7d5f6;background:#1a2838;border:1px solid var(--line);border-radius:9px;padding:10px 12px;line-height:1.6}
 @media(max-width:800px){
   main{padding:15px 12px}
   .stats{grid-template-columns:repeat(2,1fr)}
@@ -165,9 +165,7 @@ a{color:var(--blue)}
 <header>
   <div>
     <h1>MY TRADING TERMINAL</h1>
-    <div class="muted">
-      Minervini Trend Template · VCP · RS · Pivot / 米国株スクリーナー
-    </div>
+    <div class="muted">Minervini Trend Template · RS · ブレイク前監視 / 米国株スクリーナー</div>
     <div class="status" id="status" role="status">
       データを読み込み中…
     </div>
@@ -202,20 +200,12 @@ a{color:var(--blue)}
       <thead>
         <tr>
           <th data-sort="Ticker">銘柄</th>
-          <th data-sort="Price">株価</th>
           <th data-sort="RS">RS</th>
-          <th data-sort="Trend_PASS">TT</th>
-          <th data-sort="VCP_SCORE">VCP点</th>
-          <th data-sort="SWING_VCP_SCORE">Swing VCP</th>
-          <th data-sort="VCP_STAGE">VCP段階</th>
-          <th data-sort="BASE_STAGE">ベース判定</th>
-          <th data-sort="VCP_PB_SHRINK">押し目収縮</th>
-          <th data-sort="Pivot_Distance_Pct">Pivot距離%</th>
-          <th data-sort="WATCH_PRIORITY">監視優先度</th>
-          <th>統合Pivot距離%</th>
-          <th data-sort="PROVISIONAL_DISTANCE_PCT">暫定Pivot距離%</th>
+          <th data-sort="Price">株価</th>
+          <th data-sort="PROVISIONAL_DISTANCE_PCT">暫定高値距離</th>
+          <th data-sort="RECENT_20D_HIGH_BREAK">直近高値突破</th>
           <th data-sort="Volume5_50_Ratio">出来高比</th>
-          <th data-sort="SETUP_PASS">SETUP</th>
+          <th data-sort="BAR_DATE">日足日付</th>
         </tr>
       </thead>
       <tbody id="rows"></tbody>
@@ -233,13 +223,11 @@ a{color:var(--blue)}
 </section>
 
 <p class="note">
-データはGitHub Actionsの確定日足集計であり、
-リアルタイム株価ではありません。
-RSは対象銘柄内の相対順位。
-VCP段階は既存3条件の合格数による暫定分類、
-押し目収縮は固定20営業日区間の簡易指標です。
-シンプルVCP候補は値幅縮小または出来高減少と高値接近による監視用の近似判定です。
-シンプルVCPは監視候補の近似判定です。「直近高値突破」は過去10営業日に直前20日高値を終値で上回ったかを示す参考情報で、正式なベースブレイクを意味しません。突破なしでも過去の上昇済み銘柄は含まれます。実際のチャート確認が必要です。
+株価はGitHub Actionsで取得した確定日足に基づき、リアルタイムではありません。
+RSはスクリーニング対象内の相対順位です。
+「ブレイク前監視候補」はシンプルVCP候補のうち、直近10営業日でそれ以前の20日高値を終値突破していない銘柄です。
+これはVCP確定や未突破の保証ではなく、より以前のブレイクを含む場合があります。
+「暫定高値距離」は過去20営業日高値との距離で、ミネルヴィニの正式Pivotではありません。最終判断はチャートで行ってください。
 </p>
 </main>
 
@@ -249,18 +237,18 @@ VCP段階は既存3条件の合格数による暫定分類、
 const $ = id => document.getElementById(id);
 
 let data = null;
-let filter = 'simple_vcp';
+let filter = 'no_recent_break';
 let sortKey = 'RS';
 let desc = true;
 let selected = null;
 
 const filters = [
-  ['simple_vcp','シンプルVCP候補'],
-  ['no_recent_break','直近高値突破なし'],
-  ['recent_break','直近高値突破あり'],
+  ['simple_vcp','監視候補（全件）'],
+  ['no_recent_break','ブレイク前監視候補'],
+  ['recent_break','直近高値突破あり（参考）'],
   ['all','全銘柄'],
   ['rs','TT＋RS70'],
-  ['minervini_vcp','旧VCP候補（比較用）']
+  ['minervini_vcp','旧VCP判定（比較）']
 ];
 
 const num = (v,d=2) =>
@@ -304,32 +292,20 @@ function validate(obj){
 function load(raw,label){
   data=validate(safeParse(raw));
   selected=null;
-  filter='simple_vcp';
+  filter='no_recent_break';
   $('search').value='';
 
-  $('status').textContent=
-    label+' / 更新: '+
-    (data.updated_at
-      ? new Date(data.updated_at).toLocaleString(
-          'ja-JP',{timeZone:'Asia/Tokyo'})
-      : '不明')+' JST';
-  // 実際にスクリーニングに使用した日足の日付
   const barDates = data.stocks
-    .map(s => s.BAR_DATE)
-    .filter(d => typeof d === 'string' && d.length === 10)
+    .map(s=>s.BAR_DATE)
+    .filter(d=>typeof d==='string' && /^\d{4}-\d{2}-\d{2}$/.test(d))
     .sort();
-
-  if (barDates.length > 0) {
-    const oldest = barDates[0];
-    const newest = barDates[barDates.length - 1];
-
-    const dateLabel = oldest === newest
-      ? newest
-      : oldest + ' ～ ' + newest;
-
-    $('status').textContent +=
-      ' / 使用日足: ' + dateLabel;
-  }
+  const barLabel = barDates.length === 0 ? '不明' :
+    barDates[0] === barDates[barDates.length-1] ? barDates[0] :
+    barDates[0]+' ～ '+barDates[barDates.length-1];
+  const updatedLabel = data.updated_at && !Number.isNaN(Date.parse(data.updated_at))
+    ? new Date(data.updated_at).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})+' JST'
+    : '不明';
+  $('status').textContent = '判定使用日足：'+barLabel+'　｜　データ更新：'+updatedLabel+'　｜　'+label;
   render();
 }
 
@@ -453,39 +429,9 @@ function render(){
 
   const groups=[
     ['対象銘柄',stocks.length],
-    ['TT合格',stocks.filter(s=>s.Trend_PASS===true).length],
-    ['TT＋RS70',stocks.filter(s=>s.PASS===true).length],
-    ['シンプルVCP候補',stocks.filter(s=>s.SIMPLE_VCP_CANDIDATE===true).length],
-    ['SETUP合格',stocks.filter(s=>s.SETUP_PASS===true).length],
-    ['VCP形成初期',stocks.filter(s=>s.VCP_STAGE==='形成初期').length],
-    ['VCP形成中',stocks.filter(s=>s.VCP_STAGE==='形成中').length],
-    ['VCP完成候補',stocks.filter(s=>s.VCP_STAGE==='完成候補').length],
-['押し目収縮',stocks.filter(s=>s.VCP_PB_SHRINK===true).length],
-
-['Swing VCP 4点',stocks.filter(s=>
-  s.SWING_VCP_CANDIDATE===true
-).length],
-
-['Swing VCP＋TT＋RS70',stocks.filter(s=>
-  s.SWING_VCP_CANDIDATE===true &&
-  s.Trend_PASS===true &&
-  s.RS>=70
-).length],
-
-['Swing VCP＋TT＋RS70＋従来READY',stocks.filter(s=>
-  s.SWING_VCP_CANDIDATE===true &&
-  s.Trend_PASS===true &&
-  s.RS>=70 &&
-  s.SWING_VCP_READY===true
-).length],
-
-['VCPエントリー候補',stocks.filter(s=>
-  s.SWING_VCP_CANDIDATE===true &&
-  s.Trend_PASS===true &&
-  s.RS>=70 &&
-  s.SWING_VCP_READY===true &&
-  s.BASE_STAGE==='READY'
-).length]
+    ['TT＋RS70',stocks.filter(s=>s.Trend_PASS===true && s.RS>=70).length],
+    ['監視候補（全件）',stocks.filter(s=>s.SIMPLE_VCP_CANDIDATE===true).length],
+    ['ブレイク前監視候補',stocks.filter(s=>s.SIMPLE_VCP_CANDIDATE===true && s.RECENT_20D_HIGH_BREAK===false).length]
   ];
 
   $('stats').replaceChildren(...groups.map(([label,n])=>{
@@ -587,52 +533,14 @@ function render(){
     td.append(a);
     tr.append(td);
 
-    put(num(s.Price));
     put(s.RS??'—');
-    put(value(s.Trend_PASS),s.Trend_PASS?'positive':'');
-    put(s.VCP_SCORE??'—');
-    put(s.SWING_VCP_SCORE??'—',
-    s.SWING_VCP_CANDIDATE?'positive':'');
-
-    const st=document.createElement('td');
-    st.append(chip(s.VCP_STAGE||'対象外',stage(s.VCP_STAGE)));
-    tr.append(st);
-    const baseStage = s.BASE_STAGE ?? 'NO_DATA';
-
-const baseLabels = {
-  READY: '準備完了',
-  BREAKOUT: '上抜け',
-  BREAKOUT_LOW_VOLUME: '上抜け(低出来高)',
-  ABOVE_PIVOT: 'Pivot超え',
-  EXTENDED: '上昇済み',
-  FORMING: '形成中',
-  NO_DATA: 'データなし'
-};
-
-put(
-  baseLabels[baseStage] ?? baseStage,
-  baseStage === 'READY' ? 'positive' :
-  baseStage === 'EXTENDED' ? 'negative' : ''
-);
-
-    put(value(s.VCP_PB_SHRINK),s.VCP_PB_SHRINK?'positive':'');
-    put(num(s.Pivot_Distance_Pct));
-    const d = s.UNIFIED_PIVOT > 0 ? (s.UNIFIED_PIVOT - s.Price) / s.UNIFIED_PIVOT * 100 : null;
-    put(d === null ? 'C：未検出' : d < 0 ? '突破済み' : d <= 2 ? 'A：直前' : d <= 5 ? 'B：接近' : 'C：形成中');
-    put(
-      typeof s.UNIFIED_PIVOT === 'number' &&
-      s.UNIFIED_PIVOT > 0 &&
-      typeof s.Price === 'number'
-        ? num((s.UNIFIED_PIVOT - s.Price) / s.UNIFIED_PIVOT * 100) + '%'
-        : '—'
-    );
-    put(
-      s.PROVISIONAL_DISTANCE_PCT != null
-        ? num(s.PROVISIONAL_DISTANCE_PCT) + '%'
-        : '—'
-    );
+    put(num(s.Price));
+    put(s.PROVISIONAL_DISTANCE_PCT == null ? '—' : num(s.PROVISIONAL_DISTANCE_PCT)+'%');
+    put(s.RECENT_20D_HIGH_BREAK == null ? '不明' :
+        s.RECENT_20D_HIGH_BREAK ? 'あり' : 'なし',
+        s.RECENT_20D_HIGH_BREAK === false ? 'positive' : '');
     put(num(s.Volume5_50_Ratio,3));
-    put(value(s.SETUP_PASS),s.SETUP_PASS?'positive':'');
+    put(s.BAR_DATE ?? '—');
 
     fragment.append(tr);
   }
@@ -642,7 +550,7 @@ put(
   if(!items.length){
     const tr=document.createElement('tr');
     const td=document.createElement('td');
-    td.colSpan=10;
+    td.colSpan=7;
     td.textContent='該当する銘柄がありません';
     tr.append(td);
     body.append(tr);
@@ -659,105 +567,17 @@ function showDetail(ticker,rerender=true){
   $('detailtitle').textContent=ticker+' — 判定詳細';
 
   const fields=[
+    ['判定使用日足',s.BAR_DATE ?? '—'],
     ['株価',num(s.Price)],
-    ['RS',s.RS],
-    ['TT',value(s.Trend_PASS)],
-    ['シンプルVCP候補',value(s.SIMPLE_VCP_CANDIDATE)],
-    ['直近10日で20日高値を終値突破',
-      s.RECENT_20D_HIGH_BREAK == null ? '—' : (s.RECENT_20D_HIGH_BREAK ? 'あり' : 'なし')],
+    ['RS',s.RS ?? '—'],
+    ['Trend Template',value(s.Trend_PASS)],
+    ['監視候補',value(s.SIMPLE_VCP_CANDIDATE)],
+    ['直近高値突破',s.RECENT_20D_HIGH_BREAK == null ? '不明' : s.RECENT_20D_HIGH_BREAK ? 'あり' : 'なし'],
     ['最後の高値突破（営業日前）',s.RECENT_BREAK_DAYS_AGO ?? '—'],
-    ['シンプルVCP収縮兆候',value(s.SIMPLE_VCP_SHAPE)],
-    ['シンプルPivot接近',value(s.SIMPLE_PIVOT_NEAR)],
-    ['VCP段階',s.VCP_STAGE],
-    ['VCPスコア',s.VCP_SCORE],
-        // 新旧VCP判定の比較
-    ['従来VCPスコア（3点満点）',s.VCP_SCORE],
-    ['スイングVCPスコア（4点満点）',s.SWING_VCP_SCORE ?? '—'],
-    ['スイングVCP完成候補',value(s.SWING_VCP_CANDIDATE)],
-    ['スイング押し目収縮',value(s.SWING_VCP_SHRINK)],
-    ['スイング出来高収縮',value(s.SWING_VCP_VOLUME_SHRINK)],
-    ['直近安値からの営業日数',s.SWING_VCP_DAYS_SINCE_LOW ?? '—'],
-    ['スイング押し目①',
-      s.SWING_VCP_DEPTHS?.[0] != null
-        ? num(s.SWING_VCP_DEPTHS[0])+'%' : '—'],
-    ['スイング押し目②',
-      s.SWING_VCP_DEPTHS?.[1] != null
-        ? num(s.SWING_VCP_DEPTHS[1])+'%' : '—'],
-    ['スイング押し目③',
-      s.SWING_VCP_DEPTHS?.[2] != null
-        ? num(s.SWING_VCP_DEPTHS[2])+'%' : '—'],
-    ['押し目収縮',value(s.VCP_PB_SHRINK)],
-    ['押し目①',num(s.VCP_PB1_PCT)+'%'],
-    ['押し目②',num(s.VCP_PB2_PCT)+'%'],
-    ['押し目③',num(s.VCP_PB3_PCT)+'%'],
-    ['Pivot距離',num(s.Pivot_Distance_Pct)+'%'],
-        // 新しいベース判定（試験版）
-        // 新旧ピボットの比較診断
-    ['従来Pivot価格（15日）',
-      s.Pivot_Distance_Pct != null && s.Price != null
-        ? num(s.Price * (1 + s.Pivot_Distance_Pct / 100))
-        : '—'],
-
-    ['新Pivot価格（60日）',
-      num(s.BASE_PIVOT)],
-
-    ['従来Pivotまでの距離',
-      s.Pivot_Distance_Pct != null
-        ? num(s.Pivot_Distance_Pct) + '%'
-        : '—'],
-
-    ['新Pivotまでの距離',
-      s.BASE_DISTANCE_PCT != null
-        ? num(s.BASE_DISTANCE_PCT) + '%'
-        : '—'],
-
-    ['従来Pivot判定',
-      value(s.Pivot_NEAR)],
-
-    ['新ベース判定',
-      s.BASE_STAGE ?? '—'],
-        // 複数スイング高値による抵抗帯Pivot（試験版）
-    ['監視優先度', s.UNIFIED_PIVOT == null || !(s.UNIFIED_PIVOT > 0) ? 'C：Pivot未検出' : (s.UNIFIED_PIVOT - s.Price) / s.UNIFIED_PIVOT * 100 <= 2 ? 'A：Pivot直前' : 'B：Pivot接近'],
-    ['VCP収縮回数', s.MINERVINI_T_COUNT ?? 0],
-    ['VCP収縮率 T1→T4', Array.isArray(s.MINERVINI_T_DEPTHS) && s.MINERVINI_T_DEPTHS.length ? s.MINERVINI_T_DEPTHS.map(v => Number(v).toFixed(1) + '%').join(' → ') : '—'],
-    ['段階的な収縮', s.MINERVINI_SHRINKING === true ? 'YES' : 'NO'],
-    ['単一高値Pivot', s.SINGLE_PEAK_PIVOT != null ? num(s.SINGLE_PEAK_PIVOT) : '—'],
-    ['単一高値Pivotまでの距離', s.SINGLE_PEAK_DISTANCE_PCT != null ? num(s.SINGLE_PEAK_DISTANCE_PCT) + '%' : '—'],
-    ['単一高値形成からの営業日数', s.SINGLE_PEAK_DAYS ?? '—'],
-    ['抵抗帯Pivot価格',
-      num(s.RESISTANCE_PIVOT)],
-
-    ['抵抗帯Pivotまでの距離',
-      s.RESISTANCE_PIVOT != null &&
-      s.RESISTANCE_PIVOT > 0 &&
-      s.Price != null
-        ? num(
-            (s.RESISTANCE_PIVOT - s.Price) /
-            s.RESISTANCE_PIVOT * 100
-          ) + '%'
-        : '—'],
-
-    ['抵抗帯の検出回数',
-      s.RESISTANCE_TOUCHES ?? 0],
-
-    ['2つの高値の価格差',
-      s.RESISTANCE_PEAK_DIFF_PCT != null
-        ? num(s.RESISTANCE_PEAK_DIFF_PCT) + '%'
-        : '—'],
-
-    ['直近抵抗帯高値からの営業日数',
-      s.RESISTANCE_LAST_PEAK_DAYS ?? '—'],
-    ['ベース判定',s.BASE_STAGE ?? '—'],
-    ['ベースPivot価格',num(s.BASE_PIVOT)],
-    ['ベースPivot距離',num(s.BASE_DISTANCE_PCT)+'%'],
-    ['ベースの調整幅',num(s.BASE_DEPTH_PCT)+'%'],
-    ['ブレイクアウト出来高比',num(s.BASE_VOLUME_RATIO,2)],
-    ['ベース有効',value(s.BASE_VALID)],
-    ['高値形成からの営業日数',s.BASE_DAYS_SINCE_PEAK ?? '—'],
-    ['Pivot接近',value(s.Pivot_NEAR)],
-    ['出来高5日/50日',num(s.Volume5_50_Ratio,3)],
-    ['出来高枯渇',value(s.Volume_DRY)],
-    ['SETUP',value(s.SETUP_PASS)],
+    ['暫定20日高値',num(s.PROVISIONAL_PIVOT)],
+    ['暫定高値までの距離',s.PROVISIONAL_DISTANCE_PCT == null ? '—' : num(s.PROVISIONAL_DISTANCE_PCT)+'%'],
+    ['値動きの収縮兆候',value(s.SIMPLE_VCP_SHAPE)],
+    ['出来高5日／50日',num(s.Volume5_50_Ratio,3)],
     ['MA50',num(s.MA50)],
     ['MA150',num(s.MA150)],
     ['MA200',num(s.MA200)]
