@@ -612,6 +612,11 @@ put(
         ? num((s.UNIFIED_PIVOT - s.Price) / s.UNIFIED_PIVOT * 100) + '%'
         : '—'
     );
+    put(
+      s.PROVISIONAL_DISTANCE_PCT != null
+        ? num(s.PROVISIONAL_DISTANCE_PCT) + '%'
+        : '—'
+    );
     put(num(s.Volume5_50_Ratio,3));
     put(value(s.SETUP_PASS),s.SETUP_PASS?'positive':'');
 
