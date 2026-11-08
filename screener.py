@@ -560,7 +560,7 @@ def calculate_minervini_contractions(df):
         "depths_pct": depths,
         "shrinking": bool(shrinking)
     }
-    def detect_provisional_pivot(df):
+def detect_provisional_pivot(df):
     import numpy as np
 
     if len(df) < 21:
