@@ -384,7 +384,8 @@ function match(s){
         s.RS >= 70 &&
         Array.isArray(depths) &&
         depths.length >= 2 &&
-        depths[depths.length - 2] > depths[depths.length - 1]
+        depths[depths.length - 2] > depths[depths.length - 1] &&
+        Number.isInteger(s.MINERVINI_LAST_T_DAYS) && s.MINERVINI_LAST_T_DAYS <= 20
       );
     }
     case 'swing_strong':
