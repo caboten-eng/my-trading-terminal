@@ -560,6 +560,8 @@ def calculate_minervini_contractions(df):
         "depths_pct": depths,
         "shrinking": bool(shrinking)
     }
+
+
 def detect_provisional_pivot(df):
     import numpy as np
 
@@ -895,6 +897,7 @@ for ticker in TICKERS:
         # 複数スイング高値による抵抗帯判定
         resistance = detect_resistance_pivot(df)
         single_peak = detect_single_peak_pivot(df)
+        provisional = detect_provisional_pivot(df)
         minervini_vcp = calculate_minervini_contractions(df)
         if ticker == "EBAY":
             past_df = df.loc[df.index.strftime("%Y-%m-%d") <= "2026-10-14"].copy()
