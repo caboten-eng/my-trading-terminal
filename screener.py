@@ -4,7 +4,7 @@ import pandas as pd
 from pathlib import Path
 
 # 標準モード：既存のTT/VCP/PASSは変更せず、SETUP_PASSを追加
-SCREEN_MODE = "standard"
+SCREEN_MODE = "simple_vcp_plus_legacy"
 RS_MIN = 70
 PIVOT_LOOKBACK = 15
 PIVOT_MAX_DISTANCE_PCT = 5.0
@@ -764,7 +764,7 @@ for ticker in TICKERS:
         if df.empty:
             print(f"{ticker}: データ不足")
             continue
-                    # 米国市場の未確定日足を除外
+        # 米国市場の未確定日足を除外
         # ニューヨーク時間で16:30より前は当日足を使用しない
         from datetime import datetime, time
         from zoneinfo import ZoneInfo
@@ -890,7 +890,6 @@ for ticker in TICKERS:
             and swing_range_tight
             and swing_pivot_ready
         )
-        # ベース上限を使った新しいピボット判定
         # ベース上限を使ったピボット判定
         base_breakout = detect_base_breakout(df)
 
@@ -899,57 +898,6 @@ for ticker in TICKERS:
         single_peak = detect_single_peak_pivot(df)
         provisional = detect_provisional_pivot(df)
         minervini_vcp = calculate_minervini_contractions(df)
-        if ticker == "EBAY":
-            past_df = df.loc[df.index.strftime("%Y-%m-%d") <= "2026-10-14"].copy()
-            if len(past_df) >= 120:
-                past_vcp = calculate_minervini_contractions(past_df)
-                past_single = detect_single_peak_pivot(past_df)
-                past_multi = detect_resistance_pivot(past_df)
-                print("EBAY 10/14検証:")
-                print("終値:", float(one_column(past_df, "Close").iloc[-1]))
-                print("収縮:", past_vcp)
-                print("単一Pivot:", past_single)
-                recent_high = one_column(past_df, "High").iloc[-21:-1]
-                provisional_pivot = float(recent_high.max())
-                past_close = float(one_column(past_df, "Close").iloc[-1])
-                provisional_distance = (provisional_pivot - past_close) / provisional_pivot * 100
-                print(f"EBAY 暫定Pivot: {provisional_pivot:.2f} 距離: {provisional_distance:.2f}%")
-                hi = one_column(past_df, "High")
-                lo = one_column(past_df, "Low")
-                vol = one_column(past_df, "Volume")
-                range5 = (hi.iloc[-5:].max() - lo.iloc[-5:].min()) / hi.iloc[-5:].max() * 100
-                range10 = (hi.iloc[-15:-5].max() - lo.iloc[-15:-5].min()) / hi.iloc[-15:-5].max() * 100
-                volume5 = vol.iloc[-5:].mean()
-                volume10 = vol.iloc[-15:-5].mean()
-                print(f"EBAY 値幅診断: 直近5日={range5:.2f}% 以前10日={range10:.2f}%")
-                print(f"EBAY 出来高診断: 直近5日/以前10日={volume5 / volume10:.2f}倍")                
-                print("複数Pivot:", past_multi)
-        if ticker == "CSX":
-            sw = detect_minervini_swings(df)
-            print("CSX VCP診断:", "高値", sw["peaks"][-8:], "安値", sw["troughs"][-8:], "収縮", minervini_vcp) if sw else print("CSX VCP診断: データ不足")
-            import numpy as np
-            if len(df) >= 120:
-                base_high = one_column(df, "High").iloc[-120:].to_numpy(dtype=float)
-                base_low = one_column(df, "Low").iloc[-120:].to_numpy(dtype=float)
-                start = int(np.argmax(base_high))
-                peak = float(base_high[start])
-                bottom = float(np.min(base_low[start:]))
-                depth = (peak - bottom) / peak * 100
-                days = len(base_high) - 1 - start
-                print(f"CSX ベース仮候補: 開始={days}営業日前 高値={peak:.2f} 最安値={bottom:.2f} 調整幅={depth:.2f}%")
-                base_peaks = [p for p in sw["peaks"] if p["index"] >= start] if sw else []
-                base_troughs = [t for t in sw["troughs"] if t["index"] >= start] if sw else []
-                print("CSX ベース内の高値:", base_peaks)
-                print("CSX ベース内の安値:", base_troughs)
-                base_depths = []
-                for i in range(len(base_peaks) - 1):
-                    p1 = base_peaks[i]
-                    p2 = base_peaks[i + 1]
-                    lows = [t["price"] for t in base_troughs if p1["index"] < t["index"] < p2["index"]]
-                    if lows:
-                        contraction = (p1["price"] - min(lows)) / p1["price"] * 100
-                        base_depths.append(round(contraction, 2))
-                print("CSX ベース内収縮率:", base_depths)
         unified = resistance if resistance is not None else single_peak
         unified_pivot = unified["pivot"] if unified else None
         unified_pivot_type = (
@@ -958,68 +906,6 @@ for ticker in TICKERS:
             else None
         )
 
-        if ticker == "CSX":
-            hh = one_column(df, "High").iloc[-100:].to_numpy(dtype=float)
-            ll = one_column(df, "Low").iloc[-100:].to_numpy(dtype=float)
-            current = price
-            n = len(hh)
-
-            peaks = [
-                (i, float(hh[i]))
-                for i in range(10, n - 3)
-                if hh[i] > max(hh[i-3:i])
-                and hh[i] >= max(hh[i+1:i+4])
-            ]
-            print("CSX 直近20営業日のスイング高値:")
-            recent_peaks = [
-                (n - 1 - i, p)
-                for i, p in peaks
-                if n - 1 - i <= 20
-            ]
-            for days, p in recent_peaks:
-                print(f"CSX高値 {days}営業日前: {p:.2f}")
-            if not recent_peaks:
-                print("CSX高値 該当なし")
-            counts = {
-                "間隔OK": 0,
-                "直近OK": 0,
-                "高値差OK": 0,
-                "深さOK": 0,
-                "上値OK": 0
-            }
-
-            for j in range(1, len(peaks)):
-                ri, rp = peaks[j]
-                for k in range(j):
-                    oi, op = peaks[k]
-
-                    if not 5 <= ri - oi <= 40:
-                        continue
-                    counts["間隔OK"] += 1
-
-                    if n - 1 - ri > 20:
-                        continue
-                    counts["直近OK"] += 1
-
-                    pivot = max(rp, op)
-                    diff = abs(rp - op) / pivot * 100
-                    if diff > 3:
-                        continue
-                    counts["高値差OK"] += 1
-
-                    depth = (
-                        (pivot - min(ll[oi:ri+1])) / pivot * 100
-                    )
-                    if not 3 <= depth <= 25:
-                        continue
-                    counts["深さOK"] += 1
-
-                    if pivot < current:
-                        continue
-                    counts["上値OK"] += 1
-
-            print(f"CSX 抵抗帯診断: {counts}")
-                # 抵抗帯Pivot基準の準備判定（試験版）
         resistance_pivot = (
             resistance.get("pivot") if resistance else None
         )
@@ -1037,7 +923,49 @@ for ticker in TICKERS:
             and all(checks.values())
         )
 
+        # 監視用の簡易VCP：ミネルヴィニの裁量VCPとは別の近似指標。
+        # 「過去の大きな上昇」ではなく、直近の収縮と高値への接近を見る。
+        close10 = one_column(df, "Close").astype(float)
+        high10 = one_column(df, "High").astype(float)
+        low10 = one_column(df, "Low").astype(float)
+        vol10 = one_column(df, "Volume").astype(float)
+
+        # 同じ日数で比較することで、5日と10日の値幅を直接比較しない。
+        recent5_range = (
+            float(high10.iloc[-5:].max() - low10.iloc[-5:].min())
+            / float(high10.iloc[-5:].max()) * 100
+        )
+        previous5_range = (
+            float(high10.iloc[-10:-5].max() - low10.iloc[-10:-5].min())
+            / float(high10.iloc[-10:-5].max()) * 100
+        )
+        recent5_vol = float(vol10.iloc[-5:].mean())
+        previous5_vol = float(vol10.iloc[-10:-5].mean())
+        simple_range_shrinking = bool(recent5_range < previous5_range)
+        simple_volume_shrinking = bool(
+            previous5_vol > 0 and recent5_vol < previous5_vol
+        )
+        # バーが近接しているだけで「正式なVCP」とは扱わない。
+        simple_vcp_shape = bool(simple_range_shrinking or simple_volume_shrinking)
+        simple_pivot_distance = (
+            provisional["distance_pct"] if provisional else None
+        )
+        simple_pivot_near = bool(
+            simple_pivot_distance is not None
+            and 0 <= simple_pivot_distance <= 5
+        )
+
         results.append({
+            "SIMPLE_RANGE_SHRINK": simple_range_shrinking,
+            "SIMPLE_VOLUME_SHRINK": simple_volume_shrinking,
+            "SIMPLE_VCP_SHAPE": simple_vcp_shape,
+            "SIMPLE_RANGE_5D_PCT": round(recent5_range, 2),
+            "SIMPLE_PREV_RANGE_5D_PCT": round(previous5_range, 2),
+            "SIMPLE_VOLUME_5D_RATIO": (
+                round(recent5_vol / previous5_vol, 3)
+                if previous5_vol > 0 else None
+            ),
+            "SIMPLE_PIVOT_NEAR": simple_pivot_near,
             "BAR_DATE": df.index[-1].strftime("%Y-%m-%d"),
             "Ticker": ticker,
             "Price": round(price, 2),
@@ -1084,11 +1012,7 @@ for ticker in TICKERS:
             "SWING_VCP_DAYS_SINCE_LOW": (
                 swing_vcp.get("days_since_low") if swing_vcp else None
             ),
-                        # ベース上限による新しい判定（試験版）
-                        # 複数スイング高値による抵抗帯ピボット（試験版）
-                        # 抵抗帯Pivotを基準にしたREADY判定
-
-                        # 抵抗帯Pivotを基準にしたREADY判定
+            # 抵抗帯Pivotを基準にしたREADY判定
             "RESISTANCE_READY": bool(resistance_ready),
 
             "RESISTANCE_DISTANCE_PCT": (
@@ -1177,6 +1101,15 @@ output["RS"] = (
 
 # RS上位30%を判定
 output["RS_PASS"] = output["RS"] >= RS_MIN
+
+# 新しいシンプルVCP監視候補：Trend Template + RS + 収縮兆候 + 暫定高値接近。
+# 収縮兆候は（5日値幅縮小 または 5日出来高減少）。あくまで手動確認候補。
+output["SIMPLE_VCP_CANDIDATE"] = (
+    output["Trend_PASS"]
+    & output["RS_PASS"]
+    & output["SIMPLE_VCP_SHAPE"]
+    & output["SIMPLE_PIVOT_NEAR"]
+)
 
 unified_pivot_series = pd.to_numeric(output["UNIFIED_PIVOT"], errors="coerce")
 unified_distance = (
