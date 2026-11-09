@@ -1299,7 +1299,49 @@ def compute_us_market_environment(data):
     }
 
 
+# 既存の出力JSONに保存された前回の地合い判定から警戒継続日数を更新。
+# 「営業日数」はGitHub Actionsで実際に観測した確定日足の数。
+# 導入前の過去分や未実行日を遡って推測しない。
+def update_caution_streak(data, result_file="results/screening.json"):
+    current = data["market_environment"]
+    if current.get("regime") != "警戒":
+        current["caution_streak_days"] = 0 if current.get("regime") in ("強気", "中立") else None
+        current["caution_streak_since"] = None
+        return
+
+    current_date = (current.get("indexes") or {}).get("SPY")
+    current_date = current_date.get("bar_date") if isinstance(current_date, dict) else None
+    current["caution_streak_days"] = 1
+    current["caution_streak_since"] = current_date
+    if not current_date:
+        current["caution_streak_days"] = None
+        return
+
+    try:
+        with open(result_file, encoding="utf-8") as f:
+            previous = json.load(f).get("market_environment", {})
+    except (FileNotFoundError, OSError, ValueError, AttributeError):
+        return
+
+    previous_spy = (previous.get("indexes") or {}).get("SPY")
+    previous_date = previous_spy.get("bar_date") if isinstance(previous_spy, dict) else None
+    previous_days = previous.get("caution_streak_days")
+    if previous.get("regime") != "警戒" or not isinstance(previous_days, int) or previous_days < 1:
+        return
+    if not previous_date or previous_date > current_date:
+        return
+    if previous_date == current_date:
+        # 同じ確定日足で再実行してもカウントを増やさない
+        current["caution_streak_days"] = previous_days
+        current["caution_streak_since"] = previous.get("caution_streak_since") or current_date
+    else:
+        # 日付が進んだ時だけ+1。これは観測した日足数であり未実行日は数えない。
+        current["caution_streak_days"] = previous_days + 1
+        current["caution_streak_since"] = previous.get("caution_streak_since") or previous_date
+
+
 data["market_environment"] = compute_us_market_environment(data)
+update_caution_streak(data)
 print("米国市場環境:", data["market_environment"]["regime"],
       data["market_environment"]["score"], "/ 4")
 
