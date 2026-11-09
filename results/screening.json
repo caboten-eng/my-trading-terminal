@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09T18:56:26.144021+00:00",
+  "updated_at": "2026-11-09T19:18:30.154604+00:00",
   "total": 522,
   "passed": 73,
   "setup_passed": 0,
@@ -554,6 +554,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -1093,6 +1095,8 @@
       "SETUP_PASS": false,
       "MarketCap": 112383475712.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -1632,6 +1636,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -2171,6 +2177,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -2710,6 +2718,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -3249,6 +3259,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -3788,6 +3800,8 @@
       "SETUP_PASS": false,
       "MarketCap": 23439267840.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -4327,6 +4341,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -4866,6 +4882,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -5405,6 +5423,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -5942,8 +5962,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 736464779189.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -6483,6 +6505,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -7022,6 +7046,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -7559,8 +7585,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 14984790503.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -8100,6 +8128,8 @@
       "SETUP_PASS": false,
       "MarketCap": 366582038528.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -8639,6 +8669,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -9176,8 +9208,10 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 34526042320.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -9717,6 +9751,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -10256,6 +10292,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -10795,6 +10833,8 @@
       "SETUP_PASS": false,
       "MarketCap": 38283960320.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -11334,6 +11374,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -11873,6 +11915,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -12412,6 +12456,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -12951,6 +12997,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -13489,6 +13537,8 @@
       "SETUP_PASS": false,
       "MarketCap": 37153558528.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -14028,6 +14078,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -14565,8 +14617,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 153887112237.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -15106,6 +15160,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -15643,8 +15699,10 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 57713315184.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -16184,6 +16242,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -16723,6 +16783,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -17262,6 +17324,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -17801,6 +17865,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -18338,8 +18404,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 161116798217.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -18879,6 +18947,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -19418,6 +19488,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -19957,6 +20029,8 @@
       "SETUP_PASS": false,
       "MarketCap": 30253090816.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -20496,6 +20570,8 @@
       "SETUP_PASS": false,
       "MarketCap": 53487759360.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -21033,8 +21109,10 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 20895170551.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -21574,6 +21652,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -22113,6 +22193,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -22652,6 +22734,8 @@
       "SETUP_PASS": false,
       "MarketCap": 82426740736.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -23191,6 +23275,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -23730,6 +23816,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -24269,6 +24357,8 @@
       "SETUP_PASS": false,
       "MarketCap": 251199291392.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -24808,6 +24898,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -25345,8 +25437,10 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 62804451896.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -25886,6 +25980,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -26423,8 +26519,10 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 514924306100.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -26964,6 +27062,8 @@
       "SETUP_PASS": false,
       "MarketCap": 125822369792.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -27503,6 +27603,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -28042,6 +28144,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -28581,6 +28685,8 @@
       "SETUP_PASS": false,
       "MarketCap": 679788347392.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -29120,6 +29226,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -29659,6 +29767,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -30198,6 +30308,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -30737,6 +30849,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -31274,8 +31388,10 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 111627142008.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -31815,6 +31931,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -32354,6 +32472,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -32893,6 +33013,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -33432,6 +33554,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -33971,6 +34095,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -34510,6 +34636,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -35049,6 +35177,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -35588,6 +35718,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -36125,8 +36257,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 176168620455.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -36664,8 +36798,10 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 17286625000.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -37205,6 +37341,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -37744,6 +37882,8 @@
       "SETUP_PASS": false,
       "MarketCap": 28590563328.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -38283,6 +38423,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -38822,6 +38964,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -39361,6 +39505,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -39900,6 +40046,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -40439,6 +40587,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -40978,6 +41128,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -41517,6 +41669,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -42056,6 +42210,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -42595,6 +42751,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -43134,6 +43292,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -43671,8 +43831,10 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 15063523257.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -44212,6 +44374,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -44749,8 +44913,10 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 13342409768.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -45290,6 +45456,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -45829,6 +45997,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -46366,8 +46536,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 17158418448.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -46907,6 +47079,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -47444,8 +47618,10 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 49276345479.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -47985,6 +48161,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -48524,6 +48702,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -49063,6 +49243,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -49602,6 +49784,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -50141,6 +50325,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -50680,6 +50866,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -51219,6 +51407,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -51758,6 +51948,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -52297,6 +52489,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -52836,6 +53030,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -53375,6 +53571,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -53912,8 +54110,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 17464955524.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -54453,6 +54653,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -54992,6 +55194,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -55531,6 +55735,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -56070,6 +56276,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -56609,6 +56817,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -57148,6 +57358,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -57687,6 +57899,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -58226,6 +58440,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -58765,6 +58981,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -59302,8 +59520,10 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 127019493538.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -59841,8 +60061,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 34514776899.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -60382,6 +60604,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -60921,6 +61145,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -61460,6 +61686,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -61997,8 +62225,10 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 4975383151340.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -62538,6 +62768,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -63077,6 +63309,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -63616,6 +63850,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -64153,8 +64389,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 109488395776.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -64694,6 +64932,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -65229,6 +65469,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -65766,8 +66008,10 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 119750273697.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -66307,6 +66551,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -66846,6 +67092,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -67385,6 +67633,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -67924,6 +68174,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -68463,6 +68715,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -69002,6 +69256,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -69541,6 +69797,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -70080,6 +70338,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -70619,6 +70879,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -71158,6 +71420,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -71697,6 +71961,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -72236,6 +72502,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -72773,8 +73041,10 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 19595063711.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -73314,6 +73584,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -73853,6 +74125,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -74392,6 +74666,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -74931,6 +75207,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -75468,8 +75746,10 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 139466557614.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -76009,6 +76289,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -76546,8 +76828,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 76757524735.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -77085,8 +77369,10 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 25805384245.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -77626,6 +77912,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -78165,6 +78453,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -78704,6 +78994,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -79241,8 +79533,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 37975600969.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -79782,6 +80076,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -80321,6 +80617,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -80860,6 +81158,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -81397,8 +81697,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 15764969756.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -81938,6 +82240,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -82477,6 +82781,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -83014,8 +83320,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 34922358046.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -83555,6 +83863,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -84094,6 +84404,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -84631,8 +84943,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 37697633345.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -85172,6 +85486,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -85709,8 +86025,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 72209028150.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -86250,6 +86568,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -86789,6 +87109,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -87328,6 +87650,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -87867,6 +88191,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -88406,6 +88732,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -88945,6 +89273,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -89484,6 +89814,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -90023,6 +90355,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -90562,6 +90896,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -91099,8 +91435,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 67883456965.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -91638,8 +91976,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 99400564942.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -92179,6 +92519,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -92716,8 +93058,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 29923439501.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -93257,6 +93601,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -93794,8 +94140,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 51198867473.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -94335,6 +94683,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -94874,6 +95224,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -95413,6 +95765,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -95952,6 +96306,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -96491,6 +96847,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -97030,6 +97388,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -97569,6 +97929,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -98108,6 +98470,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -98645,8 +99009,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 63052606075.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -99186,6 +99552,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -99725,6 +100093,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -100264,6 +100634,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -100803,6 +101175,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -101342,6 +101716,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -101879,8 +102255,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 14032069223.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -102420,6 +102798,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -102959,6 +103339,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -103498,6 +103880,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -104035,8 +104419,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 28473094895.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -104576,6 +104962,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -105113,8 +105501,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 39773567615.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -105654,6 +106044,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -106193,6 +106585,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -106732,6 +107126,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -107271,6 +107667,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -107808,8 +108206,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 1222109814296.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -108349,6 +108749,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -108888,6 +109290,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -109427,6 +109831,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -109966,6 +110372,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -110505,6 +110913,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -111044,6 +111454,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -111583,6 +111995,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -112122,6 +112536,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -112661,6 +113077,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -113200,6 +113618,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -113739,6 +114159,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -114278,6 +114700,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -114817,6 +115241,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -115354,8 +115780,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 87553921548.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -115895,6 +116323,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -116434,6 +116864,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -116973,6 +117405,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -117512,6 +117946,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -118051,6 +118487,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -118590,6 +119028,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -119129,6 +119569,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -119666,8 +120108,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 549123927914.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -120207,6 +120651,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -120746,6 +121192,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -121283,8 +121731,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 77361716883.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -121824,6 +122274,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -122363,6 +122815,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -122902,6 +123356,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -123441,6 +123897,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -123980,6 +124438,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -124519,6 +124979,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -125056,8 +125518,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 31252395859.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -125597,6 +126061,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -126136,6 +126602,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -126675,6 +127143,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -127214,6 +127684,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -127751,8 +128223,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 11700850798.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -128292,6 +128766,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -128829,8 +129305,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 11712477513.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -129370,6 +129848,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -129909,6 +130389,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -130448,6 +130930,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -130987,6 +131471,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -131524,8 +132010,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 43553089250.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -132065,6 +132553,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -132604,6 +133094,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -133141,8 +133633,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 20723016110.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -133680,8 +134174,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 26509893633.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -134221,6 +134717,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -134760,6 +135258,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -135299,6 +135799,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -135836,8 +136338,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 14104026202.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -136377,6 +136881,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -136916,6 +137422,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -137453,8 +137961,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 264045741234.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -137994,6 +138504,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -138531,8 +139043,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 33300065864.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -139072,6 +139586,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -139609,8 +140125,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 25415289235.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -140148,8 +140666,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 182045138314.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -140689,6 +141209,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -141228,6 +141750,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -141767,6 +142291,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -142306,6 +142832,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -142845,6 +143373,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -143382,8 +143912,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 61360951863.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -143923,6 +144455,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -144462,6 +144996,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -145001,6 +145537,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -145540,6 +146078,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -146079,6 +146619,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -146616,8 +147158,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 215789118818.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -147157,6 +147701,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -147696,6 +148242,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -148235,6 +148783,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -148774,6 +149324,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -149168,6 +149720,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -149707,6 +150261,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -150246,6 +150802,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -150785,6 +151343,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -151324,6 +151884,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -151863,6 +152425,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -152402,6 +152966,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -152941,6 +153507,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -153480,6 +154048,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -154013,8 +154583,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 10610706464.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -154554,6 +155126,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -155093,6 +155667,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -155632,6 +156208,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -156171,6 +156749,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -156710,6 +157290,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -157247,8 +157829,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 68898916534.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -157788,6 +158372,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -158327,6 +158913,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -158866,6 +159454,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -159405,6 +159995,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -159944,6 +160536,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -160483,6 +161077,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -161020,8 +161616,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 8670934109.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -161561,6 +162159,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -162100,6 +162700,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -162639,6 +163241,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -163178,6 +163782,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -163717,6 +164323,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -164256,6 +164864,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -164795,6 +165405,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -165332,8 +165944,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 197052097986.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -165871,8 +166485,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 26952684779.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -166412,6 +167028,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -166951,6 +167569,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -167490,6 +168110,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -168029,6 +168651,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -168568,6 +169192,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -169107,6 +169733,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -169646,6 +170274,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -170185,6 +170815,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -170722,8 +171354,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 52438146602.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -171263,6 +171897,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -171802,6 +172438,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -172341,6 +172979,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -172880,6 +173520,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -173419,6 +174061,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -173958,6 +174602,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -174495,8 +175141,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 11941413041.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -175034,8 +175682,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 29272197150.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -175575,6 +176225,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -176114,6 +176766,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -176653,6 +177307,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -177192,6 +177848,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -177731,6 +178389,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -178268,8 +178928,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 186843400000.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -178809,6 +179471,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -179348,6 +180012,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -179885,8 +180551,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 40308622764.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -180426,6 +181094,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -180965,6 +181635,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -181504,6 +182176,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -182041,8 +182715,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 43535585078.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -182582,6 +183258,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -183119,8 +183797,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 63652309157.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -183660,6 +184340,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -184199,6 +184881,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -184736,8 +185420,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 21535427334.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -185277,6 +185963,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -185816,6 +186504,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -186355,6 +187045,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -186894,6 +187586,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -187433,6 +188127,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -187972,6 +188668,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -188511,6 +189209,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -189050,6 +189750,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -189589,6 +190291,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -190128,6 +190832,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -190667,6 +191373,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -191206,6 +191914,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -191745,6 +192455,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -192284,6 +192996,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -192821,8 +193535,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
+      "MarketCap": 2803846762745.0,
       "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -193362,6 +194078,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -193899,8 +194617,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 184182192012.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -194440,6 +195160,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -194977,8 +195699,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 23921614707.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -195518,6 +196242,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -196057,6 +196783,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -196596,6 +197324,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -197135,6 +197865,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -197674,6 +198406,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -198211,8 +198945,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 86609044510.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -198752,6 +199488,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -199291,6 +200029,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -199830,6 +200570,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -200367,8 +201109,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 21696620253.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -200908,6 +201652,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -201447,6 +202193,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -201986,6 +202734,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -202523,8 +203273,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 190392340197.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -203064,6 +203816,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -203603,6 +204357,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -204140,8 +204896,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 87779329680.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -204681,6 +205439,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -205220,6 +205980,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -205759,6 +206521,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -206298,6 +207062,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -206837,6 +207603,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -207376,6 +208144,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -207915,6 +208685,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -208452,8 +209224,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 19041448994.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -208993,6 +209767,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -209532,6 +210308,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -210069,8 +210847,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 12088980872.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -210610,6 +211390,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -211147,8 +211929,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 10382959292.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -211688,6 +212472,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -212227,6 +213013,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -212766,6 +213554,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -213303,8 +214093,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 71032344096.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -213844,6 +214636,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -214383,6 +215177,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -214922,6 +215718,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -215459,8 +216257,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 51765033675.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -216000,6 +216800,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -216539,6 +217341,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -217078,6 +217882,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -217617,6 +218423,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -218156,6 +218964,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -218695,6 +219505,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -219234,6 +220046,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -219773,6 +220587,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -220312,6 +221128,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -220849,8 +221667,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 54699480000.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -221390,6 +222210,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -221929,6 +222751,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -222468,6 +223292,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -223007,6 +223833,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -223544,8 +224372,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 33332689523.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -224085,6 +224915,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -224622,8 +225454,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 30497591535.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -225163,6 +225997,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -225702,6 +226538,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -226241,6 +227079,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -226780,6 +227620,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -227319,6 +228161,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -227856,8 +228700,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 121431497596.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -228397,6 +229243,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -228936,6 +229784,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -229475,6 +230325,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -230012,8 +230864,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 61694645952.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -230553,6 +231407,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -231090,8 +231946,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 39053474379.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -231631,6 +232489,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -232168,8 +233028,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 47538666502.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -232709,6 +233571,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -233248,6 +234112,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -233787,6 +234653,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -234326,6 +235194,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -234865,6 +235735,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -235404,6 +236276,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -235941,8 +236815,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 129619792840.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -236480,8 +237356,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 215240492257.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -237021,6 +237899,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -237560,6 +238440,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -238099,6 +238981,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -238638,6 +239522,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -239177,6 +240063,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -239714,8 +240602,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 11858084133.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -240255,6 +241145,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -240794,6 +241686,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -241333,6 +242227,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -241872,6 +242768,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -242409,8 +243307,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 7802396895.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -242950,6 +243850,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -243489,6 +244391,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -244028,6 +244932,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -244567,6 +245473,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -245106,6 +246014,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -245643,8 +246553,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 341008329076.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -246184,6 +247096,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -246723,6 +247637,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -247260,8 +248176,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 255625833421.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -247801,6 +248719,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -248338,8 +249258,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 42855231590.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -248879,6 +249801,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -249418,6 +250342,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -249955,8 +250881,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 68933004182.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -250496,6 +251424,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -251035,6 +251965,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -251574,6 +252506,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -252113,6 +253047,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -252650,8 +253586,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 14530964362.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -253191,6 +254129,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -253728,8 +254668,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 94487603060.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -254269,6 +255211,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -254808,6 +255752,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -255347,6 +256293,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -255884,8 +256832,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 137410819596.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -256425,6 +257375,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -256964,6 +257916,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -257503,6 +258457,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -258040,8 +258996,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 88559129381.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -258581,6 +259539,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -259118,8 +260078,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 119490480962.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -259659,6 +260621,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -260198,6 +261162,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -260737,6 +261703,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -261274,8 +262242,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 1401967355051.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -261815,6 +262785,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -262354,6 +263326,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -262891,8 +263865,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 4534684444.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -263432,6 +264408,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -263969,8 +264947,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 93135560000.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -264510,6 +265490,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -265049,6 +266031,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -265588,6 +266572,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -266127,6 +267113,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -266666,6 +267654,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -267205,6 +268195,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -267744,6 +268736,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -268283,6 +269277,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -268822,6 +269818,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -269361,6 +270359,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -269900,6 +270900,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -270439,6 +271441,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -270978,6 +271982,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -271517,6 +272523,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -272054,8 +273062,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 35679518209.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -272595,6 +273605,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -273134,6 +274146,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -273672,6 +274686,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -274211,6 +275227,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -274748,8 +275766,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 13513609873.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -275287,8 +276307,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 7983842118.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -275828,6 +276850,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -276367,6 +277391,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -276904,8 +277930,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 61964980240.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -277443,8 +278471,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 25488438856.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -277982,8 +279012,10 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
-      "MarketCap": null,
-      "MarketCapCheckedAt": null,
+      "MarketCap": 9692188230.0,
+      "MarketCapCheckedAt": "2026-11-09",
+      "MarketCapAttemptedAt": "2026-11-09T19:18:25.265474+00:00",
+      "MarketCapSource": "yfinance.fast_info.shares×daily_close",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -278523,6 +279555,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -279062,6 +280096,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -279601,6 +280637,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -280140,6 +281178,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -280679,6 +281719,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -281218,6 +282260,8 @@
       "SETUP_PASS": false,
       "MarketCap": null,
       "MarketCapCheckedAt": null,
+      "MarketCapAttemptedAt": null,
+      "MarketCapSource": null,
       "NEW_PREBREAK_CANDIDATE": false
     }
   ],
