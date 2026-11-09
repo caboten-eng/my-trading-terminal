@@ -112,6 +112,17 @@ def detect(df):
     }
 
 
+def chart_history(df, bars=90):
+    """Recent completed adjusted daily closes and matching rolling SMA200."""
+    close = pd.to_numeric(df["Close"], errors="coerce")
+    sma = close.rolling(200, min_periods=200).mean()
+    tail = pd.DataFrame({"close": close, "ma200": sma}).dropna().tail(bars)
+    return [{"date": str(pd.Timestamp(day).date()),
+             "close": round(float(row.close), 2),
+             "ma200": round(float(row.ma200), 2)}
+            for day, row in tail.iterrows()]
+
+
 def main():
     names = get_us_names()
     tickers = list(names)
@@ -134,7 +145,7 @@ def main():
                 analyzed += 1
                 found = detect(df)
                 if found:
-                    results.append({'Ticker': ticker, 'Name': names[ticker], 'YahooSymbol': ticker, **found})
+                    results.append({'Ticker': ticker, 'Name': names[ticker], 'YahooSymbol': ticker, **found, "Chart": chart_history(df)})
             except Exception as exc:
                 errors.append(f'{ticker}: {exc}')
     if analyzed < 350:
