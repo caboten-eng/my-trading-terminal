@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09T10:59:53.373149+00:00",
+  "updated_at": "2026-11-09T18:35:31.463364+00:00",
   "total": 522,
   "passed": 73,
   "setup_passed": 0,
@@ -552,6 +552,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -1089,6 +1091,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -1626,6 +1630,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -2163,6 +2169,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -2700,6 +2708,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -3237,6 +3247,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -3774,6 +3786,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -4311,6 +4325,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -4848,6 +4864,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -5385,6 +5403,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -5922,6 +5942,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -6459,6 +6481,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -6996,6 +7020,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -7533,6 +7559,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -8070,6 +8098,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -8607,6 +8637,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -9144,6 +9176,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -9681,6 +9715,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -10218,6 +10254,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -10755,6 +10793,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -11292,6 +11332,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -11829,6 +11871,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -12366,6 +12410,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -12903,6 +12949,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -13440,6 +13488,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -13976,6 +14026,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -14513,6 +14565,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -15050,6 +15104,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -15587,6 +15643,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -16124,6 +16182,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -16661,6 +16721,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -17198,6 +17260,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -17735,6 +17799,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -18272,6 +18338,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -18809,6 +18877,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -19346,6 +19416,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -19883,6 +19955,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -20420,6 +20494,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -20957,6 +21033,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -21494,6 +21572,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -22031,6 +22111,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -22568,6 +22650,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -23105,6 +23189,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -23642,6 +23728,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -24179,6 +24267,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -24716,6 +24806,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -25253,6 +25345,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -25790,6 +25884,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -26327,6 +26423,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -26864,6 +26962,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -27401,6 +27501,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -27938,6 +28040,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -28475,6 +28579,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -29012,6 +29118,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -29549,6 +29657,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -30086,6 +30196,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -30623,6 +30735,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -31160,6 +31274,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -31697,6 +31813,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -32234,6 +32352,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -32771,6 +32891,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -33308,6 +33430,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -33845,6 +33969,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -34382,6 +34508,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -34919,6 +35047,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -35456,6 +35586,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -35993,6 +36125,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -36530,6 +36664,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -37067,6 +37203,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -37604,6 +37742,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -38141,6 +38281,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -38678,6 +38820,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -39215,6 +39359,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -39752,6 +39898,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -40289,6 +40437,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -40826,6 +40976,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -41363,6 +41515,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -41900,6 +42054,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -42437,6 +42593,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -42974,6 +43132,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -43511,6 +43671,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -44048,6 +44210,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -44585,6 +44749,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -45122,6 +45288,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -45659,6 +45827,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -46196,6 +46366,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -46733,6 +46905,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -47270,6 +47444,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -47807,6 +47983,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -48344,6 +48522,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -48881,6 +49061,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -49418,6 +49600,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -49955,6 +50139,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -50492,6 +50678,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -51029,6 +51217,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -51566,6 +51756,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -52103,6 +52295,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -52640,6 +52834,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -53177,6 +53373,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -53714,6 +53912,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -54251,6 +54451,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -54788,6 +54990,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -55325,6 +55529,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -55862,6 +56068,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -56399,6 +56607,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -56936,6 +57146,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -57473,6 +57685,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -58010,6 +58224,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -58547,6 +58763,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -59084,6 +59302,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -59621,6 +59841,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -60158,6 +60380,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -60695,6 +60919,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -61232,6 +61458,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -61769,6 +61997,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -62306,6 +62536,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -62843,6 +63075,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -63380,6 +63614,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -63917,6 +64153,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -64454,6 +64692,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -64987,6 +65227,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -65524,6 +65766,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -66061,6 +66305,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -66598,6 +66844,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -67135,6 +67383,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -67672,6 +67922,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -68209,6 +68461,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -68746,6 +69000,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -69283,6 +69539,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -69820,6 +70078,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -70357,6 +70617,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -70894,6 +71156,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -71431,6 +71695,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -71968,6 +72234,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -72505,6 +72773,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -73042,6 +73312,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -73579,6 +73851,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -74116,6 +74390,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -74653,6 +74929,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -75190,6 +75468,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -75727,6 +76007,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -76264,6 +76546,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -76801,6 +77085,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -77338,6 +77624,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -77875,6 +78163,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -78412,6 +78702,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -78949,6 +79241,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -79486,6 +79780,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -80023,6 +80319,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -80560,6 +80858,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -81097,6 +81397,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -81634,6 +81936,8 @@
       "UNIFIED_READY": false,
       "PASS": true,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -82171,6 +82475,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -82708,6 +83014,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -83245,6 +83553,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -83782,6 +84092,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -84319,6 +84631,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -84856,6 +85170,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -85393,6 +85709,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -85930,6 +86248,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -86467,6 +86787,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -87004,6 +87326,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -87541,6 +87865,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -88078,6 +88404,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -88615,6 +88943,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -89152,6 +89482,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -89689,6 +90021,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -90226,6 +90560,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -90763,6 +91099,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -91300,6 +91638,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -91837,6 +92177,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -92374,6 +92716,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -92911,6 +93255,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -93448,6 +93794,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -93985,6 +94333,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -94522,6 +94872,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -95059,6 +95411,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -95596,6 +95950,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -96133,6 +96489,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -96670,6 +97028,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -97207,6 +97567,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -97744,6 +98106,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -98281,6 +98645,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -98818,6 +99184,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -99355,6 +99723,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -99892,6 +100262,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -100429,6 +100801,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -100966,6 +101340,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -101503,6 +101879,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -102040,6 +102418,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -102577,6 +102957,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -103114,6 +103496,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -103651,6 +104035,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -104188,6 +104574,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -104725,6 +105113,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -105262,6 +105652,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -105799,6 +106191,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -106336,6 +106730,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -106873,6 +107269,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -107410,6 +107808,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -107947,6 +108347,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -108484,6 +108886,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -109021,6 +109425,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -109558,6 +109964,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -110095,6 +110503,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -110632,6 +111042,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -111169,6 +111581,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -111706,6 +112120,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -112243,6 +112659,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -112780,6 +113198,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -113317,6 +113737,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -113854,6 +114276,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -114391,6 +114815,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -114928,6 +115354,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -115465,6 +115893,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -116002,6 +116432,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -116539,6 +116971,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -117076,6 +117510,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -117613,6 +118049,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -118150,6 +118588,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -118687,6 +119127,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -119224,6 +119666,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -119761,6 +120205,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -120298,6 +120744,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -120835,6 +121283,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -121372,6 +121822,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -121909,6 +122361,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -122446,6 +122900,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -122983,6 +123439,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -123520,6 +123978,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -124057,6 +124517,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -124594,6 +125056,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -125131,6 +125595,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -125668,6 +126134,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -126205,6 +126673,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -126742,6 +127212,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -127279,6 +127751,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -127816,6 +128290,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -128353,6 +128829,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -128890,6 +129368,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -129427,6 +129907,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -129964,6 +130446,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -130501,6 +130985,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -131038,6 +131524,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -131575,6 +132063,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -132112,6 +132602,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -132649,6 +133141,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -133186,6 +133680,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -133723,6 +134219,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -134260,6 +134758,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -134797,6 +135297,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -135334,6 +135836,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -135871,6 +136375,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -136408,6 +136914,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -136945,6 +137453,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -137482,6 +137992,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -138019,6 +138531,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -138556,6 +139070,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -139093,6 +139609,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -139630,6 +140148,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -140167,6 +140687,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -140704,6 +141226,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -141241,6 +141765,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -141778,6 +142304,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -142315,6 +142843,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -142852,6 +143382,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -143389,6 +143921,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -143926,6 +144460,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -144463,6 +144999,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -145000,6 +145538,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -145537,6 +146077,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -146074,6 +146616,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -146466,6 +147010,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -147003,6 +147549,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -147540,6 +148088,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -148077,6 +148627,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -148614,6 +149166,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -149151,6 +149705,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -149688,6 +150244,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -150225,6 +150783,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -150762,6 +151322,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -151299,6 +151861,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -151836,6 +152400,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -152373,6 +152939,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -152906,6 +153474,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -153443,6 +154013,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -153980,6 +154552,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -154517,6 +155091,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -155054,6 +155630,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -155591,6 +156169,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -156128,6 +156708,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -156665,6 +157247,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -157202,6 +157786,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -157739,6 +158325,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -158276,6 +158864,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -158813,6 +159403,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -159350,6 +159942,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -159887,6 +160481,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -160424,6 +161020,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -160961,6 +161559,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -161498,6 +162098,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -162035,6 +162637,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -162572,6 +163176,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -163109,6 +163715,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -163646,6 +164254,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -164183,6 +164793,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -164720,6 +165332,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -165257,6 +165871,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -165794,6 +166410,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -166331,6 +166949,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -166868,6 +167488,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -167405,6 +168027,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -167942,6 +168566,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -168479,6 +169105,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -169016,6 +169644,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -169553,6 +170183,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -170090,6 +170722,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -170627,6 +171261,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -171164,6 +171800,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -171701,6 +172339,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -172238,6 +172878,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -172775,6 +173417,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -173312,6 +173956,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -173849,6 +174495,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -174386,6 +175034,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -174923,6 +175573,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -175460,6 +176112,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -175997,6 +176651,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -176534,6 +177190,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -177071,6 +177729,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -177608,6 +178268,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -178145,6 +178807,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -178682,6 +179346,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -179219,6 +179885,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -179756,6 +180424,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -180293,6 +180963,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -180830,6 +181502,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -181367,6 +182041,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -181904,6 +182580,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -182441,6 +183119,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -182978,6 +183658,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -183515,6 +184197,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -184052,6 +184736,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -184589,6 +185275,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -185126,6 +185814,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -185663,6 +186353,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -186200,6 +186892,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -186737,6 +187431,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -187274,6 +187970,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -187811,6 +188509,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -188348,6 +189048,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -188885,6 +189587,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -189422,6 +190126,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -189959,6 +190665,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -190496,6 +191204,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -191033,6 +191743,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -191570,6 +192282,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -192107,6 +192821,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -192644,6 +193360,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -193181,6 +193899,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -193718,6 +194438,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": "2026-11-09",
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -194255,6 +194977,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -194792,6 +195516,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -195329,6 +196055,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -195866,6 +196594,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -196403,6 +197133,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -196940,6 +197672,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -197477,6 +198211,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -198014,6 +198750,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -198551,6 +199289,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -199088,6 +199828,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -199625,6 +200367,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -200162,6 +200906,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -200699,6 +201445,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -201236,6 +201984,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -201773,6 +202523,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -202310,6 +203062,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -202847,6 +203601,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -203384,6 +204140,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -203921,6 +204679,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -204458,6 +205218,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -204995,6 +205757,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -205532,6 +206296,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -206069,6 +206835,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -206606,6 +207374,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -207143,6 +207913,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -207680,6 +208452,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -208217,6 +208991,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -208754,6 +209530,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -209291,6 +210069,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -209828,6 +210608,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -210365,6 +211147,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -210902,6 +211686,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -211439,6 +212225,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -211976,6 +212764,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -212513,6 +213303,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -213050,6 +213842,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -213587,6 +214381,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -214124,6 +214920,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -214661,6 +215459,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -215198,6 +215998,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -215735,6 +216537,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -216272,6 +217076,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -216809,6 +217615,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -217346,6 +218154,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -217883,6 +218693,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -218420,6 +219232,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -218957,6 +219771,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -219494,6 +220310,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -220031,6 +220849,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -220568,6 +221388,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -221105,6 +221927,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -221642,6 +222466,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -222179,6 +223005,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -222716,6 +223544,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -223253,6 +224083,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -223790,6 +224622,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -224327,6 +225161,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -224864,6 +225700,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -225401,6 +226239,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -225938,6 +226778,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -226475,6 +227317,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -227012,6 +227856,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -227549,6 +228395,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -228086,6 +228934,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -228623,6 +229473,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -229160,6 +230012,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -229697,6 +230551,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -230234,6 +231090,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -230771,6 +231629,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -231308,6 +232168,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -231845,6 +232707,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -232382,6 +233246,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -232919,6 +233785,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -233456,6 +234324,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -233993,6 +234863,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -234530,6 +235402,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -235067,6 +235941,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -235604,6 +236480,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -236141,6 +237019,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -236678,6 +237558,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -237215,6 +238097,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -237752,6 +238636,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -238289,6 +239175,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -238826,6 +239714,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -239363,6 +240253,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -239900,6 +240792,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -240437,6 +241331,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -240974,6 +241870,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -241511,6 +242409,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -242048,6 +242948,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -242585,6 +243487,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -243122,6 +244026,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -243659,6 +244565,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -244196,6 +245104,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -244733,6 +245643,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -245270,6 +246182,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -245807,6 +246721,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -246344,6 +247260,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -246690,7 +247608,7 @@
         {
           "date": "2026-10-06",
           "close": 861.39,
-          "ma200": 794.28
+          "ma200": 794.29
         },
         {
           "date": "2026-10-07",
@@ -246881,6 +247799,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -247418,6 +248338,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -247955,6 +248877,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -248492,6 +249416,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -249029,6 +249955,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -249566,6 +250494,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -250103,6 +251033,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -250640,6 +251572,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -251177,6 +252111,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -251714,6 +252650,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -252251,6 +253189,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -252788,6 +253728,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -253325,6 +254267,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -253862,6 +254806,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -254399,6 +255345,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -254936,6 +255884,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -255473,6 +256423,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -256010,6 +256962,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -256547,6 +257501,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -257084,6 +258040,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -257621,6 +258579,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -258158,6 +259118,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -258695,6 +259657,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -259232,6 +260196,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -259769,6 +260735,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -260306,6 +261274,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -260843,6 +261813,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -261380,6 +262352,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -261917,6 +262891,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -262454,6 +263430,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -262991,6 +263969,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -263528,6 +264508,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -264065,6 +265047,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -264602,6 +265586,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -265139,6 +266125,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -265676,6 +266664,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -266213,6 +267203,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -266750,6 +267742,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -267287,6 +268281,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -267824,6 +268820,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -268361,6 +269359,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -268898,6 +269898,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -269435,6 +270437,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -269972,6 +270976,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -270509,6 +271515,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -271046,6 +272054,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -271583,6 +272593,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -272120,6 +273132,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -272656,6 +273670,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -273193,6 +274209,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -273730,6 +274748,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -274267,6 +275287,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -274804,6 +275826,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -275341,6 +276365,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -275878,6 +276904,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -276415,6 +277443,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -276952,6 +277982,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -277489,6 +278521,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -278026,6 +279060,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -278563,6 +279599,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -279100,6 +280138,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -279637,6 +280677,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     },
     {
@@ -280174,6 +281216,8 @@
       "UNIFIED_READY": false,
       "PASS": false,
       "SETUP_PASS": false,
+      "MarketCap": null,
+      "MarketCapCheckedAt": null,
       "NEW_PREBREAK_CANDIDATE": false
     }
   ],
