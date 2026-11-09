@@ -37,63 +37,15 @@ jobs:
           if-no-files-found: error
           retention-days: 30
 
-
       - name: Commit screening results
-        shell: bash
         run: |
-          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "..."
+          git add results/
+          git commit -m "Update screening results"
+          git push
 
-          git add -A results/
-          mapfile -d '' files < <(git diff --cached --name-only -z -- results/)
-
-          if (( ${#files[@]} == 0 )); then
-            echo "No changes"
-            exit 0
-          fi
-
-          tmp=$(mktemp -d)
-          for f in "${files[@]}"; do
-            mkdir -p "$tmp/$(dirname "$f")"
-            if [[ -f "$f" ]]; then
-              cp "$f" "$tmp/$f"
-            fi
-          done
-
-          for attempt in 1 2 3 4 5; do
-            git fetch origin main
-            git reset --hard origin/main
-
-            for f in "${files[@]}"; do
-              if [[ -f "$tmp/$f" ]]; then
-                mkdir -p "$(dirname "$f")"
-                cp "$tmp/$f" "$f"
-              else
-                rm -f "$f"
-              fi
-            done
-
-            git add -A -- "${files[@]}"
-
-            if git diff --cached --quiet; then
-              echo "Already up to date"
-              exit 0
-            fi
-
-            git -c user.name="github-actions[bot]" \
-                -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
-                commit -m "Update screening results"
-
-            if git push origin HEAD:main; then
-              echo "Push succeeded"
-              exit 0
-            fi
-
-            echo "Push conflict; retrying ($attempt/5)"
-            sleep 3
-          done
-
-          echo "Could not push after 5 attempts"
-          exit 1
+      - name: Deploy results to public website
 
       - name: Deploy results to public website
         env:
