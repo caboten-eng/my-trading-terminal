@@ -169,6 +169,17 @@ a{color:var(--blue)}
 .market-tag.neutral{color:var(--yellow);border-color:#927034}
 .market-tag.caution{color:var(--red);border-color:#914654}
 @media(max-width:800px){.market-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* チャートプレビュー：行ホバー／行クリックで固定 */
+#rows tr{cursor:default}
+.chart-preview{position:fixed;z-index:1000;width:min(410px,calc(100vw - 24px));background:#111c2b;border:1px solid #4b6280;border-radius:12px;padding:13px;box-shadow:0 16px 40px #000a;display:none;pointer-events:none}
+.chart-preview.visible{display:block}
+.chart-preview.pinned{pointer-events:auto}
+.chart-preview-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.chart-preview-head button{padding:3px 8px}
+.chart-preview svg{width:100%;height:auto;display:block}
+.chart-preview-meta,.chart-preview-foot{font-size:11px;color:var(--muted);margin:7px 0}
+.chart-preview-foot{display:flex;justify-content:space-between;gap:10px}
 </style>
 </head>
 <body>
@@ -252,6 +263,13 @@ RSはスクリーニング対象内の相対順位です。
 これはVCP確定や未突破の保証ではなく、より以前のブレイクを含む場合があります。
 「暫定高値距離」は過去20営業日高値との距離で、ミネルヴィニの正式Pivotではありません。最終判断はチャートで行ってください。
 </p>
+
+<aside id="chart-preview" class="chart-preview" aria-label="日足チャートプレビュー">
+  <div class="chart-preview-head"><strong id="chart-title">—</strong><button id="chart-close" type="button" style="display:none" aria-label="チャートを閉じる">×</button></div>
+  <div id="chart-preview-meta" class="chart-preview-meta"></div>
+  <svg id="chart-preview-svg" viewBox="0 0 370 205" role="img" aria-label="過去90営業日の終値と200日移動平均線"></svg>
+  <div class="chart-preview-foot"><span>緑：終値／紫：200日線</span><a id="chart-tv" href="#" target="_blank" rel="noopener noreferrer">TradingView</a></div>
+</aside>
 </main>
 
 <script>
@@ -567,6 +585,7 @@ function render(){
     items.length+' / '+stocks.length+' 銘柄';
 
   const body=$('rows');
+  if(!chartPinned)hideChart();
   body.replaceChildren();
 
   const fragment=document.createDocumentFragment();
@@ -577,7 +596,20 @@ function render(){
     if(s.Ticker===selected)tr.className='active';
 
     tr.tabIndex=0;
-    tr.onclick=()=>showDetail(s.Ticker);
+    tr.onclick=e=>{
+      if(e.target.closest('a')) return;
+      showDetail(s.Ticker);
+      showChart(s,e,true);
+    };
+    tr.addEventListener('pointerenter',e=>{
+      if(e.pointerType==='mouse' && !chartPinned) showChart(s,e,false);
+    });
+    tr.addEventListener('pointermove',e=>{
+      if(e.pointerType==='mouse' && !chartPinned) moveChart(e);
+    });
+    tr.addEventListener('pointerleave',()=>{
+      if(!chartPinned) hideChart();
+    });
     tr.onkeydown=e=>{
       if(e.key==='Enter')showDetail(s.Ticker);
     };
@@ -684,10 +716,84 @@ function showDetail(ticker,rerender=true){
   if(rerender)render();
 }
 
+
+const chartBox=$('chart-preview');
+const CHART_NS='http://www.w3.org/2000/svg';
+let chartPinned=false;
+let pinnedChartTicker=null;
+function hideChart(){
+  chartPinned=false;
+  pinnedChartTicker=null;
+  chartBox.classList.remove('visible','pinned');
+  $('chart-close').style.display='none';
+}
+function moveChart(e){
+  const rect=chartBox.getBoundingClientRect(),pad=12;
+  let x=Math.min(e.clientX+18,innerWidth-rect.width-pad);
+  let y=Math.min(e.clientY+12,innerHeight-rect.height-pad);
+  chartBox.style.left=Math.max(pad,x)+'px';
+  chartBox.style.top=Math.max(pad,y)+'px';
+}
+function chartEl(tag,attrs={},label){
+  const node=document.createElementNS(CHART_NS,tag);
+  for(const [k,v] of Object.entries(attrs))node.setAttribute(k,v);
+  if(label!==undefined)node.textContent=label;
+  return node;
+}
+function drawChart(points){
+  const svg=$('chart-preview-svg');svg.replaceChildren();
+  const p=Array.isArray(points)?points.filter(v=>v&&Number.isFinite(+v.close)&&Number.isFinite(+v.ma200)):[];
+  if(p.length<2){
+    svg.append(chartEl('text',{x:185,y:100,'text-anchor':'middle',fill:'#afbed2','font-size':12},'履歴がありません。日米Actionsを再実行してください'));
+    return;
+  }
+  const W=370,H=205,L=49,R=12,T=13,B=27;
+  const values=p.flatMap(v=>[+v.close,+v.ma200]);
+  let mn=Math.min(...values),mx=Math.max(...values);
+  const pad=(mx-mn||mx*.01||1)*.1;mn-=pad;mx+=pad;
+  const xp=i=>L+(W-L-R)*i/Math.max(1,p.length-1);
+  const yp=v=>T+(H-T-B)*(mx-v)/(mx-mn);
+  for(let i=0;i<4;i++){
+    let val=mn+(mx-mn)*i/3,y=yp(val);
+    svg.append(chartEl('line',{x1:L,y1:y,x2:W-R,y2:y,stroke:'#334154','stroke-width':.7}));
+    svg.append(chartEl('text',{x:L-5,y:y+3,'text-anchor':'end',fill:'#a3b5cc','font-size':10},Math.round(val).toLocaleString()));
+  }
+  for(const [key,color] of [['ma200','#b498ff'],['close','#52d99b']]){
+    svg.append(chartEl('polyline',{
+      points:p.map((v,i)=>xp(i).toFixed(1)+','+yp(+v[key]).toFixed(1)).join(' '),
+      fill:'none',stroke:color,'stroke-width':2,'stroke-linecap':'round','stroke-linejoin':'round'
+    }));
+  }
+  for(const i of [0,Math.floor((p.length-1)/2),p.length-1]){
+    svg.append(chartEl('text',{x:xp(i),y:H-6,'text-anchor':i===0?'start':i===p.length-1?'end':'middle',fill:'#a3b5cc','font-size':10},String(p[i].date||'').slice(5)));
+  }
+}
+function showChart(s,e,pin){
+  if(chartPinned && !pin)return;
+  if(pin && chartPinned && pinnedChartTicker===s.Ticker){hideChart();return;}
+  chartPinned=Boolean(pin);pinnedChartTicker=chartPinned?s.Ticker:null;
+  $('chart-title').textContent=s.Ticker+(s.Name?'  '+s.Name:'');
+  $('chart-preview-meta').textContent='終値 '+(market==='JP'?'¥':'$')+num(s.Price)+
+    ' ／ 200日線 '+num(s.MA200)+' ／ 使用日足 '+(s.BAR_DATE||'—');
+  $('chart-tv').href='https://www.tradingview.com/chart/?symbol='+
+    encodeURIComponent(market==='JP'?'TSE:'+s.Ticker:s.Ticker);
+  drawChart(s.Chart);
+  chartBox.classList.add('visible');
+  chartBox.classList.toggle('pinned',chartPinned);
+  $('chart-close').style.display=chartPinned?'inline-block':'none';
+  moveChart(e);
+}
+$('chart-close').onclick=hideChart;
+document.addEventListener('keydown',e=>{if(e.key==='Escape')hideChart();});
+document.addEventListener('pointerdown',e=>{
+  if(chartPinned && !chartBox.contains(e.target) && !e.target.closest('#rows tr'))hideChart();
+});
+
 $('search').oninput=render;
 $('refresh').onclick=autoLoad;
 function switchMarket(next){
   if(market === next) return;
+  hideChart();
   market=next;
   data=null;
   selected=null;
