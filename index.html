@@ -463,14 +463,17 @@ function renderUsMarket(){
     $('market-footnote').textContent='米国株用スクリーナーを更新すると、ここに地合い判定が表示されます。';
     return;
   }
-  tag.textContent=m.regime+(m.score==null?'':'（'+m.score+'/4）');
+  const cautionDays = m.caution_streak_days;
+  tag.textContent=m.regime+(m.score==null?'':'（'+m.score+'/4）') +
+    (m.regime==='警戒' && Number.isInteger(cautionDays) ? '・'+cautionDays+'営業日継続' : '');
   tag.className='market-tag '+(m.regime==='強気'?'bull':m.regime==='警戒'?'caution':'neutral');
   const i=m.indexes||{};
   const cells=[
     ['S&P500 / SPY',i.SPY?(i.SPY.trend_positive?'上昇トレンド':'要注意'):'取得不可',i.SPY?.bar_date||'—'],
     ['NASDAQ100 / QQQ',i.QQQ?(i.QQQ.trend_positive?'上昇トレンド':'要注意'):'取得不可',i.QQQ?.bar_date||'—'],
     ['50日線より上の銘柄',m.breadth_above_ma50_pct==null?'—':m.breadth_above_ma50_pct.toFixed(1)+'%',(m.breadth_coverage??0)+'銘柄で集計'],
-    ['TT＋RS70先導株',m.leader_pct==null?'—':m.leader_pct.toFixed(1)+'%',(m.leader_count??0)+' / '+(m.universe_count??0)+'銘柄']
+    ['TT＋RS70先導株',m.leader_pct==null?'—':m.leader_pct.toFixed(1)+'%',(m.leader_count??0)+' / '+(m.universe_count??0)+'銘柄'],
+    ['警戒継続',m.caution_streak_days==null?'—':m.caution_streak_days+'営業日',m.regime==='警戒' ? '導入後の記録：'+(m.caution_streak_since||'開始日不明') : '警戒中ではありません']
   ];
   for(const [label,val,sub] of cells){
     const cell=document.createElement('div');
@@ -480,7 +483,7 @@ function renderUsMarket(){
     const c=document.createElement('div');c.className='meta';c.textContent=sub;
     cell.append(a,b,c);grid.append(cell);
   }
-  $('market-footnote').textContent='独自の試験判定（ミネルヴィニ公式モデルではありません）。指数はSPY・QQQで代用。指数トレンド2点＋Breadth55%以上1点＋先導株10%以上1点。3～4点＝強気、2点＝中立、0～1点＝警戒。株式の候補抽出には影響しません。';
+  $('market-footnote').textContent='独自の試験判定（ミネルヴィニ公式モデルではありません）。指数はSPY・QQQで代用。指数トレンド2点＋Breadth55%以上1点＋先導株10%以上1点。3～4点＝強気、2点＝中立、0～1点＝警戒。警戒継続は導入後に保存した確定日足の観測回数で、導入前の期間や実行しなかった営業日は含みません。株式の候補抽出には影響しません。';
 }
 
 function render(){
