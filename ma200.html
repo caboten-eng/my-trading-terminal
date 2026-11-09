@@ -12,6 +12,22 @@ h1{font-size:23px;margin:0 0 8px}small,.muted{color:var(--muted)}a{color:var(--b
 .controls{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:12px 0}button,input{font:inherit;border:1px solid var(--border);border-radius:8px;background:#1a2a3b;color:var(--text);padding:10px 13px}button{cursor:pointer}button.active{background:#1c573f;border-color:#3e9274}input{min-width:180px}button:hover{border-color:var(--blue)}
 .tablewrap{overflow:auto;max-height:650px}table{border-collapse:collapse;width:100%;min-width:850px}th,td{border-bottom:1px solid var(--border);padding:11px;text-align:right;white-space:nowrap}th{position:sticky;top:0;background:#213044;cursor:pointer}th:nth-child(1),th:nth-child(2),td:nth-child(1),td:nth-child(2){text-align:left}tr:hover td{background:#1c2e40} .status{color:var(--muted);font-size:12px}.positive{color:var(--green)}
 @media(max-width:680px){.metrics{grid-template-columns:1fr}h1{font-size:19px}}
+
+/* Inline preview chart, stays within the current page */
+.ticker-button{border:0;background:transparent;padding:2px 0;color:var(--blue);font:inherit;font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.ticker-button:hover,.ticker-button:focus-visible{color:#bbdfff}
+.chart-preview{position:fixed;z-index:1000;width:min(405px,calc(100vw - 24px));background:#111c2b;border:1px solid #4c6180;border-radius:12px;padding:13px;box-shadow:0 15px 45px #000b;display:none;pointer-events:none}
+.chart-preview.visible{display:block}
+.chart-preview.pinned{pointer-events:auto}
+.chart-preview-head{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-bottom:7px}
+.chart-preview-head strong{font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.chart-preview-head button{padding:1px 8px;font-size:19px;line-height:1.3}
+.chart-preview-meta{color:var(--muted);font-size:11px;margin-bottom:8px}
+.chart-preview svg{display:block;width:100%;height:auto}
+.chart-preview-note{color:var(--muted);font-size:11px;display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:6px}
+.chart-preview-note a{font-size:11px}
+.chart-legend{display:flex;gap:14px;font-size:11px;color:var(--muted);margin-top:5px}
+.chart-legend b{font-weight:600}
 </style></head>
 <body><main>
 <header><div><h1>200日線 上抜け・転換スクリーナー</h1><div class="muted">日米株｜以前は下降していた200日線の上抜け初動</div></div><div><a href="index.html">← 元のスクリーナー</a>　<button id="refresh">再読み込み</button></div></header>
@@ -19,6 +35,7 @@ h1{font-size:23px;margin:0 0 8px}small,.muted{color:var(--muted)}a{color:var(--b
 <section class="panel"><div class="controls"><button data-market="jp" class="active">日本株</button><button data-market="us">米国株</button></div><div class="controls"><button data-filter="all" class="active">すべて</button><button data-filter="fresh">上抜け直後</button><button data-filter="confirmed">転換確認</button><input id="q" placeholder="コード・ティッカー・銘柄名で検索" aria-label="銘柄検索"><small id="count"></small></div>
 <div class="tablewrap"><table><thead><tr><th data-sort="Ticker">コード</th><th data-sort="Name">銘柄名</th><th data-sort="Price">株価</th><th data-sort="MA200">200日線</th><th data-sort="Distance_Pct">乖離率</th><th data-sort="Cross_Days_Ago">突破から</th><th data-sort="Cross_Date">突破日</th><th data-sort="Stage">区分</th></tr></thead><tbody id="rows"></tbody></table></div></section>
 <p class="status">日米とも同一条件：過去60→40営業日前に200日SMAが下降／直近20営業日以内の終値上抜け／現在もSMA200以上／乖離0〜15%。RSやTTは不要。会社イベントやギャップによる上抜けも含みます。値動きはYahoo Financeの調整後日足で判定。投資判断は必ずチャートで確認してください。</p>
+<aside id="chart-preview" class="chart-preview" role="dialog" aria-label="銘柄チャートのプレビュー"><div class="chart-preview-head"><strong id="chart-title"></strong><button type="button" id="chart-close" aria-label="閉じる" style="display:none">×</button></div><div id="chart-meta" class="chart-preview-meta"></div><svg id="chart-svg" viewBox="0 0 370 205" role="img" aria-label="終値と200日移動平均線の直近90営業日"></svg><div class="chart-legend"><span><b style="color:#54dba0">━━</b> 終値</span><span><b style="color:#ae91ff">━━</b> 200日線</span></div><div class="chart-preview-note"><span>ホバーでプレビュー・クリックで固定</span><a id="chart-tv" href="#" target="_blank" rel="noopener noreferrer">TradingViewで開く</a></div></aside>
 </main>
 <script>
 'use strict';
@@ -28,8 +45,67 @@ function fmt(v,n=2){return Number.isFinite(Number(v))?Number(v).toFixed(n):'—'
 function redraw(){if(!data)return;const q=el('q').value.trim().toUpperCase();let items=data.stocks.filter(s=>(mode==='all'||(mode==='fresh'&&s.Cross_Days_Ago<=5)||(mode==='confirmed'&&s.Cross_Days_Ago>5))&&(String(s.Ticker).includes(q)||String(s.Name).toUpperCase().includes(q)));
 items.sort((a,b)=>{let x=a[sortKey],y=b[sortKey];let z=(typeof x==='number'&&typeof y==='number')?x-y:String(x??'').localeCompare(String(y??''),'ja');return descending?-z:z;});
 el('count').textContent=`${items.length} / ${data.total} 銘柄`;
-const body=el('rows');body.replaceChildren();for(const s of items){const tr=document.createElement('tr');const link=document.createElement('a');link.textContent=s.Ticker;link.href='https://www.tradingview.com/chart/?symbol='+encodeURIComponent((market==='jp'?'TSE:':'')+s.Ticker);link.target='_blank';link.rel='noopener noreferrer';const first=document.createElement('td');first.append(link);tr.append(first);for(const v of [s.Name,(market==='us'?'$':'¥')+fmt(s.Price),(market==='us'?'$':'¥')+fmt(s.MA200),fmt(s.Distance_Pct)+'%',s.Cross_Days_Ago+'営業日',s.Cross_Date,s.Stage]){const cell=document.createElement('td');cell.textContent=v;tr.append(cell);}body.append(tr);}if(!items.length){const tr=document.createElement('tr');const c=document.createElement('td');c.colSpan=8;c.textContent='該当銘柄なし';tr.append(c);body.append(tr);}}
-async function load(){el('status').textContent='データ取得中…';try{const r=await fetch('results/ma200_'+market+'.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();if(!Array.isArray(d.stocks))throw Error('stocksがありません');data=d;el('analyzed').textContent=Number(d.analyzed||0).toLocaleString('ja-JP');el('total').textContent=d.total;el('fresh').textContent=d.stocks.filter(s=>s.Cross_Days_Ago<=5).length;const last=[...new Set(d.stocks.map(s=>s.BAR_DATE))].sort().at(-1);const marketName=market==='jp'?'日本株':'米国株';el('status').textContent=marketName+' / 更新 '+new Date(d.updated_at).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})+' JST ／ 最新候補の使用日足 '+(last||'—');redraw();}catch(e){el('status').textContent='読み込み失敗：'+e.message+'。対応するMA200スクリーナーのActionsが成功しているか確認してください。';}}
+const body=el('rows');body.replaceChildren();hideChart();
+for(const s of items){
+  const tr=document.createElement('tr');
+  const first=document.createElement('td');
+  const preview=document.createElement('button');preview.type='button';preview.className='ticker-button';preview.textContent=s.Ticker;
+  preview.title='日足チャートをプレビュー';
+  preview.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')showChart(s,e,false);});
+  preview.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'&&!chartPinned)positionChart(e);});
+  preview.addEventListener('pointerleave',()=>{if(!chartPinned)hideChart();});
+  preview.addEventListener('focus',()=>showChart(s,preview.getBoundingClientRect(),false,true));
+  preview.addEventListener('blur',()=>{if(!chartPinned)hideChart();});
+  preview.addEventListener('click',e=>{e.stopPropagation();if(chartPinned&&pinnedTicker===s.Ticker){hideChart();return;}showChart(s,e,true);});
+  first.append(preview);tr.append(first);
+  for(const v of [s.Name,(market==='us'?'$':'¥')+fmt(s.Price),(market==='us'?'$':'¥')+fmt(s.MA200),fmt(s.Distance_Pct)+'%',s.Cross_Days_Ago+'営業日',s.Cross_Date,s.Stage]){const cell=document.createElement('td');cell.textContent=v;tr.append(cell);}body.append(tr);
+}
+if(!items.length){const tr=document.createElement('tr');const c=document.createElement('td');c.colSpan=8;c.textContent='該当銘柄なし';tr.append(c);body.append(tr);}}
+const chartBox=el('chart-preview');
+const ns='http://www.w3.org/2000/svg';
+let chartPinned=false,pinnedTicker=null;
+function hideChart(){chartPinned=false;pinnedTicker=null;chartBox.classList.remove('visible','pinned');el('chart-close').style.display='none';}
+function positionChart(e,fromRect=false){
+  const box=chartBox.getBoundingClientRect(),pad=12;
+  const x=fromRect?e.right:(e.clientX??e.right),y=fromRect?e.top:(e.clientY??e.bottom);
+  const left=Math.max(pad,Math.min(x+18,window.innerWidth-box.width-pad));
+  const top=Math.max(pad,Math.min(y+12,window.innerHeight-box.height-pad));
+  chartBox.style.left=left+'px';chartBox.style.top=top+'px';
+}
+function svgEl(tag,attrs={},text){const n=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,String(v));if(text!==undefined)n.textContent=text;return n;}
+function drawChart(chart){
+  const svg=el('chart-svg');svg.replaceChildren();
+  const points=Array.isArray(chart)?chart.filter(p=>Number.isFinite(+p.close)&&Number.isFinite(+p.ma200)):[];
+  if(points.length<2){svg.append(svgEl('text',{x:185,y:102,'text-anchor':'middle',fill:'#b7c6d6','font-size':14},'過去データがありません。日米のActionsを再実行してください。'));return;}
+  const W=370,H=205,L=44,R=12,T=14,B=28;
+  const values=points.flatMap(p=>[Number(p.close),Number(p.ma200)]);
+  let ymin=Math.min(...values),ymax=Math.max(...values);const pad=(ymax-ymin||ymax*.01||1)*.1;ymin-=pad;ymax+=pad;
+  const xp=i=>L+(W-L-R)*i/Math.max(1,points.length-1);
+  const yp=v=>T+(H-T-B)*(ymax-v)/(ymax-ymin);
+  for(let i=0;i<4;i++){const v=ymin+(ymax-ymin)*i/3,y=yp(v);svg.append(svgEl('line',{x1:L,y1:y,x2:W-R,y2:y,stroke:'#344257','stroke-width':.6}));svg.append(svgEl('text',{x:L-5,y:y+4,fill:'#98abc2','text-anchor':'end','font-size':10},Math.round(v).toLocaleString()));}
+  for(const [key,color] of [['ma200','#ae91ff'],['close','#54dba0']]){
+    const pts=points.map((p,i)=>xp(i).toFixed(1)+','+yp(+p[key]).toFixed(1)).join(' ');
+    svg.append(svgEl('polyline',{points:pts,fill:'none',stroke:color,'stroke-width':key==='close'?2.1:2,'stroke-linejoin':'round','stroke-linecap':'round'}));
+    const last=points.at(-1);svg.append(svgEl('circle',{cx:xp(points.length-1),cy:yp(+last[key]),r:3,fill:color}));
+  }
+  for(const i of [0,Math.floor((points.length-1)/2),points.length-1])svg.append(svgEl('text',{x:xp(i),y:H-7,fill:'#9cacc2','text-anchor':i===0?'start':i===points.length-1?'end':'middle','font-size':10},points[i].date.slice(5)));
+}
+function showChart(s,e,pin=false,fromRect=false){
+  if(chartPinned&&!pin)return;
+  if(pin){chartPinned=true;pinnedTicker=s.Ticker;}
+  el('chart-title').textContent=s.Ticker+'  '+(s.Name||'');
+  el('chart-meta').textContent='終値 '+(market==='jp'?'¥':'$')+fmt(s.Price)+' ／ 200日線乖離 '+fmt(s.Distance_Pct)+'% ／ 突破 '+s.Cross_Days_Ago+'営業日前';
+  const tv=(market==='jp'?'TSE:':'')+s.Ticker;
+  el('chart-tv').href='https://www.tradingview.com/chart/?symbol='+encodeURIComponent(tv);
+  drawChart(s.Chart);
+  chartBox.classList.add('visible');chartBox.classList.toggle('pinned',chartPinned);
+  el('chart-close').style.display=chartPinned?'inline-block':'none';
+  positionChart(e,fromRect);
+}
+el('chart-close').onclick=hideChart;
+document.addEventListener('keydown',e=>{if(e.key==='Escape')hideChart();});
+document.addEventListener('pointerdown',e=>{if(chartPinned&&!chartBox.contains(e.target)&&!e.target.closest('.ticker-button'))hideChart();});
+async function load(){hideChart();el('status').textContent='データ取得中…';try{const r=await fetch('results/ma200_'+market+'.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();if(!Array.isArray(d.stocks))throw Error('stocksがありません');data=d;el('analyzed').textContent=Number(d.analyzed||0).toLocaleString('ja-JP');el('total').textContent=d.total;el('fresh').textContent=d.stocks.filter(s=>s.Cross_Days_Ago<=5).length;const last=[...new Set(d.stocks.map(s=>s.BAR_DATE))].sort().at(-1);const marketName=market==='jp'?'日本株':'米国株';el('status').textContent=marketName+' / 更新 '+new Date(d.updated_at).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})+' JST ／ 最新候補の使用日足 '+(last||'—');redraw();}catch(e){el('status').textContent='読み込み失敗：'+e.message+'。対応するMA200スクリーナーのActionsが成功しているか確認してください。';}}
 document.querySelectorAll('button[data-market]').forEach(b=>b.onclick=()=>{market=b.dataset.market;data=null;mode='all';el('q').value='';document.querySelectorAll('button[data-market]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('button[data-filter]').forEach(x=>x.classList.toggle('active',x.dataset.filter==='all'));load();});
 document.querySelectorAll('button[data-filter]').forEach(b=>b.onclick=()=>{mode=b.dataset.filter;document.querySelectorAll('button[data-filter]').forEach(x=>x.classList.toggle('active',x===b));redraw();});document.querySelectorAll('th[data-sort]').forEach(th=>th.onclick=()=>{const k=th.dataset.sort;descending=sortKey===k?!descending:false;sortKey=k;redraw();});el('q').oninput=redraw;el('refresh').onclick=load;load();
 </script></body></html>
