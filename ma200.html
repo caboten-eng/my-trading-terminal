@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MA200トレンド転換スクリーナー | My Trading Terminal</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1016;--panel:#121b27;--border:#2a394d;--text:#edf4fa;--muted:#9eafc3;--green:#56dfa4;--blue:#8bc2ff}
+*{box-sizing:border-box}body{background:var(--bg);color:var(--text);font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0}
+main{max-width:1200px;margin:auto;padding:24px 18px}header{display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:20px}
+h1{font-size:23px;margin:0 0 8px}small,.muted{color:var(--muted)}a{color:var(--blue)}
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:17px;margin:14px 0}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.metric{padding:12px;background:#182538;border-radius:8px}.metric strong{font-size:25px;display:block;margin-top:6px}
+.controls{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:12px 0}button,input{font:inherit;border:1px solid var(--border);border-radius:8px;background:#1a2a3b;color:var(--text);padding:10px 13px}button{cursor:pointer}button.active{background:#1c573f;border-color:#3e9274}input{min-width:180px}button:hover{border-color:var(--blue)}
+.tablewrap{overflow:auto;max-height:650px}table{border-collapse:collapse;width:100%;min-width:850px}th,td{border-bottom:1px solid var(--border);padding:11px;text-align:right;white-space:nowrap}th{position:sticky;top:0;background:#213044;cursor:pointer}th:nth-child(1),th:nth-child(2),td:nth-child(1),td:nth-child(2){text-align:left}tr:hover td{background:#1c2e40} .status{color:var(--muted);font-size:12px}.positive{color:var(--green)}
+@media(max-width:680px){.metrics{grid-template-columns:1fr}h1{font-size:19px}}
+</style></head>
+<body><main>
+<header><div><h1>200日線 上抜け・転換スクリーナー</h1><div class="muted">東証プライム｜以前は下降していた200日線の上抜け初動</div></div><div><a href="index.html">← 元のスクリーナー</a>　<button id="refresh">再読み込み</button></div></header>
+<div class="panel"><div class="metrics"><div class="metric"><small>分析対象</small><strong id="analyzed">—</strong></div><div class="metric"><small>上抜け候補</small><strong id="total">—</strong></div><div class="metric"><small>上抜け直後（5営業日以内）</small><strong id="fresh">—</strong></div></div><p id="status" class="status">読み込み中…</p></div>
+<section class="panel"><div class="controls"><button data-filter="all" class="active">すべて</button><button data-filter="fresh">上抜け直後</button><button data-filter="confirmed">転換確認</button><input id="q" placeholder="コード・銘柄名で検索" aria-label="銘柄検索"><small id="count"></small></div>
+<div class="tablewrap"><table><thead><tr><th data-sort="Ticker">コード</th><th data-sort="Name">銘柄名</th><th data-sort="Price">株価</th><th data-sort="MA200">200日線</th><th data-sort="Distance_Pct">乖離率</th><th data-sort="Cross_Days_Ago">突破から</th><th data-sort="Cross_Date">突破日</th><th data-sort="Stage">区分</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+<p class="status">条件：過去60→40営業日前に200日SMAが下降／直近20営業日以内の終値上抜け／現在もSMA200以上／乖離0〜15%。RSやTTは不要。会社イベントやギャップによる上抜けも含みます。値動きはYahoo Financeの調整後日足で判定。投資判断は必ずチャートで確認してください。</p>
+</main>
+<script>
+'use strict';
+let data=null, mode='all', sortKey='Cross_Days_Ago', descending=false;
+const el=id=>document.getElementById(id);
+function fmt(v,n=2){return Number.isFinite(Number(v))?Number(v).toFixed(n):'—'}
+function redraw(){if(!data)return;const q=el('q').value.trim().toUpperCase();let items=data.stocks.filter(s=>(mode==='all'||(mode==='fresh'&&s.Cross_Days_Ago<=5)||(mode==='confirmed'&&s.Cross_Days_Ago>5))&&(String(s.Ticker).includes(q)||String(s.Name).toUpperCase().includes(q)));
+items.sort((a,b)=>{let x=a[sortKey],y=b[sortKey];let z=(typeof x==='number'&&typeof y==='number')?x-y:String(x??'').localeCompare(String(y??''),'ja');return descending?-z:z;});
+el('count').textContent=`${items.length} / ${data.total} 銘柄`;
+const body=el('rows');body.replaceChildren();for(const s of items){const tr=document.createElement('tr');const link=document.createElement('a');link.textContent=s.Ticker;link.href='https://www.tradingview.com/chart/?symbol='+encodeURIComponent('TSE:'+s.Ticker);link.target='_blank';link.rel='noopener noreferrer';const first=document.createElement('td');first.append(link);tr.append(first);for(const v of [s.Name,fmt(s.Price),fmt(s.MA200),fmt(s.Distance_Pct)+'%',s.Cross_Days_Ago+'営業日',s.Cross_Date,s.Stage]){const cell=document.createElement('td');cell.textContent=v;tr.append(cell);}body.append(tr);}if(!items.length){const tr=document.createElement('tr');const c=document.createElement('td');c.colSpan=8;c.textContent='該当銘柄なし';tr.append(c);body.append(tr);}}
+async function load(){el('status').textContent='データ取得中…';try{const r=await fetch('results/ma200_jp.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();if(!Array.isArray(d.stocks))throw Error('stocksがありません');data=d;el('analyzed').textContent=d.analyzed.toLocaleString('ja-JP');el('total').textContent=d.total;el('fresh').textContent=d.stocks.filter(s=>s.Cross_Days_Ago<=5).length;const last=[...new Set(d.stocks.map(s=>s.BAR_DATE))].sort().at(-1);el('status').textContent='更新 '+new Date(d.updated_at).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})+' JST ／ 最新候補の使用日足 '+(last||'—');redraw();}catch(e){el('status').textContent='読み込み失敗：'+e.message+'。ActionsでJapan MA200 Recovery Screenerが実行済みか確認してください。';}}
+document.querySelectorAll('button[data-filter]').forEach(b=>b.onclick=()=>{mode=b.dataset.filter;document.querySelectorAll('button[data-filter]').forEach(x=>x.classList.toggle('active',x===b));redraw();});document.querySelectorAll('th[data-sort]').forEach(th=>th.onclick=()=>{const k=th.dataset.sort;descending=sortKey===k?!descending:false;sortKey=k;redraw();});el('q').oninput=redraw;el('refresh').onclick=load;load();
+</script></body></html>
