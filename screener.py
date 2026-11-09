@@ -1200,7 +1200,76 @@ output = output.sort_values(
     "RS", ascending=False
 )
 
+# ---- 時価総額を前回JSONから引き継ぎ、毎回少数ずつ更新（既存のTT/VCP/RSには影響しない） ----
+def enrich_market_caps(output, result_path, suffix, max_queries=100):
+    import json
+    from datetime import datetime, timezone, timedelta
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    now = datetime.now(timezone.utc)
+    history = {}
+    p = Path(result_path)
+    if p.exists():
+        try:
+            previous = json.loads(p.read_text(encoding="utf-8"))
+            history = {str(s["Ticker"]): s for s in previous.get("stocks", []) if s.get("Ticker")}
+        except (OSError, ValueError, TypeError) as e:
+            print("時価総額キャッシュ読み込み失敗:", e)
+
+    caps, checked = {}, {}
+    pending = []
+    for _, row in output.iterrows():
+        code = str(row["Ticker"])
+        old = history.get(code, {})
+        cap = old.get("MarketCap")
+        try:
+            cap = float(cap) if cap is not None else None
+            if cap is not None and (not math.isfinite(cap) or cap <= 0): cap = None
+        except (ValueError, TypeError): cap = None
+        date = old.get("MarketCapCheckedAt")
+        caps[code] = cap
+        checked[code] = date
+        try:
+            then = datetime.fromisoformat(date).replace(tzinfo=timezone.utc) if date else None
+        except (ValueError, TypeError):
+            then = None
+        stale = not then or (now - then) > timedelta(days=7 if cap else 2)
+        if stale:
+            # TT合格・監視候補を優先し、残りの銘柄は日々順番に補完
+            priority = (bool(row.get("SIMPLE_VCP_CANDIDATE", False)),
+                        bool(row.get("Trend_PASS", False)),
+                        float(row.get("RS", 0) or 0))
+            pending.append((priority, code))
+
+    pending.sort(key=lambda x: x[0], reverse=True)
+    batch = [code for _,code in pending[:max_queries]]
+    def retrieve(code):
+        symbol = code + suffix
+        try:
+            fi = yf.Ticker(symbol).fast_info
+            cap = fi.get("market_cap")
+            cap = float(cap) if cap is not None else None
+            if cap is None or not math.isfinite(cap) or cap<=0: cap=None
+            return code, cap
+        except Exception as e:
+            print("時価総額取得失敗", symbol, type(e).__name__)
+            return code, None
+
+    if batch:
+        with ThreadPoolExecutor(max_workers=6) as pool:
+            for future in as_completed([pool.submit(retrieve, code) for code in batch]):
+                code, cap = future.result()
+                if cap is not None: caps[code] = int(cap)
+                checked[code] = now.date().isoformat()
+
+    output["MarketCap"] = output["Ticker"].map(caps)
+    output["MarketCapCheckedAt"] = output["Ticker"].map(checked)
+    print("時価総額: 今回照会", len(batch), "取得済み", sum(v is not None for v in caps.values()), "/", len(caps))
+    return output
+
 output["RS_raw"] = output["RS_raw"].round(4)
+
+output = enrich_market_caps(output, "results/screening.json", "", max_queries=110)
 
 Path("results").mkdir(exist_ok=True)
 
