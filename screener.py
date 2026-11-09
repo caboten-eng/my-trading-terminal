@@ -983,6 +983,13 @@ for ticker in TICKERS:
                 if previous5_vol > 0 else None
             ),
             "SIMPLE_PIVOT_NEAR": simple_pivot_near,
+            "Chart": [
+                {"date": df.index[i].strftime("%Y-%m-%d"),
+                 "close": round(float(close_series.iloc[i]), 2),
+                 "ma200": round(float(ma200.iloc[i]), 2)}
+                for i in range(max(199, len(df) - 90), len(df))
+                if pd.notna(close_series.iloc[i]) and pd.notna(ma200.iloc[i])
+            ],
             "BAR_DATE": df.index[-1].strftime("%Y-%m-%d"),
             "Ticker": ticker,
             "Price": round(price, 2),
