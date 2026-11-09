@@ -1,4 +1,3 @@
-
 name: Stock Screener
 
 on:
@@ -8,6 +7,11 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: stock-screener-results
+  cancel-in-progress: false
+
 jobs:
   screening:
     runs-on: ubuntu-latest
@@ -38,14 +42,41 @@ jobs:
           retention-days: 30
 
       - name: Commit screening results
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
-          git config user.email "..."
-          git add results/
-          git commit -m "Update screening results"
-          git push
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Deploy results to public website
+          tmp=$(mktemp -d)
+          cp results/screening.csv "$tmp/screening.csv"
+          cp results/screening.json "$tmp/screening.json"
+
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p results
+            cp "$tmp/screening.csv" results/screening.csv
+            cp "$tmp/screening.json" results/screening.json
+            git add results/screening.csv results/screening.json
+
+            if git diff --cached --quiet; then
+              echo "Screening results are already up to date"
+              exit 0
+            fi
+
+            git commit -m "Update screening results"
+            if git push origin HEAD:main; then
+              echo "Screening results pushed"
+              exit 0
+            fi
+
+            echo "Push conflict; retrying ($attempt/5)"
+            sleep 3
+          done
+
+          echo "Failed to push screening results after 5 attempts"
+          exit 1
 
       - name: Deploy results to public website
         env:
@@ -57,10 +88,8 @@ jobs:
           cp results/screening.json /tmp/trading-web/results/screening.json
 
           cd /tmp/trading-web
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           git add results/screening.json
 
           if ! git diff --cached --quiet; then
