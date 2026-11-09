@@ -334,6 +334,14 @@ tbody tr:hover td:first-child{box-shadow:inset 3px 0 #55d5d0}
 .filters button.selected{box-shadow:inset 0 -2px #73e7bb}
 #rows td:nth-child(2) .status-pill{min-width:48px;justify-content:center}
 
+/* 信号の意味を統一: 数値=中立、距離=単色、突破=事実のみ */
+.rs-score{color:#eaf2fc!important;font-weight:800}
+.distance-number{color:#dbeaf9!important;font-weight:750}
+.signal-fill.distance-fill{background:#67b9ed!important}
+.status-pill.not-broken{background:#243447;color:#c4d5e8;border-color:#496078}
+.status-pill.broken{background:#2c2d4c;color:#c7c4ff;border-color:#6565a3}
+.status-pill.not-broken::before{background:#879db5}
+.status-pill.broken::before{background:#aaa4fa}
 </style>
 </head>
 <body>
@@ -375,7 +383,7 @@ tbody tr:hover td:first-child{box-shadow:inset 3px 0 #55d5d0}
     </div>
     <div class="rightcontrols">
       <input type="text" id="search"
-        placeholder="銘柄検索（例: NVDA）"
+        placeholder="ティッカー・会社名で検索（例: NVDA / NVIDIA）"
         aria-label="銘柄検索">
       <span class="meta" id="count"></span>
     </div>
@@ -383,7 +391,7 @@ tbody tr:hover td:first-child{box-shadow:inset 3px 0 #55d5d0}
 
   <div class="filters" id="filters"></div>
 
-  <div class="view-help"><span><i style="background:var(--good)"></i>上抜けなし＝監視中</span><span><i style="background:var(--warn)"></i>高値突破あり＝再確認</span><span>行にマウス＝チャート / 銘柄クリック＝TradingView</span></div>
+  <div class="view-help"><span>RS：相対順位（数値が高いほど強い）</span><span><i style="background:#67b9ed"></i>高値距離：0%に近いほど上抜け直前</span><span>突破状況：直近10営業日の履歴（良し悪しではない）</span><span>行にマウス＝チャート / コードクリック＝TradingView</span></div>
   <div class="tablewrap">
     <table>
       <thead>
@@ -391,8 +399,8 @@ tbody tr:hover td:first-child{box-shadow:inset 3px 0 #55d5d0}
           <th data-sort="Ticker">銘柄</th>
           <th data-sort="RS">RS</th>
           <th data-sort="Price">株価</th>
-          <th data-sort="PROVISIONAL_DISTANCE_PCT">暫定高値距離</th>
-          <th data-sort="RECENT_20D_HIGH_BREAK">直近高値突破</th>
+          <th data-sort="PROVISIONAL_DISTANCE_PCT" title="過去20日高値までの距離。小さいほど高値に近い">高値までの距離 ↓0%が近い</th>
+          <th data-sort="RECENT_20D_HIGH_BREAK" title="直近10営業日で過去20日高値を終値で上抜けしたか">直近10日の高値突破</th>
           <th data-sort="Volume5_50_Ratio">出来高比</th>
           <th data-sort="BAR_DATE">日足日付</th>
         </tr>
@@ -817,7 +825,7 @@ function render(){
       marker.style.marginLeft='6px';
       td.append(marker);
     }
-    if(market === 'JP' && s.Name){
+    if(s.Name){
       const name=document.createElement('span');
       name.textContent='  '+s.Name;
       name.style.marginLeft='9px';
@@ -830,7 +838,8 @@ function render(){
       const score=Number(s.RS);
       const td=document.createElement('td');
       const num=document.createElement('span');num.textContent=s.RS??'—';
-      num.className='signal-number '+(score>=90?'good':score>=70?'warn':'');
+      num.className='signal-number rs-score';
+      num.title='RS（対象銘柄内の相対順位）: 数値が大きいほど強い';
       td.append(num);tr.append(td);
     }
     put(num(s.Price));
@@ -838,20 +847,23 @@ function render(){
       const v=s.PROVISIONAL_DISTANCE_PCT;
       const td=document.createElement('td');
       const cell=document.createElement('div');cell.className='signal-cell';
-      const n=document.createElement('span');n.className='signal-number '+(v!=null&&v>=0&&v<=2?'good':v!=null&&v<=5&&v>=0?'warn':'');
+      const n=document.createElement('span');n.className='signal-number distance-number';
       n.textContent=v==null?'—':num(v)+'%';cell.append(n);
       if(typeof v==='number'&&v>=0){
         const track=document.createElement('span');track.className='signal-track';
-        const fill=document.createElement('span');fill.className='signal-fill'+(v>5?' bad':v>2?' warn':'');
-        fill.style.width=Math.max(3,100-Math.min(100,v/10*100))+'%';track.append(fill);cell.append(track);
+        const fill=document.createElement('span');fill.className='signal-fill distance-fill';
+        fill.style.width=Math.max(0,100-Math.min(100,v/5*100))+'%';
+        track.title='0%で満杯、5%以上で空の高値接近度';
+        track.append(fill);cell.append(track);
       }
       td.append(cell);tr.append(td);
     }
     {
       const td=document.createElement('td');const p=document.createElement('span');
       const v=s.RECENT_20D_HIGH_BREAK;
-      p.className='status-pill '+(v===false?'good':v===true?'warn':'neutral');
-      p.textContent=v===false?'突破なし':v===true?'突破あり':'未判定';
+      p.className='status-pill '+(v===false?'not-broken':v===true?'broken':'neutral');
+      p.textContent=v===false?'未突破':v===true?'突破記録あり':'未判定';
+      p.title='直近10営業日に以前の20日高値を終値で上抜けしたか。買い/売り判定ではありません。';
       td.append(p);tr.append(td);
     }
     put(num(s.Volume5_50_Ratio,3));
@@ -879,7 +891,7 @@ function showDetail(ticker,rerender=true){
   if(!s)return;
 
   selected=ticker;
-  $('detailtitle').textContent=ticker+(market === 'JP' && s.Name ? ' '+s.Name : '')+' — 判定詳細';
+  $('detailtitle').textContent=ticker+(s.Name ? ' '+s.Name : '')+' — 判定詳細';
 
   const fields=[
     ['判定使用日足',s.BAR_DATE ?? '—'],
