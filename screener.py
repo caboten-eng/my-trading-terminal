@@ -1233,7 +1233,7 @@ def enrich_market_caps(output, result_path, suffix, max_queries=100):
             then = datetime.fromisoformat(date).replace(tzinfo=timezone.utc) if date else None
         except (ValueError, TypeError):
             then = None
-        stale = not then or (now - then) > timedelta(days=7 if cap else 2)
+        stale = (cap is None) or (not then) or ((now - then) > timedelta(days=7))
         if stale:
             # TT合格・監視候補を優先し、残りの銘柄は日々順番に補完
             priority = (bool(row.get("SIMPLE_VCP_CANDIDATE", False)),
@@ -1245,22 +1245,50 @@ def enrich_market_caps(output, result_path, suffix, max_queries=100):
     batch = [code for _,code in pending[:max_queries]]
     def retrieve(code):
         symbol = code + suffix
+        ticker = yf.Ticker(symbol)
+        cap = None
         try:
-            fi = yf.Ticker(symbol).fast_info
+            fi = ticker.fast_info
             cap = fi.get("market_cap")
-            cap = float(cap) if cap is not None else None
-            if cap is None or not math.isfinite(cap) or cap<=0: cap=None
-            return code, cap
+            if not cap:
+                shares = fi.get("shares")
+                price = fi.get("last_price")
+                if shares and price:
+                    cap = float(shares) * float(price)
         except Exception as e:
-            print("時価総額取得失敗", symbol, type(e).__name__)
-            return code, None
+            print("fast_info取得失敗", symbol, type(e).__name__)
+        # fast_info で取れない銘柄は、少数だけ別API経由を再試行
+        if not cap and code in fallback_symbols:
+            try:
+                info = ticker.info
+                cap = info.get("marketCap")
+                if not cap:
+                    shares = info.get("sharesOutstanding")
+                    price = info.get("currentPrice") or info.get("regularMarketPrice")
+                    if shares and price:
+                        cap = float(shares) * float(price)
+            except Exception as e:
+                print("info取得失敗", symbol, type(e).__name__)
+        try:
+            cap = float(cap) if cap is not None else None
+            if cap is not None and (not math.isfinite(cap) or cap <= 0):
+                cap = None
+        except (TypeError, ValueError):
+            cap = None
+        return code, cap
 
+    # yfinance の追加問い合わせは制限されるため、代替照会は各回最大12件
+    fallback_symbols = set(batch[:12])
     if batch:
-        with ThreadPoolExecutor(max_workers=6) as pool:
+        with ThreadPoolExecutor(max_workers=4) as pool:
             for future in as_completed([pool.submit(retrieve, code) for code in batch]):
                 code, cap = future.result()
-                if cap is not None: caps[code] = int(cap)
-                checked[code] = now.date().isoformat()
+                if cap is not None:
+                    caps[code] = int(cap)
+                    checked[code] = now.date().isoformat()
+                else:
+                    # 失敗を取得成功と記録せず、次の実行で再試行する
+                    print("時価総額未取得:", code)
 
     output["MarketCap"] = output["Ticker"].map(caps)
     output["MarketCapCheckedAt"] = output["Ticker"].map(checked)
