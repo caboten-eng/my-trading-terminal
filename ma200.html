@@ -14,8 +14,9 @@ h1{font-size:23px;margin:0 0 8px}small,.muted{color:var(--muted)}a{color:var(--b
 @media(max-width:680px){.metrics{grid-template-columns:1fr}h1{font-size:19px}}
 
 /* Inline preview chart, stays within the current page */
-.ticker-button{border:0;background:transparent;padding:2px 0;color:var(--blue);font:inherit;font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
-.ticker-button:hover,.ticker-button:focus-visible{color:#bbdfff}
+#rows tr{cursor:default}
+.ticker-link{color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.ticker-link:hover,.ticker-link:focus-visible{color:#bbdfff}
 .chart-preview{position:fixed;z-index:1000;width:min(405px,calc(100vw - 24px));background:#111c2b;border:1px solid #4c6180;border-radius:12px;padding:13px;box-shadow:0 15px 45px #000b;display:none;pointer-events:none}
 .chart-preview.visible{display:block}
 .chart-preview.pinned{pointer-events:auto}
@@ -35,7 +36,7 @@ h1{font-size:23px;margin:0 0 8px}small,.muted{color:var(--muted)}a{color:var(--b
 <section class="panel"><div class="controls"><button data-market="jp" class="active">日本株</button><button data-market="us">米国株</button></div><div class="controls"><button data-filter="all" class="active">すべて</button><button data-filter="fresh">上抜け直後</button><button data-filter="confirmed">転換確認</button><input id="q" placeholder="コード・ティッカー・銘柄名で検索" aria-label="銘柄検索"><small id="count"></small></div>
 <div class="tablewrap"><table><thead><tr><th data-sort="Ticker">コード</th><th data-sort="Name">銘柄名</th><th data-sort="Price">株価</th><th data-sort="MA200">200日線</th><th data-sort="Distance_Pct">乖離率</th><th data-sort="Cross_Days_Ago">突破から</th><th data-sort="Cross_Date">突破日</th><th data-sort="Stage">区分</th></tr></thead><tbody id="rows"></tbody></table></div></section>
 <p class="status">日米とも同一条件：過去60→40営業日前に200日SMAが下降／直近20営業日以内の終値上抜け／現在もSMA200以上／乖離0〜15%。RSやTTは不要。会社イベントやギャップによる上抜けも含みます。値動きはYahoo Financeの調整後日足で判定。投資判断は必ずチャートで確認してください。</p>
-<aside id="chart-preview" class="chart-preview" role="dialog" aria-label="銘柄チャートのプレビュー"><div class="chart-preview-head"><strong id="chart-title"></strong><button type="button" id="chart-close" aria-label="閉じる" style="display:none">×</button></div><div id="chart-meta" class="chart-preview-meta"></div><svg id="chart-svg" viewBox="0 0 370 205" role="img" aria-label="終値と200日移動平均線の直近90営業日"></svg><div class="chart-legend"><span><b style="color:#54dba0">━━</b> 終値</span><span><b style="color:#ae91ff">━━</b> 200日線</span></div><div class="chart-preview-note"><span>ホバーでプレビュー・クリックで固定</span><a id="chart-tv" href="#" target="_blank" rel="noopener noreferrer">TradingViewで開く</a></div></aside>
+<aside id="chart-preview" class="chart-preview" role="dialog" aria-label="銘柄チャートのプレビュー"><div class="chart-preview-head"><strong id="chart-title"></strong><button type="button" id="chart-close" aria-label="閉じる" style="display:none">×</button></div><div id="chart-meta" class="chart-preview-meta"></div><svg id="chart-svg" viewBox="0 0 370 205" role="img" aria-label="終値と200日移動平均線の直近90営業日"></svg><div class="chart-legend"><span><b style="color:#54dba0">━━</b> 終値</span><span><b style="color:#ae91ff">━━</b> 200日線</span></div><div class="chart-preview-note"><span>行にホバーでプレビュー・行クリックで固定</span><a id="chart-tv" href="#" target="_blank" rel="noopener noreferrer">TradingViewで開く</a></div></aside>
 </main>
 <script>
 'use strict';
@@ -49,15 +50,18 @@ const body=el('rows');body.replaceChildren();hideChart();
 for(const s of items){
   const tr=document.createElement('tr');
   const first=document.createElement('td');
-  const preview=document.createElement('button');preview.type='button';preview.className='ticker-button';preview.textContent=s.Ticker;
-  preview.title='日足チャートをプレビュー';
-  preview.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')showChart(s,e,false);});
-  preview.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'&&!chartPinned)positionChart(e);});
-  preview.addEventListener('pointerleave',()=>{if(!chartPinned)hideChart();});
-  preview.addEventListener('focus',()=>showChart(s,preview.getBoundingClientRect(),false,true));
-  preview.addEventListener('blur',()=>{if(!chartPinned)hideChart();});
-  preview.addEventListener('click',e=>{e.stopPropagation();if(chartPinned&&pinnedTicker===s.Ticker){hideChart();return;}showChart(s,e,true);});
-  first.append(preview);tr.append(first);
+  const link=document.createElement('a');link.className='ticker-link';link.textContent=s.Ticker;
+  const tvSymbol=(market==='jp'?'TSE:':'')+s.Ticker;
+  link.href='https://www.tradingview.com/chart/?symbol='+encodeURIComponent(tvSymbol);
+  link.target='_blank';link.rel='noopener noreferrer';
+  link.title='TradingViewの詳細チャートを別タブで開く';
+  link.addEventListener('click',e=>e.stopPropagation());
+  first.append(link);tr.append(first);
+  // 銘柄コードだけでなく、一覧の行全体をホバー対象にする
+  tr.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')showChart(s,e,false);});
+  tr.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'&&!chartPinned)positionChart(e);});
+  tr.addEventListener('pointerleave',()=>{if(!chartPinned)hideChart();});
+  tr.addEventListener('click',e=>{if(e.target.closest('a'))return;if(chartPinned&&pinnedTicker===s.Ticker){hideChart();return;}showChart(s,e,true);});
   for(const v of [s.Name,(market==='us'?'$':'¥')+fmt(s.Price),(market==='us'?'$':'¥')+fmt(s.MA200),fmt(s.Distance_Pct)+'%',s.Cross_Days_Ago+'営業日',s.Cross_Date,s.Stage]){const cell=document.createElement('td');cell.textContent=v;tr.append(cell);}body.append(tr);
 }
 if(!items.length){const tr=document.createElement('tr');const c=document.createElement('td');c.colSpan=8;c.textContent='該当銘柄なし';tr.append(c);body.append(tr);}}
@@ -104,7 +108,7 @@ function showChart(s,e,pin=false,fromRect=false){
 }
 el('chart-close').onclick=hideChart;
 document.addEventListener('keydown',e=>{if(e.key==='Escape')hideChart();});
-document.addEventListener('pointerdown',e=>{if(chartPinned&&!chartBox.contains(e.target)&&!e.target.closest('.ticker-button'))hideChart();});
+document.addEventListener('pointerdown',e=>{if(chartPinned&&!chartBox.contains(e.target)&&!e.target.closest('tr'))hideChart();});
 async function load(){hideChart();el('status').textContent='データ取得中…';try{const r=await fetch('results/ma200_'+market+'.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();if(!Array.isArray(d.stocks))throw Error('stocksがありません');data=d;el('analyzed').textContent=Number(d.analyzed||0).toLocaleString('ja-JP');el('total').textContent=d.total;el('fresh').textContent=d.stocks.filter(s=>s.Cross_Days_Ago<=5).length;const last=[...new Set(d.stocks.map(s=>s.BAR_DATE))].sort().at(-1);const marketName=market==='jp'?'日本株':'米国株';el('status').textContent=marketName+' / 更新 '+new Date(d.updated_at).toLocaleString('ja-JP',{timeZone:'Asia/Tokyo'})+' JST ／ 最新候補の使用日足 '+(last||'—');redraw();}catch(e){el('status').textContent='読み込み失敗：'+e.message+'。対応するMA200スクリーナーのActionsが成功しているか確認してください。';}}
 document.querySelectorAll('button[data-market]').forEach(b=>b.onclick=()=>{market=b.dataset.market;data=null;mode='all';el('q').value='';document.querySelectorAll('button[data-market]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('button[data-filter]').forEach(x=>x.classList.toggle('active',x.dataset.filter==='all'));load();});
 document.querySelectorAll('button[data-filter]').forEach(b=>b.onclick=()=>{mode=b.dataset.filter;document.querySelectorAll('button[data-filter]').forEach(x=>x.classList.toggle('active',x===b));redraw();});document.querySelectorAll('th[data-sort]').forEach(th=>th.onclick=()=>{const k=th.dataset.sort;descending=sortKey===k?!descending:false;sortKey=k;redraw();});el('q').oninput=redraw;el('refresh').onclick=load;load();
