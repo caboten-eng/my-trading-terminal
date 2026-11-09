@@ -1134,9 +1134,10 @@ output = output.sort_values(
     "RS", ascending=False
 )
 
-# ---- 時価総額を前回JSONから引き継ぎ、毎回少数ずつ更新（既存のTT/VCP/RSには影響しない） ----
+# ---- 時価総額: 前回値を保持し、未取得だけ複数のYahoo手段で補完 ----
 def enrich_market_caps(output, result_path, suffix, max_queries=100):
     import json
+    import math
     from datetime import datetime, timezone, timedelta
     from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -1150,83 +1151,110 @@ def enrich_market_caps(output, result_path, suffix, max_queries=100):
         except (OSError, ValueError, TypeError) as e:
             print("時価総額キャッシュ読み込み失敗:", e)
 
-    caps, checked = {}, {}
+    def valid_number(value):
+        try:
+            n = float(value)
+            return n if math.isfinite(n) and n > 0 else None
+        except (TypeError, ValueError, OverflowError):
+            return None
+
+    def get_cached(code):
+        old = history.get(code, {})
+        return (valid_number(old.get("MarketCap")), old.get("MarketCapCheckedAt"),
+                old.get("MarketCapAttemptedAt"), old.get("MarketCapSource"))
+
+    caps, checked, attempted, sources = {}, {}, {}, {}
     pending = []
     for _, row in output.iterrows():
         code = str(row["Ticker"])
-        old = history.get(code, {})
-        cap = old.get("MarketCap")
+        cap, date, last_attempt, source = get_cached(code)
+        caps[code], checked[code], attempted[code], sources[code] = cap, date, last_attempt, source
         try:
-            cap = float(cap) if cap is not None else None
-            if cap is not None and (not math.isfinite(cap) or cap <= 0): cap = None
-        except (ValueError, TypeError): cap = None
-        date = old.get("MarketCapCheckedAt")
-        caps[code] = cap
-        checked[code] = date
-        try:
-            then = datetime.fromisoformat(date).replace(tzinfo=timezone.utc) if date else None
+            then = datetime.fromisoformat(str(date).replace("Z", "+00:00")) if date else None
+            if then is not None and then.tzinfo is None:
+                then = then.replace(tzinfo=timezone.utc)
         except (ValueError, TypeError):
             then = None
-        stale = (cap is None) or (not then) or ((now - then) > timedelta(days=7))
-        if stale:
-            # TT合格・監視候補を優先し、残りの銘柄は日々順番に補完
-            priority = (bool(row.get("SIMPLE_VCP_CANDIDATE", False)),
-                        bool(row.get("Trend_PASS", False)),
-                        float(row.get("RS", 0) or 0))
-            pending.append((priority, code))
+        # 既存値は30日間保持。未取得銘柄は再試行するが、古い試行から優先して偏りを防ぐ。
+        if cap is None or then is None or now - then > timedelta(days=30):
+            pending.append((str(last_attempt or ""), code))
 
-    pending.sort(key=lambda x: x[0], reverse=True)
-    batch = [code for _,code in pending[:max_queries]]
+    pending.sort()
+    batch = [code for _, code in pending[:max_queries]]
+    lookup = output.set_index(output["Ticker"].astype(str))
+
     def retrieve(code):
         symbol = code + suffix
         ticker = yf.Ticker(symbol)
-        cap = None
+        cap, source = None, None
+        row = lookup.loc[code]
+        # スクリーナーで取得済みの確定日足価格を再利用し、余分な株価API呼び出しを減らす。
+        price = valid_number(row.get("Price"))
         try:
             fi = ticker.fast_info
-            cap = fi.get("market_cap")
-            if not cap:
-                shares = fi.get("shares")
-                price = fi.get("last_price")
+            cap = valid_number(fi.get("market_cap"))
+            if cap:
+                source = "yfinance.fast_info"
+            else:
+                shares = valid_number(fi.get("shares"))
                 if shares and price:
-                    cap = float(shares) * float(price)
+                    cap, source = shares * price, "yfinance.fast_info.shares×daily_close"
         except Exception as e:
-            print("fast_info取得失敗", symbol, type(e).__name__)
-        # fast_info で取れない銘柄は、少数だけ別API経由を再試行
-        if not cap and code in fallback_symbols:
+            print("fast_info失敗:", symbol, type(e).__name__, str(e)[:110])
+
+        if not cap and code in detail_batch:
             try:
                 info = ticker.info
-                cap = info.get("marketCap")
-                if not cap:
-                    shares = info.get("sharesOutstanding")
-                    price = info.get("currentPrice") or info.get("regularMarketPrice")
-                    if shares and price:
-                        cap = float(shares) * float(price)
-            except Exception as e:
-                print("info取得失敗", symbol, type(e).__name__)
-        try:
-            cap = float(cap) if cap is not None else None
-            if cap is not None and (not math.isfinite(cap) or cap <= 0):
-                cap = None
-        except (TypeError, ValueError):
-            cap = None
-        return code, cap
-
-    # yfinance の追加問い合わせは制限されるため、代替照会は各回最大12件
-    fallback_symbols = set(batch[:12])
-    if batch:
-        with ThreadPoolExecutor(max_workers=4) as pool:
-            for future in as_completed([pool.submit(retrieve, code) for code in batch]):
-                code, cap = future.result()
-                if cap is not None:
-                    caps[code] = int(cap)
-                    checked[code] = now.date().isoformat()
+                cap = valid_number(info.get("marketCap"))
+                if cap:
+                    source = "yfinance.info"
                 else:
-                    # 失敗を取得成功と記録せず、次の実行で再試行する
+                    shares = valid_number(info.get("sharesOutstanding"))
+                    if shares and price:
+                        cap, source = shares * price, "yfinance.info.shares×daily_close"
+            except Exception as e:
+                print("info失敗:", symbol, type(e).__name__, str(e)[:110])
+
+        if not cap and code in detail_batch and price:
+            # fast_info / info が取得できない場合に発行済株式数の履歴を照会。
+            # 同じYahoo系データなので接続制限時はこれも失敗し得る。
+            try:
+                shares_history = ticker.get_shares_full(start=(now - timedelta(days=400)).date())
+                if shares_history is not None and len(shares_history):
+                    if hasattr(shares_history, "columns"):
+                        shares_history = shares_history.iloc[:, 0]
+                    shares = valid_number(shares_history.dropna().iloc[-1])
+                    if shares:
+                        cap, source = shares * price, "yfinance.shares_history×daily_close"
+            except Exception as e:
+                print("発行済株式数履歴の取得失敗:", symbol, type(e).__name__, str(e)[:110])
+
+        return code, int(cap) if valid_number(cap) else None, source
+
+    # 同時リクエストを減らして429エラーを抑える。詳細照会は1回につき最大30銘柄。
+    detail_batch = set(batch[:30])
+    newly_filled = 0
+    if batch:
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            for future in as_completed([pool.submit(retrieve, code) for code in batch]):
+                code, cap, source = future.result()
+                attempted[code] = now.isoformat()
+                if cap is not None:
+                    if caps.get(code) is None:
+                        newly_filled += 1
+                    caps[code] = cap
+                    checked[code] = now.date().isoformat()
+                    sources[code] = source
+                else:
                     print("時価総額未取得:", code)
 
-    output["MarketCap"] = output["Ticker"].map(caps)
-    output["MarketCapCheckedAt"] = output["Ticker"].map(checked)
-    print("時価総額: 今回照会", len(batch), "取得済み", sum(v is not None for v in caps.values()), "/", len(caps))
+    output["MarketCap"] = output["Ticker"].astype(str).map(caps)
+    output["MarketCapCheckedAt"] = output["Ticker"].astype(str).map(checked)
+    output["MarketCapAttemptedAt"] = output["Ticker"].astype(str).map(attempted)
+    output["MarketCapSource"] = output["Ticker"].astype(str).map(sources)
+    total = len(caps)
+    filled = sum(x is not None for x in caps.values())
+    print(f"時価総額取得状況: {filled}/{total} ({100*filled/total:.1f}%) / 今回照会 {len(batch)} / 新規取得 {newly_filled}" if total else "時価総額取得状況: 銘柄なし")
     return output
 
 output["RS_raw"] = output["RS_raw"].round(4)
