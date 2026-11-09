@@ -953,13 +953,6 @@ for ticker in TICKERS:
                 if previous5_vol > 0 else None
             ),
             "SIMPLE_PIVOT_NEAR": simple_pivot_near,
-            "Chart": [
-                {"date": df.index[i].strftime("%Y-%m-%d"),
-                 "close": round(float(close_series.iloc[i]), 2),
-                 "ma200": round(float(ma200.iloc[i]), 2)}
-                for i in range(max(199, len(df) - 90), len(df))
-                if pd.notna(close_series.iloc[i]) and pd.notna(ma200.iloc[i])
-            ],
             "BAR_DATE": df.index[-1].strftime("%Y-%m-%d"),
             "Ticker": ticker.removesuffix(".T"),
             "Name": CODE_TO_NAME.get(ticker.removesuffix(".T"), ""),
@@ -1141,7 +1134,76 @@ output = output.sort_values(
     "RS", ascending=False
 )
 
+# ---- 時価総額を前回JSONから引き継ぎ、毎回少数ずつ更新（既存のTT/VCP/RSには影響しない） ----
+def enrich_market_caps(output, result_path, suffix, max_queries=100):
+    import json
+    from datetime import datetime, timezone, timedelta
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
+    now = datetime.now(timezone.utc)
+    history = {}
+    p = Path(result_path)
+    if p.exists():
+        try:
+            previous = json.loads(p.read_text(encoding="utf-8"))
+            history = {str(s["Ticker"]): s for s in previous.get("stocks", []) if s.get("Ticker")}
+        except (OSError, ValueError, TypeError) as e:
+            print("時価総額キャッシュ読み込み失敗:", e)
+
+    caps, checked = {}, {}
+    pending = []
+    for _, row in output.iterrows():
+        code = str(row["Ticker"])
+        old = history.get(code, {})
+        cap = old.get("MarketCap")
+        try:
+            cap = float(cap) if cap is not None else None
+            if cap is not None and (not math.isfinite(cap) or cap <= 0): cap = None
+        except (ValueError, TypeError): cap = None
+        date = old.get("MarketCapCheckedAt")
+        caps[code] = cap
+        checked[code] = date
+        try:
+            then = datetime.fromisoformat(date).replace(tzinfo=timezone.utc) if date else None
+        except (ValueError, TypeError):
+            then = None
+        stale = not then or (now - then) > timedelta(days=7 if cap else 2)
+        if stale:
+            # TT合格・監視候補を優先し、残りの銘柄は日々順番に補完
+            priority = (bool(row.get("SIMPLE_VCP_CANDIDATE", False)),
+                        bool(row.get("Trend_PASS", False)),
+                        float(row.get("RS", 0) or 0))
+            pending.append((priority, code))
+
+    pending.sort(key=lambda x: x[0], reverse=True)
+    batch = [code for _,code in pending[:max_queries]]
+    def retrieve(code):
+        symbol = code + suffix
+        try:
+            fi = yf.Ticker(symbol).fast_info
+            cap = fi.get("market_cap")
+            cap = float(cap) if cap is not None else None
+            if cap is None or not math.isfinite(cap) or cap<=0: cap=None
+            return code, cap
+        except Exception as e:
+            print("時価総額取得失敗", symbol, type(e).__name__)
+            return code, None
+
+    if batch:
+        with ThreadPoolExecutor(max_workers=6) as pool:
+            for future in as_completed([pool.submit(retrieve, code) for code in batch]):
+                code, cap = future.result()
+                if cap is not None: caps[code] = int(cap)
+                checked[code] = now.date().isoformat()
+
+    output["MarketCap"] = output["Ticker"].map(caps)
+    output["MarketCapCheckedAt"] = output["Ticker"].map(checked)
+    print("時価総額: 今回照会", len(batch), "取得済み", sum(v is not None for v in caps.values()), "/", len(caps))
+    return output
+
 output["RS_raw"] = output["RS_raw"].round(4)
+
+output = enrich_market_caps(output, "results/screening_jp.json", ".T", max_queries=120)
 
 Path("results").mkdir(exist_ok=True)
 
@@ -1159,61 +1221,6 @@ data = {
     "settings": {"rs_min": RS_MIN, "pivot_max_distance_pct": PIVOT_MAX_DISTANCE_PCT, "volume_dry_max_ratio": VOLUME_DRY_MAX_RATIO},
     "stocks": output.astype(object).where(pd.notna(output), None).to_dict(orient="records")
 }
-
-
-# 前回の確定日足と比較して、新たに「ブレイク前監視候補」になった銘柄を記録。
-# 同じ日足で再実行した際は新規判定を引き継ぎ、比較元がない場合は未判定にする。
-def flag_new_prebreak(data, result_file):
-    old = None
-    try:
-        if Path(result_file).is_file():
-            with open(result_file, encoding="utf-8") as f:
-                old = json.load(f)
-    except (OSError, ValueError) as exc:
-        print(f"前回データを読み込めません: {exc}")
-
-    rows = data["stocks"]
-    dates = [s.get("BAR_DATE") for s in rows if s.get("BAR_DATE")]
-    current_date = max(dates) if dates else None
-    previous_rows = old.get("stocks", []) if isinstance(old, dict) else []
-    previous_dates = [s.get("BAR_DATE") for s in previous_rows if s.get("BAR_DATE")]
-    previous_date = max(previous_dates) if previous_dates else None
-    same_session = bool(current_date and current_date == previous_date)
-    comparable = bool(previous_date and current_date and previous_date < current_date)
-    previous_map = {str(s.get("Ticker")): s for s in previous_rows}
-
-    for s in rows:
-        is_prebreak = (s.get("SIMPLE_VCP_CANDIDATE") is True
-                       and s.get("RECENT_20D_HIGH_BREAK") is False)
-        before = previous_map.get(str(s.get("Ticker")))
-        if same_session:
-            # 同じ日足を再計算した場合、新規表示を失わないよう前回を継承
-            s["NEW_PREBREAK_CANDIDATE"] = bool(
-                is_prebreak and before and before.get("NEW_PREBREAK_CANDIDATE") is True
-            )
-        elif comparable:
-            # 前回未取得だった銘柄を誤って新規と扱わない
-            s["NEW_PREBREAK_CANDIDATE"] = bool(
-                is_prebreak and before and not (
-                    before.get("SIMPLE_VCP_CANDIDATE") is True
-                    and before.get("RECENT_20D_HIGH_BREAK") is False
-                )
-            )
-        else:
-            s["NEW_PREBREAK_CANDIDATE"] = False
-
-    data["new_prebreak_count"] = sum(
-        s["NEW_PREBREAK_CANDIDATE"] for s in rows
-    )
-    data["comparison_available"] = bool(comparable or (same_session and old.get("comparison_available"))) if isinstance(old, dict) else False
-    data["comparison_bar_date"] = (
-        old.get("comparison_bar_date") if same_session and isinstance(old, dict)
-        else previous_date if comparable else None
-    )
-    print(f"新規ブレイク前候補: {data['new_prebreak_count']}銘柄 / 前回日足: {data['comparison_bar_date'] or '比較なし'}")
-
-
-flag_new_prebreak(data, "results/screening_jp.json")
 
 with open("results/screening_jp.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2, allow_nan=False)
