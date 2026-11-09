@@ -342,6 +342,13 @@ tbody tr:hover td:first-child{box-shadow:inset 3px 0 #55d5d0}
 .status-pill.broken{background:#0c4039;color:#70f0bf;border-color:#277e68}
 .status-pill.not-broken::before{background:#ffcb69}
 .status-pill.broken::before{background:#4de1b0}
+/* Favorite watchlist: local to this browser */
+.favorite-btn{background:transparent;border:0;padding:4px 7px;margin:0 7px 0 0;min-width:30px;color:#8194a9;font-size:22px;line-height:1;vertical-align:middle;cursor:pointer;border-radius:7px}
+.favorite-btn:hover,.favorite-btn:focus-visible{color:#ffdf85;background:#2e3440;outline:1px solid #7b653b}
+.favorite-btn.is-favorite{color:#ffd56e}
+.favorite-note{margin:9px 0 0;color:var(--muted);font-size:12px}
+tr.favorite-missing{opacity:.82}
+.favorite-untracked{font-size:11px;color:#e5b878;margin-left:7px}
 </style>
 </head>
 <body>
@@ -382,15 +389,17 @@ tbody tr:hover td:first-child{box-shadow:inset 3px 0 #55d5d0}
   </div>
 
   <div class="filters" id="filters"></div>
+  <div class="favorite-note" id="favorite-note">★はこのブラウザに保存されます。別の端末とは同期しません。</div>
 
-  <div class="view-help"><span>RS：相対順位（数値が高いほど強い）</span><span><i style="background:#67b9ed"></i>高値距離：0%に近いほど上抜け直前</span><span>突破状況：直近10営業日の履歴（良し悪しではない）</span><span>行にマウス＝チャート / コードクリック＝TradingView</span></div>
+  <div class="view-help"><span>RS：相対順位（数値が高いほど強い）</span><span><i style="background:#67b9ed"></i>高値距離：0%に近いほど上抜け直前</span><span>時価総額：列見出しで昇順・降順／未取得は末尾</span><span>突破状況：直近10営業日の履歴（良し悪しではない）</span><span>行にマウス＝チャート / コードクリック＝TradingView</span></div>
   <div class="tablewrap">
     <table>
       <thead>
         <tr>
-          <th data-sort="Ticker">銘柄</th>
+          <th data-sort="Ticker">★ 銘柄</th>
           <th data-sort="RS">RS</th>
           <th data-sort="Price">株価</th>
+          <th data-sort="MarketCap" title="時価総額（米国株：USD／日本株：JPY）。クリックで大きい順・小さい順に切替">時価総額 ⇅</th>
           <th data-sort="PROVISIONAL_DISTANCE_PCT" title="過去20日高値までの距離。小さいほど高値に近い">高値までの距離 ↓0%が近い</th>
           <th data-sort="RECENT_20D_HIGH_BREAK" title="直近10営業日で過去20日高値を終値で上抜けしたか">直近10日の高値突破</th>
           <th data-sort="Volume5_50_Ratio">出来高比</th>
@@ -439,8 +448,40 @@ let filter = 'no_recent_break';
 let sortKey = 'RS';
 let desc = true;
 let selected = null;
+const FAVORITE_STORAGE_KEY='my-trading-terminal-favorites-v1';
+let favorites={US:{},JP:{}};
+try{
+  const saved=JSON.parse(localStorage.getItem(FAVORITE_STORAGE_KEY)||'{}');
+  for(const m of ['US','JP']){
+    const entries=saved && typeof saved[m]==='object' && saved[m] && !Array.isArray(saved[m]) ? saved[m] : {};
+    favorites[m]=Object.fromEntries(Object.entries(entries).filter(([k,v])=>
+      /^[A-Z0-9.\-]{1,22}$/.test(k) && v && typeof v==='object'
+    ));
+  }
+}catch(err){console.warn('お気に入りを読み込めませんでした',err);}
+function favoriteKey(s){return String(s.Ticker??'').toUpperCase().trim();}
+function isFavorite(s){return Object.prototype.hasOwnProperty.call(favorites[market],favoriteKey(s));}
+function saveFavorites(){
+  try {localStorage.setItem(FAVORITE_STORAGE_KEY,JSON.stringify(favorites));return true;}
+  catch(err){alert('お気に入りを保存できませんでした。ブラウザの保存設定を確認してください。');return false;}
+}
+function toggleFavorite(s){
+  const key=favoriteKey(s);
+  if(!key)return;
+  const before=favorites[market][key];
+  if(before)delete favorites[market][key];
+  else favorites[market][key]={snapshot:s,addedAt:new Date().toISOString()};
+  if(!saveFavorites()){
+    if(before)favorites[market][key]=before;
+    else delete favorites[market][key];
+    return;
+  }
+  render();
+}
+
 
 const filters = [
+  ['favorites','★ お気に入り'],
   ['new_prebreak','★ 新規候補'],
   ['no_recent_break','ブレイク前監視候補'],
   ['simple_vcp','監視候補（全件）'],
@@ -491,7 +532,7 @@ function validate(obj){
 function load(raw,label){
   data=validate(safeParse(raw));
   selected=null;
-  filter='no_recent_break';
+  if(filter!=='favorites')filter='no_recent_break';
   $('search').value='';
 
   const barDates = data.stocks
@@ -532,6 +573,8 @@ async function autoLoad(){
 
 function match(s){
   switch(filter){
+    case 'favorites':
+      return isFavorite(s);
     case 'simple_vcp':
       return s.SIMPLE_VCP_CANDIDATE === true;
     case 'no_recent_break':
@@ -627,6 +670,16 @@ function render(){
   if(!data)return;
 
   const stocks=data.stocks;
+  // Keep saved symbols visible even if they disappear from a later screening universe.
+  const currentByTicker=new Map(stocks.map(s=>[favoriteKey(s),s]));
+  if(Object.keys(favorites[market]).length){
+    let changed=false;
+    for(const [ticker,entry] of Object.entries(favorites[market])){
+      const current=currentByTicker.get(ticker);
+      if(current && (entry.snapshot?.BAR_DATE!==current.BAR_DATE || entry.snapshot?.Price!==current.Price || entry.snapshot?.RS!==current.RS)){entry.snapshot=current;changed=true;}
+    }
+    if(changed)saveFavorites();
+  }
 
   const groups=[
     ['対象銘柄',stocks.length],
@@ -675,8 +728,10 @@ function render(){
 
   const q=$('search').value.trim().toUpperCase();
 
-  let items=stocks.filter(s=>
-    match(s) &&
+  const favoritesList=Object.entries(favorites[market]).map(([ticker,entry])=>
+    currentByTicker.get(ticker) || Object.assign({},entry.snapshot||{Ticker:ticker},{_favoriteMissing:true})
+  );
+  let items=(filter==='favorites'?favoritesList:stocks.filter(s=>match(s))).filter(s=>
     (String(s.Ticker??'')+' '+String(s.Name??'')).toUpperCase().includes(q)
   );
 
@@ -690,6 +745,15 @@ function render(){
     };
     let x = sortKey === 'WATCH_PRIORITY' ? priority(a) : a[sortKey];
     let y = sortKey === 'WATCH_PRIORITY' ? priority(b) : b[sortKey];
+    // 時価総額の未取得値は昇順・降順どちらでも末尾にする
+    if(sortKey==='MarketCap'){
+      const xn=Number(x),yn=Number(y);
+      const xok=x!=null && Number.isFinite(xn) && xn>0;
+      const yok=y!=null && Number.isFinite(yn) && yn>0;
+      if(xok!==yok)return xok?-1:1;
+      if(xok&&yok)return desc?yn-xn:xn-yn;
+      return String(a.Ticker??'').localeCompare(String(b.Ticker??''));
+    }
     if(typeof x==='boolean')x=Number(x);
     if(typeof y==='boolean')y=Number(y);
 
@@ -701,8 +765,12 @@ function render(){
     return desc?-order:order;
   });
 
-  $('count').textContent=
-    items.length+' / '+stocks.length+' 銘柄';
+  $('count').textContent= filter==='favorites'
+    ? items.length+' / '+Object.keys(favorites[market]).length+' お気に入り'
+    : items.length+' / '+stocks.length+' 銘柄';
+  $('favorite-note').textContent=filter==='favorites'
+    ? '★を押すと登録解除できます。対象外になった銘柄は最終取得時の数値を表示します。保存先はこのブラウザのみです。'
+    : '☆を押すとお気に入り登録。登録銘柄は抽出条件から外れても「★ お気に入り」で確認できます（このブラウザのみ保存）。';
 
   const body=$('rows');
   if(!chartPinned)hideChart();
@@ -714,6 +782,7 @@ function render(){
     const tr=document.createElement('tr');
 
     if(s.Ticker===selected)tr.className='active';
+    if(s._favoriteMissing)tr.classList.add('favorite-missing');
 
     tr.tabIndex=0;
     tr.onclick=e=>{
@@ -751,7 +820,21 @@ function render(){
     a.rel='noopener noreferrer';
     a.onclick=e=>e.stopPropagation();
 
-    td.append(a);
+    const star=document.createElement('button');
+    star.type='button';
+    star.className='favorite-btn'+(isFavorite(s)?' is-favorite':'');
+    star.textContent=isFavorite(s)?'★':'☆';
+    star.title=isFavorite(s)?'お気に入りから解除':'お気に入りに登録';
+    star.setAttribute('aria-label',star.title+': '+String(s.Ticker??''));
+    star.setAttribute('aria-pressed',String(isFavorite(s)));
+    star.onclick=e=>{e.stopPropagation();toggleFavorite(s);};
+    td.append(star,a);
+    if(s._favoriteMissing){
+      const warning=document.createElement('span');
+      warning.className='favorite-untracked';
+      warning.textContent='対象外・保存時の値';
+      td.append(warning);
+    }
     if(s.NEW_PREBREAK_CANDIDATE === true){
       const marker=document.createElement('span');
       marker.textContent=' NEW';
@@ -778,6 +861,24 @@ function render(){
     }
     put(num(s.Price));
     {
+      const td=document.createElement('td');
+      const v=Number(s.MarketCap);
+      if(s.MarketCap!=null && Number.isFinite(v) && v>0){
+        if(market==='JP'){
+          td.textContent=(v/1e8).toLocaleString('ja-JP',{maximumFractionDigits:0})+'億円';
+        }else{
+          td.textContent=v>=1e12?'$'+(v/1e12).toFixed(2)+'T':
+            v>=1e9?'$'+(v/1e9).toFixed(1)+'B':'$'+(v/1e6).toFixed(0)+'M';
+        }
+        td.title='取得時点の概算時価総額：'+v.toLocaleString('ja-JP')+(market==='JP'?' JPY':' USD')+
+          (s.MarketCapCheckedAt?'／取得日 '+s.MarketCapCheckedAt:'');
+      }else{
+        td.textContent='—';
+        td.title='時価総額をまだ取得できていません（順次追加）';
+      }
+      tr.append(td);
+    }
+    {
       const v=s.PROVISIONAL_DISTANCE_PCT;
       const td=document.createElement('td');
       const cell=document.createElement('div');cell.className='signal-cell';
@@ -787,7 +888,7 @@ function render(){
         const track=document.createElement('span');track.className='signal-track';
         const fill=document.createElement('span');fill.className='signal-fill distance-fill';
         fill.style.width=Math.max(0,Math.min(100,v/5*100))+'%';
-        track.title='0%で満杯、5%以上で空の高値接近度';
+        track.title='0%で空、5%以上で満杯（距離を表す）';
         track.append(fill);cell.append(track);
       }
       td.append(cell);tr.append(td);
@@ -811,21 +912,21 @@ function render(){
   if(!items.length){
     const tr=document.createElement('tr');
     const td=document.createElement('td');
-    td.colSpan=7;
+    td.colSpan=8;
     td.textContent='該当する銘柄がありません';
     tr.append(td);
     body.append(tr);
   }
 
-  if(selected)showDetail(selected,false);
+  if(selected && (data.stocks.some(x=>x.Ticker===selected) || favorites[market][selected]))showDetail(selected,false);
 }
 
 function showDetail(ticker,rerender=true){
-  const s=data?.stocks.find(x=>x.Ticker===ticker);
+  const s=data?.stocks.find(x=>x.Ticker===ticker) || favorites[market][ticker]?.snapshot;
   if(!s)return;
 
   selected=ticker;
-  $('detailtitle').textContent=ticker+(s.Name ? ' '+s.Name : '')+' — 判定詳細';
+  $('detailtitle').textContent=ticker+(s.Name ? ' '+s.Name : '')+' — 判定詳細'+(data?.stocks.some(x=>x.Ticker===ticker)?'':'（保存時の値）');
 
   const fields=[
     ['判定使用日足',s.BAR_DATE ?? '—'],
