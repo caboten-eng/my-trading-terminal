@@ -29,12 +29,60 @@ h1{font-size:23px;margin:0 0 8px}small,.muted{color:var(--muted)}a{color:var(--b
 .chart-preview-note a{font-size:11px}
 .chart-legend{display:flex;gap:14px;font-size:11px;color:var(--muted);margin-top:5px}
 .chart-legend b{font-weight:600}
+
+/* VISUAL SIGNAL SYSTEM — consistent across both screeners */
+:root{--good:#4de1b0;--warn:#ffcd73;--bad:#ff748f;--ink:#e8f2ff;--dim:#8ea2b9}
+body{background:radial-gradient(ellipse at 12% 0%,#17344b55,transparent 48%),#080e17;color:var(--ink)}
+button{font-weight:640}
+.panel{border:1px solid #294057;border-radius:15px;box-shadow:0 12px 40px #0004}
+.tablewrap{border-radius:12px;overflow:auto;background:#0d1826;border:1px solid #273950}
+th{position:sticky;top:0;z-index:2;font-size:11px;letter-spacing:.05em;color:#a5bbd2}
+tbody tr{transition:background .12s ease;cursor:crosshair}
+tbody tr:hover td{background:#17364a!important}
+tbody tr:hover td:first-child{box-shadow:inset 3px 0 #55d5d0}
+.status-pill{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:99px;font-size:11px;font-weight:750;white-space:nowrap;border:1px solid transparent}
+.status-pill.good{background:#0c4039;color:#70f0bf;border-color:#277e68}
+.status-pill.warn{background:#4b3518;color:#ffda95;border-color:#8a622b}
+.status-pill.bad{background:#46212f;color:#ff9bab;border-color:#884056}
+.status-pill.neutral{background:#26384d;color:#b8cee4;border-color:#3c536b}
+.status-pill::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;flex:none}
+.signal-number{font-variant-numeric:tabular-nums;font-weight:770}
+.signal-number.good{color:var(--good)}.signal-number.warn{color:var(--warn)}.signal-number.bad{color:var(--bad)}
+.signal-cell{display:flex;justify-content:flex-end;align-items:center;gap:9px;white-space:nowrap}
+.signal-track{width:57px;height:5px;border-radius:9px;overflow:hidden;background:#31435a;display:inline-block;flex:none}
+.signal-fill{display:block;height:100%;border-radius:9px;background:var(--good)}
+.signal-fill.warn{background:var(--warn)}.signal-fill.bad{background:var(--bad)}
+.view-help{font-size:11px;color:#a3b8ce;margin:10px 0 0;display:flex;gap:15px;flex-wrap:wrap}
+.view-help span{display:inline-flex;align-items:center;gap:6px}
+.view-help i{width:7px;height:7px;border-radius:50%;display:inline-block}
+.chart-preview{border:1px solid #54889c!important;box-shadow:0 22px 65px #000b!important}
+@media(max-width:680px){.signal-track{width:32px}.signal-cell{gap:5px}.panel{padding:15px}}
+
+:root{--bg:#080e17;--panel:#121f2e;--border:#294057;--muted:#92a7bd;--green:#4de1b0;--blue:#8bcaff}
+main{max-width:1480px;padding:30px 32px}
+header{border-bottom:1px solid #294057;padding-bottom:20px}
+h1{font-weight:800;font-size:26px;letter-spacing:-.035em}
+header .muted{font-size:12px}
+.panel{background:linear-gradient(150deg,#152436,#0e1825);padding:22px}
+.metric{background:#162a3d;border:1px solid #2d4961;border-radius:12px;padding:19px}
+.metric strong{font-size:34px;letter-spacing:-.04em}
+.metric:nth-child(2){border-color:#287c69;background:linear-gradient(140deg,#154038,#182b3c)}
+.metric:nth-child(2) strong{color:#70f0bf}
+.metric:nth-child(3) strong{color:#a8dbff}
+.controls button{font-size:12px}
+.controls button.active{background:#195345;border:1px solid #3bbc94;color:#b8ffe0}
+#count{font-weight:700;color:#a5ddf5}
+table th{background:#1a2c3e;font-size:11px;text-transform:uppercase}
+table td{font-size:12px;padding:14px 13px}
+.tablewrap{margin-top:12px}
+.preview-subtitle{font-size:11px;color:#91aac3;line-height:1.8}
+@media(max-width:850px){main{padding:18px 12px}.metric strong{font-size:26px}}
 </style></head>
 <body><main>
-<header><div><h1>200日線 上抜け・転換スクリーナー</h1><div class="muted">日米株｜以前は下降していた200日線の上抜け初動</div></div><div><a href="index.html">← 元のスクリーナー</a>　<button id="refresh">再読み込み</button></div></header>
+<header><div><h1>MA200 <span style="color:#83c4d5;font-weight:450">REVERSAL RADAR</span></h1><div class="muted">下降していた200日線を上抜ける初動を検出｜日本株・米国株</div></div><div><a href="index.html">← 元のスクリーナー</a>　<button id="refresh">再読み込み</button></div></header>
 <div class="panel"><div class="metrics"><div class="metric"><small>分析対象</small><strong id="analyzed">—</strong></div><div class="metric"><small>上抜け候補</small><strong id="total">—</strong></div><div class="metric"><small>上抜け直後（5営業日以内）</small><strong id="fresh">—</strong></div></div><p id="status" class="status">読み込み中…</p></div>
 <section class="panel"><div class="controls"><button data-market="jp" class="active">日本株</button><button data-market="us">米国株</button></div><div class="controls"><button data-filter="all" class="active">すべて</button><button data-filter="fresh">上抜け直後</button><button data-filter="confirmed">転換確認</button><input id="q" placeholder="コード・ティッカー・銘柄名で検索" aria-label="銘柄検索"><small id="count"></small></div>
-<div class="tablewrap"><table><thead><tr><th data-sort="Ticker">コード</th><th data-sort="Name">銘柄名</th><th data-sort="Price">株価</th><th data-sort="MA200">200日線</th><th data-sort="Distance_Pct">乖離率</th><th data-sort="Cross_Days_Ago">突破から</th><th data-sort="Cross_Date">突破日</th><th data-sort="Stage">区分</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+<div class="view-help"><span><i style="background:var(--good)"></i>直近5日以内＝初動</span><span><i style="background:var(--warn)"></i>6～20日＝転換確認</span><span>行にマウス＝簡易チャート / コードクリック＝TradingView</span></div><div class="tablewrap"><table><thead><tr><th data-sort="Ticker">コード</th><th data-sort="Name">銘柄名</th><th data-sort="Price">株価</th><th data-sort="MA200">200日線</th><th data-sort="Distance_Pct">乖離率</th><th data-sort="Cross_Days_Ago">突破から</th><th data-sort="Cross_Date">突破日</th><th data-sort="Stage">区分</th></tr></thead><tbody id="rows"></tbody></table></div></section>
 <p class="status">日米とも同一条件：過去60→40営業日前に200日SMAが下降／直近20営業日以内の終値上抜け／現在もSMA200以上／乖離0〜15%。RSやTTは不要。会社イベントやギャップによる上抜けも含みます。値動きはYahoo Financeの調整後日足で判定。投資判断は必ずチャートで確認してください。</p>
 <aside id="chart-preview" class="chart-preview" role="dialog" aria-label="銘柄チャートのプレビュー"><div class="chart-preview-head"><strong id="chart-title"></strong><button type="button" id="chart-close" aria-label="閉じる" style="display:none">×</button></div><div id="chart-meta" class="chart-preview-meta"></div><svg id="chart-svg" viewBox="0 0 370 205" role="img" aria-label="終値と200日移動平均線の直近90営業日"></svg><div class="chart-legend"><span><b style="color:#54dba0">━━</b> 終値</span><span><b style="color:#ae91ff">━━</b> 200日線</span></div><div class="chart-preview-note"><span>行にホバーでプレビュー・行クリックで固定</span><a id="chart-tv" href="#" target="_blank" rel="noopener noreferrer">TradingViewで開く</a></div></aside>
 </main>
@@ -62,7 +110,15 @@ for(const s of items){
   tr.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'&&!chartPinned)positionChart(e);});
   tr.addEventListener('pointerleave',()=>{if(!chartPinned)hideChart();});
   tr.addEventListener('click',e=>{if(e.target.closest('a'))return;if(chartPinned&&pinnedTicker===s.Ticker){hideChart();return;}showChart(s,e,true);});
-  for(const v of [s.Name,(market==='us'?'$':'¥')+fmt(s.Price),(market==='us'?'$':'¥')+fmt(s.MA200),fmt(s.Distance_Pct)+'%',s.Cross_Days_Ago+'営業日',s.Cross_Date,s.Stage]){const cell=document.createElement('td');cell.textContent=v;tr.append(cell);}body.append(tr);
+  for(const v of [s.Name,(market==='us'?'$':'¥')+fmt(s.Price),(market==='us'?'$':'¥')+fmt(s.MA200)]){const cell=document.createElement('td');cell.textContent=v;tr.append(cell);}
+  {const td=document.createElement('td');const wrap=document.createElement('div');wrap.className='signal-cell';
+   const val=Number(s.Distance_Pct);const n=document.createElement('span');n.className='signal-number '+(val<=5?'good':val<=10?'warn':'');n.textContent=fmt(s.Distance_Pct)+'%';wrap.append(n);
+   if(Number.isFinite(val)){const track=document.createElement('span');track.className='signal-track';const fill=document.createElement('span');fill.className='signal-fill'+(val>10?' warn':'');fill.style.width=Math.max(4,100-Math.min(100,Math.max(0,val)/15*100))+'%';track.append(fill);wrap.append(track);}
+   td.append(wrap);tr.append(td);}
+  {const td=document.createElement('td');const p=document.createElement('span');const fresh=Number(s.Cross_Days_Ago)<=5;p.className='status-pill '+(fresh?'good':'warn');p.textContent=s.Cross_Days_Ago+'営業日';td.append(p);tr.append(td);}
+  {const td=document.createElement('td');td.textContent=s.Cross_Date;tr.append(td);}
+  {const td=document.createElement('td');const p=document.createElement('span');const fresh=Number(s.Cross_Days_Ago)<=5;p.className='status-pill '+(fresh?'good':'warn');p.textContent=fresh?'初動':'転換確認';td.append(p);tr.append(td);}
+  body.append(tr);
 }
 if(!items.length){const tr=document.createElement('tr');const c=document.createElement('td');c.colSpan=8;c.textContent='該当銘柄なし';tr.append(c);body.append(tr);}}
 const chartBox=el('chart-preview');
