@@ -365,21 +365,12 @@ tbody tr:hover td:first-child{box-shadow:inset 3px 0 #55d5d0}
   </div>
 </header>
 
-<section class="panel" id="market-panel" hidden>
-  <div class="market-heading">
-    <h2><span class="section-kicker">01 / MARKET PULSE</span>米国マーケット環境 <span class="meta">独自モデル</span></h2>
-    <span class="market-tag" id="market-regime">—</span>
-  </div>
-  <div class="market-grid" id="market-metrics"></div>
-  <p class="note" id="market-footnote">指数・市場の広がり・先導株の強さを確認。売買の自動判断には使用しません。</p>
-</section>
-
 <section class="stats" id="stats"></section>
 
 <section class="panel">
   <div class="filterbar">
     <div>
-      <h2><span class="section-kicker">02 / OPPORTUNITY RADAR</span>スクリーニング結果</h2>
+      <h2><span class="section-kicker">01 / OPPORTUNITY RADAR</span>スクリーニング結果</h2>
       <div class="meta" id="summary">—</div>
     </div>
     <div class="rightcontrols">
@@ -412,7 +403,7 @@ tbody tr:hover td:first-child{box-shadow:inset 3px 0 #55d5d0}
 </section>
 
 <section class="panel" id="detailpanel">
-  <div class="detail-heading"><span class="section-kicker">03 / SECURITY INSPECTOR</span><h2 id="detailtitle">銘柄詳細</h2></div>
+  <div class="detail-heading"><span class="section-kicker">02 / SECURITY INSPECTOR</span><h2 id="detailtitle">銘柄詳細</h2></div>
   <div class="details" id="details">
     <div class="muted">
       一覧で銘柄をクリックすると判定の内訳を表示します。
@@ -632,66 +623,8 @@ function match(s){
   }
 }
 
-function renderUsMarket(){
-  const panel=$('market-panel');
-  panel.hidden=market!=='US';
-  if(market!=='US')return;
-  const m=data?.market_environment;
-  const tag=$('market-regime');
-  const grid=$('market-metrics');
-  grid.replaceChildren();
-  if(!m){
-    tag.textContent='未取得';
-    tag.className='market-tag';
-    $('market-footnote').textContent='米国株用スクリーナーを更新すると、ここに地合い判定が表示されます。';
-    return;
-  }
-  const cautionDays = m.caution_streak_days;
-  tag.textContent=m.regime+(m.score==null?'':'（'+m.score+'/4）') +
-    (m.regime==='警戒' && Number.isInteger(cautionDays) ? '・'+cautionDays+'営業日継続' : '');
-  tag.className='market-tag '+(m.regime==='強気'?'bull':m.regime==='警戒'?'caution':'neutral');
-  const i=m.indexes||{};
-  const cells=[
-    ['S&P500 / SPY',i.SPY?(i.SPY.trend_positive?'上昇トレンド':'要注意'):'取得不可',i.SPY?.bar_date||'—'],
-    ['NASDAQ100 / QQQ',i.QQQ?(i.QQQ.trend_positive?'上昇トレンド':'要注意'):'取得不可',i.QQQ?.bar_date||'—'],
-    ['50日線より上の銘柄',m.breadth_above_ma50_pct==null?'—':m.breadth_above_ma50_pct.toFixed(1)+'%',(m.breadth_coverage??0)+'銘柄で集計'],
-    ['TT＋RS70先導株',m.leader_pct==null?'—':m.leader_pct.toFixed(1)+'%',(m.leader_count??0)+' / '+(m.universe_count??0)+'銘柄'],
-    ['警戒継続',m.caution_streak_days==null?'—':m.caution_streak_days+'営業日',m.regime==='警戒' ? '導入後の記録：'+(m.caution_streak_since||'開始日不明') : '警戒中ではありません']
-  ];
-  for(const [label,val,sub] of cells){
-    const cell=document.createElement('div');
-    cell.className='market-cell';
-    if(label==='S&P500 / SPY'||label==='NASDAQ100 / QQQ'){
-      cell.dataset.signal=val==='上昇トレンド'?'good':val==='要注意'?'bad':'neutral';
-    } else if(label==='50日線より上の銘柄' || label==='TT＋RS70先導株') {
-      const pct=parseFloat(val);
-      const floor=label==='50日線より上の銘柄'?55:10;
-      cell.dataset.signal=Number.isFinite(pct)?(pct>=floor?'good':'warn'):'neutral';
-      if(Number.isFinite(pct)){
-        const meter=document.createElement('div');meter.className='market-meter';
-        const bar=document.createElement('span');bar.style.width=Math.min(100,Math.max(0,pct))+'%';meter.append(bar);
-        cell.dataset.meterWidth=String(pct);
-      }
-    } else if(label==='警戒継続'){
-      cell.dataset.signal=m.regime==='警戒'?'bad':'neutral';
-    }
-    const a=document.createElement('small');a.textContent=label;
-    const b=document.createElement('b');b.textContent=val;
-    const c=document.createElement('div');c.className='meta';c.textContent=sub;
-    cell.append(a,b,c);
-    if(cell.dataset.meterWidth){
-      const meter=document.createElement('div');meter.className='market-meter';
-      const bar=document.createElement('span');bar.style.width=Math.min(100,Math.max(0,Number(cell.dataset.meterWidth)))+'%';
-      meter.append(bar);cell.append(meter);
-    }
-    grid.append(cell);
-  }
-  $('market-footnote').textContent='独自の試験判定（ミネルヴィニ公式モデルではありません）。指数はSPY・QQQで代用。指数トレンド2点＋Breadth55%以上1点＋先導株10%以上1点。3～4点＝強気、2点＝中立、0～1点＝警戒。警戒継続は導入後に保存した確定日足の観測回数で、導入前の期間や実行しなかった営業日は含みません。株式の候補抽出には影響しません。';
-}
-
 function render(){
   if(!data)return;
-  renderUsMarket();
 
   const stocks=data.stocks;
 
