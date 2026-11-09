@@ -611,6 +611,29 @@ def setup_metrics(df):
     dry = dry_ratio is not None and dry_ratio <= VOLUME_DRY_MAX_RATIO
     return distance_pct, dry_ratio, near, dry
 
+# S&P500に含まれない監視銘柄の名称。S&P500銘柄は公式構成一覧のSecurity列を優先。
+COMPANY_NAMES = {
+    "ARM": "Arm Holdings", "MRVL": "Marvell Technology", "ASML": "ASML Holding",
+    "TSM": "Taiwan Semiconductor Manufacturing", "COHR": "Coherent", "LITE": "Lumentum Holdings",
+    "SITM": "SiTime", "ALAB": "Astera Labs", "CRDO": "Credo Technology Group",
+    "CAMT": "Camtek", "SNDK": "SanDisk", "SHOP": "Shopify", "PLTR": "Palantir Technologies",
+    "SNOW": "Snowflake", "DDOG": "Datadog", "NET": "Cloudflare", "MDB": "MongoDB",
+    "HUBS": "HubSpot", "IOT": "Samsara", "CRWD": "CrowdStrike", "PANW": "Palo Alto Networks",
+    "APP": "AppLovin", "NBIS": "Nebius Group", "CRWV": "CoreWeave",
+    "IREN": "IREN", "BE": "Bloom Energy", "VRT": "Vertiv Holdings", "GEV": "GE Vernova",
+    "RKLB": "Rocket Lab", "ASTS": "AST SpaceMobile", "KTOS": "Kratos Defense & Security Solutions",
+    "SOFI": "SoFi Technologies", "HOOD": "Robinhood Markets", "COIN": "Coinbase Global",
+    "SQ": "Block", "PL": "Planet Labs", "ORCL": "Oracle", "NOW": "ServiceNow",
+    "ZS": "Zscaler", "FTNT": "Fortinet", "AMD": "Advanced Micro Devices",
+    "QCOM": "QUALCOMM", "INTC": "Intel", "MU": "Micron Technology", "MCHP": "Microchip Technology",
+    "MPWR": "Monolithic Power Systems", "ADI": "Analog Devices", "KLAC": "KLA",
+    "AMAT": "Applied Materials", "LRCX": "Lam Research", "ON": "ON Semiconductor",
+    "AVGO": "Broadcom", "NVDA": "NVIDIA", "SNAP": "Snap", "SMCI": "Super Micro Computer",
+    "NVO": "Novo Nordisk", "SPOT": "Spotify Technology", "U": "Unity Software",
+    "ARM": "Arm Holdings", "WIX": "Wix.com", "SE": "Sea Limited",
+    "SNDK": "Sandisk", "GOOGL": "Alphabet", "GOOG": "Alphabet",
+}
+
 # S&P 500構成銘柄を自動取得
 def get_sp500_tickers():
     from io import StringIO
@@ -629,9 +652,17 @@ def get_sp500_tickers():
         html = response.read().decode("utf-8")
 
     tables = pd.read_html(StringIO(html))
-    tickers = tables[0]["Symbol"].tolist()
-
-    return [ticker.replace(".", "-") for ticker in tickers]
+    table = tables[0]
+    if "Symbol" not in table.columns or "Security" not in table.columns:
+        raise ValueError("S&P500一覧の列構成が変わりました")
+    sp500_symbols = []
+    for _, row in table.iterrows():
+        sym = str(row["Symbol"]).strip().replace(".", "-")
+        company = str(row["Security"]).strip()
+        if sym and company and company.lower() != "nan":
+            COMPANY_NAMES[sym] = company
+            sp500_symbols.append(sym)
+    return sp500_symbols
 
 
 # VCP（値動きの収縮）候補を判定
@@ -992,6 +1023,7 @@ for ticker in TICKERS:
             ],
             "BAR_DATE": df.index[-1].strftime("%Y-%m-%d"),
             "Ticker": ticker,
+            "Name": COMPANY_NAMES.get(ticker, ""),
             "Price": round(price, 2),
             "MA50": round(float(ma50.iloc[-1]), 2),
             "MA150": round(float(ma150.iloc[-1]), 2),
