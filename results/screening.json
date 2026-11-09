@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T17:16:13.653648+00:00",
+  "updated_at": "2026-11-09T01:24:03.191185+00:00",
   "total": 522,
   "passed": 73,
   "setup_passed": 0,
@@ -43890,6 +43890,8 @@
     "breadth_coverage": 522,
     "leader_count": 73,
     "leader_pct": 14.0,
-    "universe_count": 522
+    "universe_count": 522,
+    "caution_streak_days": 0,
+    "caution_streak_since": null
   }
 }
