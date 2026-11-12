@@ -958,6 +958,21 @@ for ticker in TICKERS:
             "Name": CODE_TO_NAME.get(ticker.removesuffix(".T"), ""),
             "Market": "JP",
             "YahooSymbol": ticker,
+            # Hover chart: latest 90 confirmed trading days (close + 200-day SMA).
+            # Keep numeric values finite so JSON serialization and the SVG viewer work.
+            "Chart": [
+                {
+                    "date": dt.strftime("%Y-%m-%d"),
+                    "close": round(float(c), 2),
+                    "ma200": round(float(m), 2),
+                }
+                for dt, c, m in zip(
+                    close.tail(90).index,
+                    close.tail(90).to_numpy(dtype=float),
+                    ma200.tail(90).to_numpy(dtype=float),
+                )
+                if math.isfinite(float(c)) and math.isfinite(float(m))
+            ],
             "Price": round(price, 2),
             "MA50": round(float(ma50.iloc[-1]), 2),
             "MA150": round(float(ma150.iloc[-1]), 2),
