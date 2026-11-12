@@ -342,6 +342,10 @@ tbody tr:hover td:first-child{box-shadow:inset 3px 0 #55d5d0}
 .status-pill.broken{background:#0c4039;color:#70f0bf;border-color:#277e68}
 .status-pill.not-broken::before{background:#ffcb69}
 .status-pill.broken::before{background:#4de1b0}
+/* Market cap filter */
+.cap-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:11px 0 8px;padding:10px 12px;background:#142537;border:1px solid #294257;border-radius:9px}
+.cap-controls label{cursor:pointer;font-size:13px;color:#d8e4f0;display:flex;align-items:center;gap:9px}
+.cap-controls input{accent-color:#66d5a9;width:17px;height:17px}
 /* Favorite watchlist: local to this browser */
 .favorite-btn{background:transparent;border:0;padding:4px 7px;margin:0 7px 0 0;min-width:30px;color:#8194a9;font-size:22px;line-height:1;vertical-align:middle;cursor:pointer;border-radius:7px}
 .favorite-btn:hover,.favorite-btn:focus-visible{color:#ffdf85;background:#2e3440;outline:1px solid #7b653b}
@@ -389,6 +393,10 @@ tr.favorite-missing{opacity:.82}
   </div>
 
   <div class="filters" id="filters"></div>
+  <div class="cap-controls" id="cap-controls">
+    <label><input id="cap-min-toggle" type="checkbox"> 小型株を除外（米国10億ドル未満／日本500億円未満）</label>
+    <span class="meta" id="cap-filter-note">時価総額が未取得の銘柄は残します</span>
+  </div>
   <div class="favorite-note" id="favorite-note">★はこのブラウザに保存されます。別の端末とは同期しません。</div>
 
   <div class="view-help"><span>RS：相対順位（数値が高いほど強い）</span><span><i style="background:#67b9ed"></i>高値距離：0%に近いほど上抜け直前</span><span>時価総額：列見出しで昇順・降順／未取得は末尾</span><span>突破状況：直近10営業日の履歴（良し悪しではない）</span><span>行にマウス＝チャート / コードクリック＝TradingView</span></div>
@@ -446,6 +454,7 @@ let data = null;
 let market = 'US';
 let filter = 'no_recent_break';
 let sortKey = 'RS';
+let capFilterEnabled = false;
 let desc = true;
 let selected = null;
 const FAVORITE_STORAGE_KEY='my-trading-terminal-favorites-v1';
@@ -734,6 +743,24 @@ function render(){
   let items=(filter==='favorites'?favoritesList:stocks.filter(s=>match(s))).filter(s=>
     (String(s.Ticker??'')+' '+String(s.Name??'')).toUpperCase().includes(q)
   );
+
+  // Only filter out companies with a known, below-threshold market cap.
+  // Unknown market caps must NEVER be treated as zero; this preserves companies such as KO.
+  const capMinimum = market==='JP' ? 50_000_000_000 : 1_000_000_000;
+  let excludedSmallCaps = 0;
+  let missingCaps = 0;
+  if(capFilterEnabled){
+    items=items.filter(s=>{
+      const value=Number(s.MarketCap);
+      const known=s.MarketCap!=null && Number.isFinite(value) && value>0;
+      if(!known){missingCaps++;return true;}
+      if(value<capMinimum){excludedSmallCaps++;return false;}
+      return true;
+    });
+  }
+  $('cap-filter-note').textContent=capFilterEnabled
+    ? `時価総額で${excludedSmallCaps}件除外／未取得${missingCaps}件は残しています`
+    : '時価総額が未取得の銘柄は残します';
 
   items.sort((a,b)=>{    
     const priority = s => {
@@ -1037,6 +1064,7 @@ document.addEventListener('pointerdown',e=>{
 });
 
 $('search').oninput=render;
+$('cap-min-toggle').onchange=e=>{capFilterEnabled=e.target.checked;render();};
 $('refresh').onclick=autoLoad;
 function switchMarket(next){
   if(market === next) return;
