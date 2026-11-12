@@ -126,6 +126,62 @@ def extract_symbol(downloaded, ticker):
     return downloaded.copy()
 
 
+
+def add_market_caps(results, market):
+    """Fill market caps for detected matches only; keep existing valid values.
+
+    This is best-effort: an unavailable cap remains null, never zero.
+    Reuse cached values from previous screening results to reduce calls.
+    """
+    cache = {}
+    files = [Path("results") / f"ma200_{market}.json",
+             Path("results") / ("screening_jp.json" if market == "jp" else "screening.json")]
+    for filename in files:
+        try:
+            previous = json.loads(filename.read_text(encoding="utf-8"))
+            stocks = previous.get("stocks", previous) if isinstance(previous, dict) else previous
+            if not isinstance(stocks, list):
+                continue
+            for item in stocks:
+                if not isinstance(item, dict):
+                    continue
+                cap = item.get("MarketCap")
+                if isinstance(cap, (int, float)) and np.isfinite(cap) and cap > 0:
+                    cache[str(item.get("Ticker", ""))] = int(cap)
+        except (OSError, ValueError, TypeError, KeyError):
+            pass
+
+    success = 0
+    missing = []
+    for s in results:
+        ticker = s["Ticker"]
+        cap = cache.get(ticker)
+        if cap is None:
+            symbol = s.get("YahooSymbol") or (ticker + ".T" if market == "jp" else ticker)
+            try:
+                t = yf.Ticker(symbol)
+                try:
+                    cap = t.fast_info.get("market_cap")
+                except Exception:
+                    cap = None
+                if not isinstance(cap, (int, float)) or not np.isfinite(cap) or cap <= 0:
+                    info = t.info
+                    cap = info.get("marketCap")
+                    if not isinstance(cap, (int, float)) or not np.isfinite(cap) or cap <= 0:
+                        shares = info.get("sharesOutstanding")
+                        price = info.get("regularMarketPrice") or info.get("currentPrice")
+                        cap = shares * price if isinstance(shares, (int, float)) and isinstance(price, (int, float)) and shares > 0 and price > 0 else None
+            except Exception as exc:
+                print(f"MarketCap unavailable for {symbol}: {str(exc)[:160]}", flush=True)
+                cap = None
+        if isinstance(cap, (int, float)) and np.isfinite(cap) and cap > 0:
+            s["MarketCap"] = int(cap)
+            success += 1
+        else:
+            s["MarketCap"] = None
+            missing.append(ticker)
+    print(f"MarketCap coverage: {success}/{len(results)}; missing: {', '.join(missing[:20])}", flush=True)
+
 def main():
     names = get_prime_names()
     tickers = [code + ".T" for code in names]
@@ -158,6 +214,7 @@ def main():
                 errors.append(f"{ticker}: {exc}")
     if analyzed < 500:
         raise RuntimeError(f"分析可能な銘柄が{analyzed}件だけです。データ取得失敗の可能性があるため、旧結果を維持します。")
+    add_market_caps(results, "jp")
     results.sort(key=lambda s: (s["Cross_Days_Ago"], s["Distance_Pct"]))
     output = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
@@ -169,7 +226,7 @@ def main():
     folder = Path("results"); folder.mkdir(exist_ok=True)
     with (folder / "ma200_jp.json").open("w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2, allow_nan=False)
-    pd.DataFrame(results, columns=["Ticker", "Name", "BAR_DATE", "Price", "MA200", "Distance_Pct", "Cross_Days_Ago", "Cross_Date", "Past_MA200_Change_Pct", "Stage", "YahooSymbol"]).to_csv(folder / "ma200_jp.csv", index=False, encoding="utf-8-sig")
+    pd.DataFrame(results, columns=["Ticker", "Name", "BAR_DATE", "Price", "MA200", "Distance_Pct", "Cross_Days_Ago", "Cross_Date", "Past_MA200_Change_Pct", "Stage", "YahooSymbol", "MarketCap"]).to_csv(folder / "ma200_jp.csv", index=False, encoding="utf-8-sig")
     print(f"Finished: prime={len(tickers)}, analyzed={analyzed}, matches={len(results)}, errors={len(errors)}")
     for err in errors[:10]:
         print("Warning:", err)
