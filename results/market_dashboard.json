@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-11-20T04:01:11.118085+00:00",
-  "price_date": "2026-11-19",
+  "updated_at": "2026-11-23T03:45:11.865409+00:00",
+  "price_date": "2026-11-20",
   "universe_label": "現在の米国株スクリーナー対象銘柄",
   "requested_count": 522,
   "priced_count": 522,
   "breadth": {
-    "advancing": 69,
-    "declining": 452,
-    "unchanged": 1,
-    "above_sma50": 254,
-    "above_sma50_pct": 48.7
+    "advancing": 124,
+    "declining": 395,
+    "unchanged": 3,
+    "above_sma50": 215,
+    "above_sma50_pct": 41.2
   },
   "high_low": {
     "high_52w": 0,
@@ -20,236 +20,236 @@
     {
       "ticker": "XLP",
       "name": "生活必需品",
-      "week_pct": -1.32,
-      "month_pct": 3.16
+      "week_pct": -2.05,
+      "month_pct": 0.52
     },
     {
       "ticker": "XLU",
       "name": "公益",
-      "week_pct": -1.83,
-      "month_pct": 2.4
+      "week_pct": -3.07,
+      "month_pct": -0.42
     },
     {
       "ticker": "XLRE",
       "name": "不動産",
-      "week_pct": -2.18,
-      "month_pct": 2.93
-    },
-    {
-      "ticker": "XLC",
-      "name": "通信サービス",
-      "week_pct": -2.78,
-      "month_pct": -4.18
-    },
-    {
-      "ticker": "XLY",
-      "name": "一般消費財",
-      "week_pct": -3.8,
-      "month_pct": 0.3
-    },
-    {
-      "ticker": "XLF",
-      "name": "金融",
-      "week_pct": -4.52,
-      "month_pct": -0.82
-    },
-    {
-      "ticker": "XLI",
-      "name": "資本財",
-      "week_pct": -4.77,
-      "month_pct": -4.13
-    },
-    {
-      "ticker": "XLE",
-      "name": "エネルギー",
-      "week_pct": -5.35,
-      "month_pct": -10.67
+      "week_pct": -4.3,
+      "month_pct": -0.14
     },
     {
       "ticker": "XLV",
       "name": "ヘルスケア",
-      "week_pct": -5.52,
-      "month_pct": -0.83
+      "week_pct": -6.15,
+      "month_pct": -2.24
+    },
+    {
+      "ticker": "XLY",
+      "name": "一般消費財",
+      "week_pct": -6.27,
+      "month_pct": -2.22
+    },
+    {
+      "ticker": "XLE",
+      "name": "エネルギー",
+      "week_pct": -6.85,
+      "month_pct": -10.45
+    },
+    {
+      "ticker": "XLF",
+      "name": "金融",
+      "week_pct": -7.0,
+      "month_pct": -3.67
+    },
+    {
+      "ticker": "XLI",
+      "name": "資本財",
+      "week_pct": -7.35,
+      "month_pct": -6.21
     },
     {
       "ticker": "XLB",
       "name": "素材",
-      "week_pct": -5.58,
-      "month_pct": -3.7
+      "week_pct": -7.45,
+      "month_pct": -6.48
+    },
+    {
+      "ticker": "XLC",
+      "name": "通信サービス",
+      "week_pct": -7.97,
+      "month_pct": -6.88
     },
     {
       "ticker": "XLK",
       "name": "情報技術",
-      "week_pct": -7.53,
-      "month_pct": -14.77
+      "week_pct": -12.49,
+      "month_pct": -18.28
     },
     {
       "ticker": "SMH",
       "name": "半導体",
-      "week_pct": -10.81,
-      "month_pct": -19.62
+      "week_pct": -17.81,
+      "month_pct": -23.56
     }
   ],
   "rs_rankings": [
     {
-      "ticker": "CRL",
-      "name": "Charles River Laboratories",
-      "rs": 98,
-      "price": 327.93,
-      "trend_pass": true,
-      "high_52w_distance_pct": -12.81
-    },
-    {
       "ticker": "VTRS",
       "name": "Viatris",
-      "rs": 97,
-      "price": 19.88,
+      "rs": 98,
+      "price": 19.63,
       "trend_pass": true,
-      "high_52w_distance_pct": -5.6
-    },
-    {
-      "ticker": "TXN",
-      "name": "Texas Instruments",
-      "rs": 97,
-      "price": 285.75,
-      "trend_pass": true,
-      "high_52w_distance_pct": -13.14
+      "high_52w_distance_pct": -6.79
     },
     {
       "ticker": "SWK",
       "name": "Stanley Black & Decker",
-      "rs": 96,
-      "price": 107.64,
+      "rs": 97,
+      "price": 106.62,
       "trend_pass": true,
-      "high_52w_distance_pct": -9.03
+      "high_52w_distance_pct": -9.9
     },
     {
       "ticker": "TGT",
       "name": "Target Corporation",
       "rs": 96,
-      "price": 167.46,
+      "price": 165.83,
       "trend_pass": true,
-      "high_52w_distance_pct": -0.74
+      "high_52w_distance_pct": -1.7
     },
     {
-      "ticker": "MAR",
-      "name": "Marriott International",
-      "rs": 93,
-      "price": 414.04,
+      "ticker": "BDX",
+      "name": "Becton Dickinson",
+      "rs": 94,
+      "price": 212.78,
       "trend_pass": true,
-      "high_52w_distance_pct": -3.36
+      "high_52w_distance_pct": -2.41
+    },
+    {
+      "ticker": "HAS",
+      "name": "Hasbro",
+      "rs": 94,
+      "price": 112.41,
+      "trend_pass": true,
+      "high_52w_distance_pct": -8.82
+    },
+    {
+      "ticker": "WST",
+      "name": "West Pharmaceutical Services",
+      "rs": 94,
+      "price": 390.3,
+      "trend_pass": true,
+      "high_52w_distance_pct": -6.58
+    },
+    {
+      "ticker": "CBOE",
+      "name": "Cboe Global Markets",
+      "rs": 93,
+      "price": 357.71,
+      "trend_pass": true,
+      "high_52w_distance_pct": -5.24
+    },
+    {
+      "ticker": "BIIB",
+      "name": "Biogen",
+      "rs": 93,
+      "price": 249.59,
+      "trend_pass": true,
+      "high_52w_distance_pct": -2.07
     },
     {
       "ticker": "BBY",
       "name": "Best Buy",
       "rs": 93,
-      "price": 99.27,
+      "price": 97.95,
       "trend_pass": true,
-      "high_52w_distance_pct": -6.6
+      "high_52w_distance_pct": -7.84
     },
     {
-      "ticker": "WST",
-      "name": "West Pharmaceutical Services",
-      "rs": 93,
-      "price": 396.69,
-      "trend_pass": true,
-      "high_52w_distance_pct": -5.05
-    },
-    {
-      "ticker": "CBOE",
-      "name": "Cboe Global Markets",
+      "ticker": "MAR",
+      "name": "Marriott International",
       "rs": 92,
-      "price": 357.69,
+      "price": 406.64,
       "trend_pass": true,
-      "high_52w_distance_pct": -5.25
+      "high_52w_distance_pct": -5.09
     },
     {
-      "ticker": "BDX",
-      "name": "Becton Dickinson",
+      "ticker": "CPAY",
+      "name": "Corpay",
       "rs": 92,
-      "price": 212.68,
+      "price": 429.84,
       "trend_pass": true,
-      "high_52w_distance_pct": -2.45
+      "high_52w_distance_pct": -7.01
     },
     {
-      "ticker": "GWW",
-      "name": "W. W. Grainger",
+      "ticker": "MAS",
+      "name": "Masco",
+      "rs": 92,
+      "price": 82.6,
+      "trend_pass": true,
+      "high_52w_distance_pct": -4.5
+    },
+    {
+      "ticker": "HST",
+      "name": "Host Hotels & Resorts",
       "rs": 91,
-      "price": 1423.88,
+      "price": 24.1,
       "trend_pass": true,
-      "high_52w_distance_pct": -5.24
+      "high_52w_distance_pct": -7.7
     },
     {
       "ticker": "EBAY",
       "name": "eBay Inc.",
       "rs": 91,
-      "price": 117.22,
+      "price": 115.59,
       "trend_pass": true,
-      "high_52w_distance_pct": -6.34
+      "high_52w_distance_pct": -7.64
     },
     {
-      "ticker": "CDW",
-      "name": "CDW Corporation",
-      "rs": 91,
-      "price": 169.01,
+      "ticker": "LH",
+      "name": "Labcorp",
+      "rs": 90,
+      "price": 367.13,
       "trend_pass": true,
-      "high_52w_distance_pct": -2.35
-    },
-    {
-      "ticker": "CPAY",
-      "name": "Corpay",
-      "rs": 91,
-      "price": 434.29,
-      "trend_pass": true,
-      "high_52w_distance_pct": -6.04
+      "high_52w_distance_pct": -1.43
     },
     {
       "ticker": "DLTR",
       "name": "Dollar Tree",
       "rs": 90,
-      "price": 140.24,
+      "price": 137.96,
       "trend_pass": true,
-      "high_52w_distance_pct": -4.6
+      "high_52w_distance_pct": -6.15
     },
     {
-      "ticker": "MAS",
-      "name": "Masco",
+      "ticker": "CAH",
+      "name": "Cardinal Health",
       "rs": 90,
-      "price": 82.79,
+      "price": 272.81,
       "trend_pass": true,
-      "high_52w_distance_pct": -4.28
+      "high_52w_distance_pct": -3.89
     },
     {
-      "ticker": "BIIB",
-      "name": "Biogen",
-      "rs": 90,
-      "price": 247.13,
+      "ticker": "AIZ",
+      "name": "Assurant",
+      "rs": 89,
+      "price": 316.65,
       "trend_pass": true,
-      "high_52w_distance_pct": -3.04
+      "high_52w_distance_pct": -2.21
     },
     {
-      "ticker": "ANET",
-      "name": "Arista Networks",
+      "ticker": "DGX",
+      "name": "Quest Diagnostics",
       "rs": 88,
-      "price": 193.94,
+      "price": 258.28,
       "trend_pass": true,
-      "high_52w_distance_pct": -10.52
+      "high_52w_distance_pct": -1.5
     },
     {
-      "ticker": "HST",
-      "name": "Host Hotels & Resorts",
+      "ticker": "GWW",
+      "name": "W. W. Grainger",
       "rs": 88,
-      "price": 24.49,
+      "price": 1357.35,
       "trend_pass": true,
-      "high_52w_distance_pct": -6.2
-    },
-    {
-      "ticker": "BEN",
-      "name": "Franklin Resources",
-      "rs": 88,
-      "price": 33.27,
-      "trend_pass": true,
-      "high_52w_distance_pct": -8.35
+      "high_52w_distance_pct": -9.67
     }
   ],
   "market_regime": {
@@ -260,31 +260,31 @@
     "indexes": {
       "SPY": {
         "label": "S&P500（SPY）",
-        "bar_date": "2026-11-19",
-        "close": 715.87,
-        "ma50": 761.48,
-        "ma200": 730.2,
+        "bar_date": "2026-11-20",
+        "close": 689.81,
+        "ma50": 760.03,
+        "ma200": 730.29,
         "above_ma50": false,
         "above_ma200": false,
         "trend_positive": false
       },
       "QQQ": {
         "label": "NASDAQ100（QQQ）",
-        "bar_date": "2026-11-19",
-        "close": 645.04,
-        "ma50": 713.0,
-        "ma200": 682.01,
+        "bar_date": "2026-11-20",
+        "close": 608.45,
+        "ma50": 710.88,
+        "ma200": 682.07,
         "above_ma50": false,
         "above_ma200": false,
         "trend_positive": false
       }
     },
-    "breadth_above_ma50_pct": 48.5,
+    "breadth_above_ma50_pct": 41.2,
     "breadth_coverage": 522,
-    "leader_count": 58,
-    "leader_pct": 11.1,
+    "leader_count": 53,
+    "leader_pct": 10.2,
     "universe_count": 522,
-    "caution_streak_days": 2,
+    "caution_streak_days": 3,
     "caution_streak_since": "2026-11-18"
   },
   "methodology": "Adjusted daily prices; 252-session close high for leadership distance; sector ETF 5 and 21 sessions; RS unchanged; RS leaderboard limited to current TT-passing stocks."
