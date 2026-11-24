@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-23T22:48:34.613894+00:00",
+  "updated_at": "2026-11-24T21:26:22.017494+00:00",
   "market": "JPX Prime",
   "universe": 1546,
-  "analyzed": 1539,
+  "analyzed": 1538,
   "total": 43,
   "settings": {
     "cross_lookback_days": 20,
@@ -4875,7 +4875,7 @@
         {
           "date": "2026-09-03",
           "close": 38772.03,
-          "ma200": 39865.66
+          "ma200": 39865.65
         },
         {
           "date": "2026-09-04",
