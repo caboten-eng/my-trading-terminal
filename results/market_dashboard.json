@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-11-25T05:29:26.829648+00:00",
-  "price_date": "2026-11-24",
+  "updated_at": "2026-11-26T05:08:10.218001+00:00",
+  "price_date": "2026-11-25",
   "universe_label": "現在の米国株スクリーナー対象銘柄",
   "requested_count": 522,
   "priced_count": 522,
   "breadth": {
-    "advancing": 349,
-    "declining": 172,
-    "unchanged": 1,
-    "above_sma50": 280,
-    "above_sma50_pct": 53.6
+    "advancing": 379,
+    "declining": 140,
+    "unchanged": 3,
+    "above_sma50": 299,
+    "above_sma50_pct": 57.3
   },
   "high_low": {
     "high_52w": 0,
@@ -18,76 +18,76 @@
   },
   "sectors": [
     {
-      "ticker": "XLY",
-      "name": "一般消費財",
-      "week_pct": 0.53,
-      "month_pct": 3.03
-    },
-    {
-      "ticker": "XLP",
-      "name": "生活必需品",
-      "week_pct": 0.46,
-      "month_pct": 4.46
-    },
-    {
-      "ticker": "XLU",
-      "name": "公益",
-      "week_pct": -0.05,
-      "month_pct": 2.0
+      "ticker": "XLB",
+      "name": "素材",
+      "week_pct": 1.49,
+      "month_pct": -1.1
     },
     {
       "ticker": "XLV",
       "name": "ヘルスケア",
-      "week_pct": -0.28,
-      "month_pct": 3.03
+      "week_pct": 1.39,
+      "month_pct": 2.51
+    },
+    {
+      "ticker": "XLP",
+      "name": "生活必需品",
+      "week_pct": 1.23,
+      "month_pct": 5.91
     },
     {
       "ticker": "XLRE",
       "name": "不動産",
-      "week_pct": -0.3,
-      "month_pct": 1.54
-    },
-    {
-      "ticker": "XLC",
-      "name": "通信サービス",
-      "week_pct": -0.77,
-      "month_pct": 0.58
-    },
-    {
-      "ticker": "XLB",
-      "name": "素材",
-      "week_pct": -1.32,
-      "month_pct": -2.36
+      "week_pct": 0.55,
+      "month_pct": 3.35
     },
     {
       "ticker": "XLF",
       "name": "金融",
-      "week_pct": -1.68,
-      "month_pct": 0.16
+      "week_pct": 0.16,
+      "month_pct": 1.13
     },
     {
-      "ticker": "XLI",
-      "name": "資本財",
-      "week_pct": -1.91,
-      "month_pct": -3.2
+      "ticker": "XLU",
+      "name": "公益",
+      "week_pct": 0.14,
+      "month_pct": 1.77
     },
     {
-      "ticker": "XLK",
-      "name": "情報技術",
-      "week_pct": -3.78,
-      "month_pct": -15.69
+      "ticker": "XLC",
+      "name": "通信サービス",
+      "week_pct": -0.19,
+      "month_pct": 1.74
     },
     {
       "ticker": "XLE",
       "name": "エネルギー",
-      "week_pct": -4.59,
-      "month_pct": -13.2
+      "week_pct": -0.64,
+      "month_pct": -10.72
+    },
+    {
+      "ticker": "XLI",
+      "name": "資本財",
+      "week_pct": -1.04,
+      "month_pct": -2.96
+    },
+    {
+      "ticker": "XLY",
+      "name": "一般消費財",
+      "week_pct": -1.43,
+      "month_pct": 1.77
+    },
+    {
+      "ticker": "XLK",
+      "name": "情報技術",
+      "week_pct": -4.9,
+      "month_pct": -17.78
     },
     {
       "ticker": "SMH",
       "name": "半導体",
-      "week_pct": -7.25,
-      "month_pct": -21.21
+      "week_pct": -8.07,
+      "month_pct": -24.29
     }
   ],
   "rs_rankings": [
@@ -95,119 +95,119 @@
       "ticker": "MRNA",
       "name": "Moderna",
       "rs": 99,
-      "price": 227.38,
+      "price": 220.84,
       "trend_pass": true,
-      "high_52w_distance_pct": -15.47
+      "high_52w_distance_pct": -17.9
     },
     {
       "ticker": "CRL",
       "name": "Charles River Laboratories",
       "rs": 98,
-      "price": 336.13,
+      "price": 332.08,
       "trend_pass": true,
-      "high_52w_distance_pct": -10.63
+      "high_52w_distance_pct": -11.7
     },
     {
       "ticker": "VTRS",
       "name": "Viatris",
-      "rs": 97,
-      "price": 19.85,
+      "rs": 98,
+      "price": 19.83,
       "trend_pass": true,
-      "high_52w_distance_pct": -5.17
+      "high_52w_distance_pct": -5.26
+    },
+    {
+      "ticker": "OKTA",
+      "name": "Okta, Inc.",
+      "rs": 98,
+      "price": 201.77,
+      "trend_pass": true,
+      "high_52w_distance_pct": -13.08
     },
     {
       "ticker": "TGT",
       "name": "Target Corporation",
-      "rs": 96,
-      "price": 176.06,
+      "rs": 97,
+      "price": 172.22,
       "trend_pass": true,
-      "high_52w_distance_pct": 0.0
+      "high_52w_distance_pct": -2.18
+    },
+    {
+      "ticker": "SWK",
+      "name": "Stanley Black & Decker",
+      "rs": 96,
+      "price": 109.22,
+      "trend_pass": true,
+      "high_52w_distance_pct": -7.7
     },
     {
       "ticker": "DLTR",
       "name": "Dollar Tree",
       "rs": 95,
-      "price": 154.65,
+      "price": 152.21,
       "trend_pass": true,
-      "high_52w_distance_pct": 0.0
+      "high_52w_distance_pct": -1.58
     },
     {
-      "ticker": "SWK",
-      "name": "Stanley Black & Decker",
-      "rs": 95,
-      "price": 109.25,
-      "trend_pass": true,
-      "high_52w_distance_pct": -7.67
-    },
-    {
-      "ticker": "BIIB",
-      "name": "Biogen",
+      "ticker": "BBY",
+      "name": "Best Buy",
       "rs": 94,
-      "price": 269.11,
+      "price": 102.58,
       "trend_pass": true,
-      "high_52w_distance_pct": 0.0
+      "high_52w_distance_pct": -3.48
     },
     {
       "ticker": "BDX",
       "name": "Becton Dickinson",
-      "rs": 93,
-      "price": 220.0,
+      "rs": 94,
+      "price": 221.24,
       "trend_pass": true,
       "high_52w_distance_pct": 0.0
     },
     {
-      "ticker": "GILD",
-      "name": "Gilead Sciences",
+      "ticker": "CPAY",
+      "name": "Corpay",
       "rs": 93,
-      "price": 178.29,
+      "price": 454.33,
       "trend_pass": true,
-      "high_52w_distance_pct": 0.0
-    },
-    {
-      "ticker": "CBOE",
-      "name": "Cboe Global Markets",
-      "rs": 92,
-      "price": 362.52,
-      "trend_pass": true,
-      "high_52w_distance_pct": -3.97
+      "high_52w_distance_pct": -1.71
     },
     {
       "ticker": "HAS",
       "name": "Hasbro",
-      "rs": 92,
-      "price": 112.24,
+      "rs": 93,
+      "price": 110.58,
       "trend_pass": true,
-      "high_52w_distance_pct": -8.96
+      "high_52w_distance_pct": -10.31
+    },
+    {
+      "ticker": "BIIB",
+      "name": "Biogen",
+      "rs": 92,
+      "price": 261.44,
+      "trend_pass": true,
+      "high_52w_distance_pct": -2.85
     },
     {
       "ticker": "HST",
       "name": "Host Hotels & Resorts",
       "rs": 92,
-      "price": 24.86,
+      "price": 24.88,
       "trend_pass": true,
-      "high_52w_distance_pct": -4.79
+      "high_52w_distance_pct": -4.71
     },
     {
-      "ticker": "CPAY",
-      "name": "Corpay",
+      "ticker": "GILD",
+      "name": "Gilead Sciences",
       "rs": 91,
-      "price": 447.91,
+      "price": 176.74,
       "trend_pass": true,
-      "high_52w_distance_pct": -3.1
+      "high_52w_distance_pct": -0.87
     },
     {
-      "ticker": "BBY",
-      "name": "Best Buy",
-      "rs": 90,
-      "price": 99.62,
-      "trend_pass": true,
-      "high_52w_distance_pct": -6.27
-    },
-    {
-      "ticker": "LH",
-      "name": "Labcorp",
-      "rs": 90,
-      "price": 376.11,
+      "ticker": "MAS",
+      "name": "Masco",
+      "rs": 91,
+      "price": 86.93,
       "trend_pass": true,
       "high_52w_distance_pct": 0.0
     },
@@ -215,77 +215,77 @@
       "ticker": "MAR",
       "name": "Marriott International",
       "rs": 90,
-      "price": 416.23,
+      "price": 415.77,
       "trend_pass": true,
-      "high_52w_distance_pct": -2.85
-    },
-    {
-      "ticker": "WST",
-      "name": "West Pharmaceutical Services",
-      "rs": 89,
-      "price": 388.75,
-      "trend_pass": true,
-      "high_52w_distance_pct": -6.95
-    },
-    {
-      "ticker": "MAS",
-      "name": "Masco",
-      "rs": 88,
-      "price": 85.1,
-      "trend_pass": true,
-      "high_52w_distance_pct": -1.61
+      "high_52w_distance_pct": -2.96
     },
     {
       "ticker": "CAH",
       "name": "Cardinal Health",
-      "rs": 88,
-      "price": 279.65,
+      "rs": 89,
+      "price": 282.91,
       "trend_pass": true,
-      "high_52w_distance_pct": -1.48
+      "high_52w_distance_pct": -0.33
     },
     {
       "ticker": "AIZ",
       "name": "Assurant",
-      "rs": 88,
-      "price": 322.64,
+      "rs": 89,
+      "price": 325.73,
       "trend_pass": true,
-      "high_52w_distance_pct": -0.36
+      "high_52w_distance_pct": 0.0
+    },
+    {
+      "ticker": "MO",
+      "name": "Altria",
+      "rs": 89,
+      "price": 76.28,
+      "trend_pass": true,
+      "high_52w_distance_pct": -3.32
+    },
+    {
+      "ticker": "DRI",
+      "name": "Darden Restaurants",
+      "rs": 89,
+      "price": 241.16,
+      "trend_pass": true,
+      "high_52w_distance_pct": 0.0
     }
   ],
   "market_regime": {
     "model": "US market monitor (experimental, not Minervini proprietary model)",
-    "regime": "警戒",
-    "score": 1,
+    "regime": "中立",
+    "score": 2,
     "max_score": 4,
     "indexes": {
       "SPY": {
         "label": "S&P500（SPY）",
-        "bar_date": "2026-11-24",
-        "close": 718.78,
-        "ma50": 758.56,
-        "ma200": 730.62,
+        "bar_date": "2026-11-25",
+        "close": 716.7,
+        "ma50": 757.85,
+        "ma200": 730.77,
         "above_ma50": false,
         "above_ma200": false,
         "trend_positive": false
       },
       "QQQ": {
         "label": "NASDAQ100（QQQ）",
-        "bar_date": "2026-11-24",
-        "close": 638.1,
-        "ma50": 708.42,
-        "ma200": 682.42,
+        "bar_date": "2026-11-25",
+        "close": 633.93,
+        "ma50": 707.02,
+        "ma200": 682.54,
         "above_ma50": false,
         "above_ma200": false,
         "trend_positive": false
       }
     },
-    "breadth_above_ma50_pct": 53.6,
+    "breadth_above_ma50_pct": 57.3,
     "breadth_coverage": 522,
-    "leader_count": 70,
-    "leader_pct": 13.4,
+    "leader_count": 73,
+    "leader_pct": 14.0,
     "universe_count": 522,
-    "caution_streak_days": 5,
-    "caution_streak_since": "2026-11-18"
+    "caution_streak_days": 0,
+    "caution_streak_since": null
   },
   "methodology": "Adjusted daily prices; 252-session close high for leadership distance; sector ETF 5 and 21 sessions; RS unchanged; RS leaderboard limited to current TT-passing stocks."
 }
