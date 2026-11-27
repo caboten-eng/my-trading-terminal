@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T05:08:10.218001+00:00",
+  "updated_at": "2026-11-27T05:06:21.353589+00:00",
   "price_date": "2026-11-25",
   "universe_label": "現在の米国株スクリーナー対象銘柄",
   "requested_count": 522,
@@ -100,20 +100,20 @@
       "high_52w_distance_pct": -17.9
     },
     {
-      "ticker": "CRL",
-      "name": "Charles River Laboratories",
-      "rs": 98,
-      "price": 332.08,
-      "trend_pass": true,
-      "high_52w_distance_pct": -11.7
-    },
-    {
       "ticker": "VTRS",
       "name": "Viatris",
       "rs": 98,
       "price": 19.83,
       "trend_pass": true,
       "high_52w_distance_pct": -5.26
+    },
+    {
+      "ticker": "CRL",
+      "name": "Charles River Laboratories",
+      "rs": 98,
+      "price": 332.08,
+      "trend_pass": true,
+      "high_52w_distance_pct": -11.7
     },
     {
       "ticker": "OKTA",
@@ -228,6 +228,14 @@
       "high_52w_distance_pct": -0.33
     },
     {
+      "ticker": "DRI",
+      "name": "Darden Restaurants",
+      "rs": 89,
+      "price": 241.16,
+      "trend_pass": true,
+      "high_52w_distance_pct": 0.0
+    },
+    {
       "ticker": "AIZ",
       "name": "Assurant",
       "rs": 89,
@@ -242,14 +250,6 @@
       "price": 76.28,
       "trend_pass": true,
       "high_52w_distance_pct": -3.32
-    },
-    {
-      "ticker": "DRI",
-      "name": "Darden Restaurants",
-      "rs": 89,
-      "price": 241.16,
-      "trend_pass": true,
-      "high_52w_distance_pct": 0.0
     }
   ],
   "market_regime": {
